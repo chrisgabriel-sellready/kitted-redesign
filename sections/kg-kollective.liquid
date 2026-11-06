@@ -13,10 +13,10 @@
           <p class="form-msg is-warn" role="alert">{{ form.errors.translated_fields.email | capitalize }} {{ form.errors.messages.email }}</p>
         {%- endif -%}
         <div class="form-grid">
-          <div class="field full"><label for="hr-name">First and last name</label><input id="hr-name" name="fullname" autocomplete="name" required></div>
-          <div class="field"><label for="hr-num">Jersey # (0–99)</label><input id="hr-num" name="number" inputmode="numeric" maxlength="2" placeholder="00"></div>
-          <div class="field"><label for="hr-email">Email address</label><input id="hr-email" name="contact[email]" type="email" autocomplete="email" required></div>
-          <div class="field full"><label for="hr-phone">Mobile number</label><input id="hr-phone" name="contact[phone]" type="tel" autocomplete="tel"></div>
+          <div class="kg-field full"><label for="hr-name">First and last name</label><input id="hr-name" name="fullname" autocomplete="name" required></div>
+          <div class="kg-field"><label for="hr-num">Jersey # (0–99)</label><input id="hr-num" name="number" inputmode="numeric" maxlength="2" placeholder="00"></div>
+          <div class="kg-field"><label for="hr-email">Email address</label><input id="hr-email" name="contact[email]" type="email" autocomplete="email" required></div>
+          <div class="kg-field full"><label for="hr-phone">Mobile number</label><input id="hr-phone" name="contact[phone]" type="tel" autocomplete="tel"></div>
         </div>
         <label class="consent"><input type="checkbox" name="contact[accepts_marketing]" value="true" checked><span>{{ section.settings.consent | remove: "<p>" | remove: "</p>" }}</span></label>
         <button class="btn btn--gold btn--lg btn--block" type="submit">{{ section.settings.button }}</button>

@@ -455,19 +455,19 @@
 .kg .jersey svg{width: 100%; height: auto;}
 .kg .form-grid{display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px;}
 .kg .form-grid .full{grid-column: 1 / -1;}
-.kg .field{display: grid; gap: 6px; min-width: 0;}
-.kg .field label{font: 600 11px/1 var(--body); letter-spacing: .16em; text-transform: uppercase;}
-.kg .field input,
-.kg .field textarea,
-.kg .field select{width: 100%; min-height: 50px; padding: 12px 14px; border: 1px solid var(--line); background: var(--paper); border-radius: var(--radius); font-size: 15px;}
-.kg .field textarea{min-height: 140px; resize: vertical;}
-.kg .field input:focus-visible,
-.kg .field textarea:focus-visible{outline: 2px solid var(--ink); outline-offset: 0; border-color: var(--ink);}
+.kg .kg-field{display: grid; gap: 6px; min-width: 0;}
+.kg .kg-field label{font: 600 11px/1.5 var(--body); letter-spacing: .16em; text-transform: uppercase;}
+.kg .kg-field input,
+.kg .kg-field textarea,
+.kg .kg-field select{width: 100%; min-height: 50px; padding: 12px 14px; border: 1px solid var(--line); background: var(--paper); border-radius: var(--radius); font-size: 15px;}
+.kg .kg-field textarea{min-height: 140px; resize: vertical;}
+.kg .kg-field input:focus-visible,
+.kg .kg-field textarea:focus-visible{outline: 2px solid var(--ink); outline-offset: 0; border-color: var(--ink);}
 .kg .consent{display: grid; grid-template-columns: 20px 1fr; gap: 10px; font-size: 12px; color: var(--mute); line-height: 1.5;}
 .kg .consent input{width: 18px; height: 18px; margin: 1px 0 0; accent-color: var(--ink);}
 .kg .consent a{text-decoration: underline;}
-.kg .band--ink .field input{background: transparent; border-color: rgba(255,255,255,.3); color: var(--paper);}
-.kg .band--ink .field input::placeholder{color: var(--mute-on-ink);}
+.kg .band--ink .kg-field input{background: transparent; border-color: rgba(255,255,255,.3); color: var(--paper);}
+.kg .band--ink .kg-field input::placeholder{color: var(--mute-on-ink);}
 .kg .contact{display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(28px, 5vw, 72px); align-items: start;}
 .kg .bulk{border: 1px solid var(--ink); padding: 24px; display: grid; gap: 14px;}
 .kg .bulk table{width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums;}
@@ -628,10 +628,10 @@
 .kg .roster-band__tag{display: inline-block; background: var(--paper); color: var(--ink); font: 700 11px/1 var(--body); letter-spacing: .22em; text-transform: uppercase; padding: 10px 18px; border-radius: 999px;}
 .kg .roster-band .page-title{color: var(--paper);}
 .kg .roster-band .jersey{background: rgba(255,255,255,.04); border: 1px solid rgba(250,181,5,.28);}
-.kg .roster-band .field label{color: rgba(255,255,255,.8);}
-.kg .roster-band .field input{background: rgba(255,255,255,.03); border-color: rgba(255,255,255,.22); color: var(--paper);}
-.kg .roster-band .field input::placeholder{color: var(--mute-on-ink);}
-.kg .roster-band .field input:focus-visible{outline-color: var(--gold); border-color: var(--gold);}
+.kg .roster-band .kg-field label{color: rgba(255,255,255,.8);}
+.kg .roster-band .kg-field input{background: rgba(255,255,255,.03); border-color: rgba(255,255,255,.22); color: var(--paper);}
+.kg .roster-band .kg-field input::placeholder{color: var(--mute-on-ink);}
+.kg .roster-band .kg-field input:focus-visible{outline-color: var(--gold); border-color: var(--gold);}
 .kg .roster-band .consent{color: var(--mute-on-ink);}
 .kg .roster-band .consent input{accent-color: var(--gold);}
 .kg .roster-band .pill{border-color: rgba(250,181,5,.5); color: var(--gold);}

@@ -12,10 +12,10 @@
     {%- form 'contact', class: 'form-grid' -%}
       {%- if form.posted_successfully? -%}<p class="form-msg full is-ok" role="status">{{ section.settings.success }}</p>{%- endif -%}
       {%- if form.errors -%}<div class="form-msg full is-warn" role="alert">{{ form.errors | default_errors }}</div>{%- endif -%}
-      <div class="field"><label for="c-name">Name</label><input id="c-name" name="contact[name]" autocomplete="name" required value="{{ form.name }}"></div>
-      <div class="field"><label for="c-email">Email</label><input id="c-email" name="contact[email]" type="email" autocomplete="email" required value="{{ form.email }}"></div>
-      <div class="field full"><label for="c-phone">Phone number</label><input id="c-phone" name="contact[phone]" type="tel" autocomplete="tel" value="{{ form.phone }}"></div>
-      <div class="field full"><label for="c-msg">Comment</label><textarea id="c-msg" name="contact[body]" required>{{ form.body }}</textarea></div>
+      <div class="kg-field"><label for="c-name">Name</label><input id="c-name" name="contact[name]" autocomplete="name" required value="{{ form.name }}"></div>
+      <div class="kg-field"><label for="c-email">Email</label><input id="c-email" name="contact[email]" type="email" autocomplete="email" required value="{{ form.email }}"></div>
+      <div class="kg-field full"><label for="c-phone">Phone number</label><input id="c-phone" name="contact[phone]" type="tel" autocomplete="tel" value="{{ form.phone }}"></div>
+      <div class="kg-field full"><label for="c-msg">Comment</label><textarea id="c-msg" name="contact[body]" required>{{ form.body }}</textarea></div>
       <div class="full"><button class="btn btn--lg" type="submit">Send</button></div>
     {%- endform -%}
   </div>
