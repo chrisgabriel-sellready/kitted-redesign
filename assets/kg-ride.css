@@ -145,8 +145,8 @@ html.kg-lock { overflow: hidden; }
 .kg .primary-nav{display: none;}
 }@media (max-width: 640px){.kg .mega{display: none;}
 }
-.kg .kg-cart .svg-wrapper { display: grid; place-items: center; width: 28px; height: 28px; }
-.kg .kg-cart .svg-wrapper svg { width: 44px !important; height: 44px !important; max-width: none; }
+.kg .kg-cart .svg-wrapper { display: grid; place-items: center; width: 21px; height: 21px; }
+.kg .kg-cart .svg-wrapper svg { width: 21px !important; height: 21px !important; }
 
 /* Announcement bar like kittedgear.com: no arrows, messages rotate on their own */
 .announcement-bar-slider .slider-button { display: none !important; }
