@@ -873,7 +873,7 @@ class SlideshowComponent extends SliderComponent {
       this.autoplayButtonIsSetToPlay = true;
       this.play();
     } else {
-      this.reducedMotion.matches || this.announcementBarArrowButtonWasClicked ? this.pause() : this.play();
+      this.announcementBarArrowButtonWasClicked ? this.pause() : this.play(); // KITTED: announcement bar always rotates (no arrows)
     }
   }
 

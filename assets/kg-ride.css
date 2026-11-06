@@ -147,3 +147,8 @@ html.kg-lock { overflow: hidden; }
 }
 .kg .kg-cart .svg-wrapper { display: grid; place-items: center; width: 28px; height: 28px; }
 .kg .kg-cart .svg-wrapper svg { width: 44px !important; height: 44px !important; max-width: none; }
+
+/* Announcement bar like kittedgear.com: no arrows, messages rotate on their own */
+.announcement-bar-slider .slider-button { display: none !important; }
+.announcement-bar-slider { padding-inline: 0; }
+.announcement-bar-slider .slider { margin-inline: auto; }

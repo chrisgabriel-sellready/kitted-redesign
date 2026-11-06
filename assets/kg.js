@@ -102,7 +102,7 @@
   function syncLoop(v) {
     var r = v.getBoundingClientRect(), hero = v.closest(".shero__media");
     var visible = r.width > 0 && r.height > 0 && r.bottom > 0 && r.top < window.innerHeight;
-    var allowed = hero ? !hero.kgPaused && (!reduce || hero.kgMotionAllowed) : !reduce;
+    var allowed = hero ? !hero.kgPaused : true; /* muted ambient loops always autoplay, like kittedgear.com; heroes keep their pause button */
     if (visible && allowed && !document.hidden) {
       var p = v.play(); if (p && p.catch) p.catch(function () {});
     } else { v.pause(); }
