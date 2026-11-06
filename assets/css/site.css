@@ -681,7 +681,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   .step { grid-template-columns: 120px minmax(0, 1fr); align-items: center; }
   .step__img { aspect-ratio: 1; }
   .shero { grid-template-columns: minmax(0, 1fr); }
-  .shero__media { min-height: 0; aspect-ratio: 4 / 5; order: -1; max-height: 70svh; }
+  .shero__media { min-height: 0; width: 100%; height: min(125vw, 70svh); order: -1; }
   .shero__text { padding-left: max(var(--gutter), env(safe-area-inset-left, 0px)); padding-right: max(var(--gutter), env(safe-area-inset-right, 0px)); }
   .award-strip { grid-template-columns: 120px minmax(0, 1fr); }
   .award-strip img { width: 120px; }
@@ -789,6 +789,8 @@ ul { margin: 0; padding: 0; list-style: none; }
   background: linear-gradient(180deg, #fff 30%, #f6d27a 100%);
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
+/* full-width buttons may wrap so long labels never push the page wider than the phone */
+.btn--block { white-space: normal; text-align: center; line-height: 1.3; }
 .footer__signup h2::after { content: ""; display: block; width: 48px; height: 2px; background: var(--gold); margin: 16px auto 0; }
 
 /* ---------- home: early roster access ---------- */
