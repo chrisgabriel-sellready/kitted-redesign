@@ -1,239 +1,239 @@
 {
- "sections": {
-  "kg_00": {
-   "type": "kg-product",
-   "settings": {
-    "show_crumbs": true,
-    "title_tag": "h1",
-    "anchor": "",
-    "kicker": "",
-    "heading": "",
-    "as_section": false,
-    "banner": "Instant digital access · guaranteed results",
-    "eyebrow": "Softball · Digital program",
-    "rating_text": "",
-    "value_tag": "$150 value",
-    "lede": "Train with 2-time National Champion Kaydee Bennett to guarantee results from your SpinGrip.",
-    "seal": "none",
-    "digital": true,
-    "show_used_by": false,
-    "show_trust": false,
-    "show_pack_callout": false,
-    "description_label": "About the program"
-   },
-   "blocks": {
-    "inside_0": {
-     "type": "inside",
-     "settings": {
-      "text": "Train with 2-time National Champion Kaydee Bennett (former Texas Longhorn)"
-     }
+  "sections": {
+    "kg_00": {
+      "type": "kg-product",
+      "settings": {
+        "show_crumbs": true,
+        "title_tag": "h1",
+        "anchor": "",
+        "kicker": "",
+        "heading": "",
+        "as_section": false,
+        "banner": "Instant digital access · guaranteed results",
+        "eyebrow": "Softball · Digital program",
+        "rating_text": "",
+        "value_tag": "$150 value",
+        "lede": "Train with 2-time National Champion Kaydee Bennett to guarantee results from your SpinGrip.",
+        "seal": "none",
+        "digital": true,
+        "show_used_by": false,
+        "show_trust": false,
+        "show_pack_callout": false,
+        "description_label": "About the program"
+      },
+      "blocks": {
+        "inside_0": {
+          "type": "inside",
+          "settings": {
+            "text": "Train with 2-time National Champion Kaydee Bennett (former Texas Longhorn)"
+          }
+        },
+        "inside_1": {
+          "type": "inside",
+          "settings": {
+            "text": "Division 1 level warm up"
+          }
+        },
+        "inside_2": {
+          "type": "inside",
+          "settings": {
+            "text": "Elite-level throwing progressions"
+          }
+        },
+        "inside_3": {
+          "type": "inside",
+          "settings": {
+            "text": "Position-player specific tips"
+          }
+        },
+        "inside_4": {
+          "type": "inside",
+          "settings": {
+            "text": "Guaranteed results with your SpinGrip, or your money back"
+          }
+        },
+        "inside_5": {
+          "type": "inside",
+          "settings": {
+            "text": "Instant digital access, start today"
+          }
+        },
+        "accordion_6": {
+          "type": "accordion",
+          "settings": {
+            "title": "Pairs with",
+            "content": "<p>Built around the fingertip release that <a href=\"/products/spingrip-softball\">SpinGrip Softball</a> makes automatic. Use them together for the fastest results.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "inside_0",
+        "inside_1",
+        "inside_2",
+        "inside_3",
+        "inside_4",
+        "inside_5",
+        "accordion_6"
+      ]
     },
-    "inside_1": {
-     "type": "inside",
-     "settings": {
-      "text": "Division 1 level warm up"
-     }
+    "kg_01": {
+      "type": "kg-0baae17c",
+      "settings": {
+        "t2": "kg-poster-formula-softball.webp",
+        "t3": "Program preview",
+        "t4": "See the formula in action",
+        "t5": "Train with 2-time National Champion Kaydee Bennett to guarantee results from your SpinGrip.",
+        "t6": "Get instant access"
+      }
     },
-    "inside_2": {
-     "type": "inside",
-     "settings": {
-      "text": "Elite-level throwing progressions"
-     }
+    "kg_02": {
+      "type": "kg-a1e80829",
+      "settings": {
+        "t1": "Real players. Real results.",
+        "t2": "Don’t take our word for it. See what athletes and coaches are saying about SpinGrip."
+      },
+      "blocks": {
+        "c1a_1": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-poster-softball-ugc-1.webp",
+            "t3": "“It’s making me pull down my throws.”",
+            "t4": "Annie Kay, All-American"
+          }
+        },
+        "c1a_2": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-poster-softball-ugc-2.webp",
+            "t3": "“I feel everything in the finger tips.”",
+            "t4": "HS Softball Players"
+          }
+        },
+        "c1a_3": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-poster-softball-ugc-3.webp",
+            "t3": "“It’s letting me feel where I release the ball.”",
+            "t4": "Ainsley Davis, College Pitcher"
+          }
+        },
+        "c1a_4": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-poster-softball-ugc-4.webp",
+            "t3": "“You can’t death grip the ball.”",
+            "t4": "Steele Walker, Founder"
+          }
+        },
+        "c1a_5": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-poster-softball-ugc-5.webp",
+            "t3": "“This offers game changing benefits.”",
+            "t4": "Softball Coach"
+          }
+        },
+        "c1a_6": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-poster-softball-ugc-6.webp",
+            "t3": "“My throws are way more accurate now.”",
+            "t4": "Fastpitch athlete"
+          }
+        },
+        "c1a_7": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-poster-softball-ugc-7.webp",
+            "t3": "“This is the only tool on the market that does this.”",
+            "t4": "Fastpitch athlete"
+          }
+        },
+        "c1a_8": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-poster-softball-ugc-8.webp",
+            "t3": "“The ball just jumps out of my hand.”",
+            "t4": "Pitcher"
+          }
+        },
+        "c1a_9": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-poster-softball-ugc-9.webp",
+            "t3": "“No more bad grips.”",
+            "t4": "Fastpitch athlete"
+          }
+        },
+        "c1a_10": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-poster-softball-ugc-10.webp",
+            "t3": "“Hits her spots every throw.”",
+            "t4": "Softball dad"
+          }
+        }
+      },
+      "block_order": [
+        "c1a_1",
+        "c1a_2",
+        "c1a_3",
+        "c1a_4",
+        "c1a_5",
+        "c1a_6",
+        "c1a_7",
+        "c1a_8",
+        "c1a_9",
+        "c1a_10"
+      ]
     },
-    "inside_3": {
-     "type": "inside",
-     "settings": {
-      "text": "Position-player specific tips"
-     }
-    },
-    "inside_4": {
-     "type": "inside",
-     "settings": {
-      "text": "Guaranteed results with your SpinGrip, or your money back"
-     }
-    },
-    "inside_5": {
-     "type": "inside",
-     "settings": {
-      "text": "Instant digital access, start today"
-     }
-    },
-    "accordion_6": {
-     "type": "accordion",
-     "settings": {
-      "title": "Pairs with",
-      "content": "<p>Built around the fingertip release that <a href=\"/products/spingrip-softball\">SpinGrip Softball</a> makes automatic. Use them together for the fastest results.</p>"
-     }
+    "kg_03": {
+      "type": "kg-5fc65833",
+      "settings": {
+        "t1": "Frequently asked"
+      },
+      "blocks": {
+        "c1a_1": {
+          "type": "c1a",
+          "settings": {
+            "t1": "How do I get access?",
+            "t2": "It's 100% digital. Right after checkout you'll receive an email with instant access. Nothing ships, and you can start the same day."
+          }
+        },
+        "c1a_2": {
+          "type": "c1a",
+          "settings": {
+            "t1": "Do I need a SpinGrip to use it?",
+            "t2": "You don't need one to follow the program, but it's built to pair with SpinGrip Softball. The progressions are designed around the fingertip release SpinGrip makes automatic, so the two together produce the fastest results."
+          }
+        },
+        "c1a_3": {
+          "type": "c1a",
+          "settings": {
+            "t1": "Who is this for?",
+            "t2": "Softball players of any age who want more spin, velocity, and accuracy, plus coaches and parents who want a clear, safe throwing structure to follow."
+          }
+        },
+        "c1a_4": {
+          "type": "c1a",
+          "settings": {
+            "t1": "Is it refundable?",
+            "t2": "Because it's an instant digital product, access is delivered immediately and sales are final. Reach out to our team if anything doesn't work and we'll take care of you."
+          }
+        }
+      },
+      "block_order": [
+        "c1a_1",
+        "c1a_2",
+        "c1a_3",
+        "c1a_4"
+      ]
     }
-   },
-   "block_order": [
-    "inside_0",
-    "inside_1",
-    "inside_2",
-    "inside_3",
-    "inside_4",
-    "inside_5",
-    "accordion_6"
-   ]
   },
-  "kg_01": {
-   "type": "kg-0baae17c",
-   "settings": {
-    "t2": "kg-poster-formula-softball.webp",
-    "t3": "Program preview",
-    "t4": "See the formula in action",
-    "t5": "Train with 2-time National Champion Kaydee Bennett to guarantee results from your SpinGrip.",
-    "t6": "Get instant access"
-   }
-  },
-  "kg_02": {
-   "type": "kg-a1e80829",
-   "settings": {
-    "t1": "Real players. Real results.",
-    "t2": "Don’t take our word for it. See what athletes and coaches are saying about SpinGrip."
-   },
-   "blocks": {
-    "c1a_1": {
-     "type": "c1a",
-     "settings": {
-      "t2": "kg-poster-softball-ugc-1.webp",
-      "t3": "“It’s making me pull down my throws.”",
-      "t4": "Annie Kay, All-American"
-     }
-    },
-    "c1a_2": {
-     "type": "c1a",
-     "settings": {
-      "t2": "kg-poster-softball-ugc-2.webp",
-      "t3": "“I feel everything in the finger tips.”",
-      "t4": "HS Softball Players"
-     }
-    },
-    "c1a_3": {
-     "type": "c1a",
-     "settings": {
-      "t2": "kg-poster-softball-ugc-3.webp",
-      "t3": "“It’s letting me feel where I release the ball.”",
-      "t4": "Ainsley Davis, College Pitcher"
-     }
-    },
-    "c1a_4": {
-     "type": "c1a",
-     "settings": {
-      "t2": "kg-poster-softball-ugc-4.webp",
-      "t3": "“You can’t death grip the ball.”",
-      "t4": "Steele Walker, Founder"
-     }
-    },
-    "c1a_5": {
-     "type": "c1a",
-     "settings": {
-      "t2": "kg-poster-softball-ugc-5.webp",
-      "t3": "“This offers game changing benefits.”",
-      "t4": "Softball Coach"
-     }
-    },
-    "c1a_6": {
-     "type": "c1a",
-     "settings": {
-      "t2": "kg-poster-softball-ugc-6.webp",
-      "t3": "“My throws are way more accurate now.”",
-      "t4": "Fastpitch athlete"
-     }
-    },
-    "c1a_7": {
-     "type": "c1a",
-     "settings": {
-      "t2": "kg-poster-softball-ugc-7.webp",
-      "t3": "“This is the only tool on the market that does this.”",
-      "t4": "Fastpitch athlete"
-     }
-    },
-    "c1a_8": {
-     "type": "c1a",
-     "settings": {
-      "t2": "kg-poster-softball-ugc-8.webp",
-      "t3": "“The ball just jumps out of my hand.”",
-      "t4": "Pitcher"
-     }
-    },
-    "c1a_9": {
-     "type": "c1a",
-     "settings": {
-      "t2": "kg-poster-softball-ugc-9.webp",
-      "t3": "“No more bad grips.”",
-      "t4": "Fastpitch athlete"
-     }
-    },
-    "c1a_10": {
-     "type": "c1a",
-     "settings": {
-      "t2": "kg-poster-softball-ugc-10.webp",
-      "t3": "“Hits her spots every throw.”",
-      "t4": "Softball dad"
-     }
-    }
-   },
-   "block_order": [
-    "c1a_1",
-    "c1a_2",
-    "c1a_3",
-    "c1a_4",
-    "c1a_5",
-    "c1a_6",
-    "c1a_7",
-    "c1a_8",
-    "c1a_9",
-    "c1a_10"
-   ]
-  },
-  "kg_03": {
-   "type": "kg-5fc65833",
-   "settings": {
-    "t1": "Frequently asked"
-   },
-   "blocks": {
-    "c1a_1": {
-     "type": "c1a",
-     "settings": {
-      "t1": "How do I get access?",
-      "t2": "It's 100% digital. Right after checkout you'll receive an email with instant access. Nothing ships, and you can start the same day."
-     }
-    },
-    "c1a_2": {
-     "type": "c1a",
-     "settings": {
-      "t1": "Do I need a SpinGrip to use it?",
-      "t2": "You don't need one to follow the program, but it's built to pair with SpinGrip Softball. The progressions are designed around the fingertip release SpinGrip makes automatic, so the two together produce the fastest results."
-     }
-    },
-    "c1a_3": {
-     "type": "c1a",
-     "settings": {
-      "t1": "Who is this for?",
-      "t2": "Softball players of any age who want more spin, velocity, and accuracy, plus coaches and parents who want a clear, safe throwing structure to follow."
-     }
-    },
-    "c1a_4": {
-     "type": "c1a",
-     "settings": {
-      "t1": "Is it refundable?",
-      "t2": "Because it's an instant digital product, access is delivered immediately and sales are final. Reach out to our team if anything doesn't work and we'll take care of you."
-     }
-    }
-   },
-   "block_order": [
-    "c1a_1",
-    "c1a_2",
-    "c1a_3",
-    "c1a_4"
-   ]
-  }
- },
- "order": [
-  "kg_00",
-  "kg_01",
-  "kg_02",
-  "kg_03"
- ]
+  "order": [
+    "kg_00",
+    "kg_01",
+    "kg_02",
+    "kg_03"
+  ]
 }

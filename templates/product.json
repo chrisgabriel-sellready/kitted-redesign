@@ -1,441 +1,441 @@
 {
- "sections": {
-  "kg_00": {
-   "type": "kg-product",
-   "settings": {
-    "show_crumbs": true,
-    "title_tag": "h1",
-    "anchor": "",
-    "kicker": "",
-    "heading": "",
-    "as_section": false,
-    "banner": "Guaranteed to increase velo, spin and accuracy",
-    "eyebrow": "Baseball",
-    "rating_text": "4.8 · 199 reviews",
-    "value_tag": "",
-    "lede": "",
-    "seal": "red",
-    "digital": false,
-    "show_used_by": true,
-    "show_trust": true,
-    "show_pack_callout": true,
-    "description_label": "Description"
-   },
-   "blocks": {
-    "result_0": {
-     "type": "result",
-     "settings": {
-      "label": "MPH velocity",
-      "value": "Up to +7"
-     }
+  "sections": {
+    "kg_00": {
+      "type": "kg-product",
+      "settings": {
+        "show_crumbs": true,
+        "title_tag": "h1",
+        "anchor": "",
+        "kicker": "",
+        "heading": "",
+        "as_section": false,
+        "banner": "Guaranteed to increase velo, spin and accuracy",
+        "eyebrow": "Baseball",
+        "rating_text": "4.8 · 199 reviews",
+        "value_tag": "",
+        "lede": "",
+        "seal": "red",
+        "digital": false,
+        "show_used_by": true,
+        "show_trust": true,
+        "show_pack_callout": true,
+        "description_label": "Description"
+      },
+      "blocks": {
+        "result_0": {
+          "type": "result",
+          "settings": {
+            "label": "MPH velocity",
+            "value": "Up to +7"
+          }
+        },
+        "result_1": {
+          "type": "result",
+          "settings": {
+            "label": "RPM spin rate",
+            "value": "+350"
+          }
+        },
+        "result_2": {
+          "type": "result",
+          "settings": {
+            "label": "Accuracy increase",
+            "value": "30%"
+          }
+        },
+        "accordion_3": {
+          "type": "accordion",
+          "settings": {
+            "title": "Sizing guide",
+            "content": "<p>Youth6–9 · Small/Medium10–14 · Large/XLarge15+</p><p class=\"muted\">Between sizes? Size by age first; the strap adjusts high and tight on the wrist.</p>"
+          }
+        },
+        "accordion_4": {
+          "type": "accordion",
+          "settings": {
+            "title": "How SpinGrip works",
+            "content": "<p>Put your throwing hand's index finger and thumb in an “L” shape, slide the index finger into the top hole and the thumb into the side hole, pull tight on the wrist, and fasten the velcro.</p><p>Grab a ball and throw normally.</p><p>We recommend wearing the grip from the very first throw and working all the way up to full speed with it on. When you're good and warm, take it off and keep letting it fly. You'll feel a fifth gear every time.</p>"
+          }
+        },
+        "accordion_5": {
+          "type": "accordion",
+          "settings": {
+            "title": "Shipping & returns",
+            "content": "<p>Orders ship within 1–2 business days. Standard delivery is 3–7 business days. Free domestic shipping on orders $100+. See the <a href=\"/policies/refund-policy\">return policy</a>.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "result_0",
+        "result_1",
+        "result_2",
+        "accordion_3",
+        "accordion_4",
+        "accordion_5"
+      ]
     },
-    "result_1": {
-     "type": "result",
-     "settings": {
-      "label": "RPM spin rate",
-      "value": "+350"
-     }
+    "kg_01": {
+      "type": "kg-a8e041ee",
+      "settings": {
+        "t2": "kg-vposter-how-to-use.jpg",
+        "t3": "Watch it in action",
+        "t4": "How to wear SpinGrip",
+        "t5": "Index finger and thumb in an “L”, slide in, pull tight on the wrist, fasten the strap, and throw normally.",
+        "u6": "/pages/the-spingrip-effect",
+        "t7": "Read the full guide"
+      }
     },
-    "result_2": {
-     "type": "result",
-     "settings": {
-      "label": "Accuracy increase",
-      "value": "30%"
-     }
+    "kg_02": {
+      "type": "kg-2b4b7be0",
+      "settings": {
+        "t1": "How SpinGrip works",
+        "t2": "SpinGrip's embedded palm-spacer harnesses the physics of an elite release by positioning the ball farther into your fingers, unlocking optimal spin, velocity, and accuracy."
+      },
+      "blocks": {
+        "c1a_1": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-product-on-hand.webp",
+            "t3": "Step 1 of 3",
+            "t4": "Slide it on",
+            "t5": "SpinGrip slides onto your throwing hand in seconds. Fasten the strap high and tight on the wrist."
+          }
+        },
+        "c1a_2": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-baseball-let-it-fly.webp",
+            "t3": "Step 2 of 3",
+            "t4": "Let it fly",
+            "t5": "The patent-pending design with embedded palm-spacer positions the ball in your fingers for the optimal grip on every throw."
+          }
+        },
+        "c1a_3": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-grayson-one-use-full.webp",
+            "t3": "Step 3 of 3",
+            "t4": "Feel the SpinGrip Effect",
+            "t5": "Velocity, spin rate, and accuracy improve right away. Data-proven performance gains."
+          }
+        }
+      },
+      "block_order": [
+        "c1a_1",
+        "c1a_2",
+        "c1a_3"
+      ]
     },
-    "accordion_3": {
-     "type": "accordion",
-     "settings": {
-      "title": "Sizing guide",
-      "content": "<p>Youth6–9 · Small/Medium10–14 · Large/XLarge15+</p><p class=\"muted\">Between sizes? Size by age first; the strap adjusts high and tight on the wrist.</p>"
-     }
+    "kg_03": {
+      "type": "kg-aab34eb6",
+      "settings": {
+        "t1": "Customer reviews",
+        "t2": "4.8",
+        "t3": "199 reviews",
+        "t4": "All athletes experience immediate proper grip results. Most see metric gains within 1 week of use."
+      },
+      "blocks": {
+        "c1a_1": {
+          "type": "c1a",
+          "settings": {
+            "t1": "Mar 25, 2026",
+            "t2": "My 9 year old loves it",
+            "t3": "My 9 year old loves it. Haven’t even had it a week and while he was already a solid pitcher in his leagues, I can clearly see added velocity just from using this during throwing.",
+            "t4": "Christopher G.",
+            "t5": "Verified buyer"
+          }
+        },
+        "c1a_2": {
+          "type": "c1a",
+          "settings": {
+            "t1": "Mar 21, 2026",
+            "t2": "Great learning tool",
+            "t3": "Got this for my team. Worked great getting them to understand how to hold the ball. It’s a great tool for kinesthetic learners.",
+            "t4": "Coach N.",
+            "t5": "Verified buyer"
+          }
+        },
+        "c1a_3": {
+          "type": "c1a",
+          "settings": {
+            "t1": "Mar 20, 2026",
+            "t2": "Teaches naturally",
+            "t3": "Teaches naturally without having to think about it and becomes muscle memory after a few uses. Great product!",
+            "t4": "Jeremiah F.",
+            "t5": "Verified buyer"
+          }
+        },
+        "c1a_4": {
+          "type": "c1a",
+          "settings": {
+            "t1": "Mar 19, 2026",
+            "t2": "Amazing product!",
+            "t3": "It works beautifully. I wore it for about 3 innings in the outfield and catching the ball felt so amazing coming off my hand!",
+            "t4": "Gionni H.",
+            "t5": "Verified buyer"
+          }
+        },
+        "c1a_5": {
+          "type": "c1a",
+          "settings": {
+            "t1": "Mar 14, 2026",
+            "t2": "Immediately throwing better",
+            "t3": "My son immediately started throwing better with more spin and accuracy.",
+            "t4": "Jess S.",
+            "t5": "Verified buyer"
+          }
+        },
+        "c1a_6": {
+          "type": "c1a",
+          "settings": {
+            "t1": "Sep 22, 2026",
+            "t2": "Revolutionary",
+            "t3": "Revolutionary piece of baseball equipment! If I could only give it more stars!",
+            "t4": "Dweller Parker",
+            "t5": "Verified buyer"
+          }
+        },
+        "c1a_7": {
+          "type": "c1a",
+          "settings": {
+            "t1": "Sep 9, 2026",
+            "t2": "Bought two",
+            "t3": "I bought SpinGrip Softball for myself and loved it so much I bought one for my grandson for the little league baseball team I coach as well. He loves it too!",
+            "t4": "Chris Picciano",
+            "t5": "Verified buyer"
+          }
+        },
+        "c1a_8": {
+          "type": "c1a",
+          "settings": {
+            "t1": "Aug 20, 2026",
+            "t2": "Easy to explain",
+            "t3": "Great tool for learning, makes it easy to explain to a young player how to position the ball. My son seems to really like it!",
+            "t4": "Jeff Schurman",
+            "t5": "Verified buyer"
+          }
+        },
+        "c1a_9": {
+          "type": "c1a",
+          "settings": {
+            "t1": "Aug 10, 2026",
+            "t2": "Difference in his throws",
+            "t3": "My son loves to practice with this on his hand. He can tell a difference in his throws to second. He wore it during his bullpen and is going to wear it before he pitches tonight.",
+            "t4": "Verified customer",
+            "t5": "Verified buyer"
+          }
+        }
+      },
+      "block_order": [
+        "c1a_1",
+        "c1a_2",
+        "c1a_3",
+        "c1a_4",
+        "c1a_5",
+        "c1a_6",
+        "c1a_7",
+        "c1a_8",
+        "c1a_9"
+      ]
     },
-    "accordion_4": {
-     "type": "accordion",
-     "settings": {
-      "title": "How SpinGrip works",
-      "content": "<p>Put your throwing hand's index finger and thumb in an “L” shape, slide the index finger into the top hole and the thumb into the side hole, pull tight on the wrist, and fasten the velcro.</p><p>Grab a ball and throw normally.</p><p>We recommend wearing the grip from the very first throw and working all the way up to full speed with it on. When you're good and warm, take it off and keep letting it fly. You'll feel a fifth gear every time.</p>"
-     }
+    "kg_04": {
+      "type": "kg-b9b2fcf4",
+      "settings": {
+        "t1": "Real ballplayers. Real results.",
+        "t2": "Don’t take our word for it. See what athletes and coaches are saying about SpinGrip."
+      },
+      "blocks": {
+        "c1a_1": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-poster-pdp-baseball-b.webp",
+            "t3": "“Grip it like the pros.”",
+            "t4": "SpinGrip Baseball"
+          }
+        },
+        "c1a_2": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-poster-pdp-baseball-c.webp",
+            "t3": "“Slide it on. Let it fly.”",
+            "t4": "SpinGrip Baseball"
+          }
+        },
+        "c1a_3": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-poster-ugc-2.webp",
+            "t3": "“It’s a simple training tool that leaves a big impact.”",
+            "t4": "Chip"
+          }
+        },
+        "c1b_4": {
+          "type": "c1b",
+          "settings": {
+            "v1": "shopify://files/videos/copy_3C3DF899-FBD7-4310-A09D-5C3643315F1C.MOV",
+            "u2": "https://shop.kittedgear.com/cdn/shop/videos/c/vp/833085947e8d471483e7cd68f101d3d9/833085947e8d471483e7cd68f101d3d9.HD-1080p-4.8Mbps-80246359.mp4",
+            "t4": "kg-poster-ugc-3.webp",
+            "t5": "Tap for sound",
+            "t6": "“This just naturally helped me get that grip every time.”",
+            "t7": "Cody Freeman, Big Leaguer"
+          }
+        },
+        "c1a_5": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-poster-ugc-4.webp",
+            "t3": "“I highly approve and recommend the SpinGrip.”",
+            "t4": "Pro Pitching Instructor"
+          }
+        },
+        "c1a_6": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-poster-ugc-6.webp",
+            "t3": "“It’s effortless power.”",
+            "t4": "Youth Ballplayers"
+          }
+        },
+        "c1a_7": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-poster-ugc-15.webp",
+            "t3": "“It’s forcing me to use my fingertips.”",
+            "t4": "Donte Lewis, D1 Player"
+          }
+        },
+        "c1a_8": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-poster-ugc-16.webp",
+            "t3": "“It puts the ball in the right position in my hand.”",
+            "t4": "Will Brennan, Big Leaguer"
+          }
+        },
+        "c1a_9": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-poster-ugc-17.webp",
+            "t3": "“There’s no tension. Everything is loose.”",
+            "t4": "Blake Rogers, Pro Player"
+          }
+        },
+        "c1a_10": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-poster-ugc-19.webp",
+            "t3": "“I don’t feel like I’m choking the ball.”",
+            "t4": "Youth Player"
+          }
+        }
+      },
+      "block_order": [
+        "c1a_1",
+        "c1a_2",
+        "c1a_3",
+        "c1b_4",
+        "c1a_5",
+        "c1a_6",
+        "c1a_7",
+        "c1a_8",
+        "c1a_9",
+        "c1a_10"
+      ]
     },
-    "accordion_5": {
-     "type": "accordion",
-     "settings": {
-      "title": "Shipping & returns",
-      "content": "<p>Orders ship within 1–2 business days. Standard delivery is 3–7 business days. Free domestic shipping on orders $100+. See the <a href=\"/policies/refund-policy\">return policy</a>.</p>"
-     }
+    "kg_05": {
+      "type": "kg-8c85b1a1",
+      "settings": {
+        "t1": "Frequently asked"
+      },
+      "blocks": {
+        "c1a_1": {
+          "type": "c1a",
+          "settings": {
+            "t1": "How does SpinGrip actually work?",
+            "t2": "SpinGrip is physics. The most optimal way to throw a round object is from the fingers. SpinGrip does this the most optimal way and automatically, without you thinking about anything. Just put on the grip and get to work. SpinGrip's embedded palm-spacer will place the ball where it needs to be in the fingers and do everything for you, so your mind and body can feel what it's like to release the ball the way the best arms on the planet do. It's repeatable and guaranteed to make you more optimal."
+          }
+        },
+        "c1b_2": {
+          "type": "c1b",
+          "settings": {
+            "t1": "Can I use SpinGrip in a game?",
+            "h2": "Yes, you can use SpinGrip in a game. For pitchers the rules are stricter, so speak with your umpire or league coordinator first. We recommend training with SpinGrip on: bullpens, long toss, flat grounds. Work with it on for every pitch from first throw to fully warmed up, then take the grip off at the end of your session and feel the most optimal you've ever felt.<br/><br/>We have both position players and pitchers using SpinGrip in-game. Every time you throw, warm up, long toss, train defensively or do drill work, you can wear it. It implements the automatic optimal release consistently every time.<br/><br/>We are running active health studies suggesting SpinGrip may alleviate arm stress, which may allow it to be worn in more games in the future. We'll update customers as we learn more."
+          }
+        },
+        "c1b_3": {
+          "type": "c1b",
+          "settings": {
+            "t1": "How do I wear it?",
+            "h2": "Put your throwing hand's index finger and thumb in an “L” shape, slide the index finger into the top hole and the thumb into the side hole, pull tight on the wrist, and fasten the velcro.<br/><br/>Grab a ball and throw normally.<br/><br/>We recommend wearing the grip from the very first throw and working all the way up to full speed with it on. When you're good and warm, take it off and keep letting it fly. You'll feel a fifth gear every time."
+          }
+        },
+        "c1a_4": {
+          "type": "c1a",
+          "settings": {
+            "t1": "What ages/sizes is SpinGrip available in?",
+            "t2": "SpinGrip comes in three sizes: Youth (Ages 6-9), Small/Medium (Ages 10-14), and Large/XLarge (Ages 15+). It fits throwing hands of all sizes within these ranges."
+          }
+        },
+        "c1a_5": {
+          "type": "c1a",
+          "settings": {
+            "t1": "Is the data real? How were results measured?",
+            "t2": "Absolutely. Results were measured using Trackman technology."
+          }
+        },
+        "c1a_6": {
+          "type": "c1a",
+          "settings": {
+            "t1": "When will I start seeing results?",
+            "t2": "It's common for players to see results immediately. If SpinGrip feels uncomfortable or “not working” at first, that is a clear sign you have been choking the ball and should keep using it to recalibrate your mechanics."
+          }
+        },
+        "c1a_7": {
+          "type": "c1a",
+          "settings": {
+            "t1": "Do results last?",
+            "t2": "Yes. Because SpinGrip trains the feel of the optimal release, data shows throwing metrics increase with the glove on and continue to improve after taking it off. It imparts a consistent feel of the fingertip release that athletes can own and reproduce as they grow and train."
+          }
+        },
+        "c1a_8": {
+          "type": "c1a",
+          "settings": {
+            "t1": "How long does shipping take?",
+            "t2": "Orders ship within 1–2 business days. Standard delivery is 3–7 business days."
+          }
+        }
+      },
+      "block_order": [
+        "c1a_1",
+        "c1b_2",
+        "c1b_3",
+        "c1a_4",
+        "c1a_5",
+        "c1a_6",
+        "c1a_7",
+        "c1a_8"
+      ]
+    },
+    "kg_06": {
+      "type": "kg-035962fe",
+      "settings": {
+        "t1": "Team up and save",
+        "t2": "SpinGrip Packs. Any glove, any size, either hand. The discount applies automatically.",
+        "i3": "2-Pack <strong>save 10%</strong>",
+        "i4": "5-Pack <strong>save 15%</strong>",
+        "i5": "10-Pack <strong>save 20%</strong>",
+        "u6": "/pages/packs",
+        "t7": "Build your pack"
+      }
     }
-   },
-   "block_order": [
-    "result_0",
-    "result_1",
-    "result_2",
-    "accordion_3",
-    "accordion_4",
-    "accordion_5"
-   ]
   },
-  "kg_01": {
-   "type": "kg-a8e041ee",
-   "settings": {
-    "t2": "kg-vposter-how-to-use.jpg",
-    "t3": "Watch it in action",
-    "t4": "How to wear SpinGrip",
-    "t5": "Index finger and thumb in an “L”, slide in, pull tight on the wrist, fasten the strap, and throw normally.",
-    "u6": "/pages/the-spingrip-effect",
-    "t7": "Read the full guide"
-   }
-  },
-  "kg_02": {
-   "type": "kg-2b4b7be0",
-   "settings": {
-    "t1": "How SpinGrip works",
-    "t2": "SpinGrip's embedded palm-spacer harnesses the physics of an elite release by positioning the ball farther into your fingers, unlocking optimal spin, velocity, and accuracy."
-   },
-   "blocks": {
-    "c1a_1": {
-     "type": "c1a",
-     "settings": {
-      "t2": "kg-product-on-hand.webp",
-      "t3": "Step 1 of 3",
-      "t4": "Slide it on",
-      "t5": "SpinGrip slides onto your throwing hand in seconds. Fasten the strap high and tight on the wrist."
-     }
-    },
-    "c1a_2": {
-     "type": "c1a",
-     "settings": {
-      "t2": "kg-baseball-let-it-fly.webp",
-      "t3": "Step 2 of 3",
-      "t4": "Let it fly",
-      "t5": "The patent-pending design with embedded palm-spacer positions the ball in your fingers for the optimal grip on every throw."
-     }
-    },
-    "c1a_3": {
-     "type": "c1a",
-     "settings": {
-      "t2": "kg-grayson-one-use-full.webp",
-      "t3": "Step 3 of 3",
-      "t4": "Feel the SpinGrip Effect",
-      "t5": "Velocity, spin rate, and accuracy improve right away. Data-proven performance gains."
-     }
-    }
-   },
-   "block_order": [
-    "c1a_1",
-    "c1a_2",
-    "c1a_3"
-   ]
-  },
-  "kg_03": {
-   "type": "kg-aab34eb6",
-   "settings": {
-    "t1": "Customer reviews",
-    "t2": "4.8",
-    "t3": "199 reviews",
-    "t4": "All athletes experience immediate proper grip results. Most see metric gains within 1 week of use."
-   },
-   "blocks": {
-    "c1a_1": {
-     "type": "c1a",
-     "settings": {
-      "t1": "Mar 25, 2026",
-      "t2": "My 9 year old loves it",
-      "t3": "My 9 year old loves it. Haven’t even had it a week and while he was already a solid pitcher in his leagues, I can clearly see added velocity just from using this during throwing.",
-      "t4": "Christopher G.",
-      "t5": "Verified buyer"
-     }
-    },
-    "c1a_2": {
-     "type": "c1a",
-     "settings": {
-      "t1": "Mar 21, 2026",
-      "t2": "Great learning tool",
-      "t3": "Got this for my team. Worked great getting them to understand how to hold the ball. It’s a great tool for kinesthetic learners.",
-      "t4": "Coach N.",
-      "t5": "Verified buyer"
-     }
-    },
-    "c1a_3": {
-     "type": "c1a",
-     "settings": {
-      "t1": "Mar 20, 2026",
-      "t2": "Teaches naturally",
-      "t3": "Teaches naturally without having to think about it and becomes muscle memory after a few uses. Great product!",
-      "t4": "Jeremiah F.",
-      "t5": "Verified buyer"
-     }
-    },
-    "c1a_4": {
-     "type": "c1a",
-     "settings": {
-      "t1": "Mar 19, 2026",
-      "t2": "Amazing product!",
-      "t3": "It works beautifully. I wore it for about 3 innings in the outfield and catching the ball felt so amazing coming off my hand!",
-      "t4": "Gionni H.",
-      "t5": "Verified buyer"
-     }
-    },
-    "c1a_5": {
-     "type": "c1a",
-     "settings": {
-      "t1": "Mar 14, 2026",
-      "t2": "Immediately throwing better",
-      "t3": "My son immediately started throwing better with more spin and accuracy.",
-      "t4": "Jess S.",
-      "t5": "Verified buyer"
-     }
-    },
-    "c1a_6": {
-     "type": "c1a",
-     "settings": {
-      "t1": "Sep 22, 2026",
-      "t2": "Revolutionary",
-      "t3": "Revolutionary piece of baseball equipment! If I could only give it more stars!",
-      "t4": "Dweller Parker",
-      "t5": "Verified buyer"
-     }
-    },
-    "c1a_7": {
-     "type": "c1a",
-     "settings": {
-      "t1": "Sep 9, 2026",
-      "t2": "Bought two",
-      "t3": "I bought SpinGrip Softball for myself and loved it so much I bought one for my grandson for the little league baseball team I coach as well. He loves it too!",
-      "t4": "Chris Picciano",
-      "t5": "Verified buyer"
-     }
-    },
-    "c1a_8": {
-     "type": "c1a",
-     "settings": {
-      "t1": "Aug 20, 2026",
-      "t2": "Easy to explain",
-      "t3": "Great tool for learning, makes it easy to explain to a young player how to position the ball. My son seems to really like it!",
-      "t4": "Jeff Schurman",
-      "t5": "Verified buyer"
-     }
-    },
-    "c1a_9": {
-     "type": "c1a",
-     "settings": {
-      "t1": "Aug 10, 2026",
-      "t2": "Difference in his throws",
-      "t3": "My son loves to practice with this on his hand. He can tell a difference in his throws to second. He wore it during his bullpen and is going to wear it before he pitches tonight.",
-      "t4": "Verified customer",
-      "t5": "Verified buyer"
-     }
-    }
-   },
-   "block_order": [
-    "c1a_1",
-    "c1a_2",
-    "c1a_3",
-    "c1a_4",
-    "c1a_5",
-    "c1a_6",
-    "c1a_7",
-    "c1a_8",
-    "c1a_9"
-   ]
-  },
-  "kg_04": {
-   "type": "kg-b9b2fcf4",
-   "settings": {
-    "t1": "Real ballplayers. Real results.",
-    "t2": "Don’t take our word for it. See what athletes and coaches are saying about SpinGrip."
-   },
-   "blocks": {
-    "c1a_1": {
-     "type": "c1a",
-     "settings": {
-      "t2": "kg-poster-pdp-baseball-b.webp",
-      "t3": "“Grip it like the pros.”",
-      "t4": "SpinGrip Baseball"
-     }
-    },
-    "c1a_2": {
-     "type": "c1a",
-     "settings": {
-      "t2": "kg-poster-pdp-baseball-c.webp",
-      "t3": "“Slide it on. Let it fly.”",
-      "t4": "SpinGrip Baseball"
-     }
-    },
-    "c1a_3": {
-     "type": "c1a",
-     "settings": {
-      "t2": "kg-poster-ugc-2.webp",
-      "t3": "“It’s a simple training tool that leaves a big impact.”",
-      "t4": "Chip"
-     }
-    },
-    "c1b_4": {
-     "type": "c1b",
-     "settings": {
-      "v1": "shopify://files/videos/copy_3C3DF899-FBD7-4310-A09D-5C3643315F1C.MOV",
-      "u2": "https://shop.kittedgear.com/cdn/shop/videos/c/vp/833085947e8d471483e7cd68f101d3d9/833085947e8d471483e7cd68f101d3d9.HD-1080p-4.8Mbps-80246359.mp4",
-      "t4": "kg-poster-ugc-3.webp",
-      "t5": "Tap for sound",
-      "t6": "“This just naturally helped me get that grip every time.”",
-      "t7": "Cody Freeman, Big Leaguer"
-     }
-    },
-    "c1a_5": {
-     "type": "c1a",
-     "settings": {
-      "t2": "kg-poster-ugc-4.webp",
-      "t3": "“I highly approve and recommend the SpinGrip.”",
-      "t4": "Pro Pitching Instructor"
-     }
-    },
-    "c1a_6": {
-     "type": "c1a",
-     "settings": {
-      "t2": "kg-poster-ugc-6.webp",
-      "t3": "“It’s effortless power.”",
-      "t4": "Youth Ballplayers"
-     }
-    },
-    "c1a_7": {
-     "type": "c1a",
-     "settings": {
-      "t2": "kg-poster-ugc-15.webp",
-      "t3": "“It’s forcing me to use my fingertips.”",
-      "t4": "Donte Lewis, D1 Player"
-     }
-    },
-    "c1a_8": {
-     "type": "c1a",
-     "settings": {
-      "t2": "kg-poster-ugc-16.webp",
-      "t3": "“It puts the ball in the right position in my hand.”",
-      "t4": "Will Brennan, Big Leaguer"
-     }
-    },
-    "c1a_9": {
-     "type": "c1a",
-     "settings": {
-      "t2": "kg-poster-ugc-17.webp",
-      "t3": "“There’s no tension. Everything is loose.”",
-      "t4": "Blake Rogers, Pro Player"
-     }
-    },
-    "c1a_10": {
-     "type": "c1a",
-     "settings": {
-      "t2": "kg-poster-ugc-19.webp",
-      "t3": "“I don’t feel like I’m choking the ball.”",
-      "t4": "Youth Player"
-     }
-    }
-   },
-   "block_order": [
-    "c1a_1",
-    "c1a_2",
-    "c1a_3",
-    "c1b_4",
-    "c1a_5",
-    "c1a_6",
-    "c1a_7",
-    "c1a_8",
-    "c1a_9",
-    "c1a_10"
-   ]
-  },
-  "kg_05": {
-   "type": "kg-8c85b1a1",
-   "settings": {
-    "t1": "Frequently asked"
-   },
-   "blocks": {
-    "c1a_1": {
-     "type": "c1a",
-     "settings": {
-      "t1": "How does SpinGrip actually work?",
-      "t2": "SpinGrip is physics. The most optimal way to throw a round object is from the fingers. SpinGrip does this the most optimal way and automatically, without you thinking about anything. Just put on the grip and get to work. SpinGrip's embedded palm-spacer will place the ball where it needs to be in the fingers and do everything for you, so your mind and body can feel what it's like to release the ball the way the best arms on the planet do. It's repeatable and guaranteed to make you more optimal."
-     }
-    },
-    "c1b_2": {
-     "type": "c1b",
-     "settings": {
-      "t1": "Can I use SpinGrip in a game?",
-      "h2": "Yes, you can use SpinGrip in a game. For pitchers the rules are stricter, so speak with your umpire or league coordinator first. We recommend training with SpinGrip on: bullpens, long toss, flat grounds. Work with it on for every pitch from first throw to fully warmed up, then take the grip off at the end of your session and feel the most optimal you've ever felt.<br/><br/>We have both position players and pitchers using SpinGrip in-game. Every time you throw, warm up, long toss, train defensively or do drill work, you can wear it. It implements the automatic optimal release consistently every time.<br/><br/>We are running active health studies suggesting SpinGrip may alleviate arm stress, which may allow it to be worn in more games in the future. We'll update customers as we learn more."
-     }
-    },
-    "c1b_3": {
-     "type": "c1b",
-     "settings": {
-      "t1": "How do I wear it?",
-      "h2": "Put your throwing hand's index finger and thumb in an “L” shape, slide the index finger into the top hole and the thumb into the side hole, pull tight on the wrist, and fasten the velcro.<br/><br/>Grab a ball and throw normally.<br/><br/>We recommend wearing the grip from the very first throw and working all the way up to full speed with it on. When you're good and warm, take it off and keep letting it fly. You'll feel a fifth gear every time."
-     }
-    },
-    "c1a_4": {
-     "type": "c1a",
-     "settings": {
-      "t1": "What ages/sizes is SpinGrip available in?",
-      "t2": "SpinGrip comes in three sizes: Youth (Ages 6-9), Small/Medium (Ages 10-14), and Large/XLarge (Ages 15+). It fits throwing hands of all sizes within these ranges."
-     }
-    },
-    "c1a_5": {
-     "type": "c1a",
-     "settings": {
-      "t1": "Is the data real? How were results measured?",
-      "t2": "Absolutely. Results were measured using Trackman technology."
-     }
-    },
-    "c1a_6": {
-     "type": "c1a",
-     "settings": {
-      "t1": "When will I start seeing results?",
-      "t2": "It's common for players to see results immediately. If SpinGrip feels uncomfortable or “not working” at first, that is a clear sign you have been choking the ball and should keep using it to recalibrate your mechanics."
-     }
-    },
-    "c1a_7": {
-     "type": "c1a",
-     "settings": {
-      "t1": "Do results last?",
-      "t2": "Yes. Because SpinGrip trains the feel of the optimal release, data shows throwing metrics increase with the glove on and continue to improve after taking it off. It imparts a consistent feel of the fingertip release that athletes can own and reproduce as they grow and train."
-     }
-    },
-    "c1a_8": {
-     "type": "c1a",
-     "settings": {
-      "t1": "How long does shipping take?",
-      "t2": "Orders ship within 1–2 business days. Standard delivery is 3–7 business days."
-     }
-    }
-   },
-   "block_order": [
-    "c1a_1",
-    "c1b_2",
-    "c1b_3",
-    "c1a_4",
-    "c1a_5",
-    "c1a_6",
-    "c1a_7",
-    "c1a_8"
-   ]
-  },
-  "kg_06": {
-   "type": "kg-035962fe",
-   "settings": {
-    "t1": "Team up and save",
-    "t2": "SpinGrip Packs. Any glove, any size, either hand. The discount applies automatically.",
-    "i3": "2-Pack <strong>save 10%</strong>",
-    "i4": "5-Pack <strong>save 15%</strong>",
-    "i5": "10-Pack <strong>save 20%</strong>",
-    "u6": "/pages/packs",
-    "t7": "Build your pack"
-   }
-  }
- },
- "order": [
-  "kg_00",
-  "kg_01",
-  "kg_02",
-  "kg_03",
-  "kg_04",
-  "kg_05",
-  "kg_06"
- ]
+  "order": [
+    "kg_00",
+    "kg_01",
+    "kg_02",
+    "kg_03",
+    "kg_04",
+    "kg_05",
+    "kg_06"
+  ]
 }
