@@ -39,42 +39,248 @@
 
 {% schema %}
 {
-  "name": "KITTED product buy box",
-  "tag": "div",
-  "class": "kg-section",
-  "settings": [
-    { "type": "product", "id": "product", "label": "Product", "info": "Leave empty on product pages to use the page's product." },
-    { "type": "product", "id": "alt_product", "label": "Alternate product (optional)", "info": "Adds a toggle, e.g. Position player / Pitcher." },
-    { "type": "text", "id": "switch_label", "label": "Toggle label", "default": "Glove type" },
-    { "type": "text", "id": "label_a", "label": "Toggle option 1", "default": "Position player" },
-    { "type": "text", "id": "label_b", "label": "Toggle option 2", "default": "Pitcher" },
-    { "type": "checkbox", "id": "show_crumbs", "label": "Show breadcrumbs", "default": true },
-    { "type": "checkbox", "id": "as_section", "label": "Section spacing", "default": false },
-    { "type": "text", "id": "anchor", "label": "Anchor id", "info": "e.g. buy, so buttons can link to #buy" },
-    { "type": "text", "id": "kicker", "label": "Small heading above" },
-    { "type": "text", "id": "heading", "label": "Section heading" },
-    { "type": "select", "id": "title_tag", "label": "Product title tag", "default": "h1", "options": [{ "value": "h1", "label": "H1 (product pages)" }, { "value": "h2", "label": "H2 (landing pages)" }] },
-    { "type": "text", "id": "banner", "label": "Banner", "default": "Guaranteed to increase velo, spin and accuracy" },
-    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Baseball" },
-    { "type": "text", "id": "rating_text", "label": "Rating text", "default": "4.8 · 199 reviews" },
-    { "type": "text", "id": "value_tag", "label": "Value tag" },
-    { "type": "text", "id": "lede", "label": "Intro line" },
-    { "type": "checkbox", "id": "digital", "label": "Digital product (no quantity, 'Get instant access')", "default": false },
-    { "type": "text", "id": "results_heading", "label": "Results heading", "default": "Results we see after using SpinGrip" },
-    { "type": "text", "id": "inside_heading", "label": "What's inside heading", "default": "What’s inside" },
-    { "type": "select", "id": "seal", "label": "Patent seal", "default": "red", "options": [{ "value": "none", "label": "None" }, { "value": "red", "label": "Red (baseball)" }, { "value": "yellow", "label": "Yellow (softball)" }, { "value": "pink", "label": "Pink (pitcher)" }, { "value": "green", "label": "Green (football)" }] },
-    { "type": "checkbox", "id": "show_used_by", "label": "Show 'Used by' logos", "default": true },
-    { "type": "checkbox", "id": "show_trust", "label": "Show trust icons", "default": true },
-    { "type": "checkbox", "id": "show_pack_callout", "label": "Show pack callout", "default": true },
-    { "type": "url", "id": "pack_link", "label": "Pack builder link" },
-    { "type": "checkbox", "id": "show_description", "label": "Show product description", "default": true },
-    { "type": "text", "id": "description_label", "label": "Description label", "default": "Description" }
-  ],
-  "blocks": [
-    { "type": "result", "name": "Result row", "settings": [ { "type": "text", "id": "label", "label": "Label", "default": "MPH velocity" }, { "type": "text", "id": "value", "label": "Value", "default": "Up to +7" } ] },
-    { "type": "inside", "name": "What's inside item", "settings": [ { "type": "text", "id": "text", "label": "Text", "default": "Instant digital access, start today" } ] },
-    { "type": "accordion", "name": "Accordion", "settings": [ { "type": "text", "id": "title", "label": "Title", "default": "Shipping & returns" }, { "type": "richtext", "id": "content", "label": "Content", "default": "<p>Orders ship within 1–2 business days.</p>" } ] }
-  ],
-  "presets": [{ "name": "KITTED product buy box" }]
+ "name": "KITTED product buy box",
+ "tag": "div",
+ "class": "kg-section",
+ "settings": [
+  {
+   "type": "product",
+   "id": "product",
+   "label": "Product",
+   "info": "Leave empty on product pages to use the page's product."
+  },
+  {
+   "type": "product",
+   "id": "alt_product",
+   "label": "Alternate product (optional)",
+   "info": "Adds a toggle, e.g. Position player / Pitcher."
+  },
+  {
+   "type": "text",
+   "id": "switch_label",
+   "label": "Toggle label",
+   "default": "Glove type"
+  },
+  {
+   "type": "text",
+   "id": "label_a",
+   "label": "Toggle option 1",
+   "default": "Position player"
+  },
+  {
+   "type": "text",
+   "id": "label_b",
+   "label": "Toggle option 2",
+   "default": "Pitcher"
+  },
+  {
+   "type": "checkbox",
+   "id": "show_crumbs",
+   "label": "Show breadcrumbs",
+   "default": true
+  },
+  {
+   "type": "checkbox",
+   "id": "as_section",
+   "label": "Section spacing",
+   "default": false
+  },
+  {
+   "type": "text",
+   "id": "anchor",
+   "label": "Anchor id",
+   "info": "e.g. buy, so buttons can link to #buy"
+  },
+  {
+   "type": "text",
+   "id": "kicker",
+   "label": "Small heading above"
+  },
+  {
+   "type": "text",
+   "id": "heading",
+   "label": "Section heading"
+  },
+  {
+   "type": "select",
+   "id": "title_tag",
+   "label": "Product title tag",
+   "default": "h1",
+   "options": [
+    {
+     "value": "h1",
+     "label": "H1 (product pages)"
+    },
+    {
+     "value": "h2",
+     "label": "H2 (landing pages)"
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "id": "banner",
+   "label": "Banner",
+   "default": "Guaranteed to increase velo, spin and accuracy"
+  },
+  {
+   "type": "text",
+   "id": "eyebrow",
+   "label": "Eyebrow",
+   "default": "Baseball"
+  },
+  {
+   "type": "text",
+   "id": "rating_text",
+   "label": "Rating text",
+   "default": "4.8 \u00b7 199 reviews"
+  },
+  {
+   "type": "text",
+   "id": "value_tag",
+   "label": "Value tag"
+  },
+  {
+   "type": "text",
+   "id": "lede",
+   "label": "Intro line"
+  },
+  {
+   "type": "checkbox",
+   "id": "digital",
+   "label": "Digital product (no quantity, 'Get insta",
+   "default": false
+  },
+  {
+   "type": "text",
+   "id": "results_heading",
+   "label": "Results heading",
+   "default": "Results we see after using SpinGrip"
+  },
+  {
+   "type": "text",
+   "id": "inside_heading",
+   "label": "What's inside heading",
+   "default": "What\u2019s inside"
+  },
+  {
+   "type": "select",
+   "id": "seal",
+   "label": "Patent seal",
+   "default": "red",
+   "options": [
+    {
+     "value": "none",
+     "label": "None"
+    },
+    {
+     "value": "red",
+     "label": "Red (baseball)"
+    },
+    {
+     "value": "yellow",
+     "label": "Yellow (softball)"
+    },
+    {
+     "value": "pink",
+     "label": "Pink (pitcher)"
+    },
+    {
+     "value": "green",
+     "label": "Green (football)"
+    }
+   ]
+  },
+  {
+   "type": "checkbox",
+   "id": "show_used_by",
+   "label": "Show 'Used by' logos",
+   "default": true
+  },
+  {
+   "type": "checkbox",
+   "id": "show_trust",
+   "label": "Show trust icons",
+   "default": true
+  },
+  {
+   "type": "checkbox",
+   "id": "show_pack_callout",
+   "label": "Show pack callout",
+   "default": true
+  },
+  {
+   "type": "url",
+   "id": "pack_link",
+   "label": "Pack builder link"
+  },
+  {
+   "type": "checkbox",
+   "id": "show_description",
+   "label": "Show product description",
+   "default": true
+  },
+  {
+   "type": "text",
+   "id": "description_label",
+   "label": "Description label",
+   "default": "Description"
+  }
+ ],
+ "blocks": [
+  {
+   "type": "result",
+   "name": "Result row",
+   "settings": [
+    {
+     "type": "text",
+     "id": "label",
+     "label": "Label",
+     "default": "MPH velocity"
+    },
+    {
+     "type": "text",
+     "id": "value",
+     "label": "Value",
+     "default": "Up to +7"
+    }
+   ]
+  },
+  {
+   "type": "inside",
+   "name": "What's inside item",
+   "settings": [
+    {
+     "type": "text",
+     "id": "text",
+     "label": "Text",
+     "default": "Instant digital access, start today"
+    }
+   ]
+  },
+  {
+   "type": "accordion",
+   "name": "Accordion",
+   "settings": [
+    {
+     "type": "text",
+     "id": "title",
+     "label": "Title",
+     "default": "Shipping & returns"
+    },
+    {
+     "type": "richtext",
+     "id": "content",
+     "label": "Content",
+     "default": "<p>Orders ship within 1\u20132 business days.</p>"
+    }
+   ]
+  }
+ ],
+ "presets": [
+  {
+   "name": "KITTED product buy box"
+  }
+ ]
 }
 {% endschema %}

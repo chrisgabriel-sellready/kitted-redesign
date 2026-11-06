@@ -144,3 +144,6 @@ html.kg-lock { overflow: hidden; }
 .kg .primary-nav{display: none;}
 }@media (max-width: 640px){.kg .mega{display: none;}
 }
+/* header cart icon: same size as the search icon */
+.kg .kg-cart .svg-wrapper { display: grid; place-items: center; width: 22px; height: 22px; }
+.kg .kg-cart .svg-wrapper svg { width: 22px !important; height: 22px !important; }
