@@ -1,0 +1,52 @@
+<div class="kg">
+<section class="section band--ink">
+<div class="wrap">
+<div class="section-head section-head--row"><div><h2 class="h-section">{{ section.settings.t1 }}</h2></div><div class="carousel__nav"><button aria-label="Previous" class="carousel__btn" data-car="car-quotes" data-dir="-1" type="button"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"></path></svg></button><button aria-label="Next" class="carousel__btn" data-car="car-quotes" data-dir="1" type="button"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></button></div></div>
+<div class="carousel carousel--3 carousel--wide" id="car-quotes"><div class="carousel__track">{%- for block in section.blocks -%}{%- case block.type -%}{%- when "c1a" -%}<figure {{ block.shopify_attributes }} class="quote-img" style="margin:0">{%- assign kg_alt = block.settings.t3 | escape -%}{%- if block.settings.i1 != blank -%}{{ block.settings.i1 | image_url: width: 1800 | image_tag: alt: kg_alt, loading: "lazy" }}{%- else -%}<img src="{{ block.settings.t2 | asset_url }}" alt="{{ block.settings.t3 | escape }}" width="1600" height="1279" loading="lazy">{%- endif -%}</figure>{%- endcase -%}{%- endfor -%}</div></div>
+</div>
+</section>
+</div>
+
+{% schema %}
+{
+ "name": "KITTED: What the pros say",
+ "tag": "div",
+ "class": "kg-section",
+ "settings": [
+  {
+   "type": "text",
+   "id": "t1",
+   "label": "Heading: What the pros say",
+   "default": "What the pros say"
+  }
+ ],
+ "blocks": [
+  {
+   "type": "c1a",
+   "name": "Image",
+   "settings": [
+    {
+     "type": "image_picker",
+     "id": "i1",
+     "label": "Image"
+    },
+    {
+     "type": "text",
+     "id": "t2",
+     "label": "Built-in image (used when no image is picked)"
+    },
+    {
+     "type": "text",
+     "id": "t3",
+     "label": "Image alt text"
+    }
+   ]
+  }
+ ],
+ "presets": [
+  {
+   "name": "KITTED: What the pros say"
+  }
+ ]
+}
+{% endschema %}

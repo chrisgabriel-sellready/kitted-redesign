@@ -1,0 +1,189 @@
+<div class="kg">
+<section aria-label="Featured SpinGrip gloves" aria-roledescription="carousel" class="hero"><div class="hero__slides"><div aria-label="1 of 3" aria-roledescription="slide" class="hero__slide is-on">
+<picture><source media="(max-width: 640px)" srcset="{{ 'kg-baseball-hero-mobile-v3.webp' | asset_url }}"/>{%- if section.settings.i1 != blank -%}{{ section.settings.i1 | image_url: width: 1800 | image_tag: alt: "" }}{%- else -%}<img src="{{ section.settings.t2 | asset_url }}" alt="" width="1920" height="1080" fetchpriority="high">{%- endif -%}</picture>
+<p class="hero__credit hero__credit--l">{{ section.settings.h3 }}</p><p class="hero__credit hero__credit--r">{{ section.settings.h4 }}</p>
+<div class="hero__content"><div class="wrap">
+<p class="eyebrow">{{ section.settings.t5 }}</p>
+<h1 class="display hero__title">{{ section.settings.t6 }}</h1>
+<p class="hero__body">{{ section.settings.t7 }}</p>
+<a class="btn btn--light" href="{{ section.settings.u8 }}">{{ section.settings.t9 }}<svg aria-hidden="true" class="arrow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div></div>
+</div><div aria-label="2 of 3" aria-roledescription="slide" class="hero__slide">
+<picture><source media="(max-width: 640px)" srcset="{{ 'kg-softball-hero-mobile.webp' | asset_url }}"/>{%- if section.settings.i10 != blank -%}{{ section.settings.i10 | image_url: width: 1800 | image_tag: alt: "", loading: "lazy" }}{%- else -%}<img src="{{ section.settings.t11 | asset_url }}" alt="" width="1920" height="1080" loading="lazy">{%- endif -%}</picture>
+<p class="hero__credit hero__credit--l">{{ section.settings.h12 }}</p>
+<div class="hero__content"><div class="wrap">
+<p class="eyebrow">{{ section.settings.t13 }}</p>
+<h2 class="display hero__title">{{ section.settings.t14 }}</h2>
+<p class="hero__body">{{ section.settings.t15 }}</p>
+<a class="btn btn--light" href="{{ section.settings.u16 }}">{{ section.settings.t17 }}<svg aria-hidden="true" class="arrow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div></div>
+</div><div aria-label="3 of 3" aria-roledescription="slide" class="hero__slide">
+<picture><source media="(max-width: 640px)" srcset="{{ 'kg-pop-hero-mobile-v2.webp' | asset_url }}"/>{%- if section.settings.i18 != blank -%}{{ section.settings.i18 | image_url: width: 1800 | image_tag: alt: "", loading: "lazy" }}{%- else -%}<img src="{{ section.settings.t19 | asset_url }}" alt="" width="1920" height="1080" loading="lazy">{%- endif -%}</picture>
+<p class="hero__credit hero__credit--l">{{ section.settings.h20 }}</p>
+<div class="hero__content"><div class="wrap">
+<p class="eyebrow">{{ section.settings.t21 }}</p>
+<h2 class="display hero__title">{{ section.settings.t22 }}</h2>
+<p class="hero__body">{{ section.settings.t23 }}</p>
+<a class="btn btn--light" href="{{ section.settings.u24 }}">{{ section.settings.t25 }}<svg aria-hidden="true" class="arrow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div></div>
+</div></div><div class="hero__dots"><button aria-current="true" aria-label="Show baseball slide" class="hero__dot" type="button"></button><button aria-current="false" aria-label="Show softball slide" class="hero__dot" type="button"></button><button aria-current="false" aria-label="Show football slide" class="hero__dot" type="button"></button><button aria-label="Pause slideshow" class="hero__pause" type="button"></button></div></section>
+</div>
+
+{% schema %}
+{
+ "name": "KITTED: Own the Diamond",
+ "tag": "div",
+ "class": "kg-section",
+ "settings": [
+  {
+   "type": "image_picker",
+   "id": "i1",
+   "label": "Image"
+  },
+  {
+   "type": "text",
+   "id": "t2",
+   "label": "Built-in image (used when no image is picked)",
+   "default": "kg-baseball-hero-desktop-v3.webp"
+  },
+  {
+   "type": "html",
+   "id": "h3",
+   "label": "Name: Dylan Cheek Arkansas Com…",
+   "default": "Dylan Cheek<br/>Arkansas Commit"
+  },
+  {
+   "type": "html",
+   "id": "h4",
+   "label": "Name: Dax Price 2029 Top Texas…",
+   "default": "Dax Price<br/>2029 Top Texas Prospect"
+  },
+  {
+   "type": "text",
+   "id": "t5",
+   "label": "Eyebrow: Introducing the KITTED S…",
+   "default": "Introducing the KITTED SpinGrip Baseball"
+  },
+  {
+   "type": "text",
+   "id": "t6",
+   "label": "Heading: Own the Diamond",
+   "default": "Own the Diamond"
+  },
+  {
+   "type": "text",
+   "id": "t7",
+   "label": "Text: Proven to increase veloc…",
+   "default": "Proven to increase velocity, spin rate, and accuracy."
+  },
+  {
+   "type": "url",
+   "id": "u8",
+   "label": "Button link"
+  },
+  {
+   "type": "text",
+   "id": "t9",
+   "label": "Link text: Shop Baseball",
+   "default": "Shop Baseball"
+  },
+  {
+   "type": "image_picker",
+   "id": "i10",
+   "label": "Image"
+  },
+  {
+   "type": "text",
+   "id": "t11",
+   "label": "Built-in image (used when no image is picked)",
+   "default": "kg-softball-hero-desktop.webp"
+  },
+  {
+   "type": "html",
+   "id": "h12",
+   "label": "Name: 18U Team Mercado Texas S…",
+   "default": "18U Team Mercado<br/>Texas Select"
+  },
+  {
+   "type": "text",
+   "id": "t13",
+   "label": "Eyebrow: Introducing the KITTED S…",
+   "default": "Introducing the KITTED SpinGrip Softball"
+  },
+  {
+   "type": "text",
+   "id": "t14",
+   "label": "Heading: The Time is Now",
+   "default": "The Time is Now"
+  },
+  {
+   "type": "text",
+   "id": "t15",
+   "label": "Text: Tighter spins, stronger …",
+   "default": "Tighter spins, stronger throws."
+  },
+  {
+   "type": "url",
+   "id": "u16",
+   "label": "Button link"
+  },
+  {
+   "type": "text",
+   "id": "t17",
+   "label": "Link text: Shop Softball",
+   "default": "Shop Softball"
+  },
+  {
+   "type": "image_picker",
+   "id": "i18",
+   "label": "Image"
+  },
+  {
+   "type": "text",
+   "id": "t19",
+   "label": "Built-in image (used when no image is picked)",
+   "default": "kg-pop-hero-desktop.webp"
+  },
+  {
+   "type": "html",
+   "id": "h20",
+   "label": "Name: Peyton “Pop” Houston Eli…",
+   "default": "Peyton “Pop” Houston<br/>Elite 11 Champ"
+  },
+  {
+   "type": "text",
+   "id": "t21",
+   "label": "Eyebrow: Introducing the KITTED S…",
+   "default": "Introducing the KITTED SpinGrip Football"
+  },
+  {
+   "type": "text",
+   "id": "t22",
+   "label": "Heading: Calling All QB1s",
+   "default": "Calling All QB1s"
+  },
+  {
+   "type": "text",
+   "id": "t23",
+   "label": "Text: The first and only QB th…",
+   "default": "The first and only QB throwing glove built to enhance spirals, velocity and accuracy."
+  },
+  {
+   "type": "url",
+   "id": "u24",
+   "label": "Button link"
+  },
+  {
+   "type": "text",
+   "id": "t25",
+   "label": "Link text: Shop Football",
+   "default": "Shop Football"
+  }
+ ],
+ "presets": [
+  {
+   "name": "KITTED: Own the Diamond"
+  }
+ ]
+}
+{% endschema %}

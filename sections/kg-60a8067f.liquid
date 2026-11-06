@@ -1,0 +1,97 @@
+<div class="kg">
+<section class="band--ink" style="padding-top:clamp(56px,7vw,96px)">
+<div class="wrap play">
+<div class="play__text">
+<p class="eyebrow" style="color:var(--gold)">{{ section.settings.t1 }}</p>
+<h2 class="display" style="font-size:clamp(52px,6.6vw,96px)">{{ section.settings.t2 }}</h2>
+<div class="stats" style="--cols:3;width:100%">{%- for block in section.blocks -%}{%- case block.type -%}{%- when "c1a" -%}<div {{ block.shopify_attributes }} class="stat"><span class="stat__num">{{ block.settings.t1 }}</span><span class="stat__label">{{ block.settings.t2 }}</span></div>{%- endcase -%}{%- endfor -%}</div>
+<div class="btn-row"><a class="btn btn--light" href="{{ section.settings.u3 }}">{{ section.settings.t4 }}<svg aria-hidden="true" class="arrow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>
+<p class="play__credit">{{ section.settings.t5 }}</p>
+</div>
+<div class="play__media">{%- for block in section.blocks -%}{%- case block.type -%}{%- when "c2a" -%}{%- assign kg_alt = block.settings.t3 | escape -%}{%- if block.settings.i1 != blank -%}{{ block.settings.i1 | image_url: width: 1800 | image_tag: alt: kg_alt, loading: "lazy" }}{%- else -%}<img src="{{ block.settings.t2 | asset_url }}" alt="{{ block.settings.t3 | escape }}" width="829" height="1089" loading="lazy">{%- endif -%}{%- endcase -%}{%- endfor -%}</div>
+</div>
+</section>
+</div>
+
+{% schema %}
+{
+ "name": "KITTED: There's never bee",
+ "tag": "div",
+ "class": "kg-section",
+ "settings": [
+  {
+   "type": "text",
+   "id": "t1",
+   "label": "Eyebrow: Make a play",
+   "default": "Make a play"
+  },
+  {
+   "type": "text",
+   "id": "t2",
+   "label": "Heading: There's never been a thr…",
+   "default": "There's never been a throwing tool like it."
+  },
+  {
+   "type": "url",
+   "id": "u3",
+   "label": "Button link"
+  },
+  {
+   "type": "text",
+   "id": "t4",
+   "label": "Link text: Shop SpinGrip",
+   "default": "Shop SpinGrip"
+  },
+  {
+   "type": "text",
+   "id": "t5",
+   "label": "Name: BJ Brannon · USC commit",
+   "default": "BJ Brannon · USC commit"
+  }
+ ],
+ "blocks": [
+  {
+   "type": "c1a",
+   "name": "Stat",
+   "settings": [
+    {
+     "type": "text",
+     "id": "t1",
+     "label": "Text: +7"
+    },
+    {
+     "type": "text",
+     "id": "t2",
+     "label": "Text: MPH"
+    }
+   ]
+  },
+  {
+   "type": "c2a",
+   "name": "Logo",
+   "settings": [
+    {
+     "type": "image_picker",
+     "id": "i1",
+     "label": "Image"
+    },
+    {
+     "type": "text",
+     "id": "t2",
+     "label": "Built-in image (used when no image is picked)"
+    },
+    {
+     "type": "text",
+     "id": "t3",
+     "label": "Image alt text"
+    }
+   ]
+  }
+ ],
+ "presets": [
+  {
+   "name": "KITTED: There's never bee"
+  }
+ ]
+}
+{% endschema %}

@@ -1,0 +1,64 @@
+<div class="kg">
+<section class="section band--stone">
+<div class="wrap center">
+<div class="section-head center"><h2 class="h-spaced h-spaced--rule">{{ section.settings.t1 }}</h2><p class="lede muted">{{ section.settings.t2 }}</p></div>
+<figure class="frame frame--ink" style="margin:0">{%- assign kg_alt = section.settings.t5 | escape -%}{%- if section.settings.i3 != blank -%}{{ section.settings.i3 | image_url: width: 1800 | image_tag: alt: kg_alt, loading: "lazy" }}{%- else -%}<img src="{{ section.settings.t4 | asset_url }}" alt="{{ section.settings.t5 | escape }}" width="1600" height="1067" loading="lazy">{%- endif -%}</figure>
+<div class="btn-row" style="margin-top:28px"><a class="btn" href="{{ section.settings.u6 }}">{{ section.settings.t7 }}<svg aria-hidden="true" class="arrow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>
+</div>
+</section>
+</div>
+
+{% schema %}
+{
+ "name": "KITTED: The SpinGrip E 2",
+ "tag": "div",
+ "class": "kg-section",
+ "settings": [
+  {
+   "type": "text",
+   "id": "t1",
+   "label": "Heading: The SpinGrip Effect",
+   "default": "The SpinGrip Effect"
+  },
+  {
+   "type": "textarea",
+   "id": "t2",
+   "label": "Text: The first-ever throwing …",
+   "default": "The first-ever throwing glove. A patent-pending embedded palm-spacer moves the ball out to your fingertips, where velocity, spin and accuracy are decided."
+  },
+  {
+   "type": "image_picker",
+   "id": "i3",
+   "label": "Image"
+  },
+  {
+   "type": "text",
+   "id": "t4",
+   "label": "Built-in image (used when no image is picked)",
+   "default": "kg-spingrip-engineering.webp"
+  },
+  {
+   "type": "text",
+   "id": "t5",
+   "label": "Image alt text",
+   "default": "SpinGrip engineering: index finger opening, ergonomic coding for real-game feel, TPU grip print, thumb opening, 4-way stretch ultra-light neoprene body, patent-pending palm-spacer and flex-soft comfort strap"
+  },
+  {
+   "type": "url",
+   "id": "u6",
+   "label": "Button link"
+  },
+  {
+   "type": "text",
+   "id": "t7",
+   "label": "Link text: Read the guide",
+   "default": "Read the guide"
+  }
+ ],
+ "presets": [
+  {
+   "name": "KITTED: The SpinGrip E 2"
+  }
+ ]
+}
+{% endschema %}

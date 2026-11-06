@@ -1,0 +1,67 @@
+<div class="kg">
+<section class="section band--stone">
+<div class="wrap split split--media-first">
+<div class="split__media" style=""><div style="max-width:380px;margin-inline:auto"><figure class="vcard" style="margin:0">
+<div class="vcard__frame">
+{%- if section.settings.i1 != blank -%}{{ section.settings.i1 | image_url: width: 1800 | image_tag: alt: "", loading: "lazy", style: "position:absolute;inset:0;width:100%;height:100%;object-fit:cover" }}{%- else -%}<img src="{{ section.settings.t2 | asset_url }}" width="720" height="1280" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">{%- endif -%}
+</div>
+</figure></div></div>
+<div class="split__text">
+<p class="eyebrow">{{ section.settings.t3 }}</p>
+<h2 class="h-section">{{ section.settings.t4 }}</h2>
+<p class="lede">{{ section.settings.t5 }}</p>
+<div class="btn-row"><a class="btn" href="#main">{{ section.settings.t6 }}<svg aria-hidden="true" class="arrow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>
+</div>
+</div>
+</section>
+</div>
+
+{% schema %}
+{
+ "name": "KITTED: See the formul 2",
+ "tag": "div",
+ "class": "kg-section",
+ "settings": [
+  {
+   "type": "image_picker",
+   "id": "i1",
+   "label": "Image"
+  },
+  {
+   "type": "text",
+   "id": "t2",
+   "label": "Built-in image (used when no image is picked)",
+   "default": "kg-poster-formula-baseball.webp"
+  },
+  {
+   "type": "text",
+   "id": "t3",
+   "label": "Eyebrow: Program preview",
+   "default": "Program preview"
+  },
+  {
+   "type": "text",
+   "id": "t4",
+   "label": "Heading: See the formula in actio…",
+   "default": "See the formula in action"
+  },
+  {
+   "type": "text",
+   "id": "t5",
+   "label": "Text: Work 1-on-1 with a forme…",
+   "default": "Work 1-on-1 with a former MLB athlete to guarantee results from your SpinGrip."
+  },
+  {
+   "type": "text",
+   "id": "t6",
+   "label": "Link text: Get instant access",
+   "default": "Get instant access"
+  }
+ ],
+ "presets": [
+  {
+   "name": "KITTED: See the formul 2"
+  }
+ ]
+}
+{% endschema %}

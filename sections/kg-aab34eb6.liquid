@@ -1,0 +1,80 @@
+<div class="kg">
+<div id="reviews" style="scroll-margin-top:calc(var(--header-h) + 12px)"><section class="section band--stone">
+<div class="wrap">
+<div class="section-head section-head--row"><div><h2 class="h-section">{{ section.settings.t1 }}</h2><div class="review-summary"><span class="review-summary__score">{{ section.settings.t2 }}</span><div class="stack" style="gap:4px"><span aria-label="5 out of 5 stars" class="stars"><svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"></path></svg><svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"></path></svg><svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"></path></svg><svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"></path></svg><svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"></path></svg></span><span class="muted" style="font-size:13px">{{ section.settings.t3 }}</span></div></div><p class="lede muted">{{ section.settings.t4 }}</p></div><div class="carousel__nav"><button aria-label="Previous" class="carousel__btn" data-car="car-reviews" data-dir="-1" type="button"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"></path></svg></button><button aria-label="Next" class="carousel__btn" data-car="car-reviews" data-dir="1" type="button"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></button></div></div>
+<div class="carousel carousel--4" id="car-reviews"><div class="carousel__track">{%- for block in section.blocks -%}{%- case block.type -%}{%- when "c1a" -%}<article {{ block.shopify_attributes }} class="review"><div class="review__top"><span aria-label="5 out of 5 stars" class="stars"><svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"></path></svg><svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"></path></svg><svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"></path></svg><svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"></path></svg><svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"></path></svg></span><span>{{ block.settings.t1 }}</span></div><p class="review__title">{{ block.settings.t2 }}</p><p class="review__body">{{ block.settings.t3 }}</p><div class="review__who">{{ block.settings.t4 }} <span class="verified"><svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l2.4 1.8 3-.2.9 2.9 2.5 1.7-1 2.8 1 2.8-2.5 1.7-.9 2.9-3-.2L12 22l-2.4-1.8-3 .2-.9-2.9-2.5-1.7 1-2.8-1-2.8 2.5-1.7.9-2.9 3 .2z"></path><path d="M8.5 12.3l2.3 2.2 4.7-4.8" fill="none" stroke="#fff" stroke-width="1.8"></path></svg>{{ block.settings.t5 }}</span></div></article>{%- endcase -%}{%- endfor -%}</div></div>
+</div>
+</section></div>
+</div>
+
+{% schema %}
+{
+ "name": "KITTED: Customer reviews",
+ "tag": "div",
+ "class": "kg-section",
+ "settings": [
+  {
+   "type": "text",
+   "id": "t1",
+   "label": "Heading: Customer reviews",
+   "default": "Customer reviews"
+  },
+  {
+   "type": "text",
+   "id": "t2",
+   "label": "Text: 4.8",
+   "default": "4.8"
+  },
+  {
+   "type": "text",
+   "id": "t3",
+   "label": "Text: 199 reviews",
+   "default": "199 reviews"
+  },
+  {
+   "type": "text",
+   "id": "t4",
+   "label": "Text: All athletes experience …",
+   "default": "All athletes experience immediate proper grip results. Most see metric gains within 1 week of use."
+  }
+ ],
+ "blocks": [
+  {
+   "type": "c1a",
+   "name": "Review",
+   "settings": [
+    {
+     "type": "text",
+     "id": "t1",
+     "label": "Text: Mar 25, 2026"
+    },
+    {
+     "type": "text",
+     "id": "t2",
+     "label": "Text: My 9 year old loves it"
+    },
+    {
+     "type": "textarea",
+     "id": "t3",
+     "label": "Text: My 9 year old loves it. …"
+    },
+    {
+     "type": "text",
+     "id": "t4",
+     "label": "Name: Christopher G."
+    },
+    {
+     "type": "text",
+     "id": "t5",
+     "label": "Text: Verified buyer"
+    }
+   ]
+  }
+ ],
+ "presets": [
+  {
+   "name": "KITTED: Customer reviews"
+  }
+ ]
+}
+{% endschema %}

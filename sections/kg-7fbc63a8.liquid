@@ -1,0 +1,119 @@
+<div class="kg">
+<section class="section">
+<div class="wrap">
+<div class="section-head"><h2 class="h-section">{{ section.settings.t1 }}</h2><p class="lede muted">{{ section.settings.t2 }}</p></div>
+<div class="compare">{%- for block in section.blocks -%}{%- case block.type -%}{%- when "c1a" -%}<div {{ block.shopify_attributes }} class="compare__col"><p class="eyebrow muted">{{ block.settings.t1 }}</p><h3>{{ block.settings.t2 }}</h3><ul><li><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"></path></svg><span>{{ block.settings.t3 }}</span></li><li><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"></path></svg><span>{{ block.settings.t4 }}</span></li><li><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"></path></svg><span>{{ block.settings.t5 }}</span></li><li><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"></path></svg><span>{{ block.settings.t6 }}</span></li><li><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"></path></svg><span>{{ block.settings.t7 }}</span></li></ul></div>{%- when "c1b" -%}<div {{ block.shopify_attributes }} class="compare__col"><p class="eyebrow" style="color:var(--gold)">{{ block.settings.t1 }}</p><h3>{{ block.settings.t2 }}</h3><ul><li><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"></path></svg><span>{{ block.settings.t3 }}</span></li><li><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"></path></svg><span>{{ block.settings.t4 }}</span></li><li><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"></path></svg><span>{{ block.settings.t5 }}</span></li><li><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"></path></svg><span>{{ block.settings.t6 }}</span></li><li><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"></path></svg><span>{{ block.settings.t7 }}</span></li></ul></div>{%- endcase -%}{%- endfor -%}</div>
+</div>
+</section>
+</div>
+
+{% schema %}
+{
+ "name": "KITTED: The difference",
+ "tag": "div",
+ "class": "kg-section",
+ "settings": [
+  {
+   "type": "text",
+   "id": "t1",
+   "label": "Heading: The difference",
+   "default": "The difference"
+  },
+  {
+   "type": "text",
+   "id": "t2",
+   "label": "Text: The problem with traditi…",
+   "default": "The problem with traditional throwing, and the fix."
+  }
+ ],
+ "blocks": [
+  {
+   "type": "c1a",
+   "name": "Item",
+   "settings": [
+    {
+     "type": "text",
+     "id": "t1",
+     "label": "Eyebrow: Without SpinGrip"
+    },
+    {
+     "type": "text",
+     "id": "t2",
+     "label": "Heading: The problem"
+    },
+    {
+     "type": "text",
+     "id": "t3",
+     "label": "Text: Palming the football"
+    },
+    {
+     "type": "text",
+     "id": "t4",
+     "label": "Text: Inconsistent spirals"
+    },
+    {
+     "type": "text",
+     "id": "t5",
+     "label": "Text: Lower confidence in thro…"
+    },
+    {
+     "type": "text",
+     "id": "t6",
+     "label": "Text: Sloppy release & mechani…"
+    },
+    {
+     "type": "text",
+     "id": "t7",
+     "label": "Text: Weak wrist (U-shaped rel…"
+    }
+   ]
+  },
+  {
+   "type": "c1b",
+   "name": "Item (layout 2)",
+   "settings": [
+    {
+     "type": "text",
+     "id": "t1",
+     "label": "Eyebrow: With SpinGrip"
+    },
+    {
+     "type": "text",
+     "id": "t2",
+     "label": "Heading: The fix"
+    },
+    {
+     "type": "text",
+     "id": "t3",
+     "label": "Text: Finger-snap release"
+    },
+    {
+     "type": "text",
+     "id": "t4",
+     "label": "Text: Tight spiral"
+    },
+    {
+     "type": "text",
+     "id": "t5",
+     "label": "Text: Certainty in every throw"
+    },
+    {
+     "type": "text",
+     "id": "t6",
+     "label": "Text: Elite-level grip"
+    },
+    {
+     "type": "text",
+     "id": "t7",
+     "label": "Text: Strong wrist (C-shaped r…"
+    }
+   ]
+  }
+ ],
+ "presets": [
+  {
+   "name": "KITTED: The difference"
+  }
+ ]
+}
+{% endschema %}

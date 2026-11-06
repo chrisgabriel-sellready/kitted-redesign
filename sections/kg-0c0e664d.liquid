@@ -1,0 +1,47 @@
+<div class="kg">
+<section class="coll-hero">{%- if section.settings.i1 != blank -%}{{ section.settings.i1 | image_url: width: 1800 | image_tag: alt: "" }}{%- else -%}<img src="{{ section.settings.t2 | asset_url }}" alt="" width="1200" height="1200">{%- endif -%}<div class="wrap"><p class="eyebrow">{{ section.settings.t3 }}</p><h1 class="page-title">{{ section.settings.t4 }}</h1><p class="lede" style="color:rgba(255,255,255,.88)">{{ section.settings.t5 }}</p></div></section>
+</div>
+
+{% schema %}
+{
+ "name": "KITTED: The SpinGrip Effe",
+ "tag": "div",
+ "class": "kg-section",
+ "settings": [
+  {
+   "type": "image_picker",
+   "id": "i1",
+   "label": "Image"
+  },
+  {
+   "type": "text",
+   "id": "t2",
+   "label": "Built-in image (used when no image is picked)",
+   "default": "kg-pdp-bb-9.webp"
+  },
+  {
+   "type": "text",
+   "id": "t3",
+   "label": "Eyebrow: Training guide",
+   "default": "Training guide"
+  },
+  {
+   "type": "text",
+   "id": "t4",
+   "label": "Heading: The SpinGrip Effect",
+   "default": "The SpinGrip Effect"
+  },
+  {
+   "type": "textarea",
+   "id": "t5",
+   "label": "Text: Velocity, spin and accur…",
+   "default": "Velocity, spin and accuracy are the three pillars of throwing better, and SpinGrip helps all three. They are all decided in the same place: the release. Here is how that works."
+  }
+ ],
+ "presets": [
+  {
+   "name": "KITTED: The SpinGrip Effe"
+  }
+ ]
+}
+{% endschema %}

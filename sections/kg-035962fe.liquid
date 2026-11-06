@@ -1,0 +1,67 @@
+<div class="kg">
+<section class="section--tight">
+<div class="wrap">
+<div class="promo">
+<div class="promo__text"><h2 class="h-section" style="font-size:clamp(26px,2.8vw,36px)">{{ section.settings.t1 }}</h2><p class="muted">{{ section.settings.t2 }}</p>
+<div class="tiers"><span class="tier">{{ section.settings.i3 }}</span><span class="tier">{{ section.settings.i4 }}</span><span class="tier">{{ section.settings.i5 }}</span></div></div>
+<a class="btn" href="{{ section.settings.u6 }}">{{ section.settings.t7 }}<svg aria-hidden="true" class="arrow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+</div>
+</section>
+</div>
+
+{% schema %}
+{
+ "name": "KITTED: Team up and save",
+ "tag": "div",
+ "class": "kg-section",
+ "settings": [
+  {
+   "type": "text",
+   "id": "t1",
+   "label": "Heading: Team up and save",
+   "default": "Team up and save"
+  },
+  {
+   "type": "text",
+   "id": "t2",
+   "label": "Text: SpinGrip Packs. Any glov…",
+   "default": "SpinGrip Packs. Any glove, any size, either hand. The discount applies automatically."
+  },
+  {
+   "type": "inline_richtext",
+   "id": "i3",
+   "label": "Text: 2-Pack save 10%",
+   "default": "2-Pack <strong>save 10%</strong>"
+  },
+  {
+   "type": "inline_richtext",
+   "id": "i4",
+   "label": "Text: 5-Pack save 15%",
+   "default": "5-Pack <strong>save 15%</strong>"
+  },
+  {
+   "type": "inline_richtext",
+   "id": "i5",
+   "label": "Text: 10-Pack save 20%",
+   "default": "10-Pack <strong>save 20%</strong>"
+  },
+  {
+   "type": "url",
+   "id": "u6",
+   "label": "Button link"
+  },
+  {
+   "type": "text",
+   "id": "t7",
+   "label": "Link text: Build your pack",
+   "default": "Build your pack"
+  }
+ ],
+ "presets": [
+  {
+   "name": "KITTED: Team up and save"
+  }
+ ]
+}
+{% endschema %}

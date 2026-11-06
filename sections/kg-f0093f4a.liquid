@@ -1,0 +1,54 @@
+<div class="kg">
+<section class="section band--ink">
+<div class="wrap final-cta">
+<span class="pill">{{ section.settings.h1 }}</span>
+<h2 class="display">{{ section.settings.t2 }}</h2>
+<p class="lede" style="color:var(--mute-on-ink)">{{ section.settings.t3 }}</p>
+<a class="btn btn--light btn--lg" href="{{ section.settings.u4 }}">{{ section.settings.t5 }}<svg aria-hidden="true" class="arrow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+</section>
+</div>
+
+{% schema %}
+{
+ "name": "KITTED: The pros do it 2",
+ "tag": "div",
+ "class": "kg-section",
+ "settings": [
+  {
+   "type": "html",
+   "id": "h1",
+   "label": "Text: Limited stock available",
+   "default": "<span class=\"dot\"></span>Limited stock available"
+  },
+  {
+   "type": "text",
+   "id": "t2",
+   "label": "Heading: The pros do it. Now you …",
+   "default": "The pros do it. Now you can too."
+  },
+  {
+   "type": "textarea",
+   "id": "t3",
+   "label": "Text: Every throw without Spin…",
+   "default": "Every throw without SpinGrip is a missed opportunity. Join the athletes throwing harder, spinning more, and hitting their spots with confidence."
+  },
+  {
+   "type": "url",
+   "id": "u4",
+   "label": "Button link"
+  },
+  {
+   "type": "text",
+   "id": "t5",
+   "label": "Link text: Shop SpinGrip",
+   "default": "Shop SpinGrip"
+  }
+ ],
+ "presets": [
+  {
+   "name": "KITTED: The pros do it 2"
+  }
+ ]
+}
+{% endschema %}

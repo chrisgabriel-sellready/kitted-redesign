@@ -1,0 +1,79 @@
+<div class="kg">
+<section class="section">
+<div class="wrap">
+<h2 class="h-section" style="margin-bottom:clamp(20px,3vw,32px)">{{ section.settings.t1 }}</h2>
+<div class="faq-panel"><div class="faq-list">{%- for block in section.blocks -%}{%- case block.type -%}{%- when "c1a" -%}<details {{ block.shopify_attributes }} class="acc"><summary>{{ block.settings.t1 }}<span aria-hidden="true" class="pm"></span></summary><div class="acc__body"><p>{{ block.settings.t2 }}</p></div></details>{%- when "c1b" -%}<details {{ block.shopify_attributes }} class="acc"><summary>{{ block.settings.t1 }}<span aria-hidden="true" class="pm"></span></summary><div class="acc__body"><p>{{ block.settings.h2 }}</p></div></details>{%- when "c1c" -%}<details {{ block.shopify_attributes }} class="acc"><summary>{{ block.settings.t1 }}<span aria-hidden="true" class="pm"></span></summary><div class="acc__body"><p>{{ block.settings.i2 }}</p></div></details>{%- endcase -%}{%- endfor -%}</div></div>
+</div>
+</section>
+</div>
+
+{% schema %}
+{
+ "name": "KITTED: Got questions? 3",
+ "tag": "div",
+ "class": "kg-section",
+ "settings": [
+  {
+   "type": "text",
+   "id": "t1",
+   "label": "Heading: Got questions?",
+   "default": "Got questions?"
+  }
+ ],
+ "blocks": [
+  {
+   "type": "c1a",
+   "name": "Question",
+   "settings": [
+    {
+     "type": "text",
+     "id": "t1",
+     "label": "Question: How does SpinGrip actual…"
+    },
+    {
+     "type": "textarea",
+     "id": "t2",
+     "label": "Text: SpinGrip is physics. The…"
+    }
+   ]
+  },
+  {
+   "type": "c1b",
+   "name": "Question (layout 2)",
+   "settings": [
+    {
+     "type": "text",
+     "id": "t1",
+     "label": "Question: Can I use SpinGrip in a …"
+    },
+    {
+     "type": "html",
+     "id": "h2",
+     "label": "Text: Yes, you can use SpinGri…"
+    }
+   ]
+  },
+  {
+   "type": "c1c",
+   "name": "Question (layout 3)",
+   "settings": [
+    {
+     "type": "text",
+     "id": "t1",
+     "label": "Question: Is SpinGrip available fo…"
+    },
+    {
+     "type": "inline_richtext",
+     "id": "i2",
+     "label": "Text: Yes. We have a baseball-…"
+    }
+   ]
+  }
+ ],
+ "presets": [
+  {
+   "name": "KITTED: Got questions? 3"
+  }
+ ]
+}
+{% endschema %}

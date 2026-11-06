@@ -1,0 +1,58 @@
+<div class="kg">
+<section class="section band--stone">
+<div class="wrap">
+<div class="section-head"><h2 class="h-section">{{ section.settings.t1 }}</h2><p class="lede muted">{{ section.settings.t2 }}</p></div>
+<div class="stats" style="--cols:4">{%- for block in section.blocks -%}{%- case block.type -%}{%- when "c1a" -%}<div {{ block.shopify_attributes }} class="stat"><span class="stat__num">{{ block.settings.t1 }}</span><span class="stat__label">{{ block.settings.t2 }}</span><p>{{ block.settings.t3 }}</p></div>{%- endcase -%}{%- endfor -%}</div>
+</div>
+</section>
+</div>
+
+{% schema %}
+{
+ "name": "KITTED: Tested. Proven. M",
+ "tag": "div",
+ "class": "kg-section",
+ "settings": [
+  {
+   "type": "text",
+   "id": "t1",
+   "label": "Heading: Tested. Proven. Measured…",
+   "default": "Tested. Proven. Measured."
+  },
+  {
+   "type": "textarea",
+   "id": "t2",
+   "label": "Text: Every major throwing met…",
+   "default": "Every major throwing metric improves with SpinGrip. Results were measured with Trackman, and a cleaner fingertip release also reduces unnecessary strain on the throwing arm."
+  }
+ ],
+ "blocks": [
+  {
+   "type": "c1a",
+   "name": "Stat",
+   "settings": [
+    {
+     "type": "text",
+     "id": "t1",
+     "label": "Text: 7 mph"
+    },
+    {
+     "type": "text",
+     "id": "t2",
+     "label": "Text: Velocity increase"
+    },
+    {
+     "type": "text",
+     "id": "t3",
+     "label": "Text: Athletes have seen up to…"
+    }
+   ]
+  }
+ ],
+ "presets": [
+  {
+   "name": "KITTED: Tested. Proven. M"
+  }
+ ]
+}
+{% endschema %}

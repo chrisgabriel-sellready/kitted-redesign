@@ -1,0 +1,90 @@
+<div class="kg">
+<section class="section band--stone">
+<div class="wrap split split--media-first">
+<div class="split__media" style=""><div style="max-width:380px;margin-inline:auto"><figure class="vcard" data-video="" style="margin:0">
+<div class="vcard__frame">
+<video playsinline="" poster="{%- if section.settings.i3 != blank -%}{{ section.settings.i3 | image_url: width: 1200 }}{%- elsif section.settings.t4 != blank -%}{{ section.settings.t4 | asset_url }}{%- elsif section.settings.v1 != blank -%}{{ section.settings.v1.preview_image | image_url: width: 1200 }}{%- endif -%}" preload="none" src="{%- if section.settings.v1 != blank -%}{{ section.settings.v1.sources | where: "mime_type", "video/mp4" | map: "url" | first }}{%- else -%}{{ section.settings.u2 }}{%- endif -%}"></video>
+<button aria-label="Play video: softball-pos-player-howto" class="vcard__play" type="button"><span><svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24"><path d="M7 4l13 8-13 8z"></path></svg></span></button>
+<button aria-label="Toggle sound" class="vcard__sound" type="button"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"></path><path d="M23 9l-6 6M17 9l6 6"></path></svg>{{ section.settings.t5 }}</button>
+</div>
+</figure></div></div>
+<div class="split__text">
+<p class="eyebrow">{{ section.settings.t6 }}</p>
+<h2 class="h-section">{{ section.settings.t7 }}</h2>
+<p class="lede">{{ section.settings.t8 }}</p>
+<div class="btn-row"><a class="btn" href="{{ section.settings.u9 }}">{{ section.settings.t10 }}<svg aria-hidden="true" class="arrow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>
+</div>
+</div>
+</section>
+</div>
+
+{% schema %}
+{
+ "name": "KITTED: How to wear Sp 2",
+ "tag": "div",
+ "class": "kg-section",
+ "settings": [
+  {
+   "type": "video",
+   "id": "v1",
+   "label": "Video (Shopify file)"
+  },
+  {
+   "type": "url",
+   "id": "u2",
+   "label": "Video URL (used when no video is picked)"
+  },
+  {
+   "type": "image_picker",
+   "id": "i3",
+   "label": "Video cover image"
+  },
+  {
+   "type": "text",
+   "id": "t4",
+   "label": "Built-in cover image",
+   "default": "kg-poster-softball-pos-player-howto.webp"
+  },
+  {
+   "type": "text",
+   "id": "t5",
+   "label": "Text: Tap for sound",
+   "default": "Tap for sound"
+  },
+  {
+   "type": "text",
+   "id": "t6",
+   "label": "Eyebrow: Watch it in action",
+   "default": "Watch it in action"
+  },
+  {
+   "type": "text",
+   "id": "t7",
+   "label": "Heading: How to wear SpinGrip",
+   "default": "How to wear SpinGrip"
+  },
+  {
+   "type": "text",
+   "id": "t8",
+   "label": "Text: Index finger and thumb i…",
+   "default": "Index finger and thumb in an “L”, slide in, pull tight on the wrist, fasten the strap, and throw normally."
+  },
+  {
+   "type": "url",
+   "id": "u9",
+   "label": "Button link"
+  },
+  {
+   "type": "text",
+   "id": "t10",
+   "label": "Link text: Read the full guide",
+   "default": "Read the full guide"
+  }
+ ],
+ "presets": [
+  {
+   "name": "KITTED: How to wear Sp 2"
+  }
+ ]
+}
+{% endschema %}

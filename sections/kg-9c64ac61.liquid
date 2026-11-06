@@ -1,0 +1,136 @@
+<div class="kg">
+<section class="section">
+<div class="wrap">
+<div class="section-head section-head--row"><div><h2 class="h-section">{{ section.settings.t1 }}</h2><p class="lede muted">{{ section.settings.t2 }}</p></div><div class="carousel__nav"><button aria-label="Previous" class="carousel__btn" data-car="car-feature" data-dir="-1" type="button"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"></path></svg></button><button aria-label="Next" class="carousel__btn" data-car="car-feature" data-dir="1" type="button"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></button></div></div>
+<div class="carousel carousel--4" id="car-feature"><div class="carousel__track">{%- for block in section.blocks -%}{%- case block.type -%}{%- when "c1a" -%}<div {{ block.shopify_attributes }} class="stack" style="gap:14px;align-content:start;min-width:0"><p class="eyebrow muted">{{ block.settings.t1 }}</p><figure class="vcard" data-video="" style="margin:0">
+<div class="vcard__frame">
+<video playsinline="" poster="{%- if block.settings.i4 != blank -%}{{ block.settings.i4 | image_url: width: 1200 }}{%- elsif block.settings.t5 != blank -%}{{ block.settings.t5 | asset_url }}{%- elsif block.settings.v2 != blank -%}{{ block.settings.v2.preview_image | image_url: width: 1200 }}{%- endif -%}" preload="none" src="{%- if block.settings.v2 != blank -%}{{ block.settings.v2.sources | where: "mime_type", "video/mp4" | map: "url" | first }}{%- else -%}{{ block.settings.u3 }}{%- endif -%}"></video>
+<button aria-label="Play video: Pro pitching instructor" class="vcard__play" type="button"><span><svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24"><path d="M7 4l13 8-13 8z"></path></svg></span></button>
+<button aria-label="Toggle sound" class="vcard__sound" type="button"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"></path><path d="M23 9l-6 6M17 9l6 6"></path></svg>{{ block.settings.t6 }}</button>
+</div>
+<div class="vcard__cap"><p class="vcard__quote">{{ block.settings.t7 }}</p><p class="vcard__who">{{ block.settings.t8 }}</p></div>
+</figure><p class="muted" style="font-size:13px">{{ block.settings.t9 }}</p></div>{%- when "c1b" -%}<div {{ block.shopify_attributes }} class="stack" style="gap:14px;align-content:start;min-width:0"><p class="eyebrow muted">{{ block.settings.t1 }}</p><figure class="vcard" style="margin:0">
+<div class="vcard__frame">
+{%- if block.settings.i2 != blank -%}{{ block.settings.i2 | image_url: width: 1800 | image_tag: alt: "", loading: "lazy", style: "position:absolute;inset:0;width:100%;height:100%;object-fit:cover" }}{%- else -%}<img src="{{ block.settings.t3 | asset_url }}" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" width="720" height="1280">{%- endif -%}
+</div>
+<div class="vcard__cap"><p class="vcard__quote">{{ block.settings.t4 }}</p><p class="vcard__who">{{ block.settings.t5 }}</p></div>
+</figure><p class="muted" style="font-size:13px">{{ block.settings.t6 }}</p></div>{%- endcase -%}{%- endfor -%}</div></div>
+</div>
+</section>
+</div>
+
+{% schema %}
+{
+ "name": "KITTED: Trusted by MLB, D",
+ "tag": "div",
+ "class": "kg-section",
+ "settings": [
+  {
+   "type": "text",
+   "id": "t1",
+   "label": "Heading: Trusted by MLB, D1 & pro…",
+   "default": "Trusted by MLB, D1 & pro athletes"
+  },
+  {
+   "type": "text",
+   "id": "t2",
+   "label": "Text: All athletes feel the pr…",
+   "default": "All athletes feel the proper grip right away. Most see metric gains within one week of use."
+  }
+ ],
+ "blocks": [
+  {
+   "type": "c1a",
+   "name": "Item",
+   "settings": [
+    {
+     "type": "text",
+     "id": "t1",
+     "label": "Eyebrow: The SpinGrip wow factor"
+    },
+    {
+     "type": "video",
+     "id": "v2",
+     "label": "Video (Shopify file)"
+    },
+    {
+     "type": "url",
+     "id": "u3",
+     "label": "Video URL (used when no video is picked)"
+    },
+    {
+     "type": "image_picker",
+     "id": "i4",
+     "label": "Video cover image"
+    },
+    {
+     "type": "text",
+     "id": "t5",
+     "label": "Built-in cover image"
+    },
+    {
+     "type": "text",
+     "id": "t6",
+     "label": "Text: Tap for sound"
+    },
+    {
+     "type": "text",
+     "id": "t7",
+     "label": "Quote: “Wow! The ball feels lik…"
+    },
+    {
+     "type": "text",
+     "id": "t8",
+     "label": "Name: Pro pitching instructor"
+    },
+    {
+     "type": "text",
+     "id": "t9",
+     "label": "Text: First throw, first react…"
+    }
+   ]
+  },
+  {
+   "type": "c1b",
+   "name": "Item (layout 2)",
+   "settings": [
+    {
+     "type": "text",
+     "id": "t1",
+     "label": "Eyebrow: Bullpen session"
+    },
+    {
+     "type": "image_picker",
+     "id": "i2",
+     "label": "Image"
+    },
+    {
+     "type": "text",
+     "id": "t3",
+     "label": "Built-in image (used when no image is picked)"
+    },
+    {
+     "type": "text",
+     "id": "t4",
+     "label": "Quote: “An absolute no-brainer.…"
+    },
+    {
+     "type": "text",
+     "id": "t5",
+     "label": "Name: Pro pitching instructor"
+    },
+    {
+     "type": "text",
+     "id": "t6",
+     "label": "Text: Bullpen session with a p…"
+    }
+   ]
+  }
+ ],
+ "presets": [
+  {
+   "name": "KITTED: Trusted by MLB, D"
+  }
+ ]
+}
+{% endschema %}

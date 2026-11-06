@@ -1,0 +1,41 @@
+<div class="kg">
+<div class="wrap"><nav aria-label="Breadcrumb" class="crumbs"><a href="{{ section.settings.u1 }}">{{ section.settings.t2 }}</a><span aria-hidden="true">{{ section.settings.t3 }}</span><span>{{ section.settings.t4 }}</span></nav></div>
+</div>
+
+{% schema %}
+{
+ "name": "KITTED: Feature 2",
+ "tag": "div",
+ "class": "kg-section",
+ "settings": [
+  {
+   "type": "url",
+   "id": "u1",
+   "label": "Link"
+  },
+  {
+   "type": "text",
+   "id": "t2",
+   "label": "Link text: Home",
+   "default": "Home"
+  },
+  {
+   "type": "text",
+   "id": "t3",
+   "label": "Text: /",
+   "default": "/"
+  },
+  {
+   "type": "text",
+   "id": "t4",
+   "label": "Text: The SpinGrip Effect",
+   "default": "The SpinGrip Effect"
+  }
+ ],
+ "presets": [
+  {
+   "name": "KITTED: Feature 2"
+  }
+ ]
+}
+{% endschema %}

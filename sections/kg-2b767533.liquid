@@ -1,0 +1,125 @@
+<div class="kg">
+<section class="shero">
+<div class="shero__text">
+<p class="eyebrow" style="color:var(--gold)">{{ section.settings.t1 }}</p>
+<h1 class="display shero__title">{{ section.settings.h2 }}</h1>
+<p class="shero__sub">{{ section.settings.t3 }}</p>
+<div class="btn-row"><a class="btn btn--light" href="#buy">{{ section.settings.t4 }}<svg aria-hidden="true" class="arrow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a class="btn btn--ghost-light" href="#how">{{ section.settings.t5 }}</a></div>
+<a class="rating" href="#reviews" style="color:var(--mute-on-ink)"><span aria-label="5 out of 5 stars" class="stars"><svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"></path></svg><svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"></path></svg><svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"></path></svg><svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"></path></svg><svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"></path></svg></span> {{ section.settings.t6 }}</a>
+</div>
+<div class="shero__media">
+<video aria-label="SpinGrip baseball in action" class="shero__vid shero__vid--wide" data-loop="" loop="" muted="" playsinline="" poster="{%- if section.settings.i9 != blank -%}{{ section.settings.i9 | image_url: width: 1200 }}{%- elsif section.settings.t10 != blank -%}{{ section.settings.t10 | asset_url }}{%- elsif section.settings.v7 != blank -%}{{ section.settings.v7.preview_image | image_url: width: 1200 }}{%- endif -%}" preload="none" src="{%- if section.settings.v7 != blank -%}{{ section.settings.v7.sources | where: "mime_type", "video/mp4" | map: "url" | first }}{%- else -%}{{ section.settings.u8 }}{%- endif -%}"></video><video aria-label="SpinGrip baseball in action" class="shero__vid shero__vid--tall" data-loop="" loop="" muted="" playsinline="" poster="{%- if section.settings.i13 != blank -%}{{ section.settings.i13 | image_url: width: 1200 }}{%- elsif section.settings.t14 != blank -%}{{ section.settings.t14 | asset_url }}{%- elsif section.settings.v11 != blank -%}{{ section.settings.v11.preview_image | image_url: width: 1200 }}{%- endif -%}" preload="none" src="{%- if section.settings.v11 != blank -%}{{ section.settings.v11.sources | where: "mime_type", "video/mp4" | map: "url" | first }}{%- else -%}{{ section.settings.u12 }}{%- endif -%}"></video>
+{%- assign kg_alt = section.settings.t17 | escape -%}{%- if section.settings.i15 != blank -%}{{ section.settings.i15 | image_url: width: 1800 | image_tag: alt: kg_alt, class: "shero__seal", loading: "lazy" }}{%- else -%}<img src="{{ section.settings.t16 | asset_url }}" class="shero__seal" alt="{{ section.settings.t17 | escape }}" width="96" height="94" loading="lazy">{%- endif -%}
+</div>
+</section>
+</div>
+
+{% schema %}
+{
+ "name": "KITTED: Throw harder. Inc",
+ "tag": "div",
+ "class": "kg-section",
+ "settings": [
+  {
+   "type": "text",
+   "id": "t1",
+   "label": "Eyebrow: SpinGrip Baseball",
+   "default": "SpinGrip Baseball"
+  },
+  {
+   "type": "html",
+   "id": "h2",
+   "label": "Heading: Throw harder. Increase s…",
+   "default": "<span>Throw harder.</span><span>Increase spin.</span><span>Enhance accuracy.</span>"
+  },
+  {
+   "type": "textarea",
+   "id": "t3",
+   "label": "Text: Introducing SpinGrip Bas…",
+   "default": "Introducing SpinGrip Baseball, the first-ever throwing glove. Patent pending, data-proven, and built for ages 6+."
+  },
+  {
+   "type": "text",
+   "id": "t4",
+   "label": "Link text: Shop SpinGrip",
+   "default": "Shop SpinGrip"
+  },
+  {
+   "type": "text",
+   "id": "t5",
+   "label": "Link text: How it works",
+   "default": "How it works"
+  },
+  {
+   "type": "text",
+   "id": "t6",
+   "label": "Link text: 4.8 across thousands of …",
+   "default": "4.8 across thousands of player experiences"
+  },
+  {
+   "type": "video",
+   "id": "v7",
+   "label": "Video (Shopify file)"
+  },
+  {
+   "type": "url",
+   "id": "u8",
+   "label": "Video URL (used when no video is picked)"
+  },
+  {
+   "type": "image_picker",
+   "id": "i9",
+   "label": "Video cover image"
+  },
+  {
+   "type": "text",
+   "id": "t10",
+   "label": "Built-in cover image",
+   "default": "kg-baseball-hero-wide-poster.webp"
+  },
+  {
+   "type": "video",
+   "id": "v11",
+   "label": "Video (Shopify file)"
+  },
+  {
+   "type": "url",
+   "id": "u12",
+   "label": "Video URL (used when no video is picked)"
+  },
+  {
+   "type": "image_picker",
+   "id": "i13",
+   "label": "Video cover image"
+  },
+  {
+   "type": "text",
+   "id": "t14",
+   "label": "Built-in cover image",
+   "default": "kg-baseball-hero-tall-poster.webp"
+  },
+  {
+   "type": "image_picker",
+   "id": "i15",
+   "label": "Image"
+  },
+  {
+   "type": "text",
+   "id": "t16",
+   "label": "Built-in image (used when no image is picked)",
+   "default": "kg-patent-seal-red.webp"
+  },
+  {
+   "type": "text",
+   "id": "t17",
+   "label": "Image alt text",
+   "default": "Patent pending"
+  }
+ ],
+ "presets": [
+  {
+   "name": "KITTED: Throw harder. Inc"
+  }
+ ]
+}
+{% endschema %}

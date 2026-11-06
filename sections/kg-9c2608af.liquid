@@ -1,0 +1,74 @@
+<div class="kg">
+<section class="section band--stone">
+<div class="wrap split">
+<div class="split__text">
+<p class="eyebrow">{{ section.settings.t1 }}</p>
+<h2 class="display" style="font-size:clamp(56px,7vw,104px)">{{ section.settings.h2 }}</h2>
+<p class="lede">{{ section.settings.t3 }}</p>
+<div class="btn-row"><a class="btn" href="{{ section.settings.u4 }}">{{ section.settings.t5 }}<svg aria-hidden="true" class="arrow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>
+</div>
+<div class="split__media"><figure class="frame" style="margin:0">{%- assign kg_alt = section.settings.t8 | escape -%}{%- if section.settings.i6 != blank -%}{{ section.settings.i6 | image_url: width: 1800 | image_tag: alt: kg_alt, loading: "lazy" }}{%- else -%}<img src="{{ section.settings.t7 | asset_url }}" alt="{{ section.settings.t8 | escape }}" width="1200" height="1360" loading="lazy">{%- endif -%}</figure></div>
+</div>
+</section>
+</div>
+
+{% schema %}
+{
+ "name": "KITTED: +4 mph in one use",
+ "tag": "div",
+ "class": "kg-section",
+ "settings": [
+  {
+   "type": "text",
+   "id": "t1",
+   "label": "Eyebrow: First throws with SpinGr…",
+   "default": "First throws with SpinGrip"
+  },
+  {
+   "type": "html",
+   "id": "h2",
+   "label": "Heading: +4 mph in one use.",
+   "default": "+4 mph<br/>in one use."
+  },
+  {
+   "type": "textarea",
+   "id": "t3",
+   "label": "Text: Grayson went from 49 to …",
+   "default": "Grayson went from 49 to 53 mph on his first throws with SpinGrip. The glove puts the ball out on the fingertips, so the right release happens without thinking about it."
+  },
+  {
+   "type": "url",
+   "id": "u4",
+   "label": "Button link"
+  },
+  {
+   "type": "text",
+   "id": "t5",
+   "label": "Link text: Shop SpinGrip Baseball",
+   "default": "Shop SpinGrip Baseball"
+  },
+  {
+   "type": "image_picker",
+   "id": "i6",
+   "label": "Image"
+  },
+  {
+   "type": "text",
+   "id": "t7",
+   "label": "Built-in image (used when no image is picked)",
+   "default": "kg-grayson-one-use-full.webp"
+  },
+  {
+   "type": "text",
+   "id": "t8",
+   "label": "Image alt text",
+   "default": "Grayson throwing with SpinGrip, a ring highlighting the glove on his throwing hand"
+  }
+ ],
+ "presets": [
+  {
+   "name": "KITTED: +4 mph in one use"
+  }
+ ]
+}
+{% endschema %}

@@ -51,23 +51,76 @@
       }
     },
     "header": {
-      "type": "header",
-      "settings": {
-        "logo_position": "top-center",
-        "menu": "main-menu",
-        "menu_type_desktop": "mega",
-        "sticky_header_type": "always",
-        "show_line_separator": true,
-        "color_scheme": "scheme-20949acd-2f0a-4bf7-9681-1c3d7282fa5f",
-        "menu_color_scheme": "scheme-20949acd-2f0a-4bf7-9681-1c3d7282fa5f",
-        "enable_country_selector": false,
-        "enable_language_selector": false,
-        "enable_customer_avatar": true,
-        "mobile_logo_position": "center",
-        "margin_bottom": 0,
-        "padding_top": 12,
-        "padding_bottom": 12
-      }
+      "type": "kg-header",
+      "blocks": {
+        "baseball": {
+          "type": "link",
+          "settings": {
+            "label": "Baseball",
+            "url": "/pages/baseball",
+            "mobile_note": "Shop"
+          }
+        },
+        "softball": {
+          "type": "link",
+          "settings": {
+            "label": "Softball",
+            "url": "/pages/softball",
+            "mobile_note": "Shop"
+          }
+        },
+        "football": {
+          "type": "link",
+          "settings": {
+            "label": "Football",
+            "url": "/pages/football",
+            "mobile_note": "Shop"
+          }
+        },
+        "shop": {
+          "type": "shop_menu",
+          "settings": {
+            "label": "Shop all",
+            "products": [
+              "spingrip",
+              "spingrip-softball",
+              "spingrip-softball-pitcher",
+              "spin-grip-football"
+            ],
+            "more_1_label": "All SpinGrip",
+            "more_1_url": "/collections/all",
+            "more_2_label": "Build a pack",
+            "more_2_url": "/pages/packs",
+            "more_3_label": "Throwing formulas",
+            "more_3_url": "/collections/all"
+          }
+        },
+        "effect": {
+          "type": "link",
+          "settings": {
+            "label": "The SpinGrip Effect",
+            "url": "/pages/the-spingrip-effect",
+            "mobile_note": ""
+          }
+        },
+        "kollective": {
+          "type": "link",
+          "settings": {
+            "label": "The Kollective",
+            "url": "/pages/kollective",
+            "mobile_note": "Early access"
+          }
+        }
+      },
+      "block_order": [
+        "baseball",
+        "softball",
+        "football",
+        "shop",
+        "effect",
+        "kollective"
+      ],
+      "settings": {}
     }
   },
   "order": [

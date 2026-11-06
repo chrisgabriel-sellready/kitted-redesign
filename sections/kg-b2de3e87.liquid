@@ -1,0 +1,98 @@
+<div class="kg">
+<section class="shero">
+<div class="shero__text">
+<p class="eyebrow" style="color:var(--gold)">{{ section.settings.t1 }}</p>
+<h1 class="display shero__title">{{ section.settings.h2 }}</h1>
+<p class="shero__sub">{{ section.settings.t3 }}</p>
+<div class="btn-row"><a class="btn btn--light" href="#buy">{{ section.settings.t4 }}<svg aria-hidden="true" class="arrow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a class="btn btn--ghost-light" href="#how">{{ section.settings.t5 }}</a></div>
+</div>
+<div class="shero__media">
+{%- if section.settings.i6 != blank -%}{{ section.settings.i6 | image_url: width: 1800 | image_tag: alt: "", class: "shero__vid shero__vid--wide", loading: "eager" }}{%- else -%}<img src="{{ section.settings.t7 | asset_url }}" class="shero__vid shero__vid--wide" width="720" height="1280" alt="" loading="eager">{%- endif -%}{%- if section.settings.i8 != blank -%}{{ section.settings.i8 | image_url: width: 1800 | image_tag: alt: "", class: "shero__vid shero__vid--tall", loading: "eager" }}{%- else -%}<img src="{{ section.settings.t9 | asset_url }}" class="shero__vid shero__vid--tall" width="720" height="1280" alt="" loading="eager">{%- endif -%}
+{%- assign kg_alt = section.settings.t12 | escape -%}{%- if section.settings.i10 != blank -%}{{ section.settings.i10 | image_url: width: 1800 | image_tag: alt: kg_alt, class: "shero__seal", loading: "lazy" }}{%- else -%}<img src="{{ section.settings.t11 | asset_url }}" class="shero__seal" alt="{{ section.settings.t12 | escape }}" width="96" height="94" loading="lazy">{%- endif -%}
+</div>
+</section>
+</div>
+
+{% schema %}
+{
+ "name": "KITTED: Tighter spirals.",
+ "tag": "div",
+ "class": "kg-section",
+ "settings": [
+  {
+   "type": "text",
+   "id": "t1",
+   "label": "Eyebrow: SpinGrip Football",
+   "default": "SpinGrip Football"
+  },
+  {
+   "type": "html",
+   "id": "h2",
+   "label": "Heading: Tighter spirals. Precisi…",
+   "default": "<span>Tighter spirals.</span><span>Precision accuracy.</span><span>Stronger throws.</span>"
+  },
+  {
+   "type": "textarea",
+   "id": "t3",
+   "label": "Text: Introducing SpinGrip Foo…",
+   "default": "Introducing SpinGrip Football, the first-ever throwing glove. Patent pending, data-proven, and built for ages 6+."
+  },
+  {
+   "type": "text",
+   "id": "t4",
+   "label": "Link text: Shop SpinGrip",
+   "default": "Shop SpinGrip"
+  },
+  {
+   "type": "text",
+   "id": "t5",
+   "label": "Link text: How it works",
+   "default": "How it works"
+  },
+  {
+   "type": "image_picker",
+   "id": "i6",
+   "label": "Image"
+  },
+  {
+   "type": "text",
+   "id": "t7",
+   "label": "Built-in image (used when no image is picked)",
+   "default": "kg-football-hero-wide-poster.webp"
+  },
+  {
+   "type": "image_picker",
+   "id": "i8",
+   "label": "Image"
+  },
+  {
+   "type": "text",
+   "id": "t9",
+   "label": "Built-in image (used when no image is picked)",
+   "default": "kg-football-hero-tall-poster.webp"
+  },
+  {
+   "type": "image_picker",
+   "id": "i10",
+   "label": "Image"
+  },
+  {
+   "type": "text",
+   "id": "t11",
+   "label": "Built-in image (used when no image is picked)",
+   "default": "kg-patent-seal-green.webp"
+  },
+  {
+   "type": "text",
+   "id": "t12",
+   "label": "Image alt text",
+   "default": "Patent pending"
+  }
+ ],
+ "presets": [
+  {
+   "name": "KITTED: Tighter spirals."
+  }
+ ]
+}
+{% endschema %}

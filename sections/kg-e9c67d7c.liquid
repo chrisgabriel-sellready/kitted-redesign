@@ -1,0 +1,58 @@
+<div class="kg">
+<section class="section band--stone">
+<div class="wrap">
+<div class="section-head"><h2 class="h-section">{{ section.settings.t1 }}</h2><p class="lede muted">{{ section.settings.t2 }}</p></div>
+<div class="grid grid--2">{%- for block in section.blocks -%}{%- case block.type -%}{%- when "c1a" -%}<figure {{ block.shopify_attributes }} class="frame frame--ink" style="margin:0">{%- assign kg_alt = block.settings.t3 | escape -%}{%- if block.settings.i1 != blank -%}{{ block.settings.i1 | image_url: width: 1800 | image_tag: alt: kg_alt, loading: "lazy" }}{%- else -%}<img src="{{ block.settings.t2 | asset_url }}" alt="{{ block.settings.t3 | escape }}" width="1600" height="1281" loading="lazy">{%- endif -%}</figure>{%- endcase -%}{%- endfor -%}</div>
+</div>
+</section>
+</div>
+
+{% schema %}
+{
+ "name": "KITTED: Something you’ve",
+ "tag": "div",
+ "class": "kg-section",
+ "settings": [
+  {
+   "type": "text",
+   "id": "t1",
+   "label": "Heading: Something you’ve never f…",
+   "default": "Something you’ve never felt before"
+  },
+  {
+   "type": "textarea",
+   "id": "t2",
+   "label": "Text: The embedded palm-spacer…",
+   "default": "The embedded palm-spacer keeps the ball out of the palm on every throw, for infielders, outfielders, catchers and pitchers."
+  }
+ ],
+ "blocks": [
+  {
+   "type": "c1a",
+   "name": "Card",
+   "settings": [
+    {
+     "type": "image_picker",
+     "id": "i1",
+     "label": "Image"
+    },
+    {
+     "type": "text",
+     "id": "t2",
+     "label": "Built-in image (used when no image is picked)"
+    },
+    {
+     "type": "text",
+     "id": "t3",
+     "label": "Image alt text"
+    }
+   ]
+  }
+ ],
+ "presets": [
+  {
+   "name": "KITTED: Something you’ve"
+  }
+ ]
+}
+{% endschema %}

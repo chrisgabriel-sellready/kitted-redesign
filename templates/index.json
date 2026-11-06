@@ -1,12 +1,42 @@
 {
   "sections": {
     "kg_00": {
-      "type": "kg-s-898a57f9",
-      "settings": {}
+      "type": "kg-f88d44b6",
+      "settings": {
+        "t2": "kg-baseball-hero-desktop-v3.webp",
+        "h3": "Dylan Cheek<br/>Arkansas Commit",
+        "h4": "Dax Price<br/>2029 Top Texas Prospect",
+        "t5": "Introducing the KITTED SpinGrip Baseball",
+        "t6": "Own the Diamond",
+        "t7": "Proven to increase velocity, spin rate, and accuracy.",
+        "u8": "/pages/baseball",
+        "t9": "Shop Baseball",
+        "t11": "kg-softball-hero-desktop.webp",
+        "h12": "18U Team Mercado<br/>Texas Select",
+        "t13": "Introducing the KITTED SpinGrip Softball",
+        "t14": "The Time is Now",
+        "t15": "Tighter spins, stronger throws.",
+        "u16": "/pages/softball",
+        "t17": "Shop Softball",
+        "t19": "kg-pop-hero-desktop.webp",
+        "h20": "Peyton “Pop” Houston<br/>Elite 11 Champ",
+        "t21": "Introducing the KITTED SpinGrip Football",
+        "t22": "Calling All QB1s",
+        "t23": "The first and only QB throwing glove built to enhance spirals, velocity and accuracy.",
+        "u24": "/pages/football",
+        "t25": "Shop Football"
+      }
     },
     "kg_01": {
-      "type": "kg-s-cf2c01d5",
-      "settings": {}
+      "type": "kg-3838def8",
+      "settings": {
+        "t1": "The SpinGrip Effect",
+        "t2": "The first-ever throwing glove. A patent-pending embedded palm-spacer moves the ball out to your fingertips, where velocity, spin and accuracy are decided.",
+        "t4": "kg-spingrip-engineering.webp",
+        "t5": "SpinGrip engineering: index finger opening, ergonomic coding for real-game feel, TPU grip print, thumb opening, 4-way stretch ultra-light neoprene body, patent-pending palm-spacer and flex-soft comfort strap",
+        "u6": "/pages/the-spingrip-effect",
+        "t7": "Read the guide"
+      }
     },
     "kg_02": {
       "type": "kg-product-grid",
@@ -16,44 +46,620 @@
       }
     },
     "kg_03": {
-      "type": "kg-s-67bc492d",
-      "settings": {}
+      "type": "kg-7e5bd048",
+      "settings": {
+        "t1": "Players know"
+      },
+      "blocks": {
+        "c1a_1": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-poster-ugc-2.webp",
+            "t3": "“It’s a simple training tool that leaves a big impact.”",
+            "t4": "Chip"
+          }
+        },
+        "c1b_2": {
+          "type": "c1b",
+          "settings": {
+            "v1": "shopify://files/videos/copy_3C3DF899-FBD7-4310-A09D-5C3643315F1C.MOV",
+            "u2": "https://shop.kittedgear.com/cdn/shop/videos/c/vp/833085947e8d471483e7cd68f101d3d9/833085947e8d471483e7cd68f101d3d9.HD-1080p-4.8Mbps-80246359.mp4",
+            "t4": "kg-poster-ugc-3.webp",
+            "t5": "Tap for sound",
+            "t6": "“This just naturally helped me get that grip every time.”",
+            "t7": "Cody Freeman, Big Leaguer"
+          }
+        },
+        "c1a_3": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-poster-ugc-4.webp",
+            "t3": "“I highly approve and recommend the SpinGrip.”",
+            "t4": "Pro Pitching Instructor"
+          }
+        },
+        "c1a_4": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-poster-ugc-6.webp",
+            "t3": "“It’s effortless power.”",
+            "t4": "Youth Ballplayers"
+          }
+        },
+        "c1a_5": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-poster-softball-ugc-1.webp",
+            "t3": "“It’s making me pull down my throws.”",
+            "t4": "Annie Kay, All-American"
+          }
+        },
+        "c1a_6": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-poster-softball-ugc-2.webp",
+            "t3": "“I feel everything in the finger tips.”",
+            "t4": "HS Softball Players"
+          }
+        },
+        "c1a_7": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-poster-softball-ugc-3.webp",
+            "t3": "“It’s letting me feel where I release the ball.”",
+            "t4": "Ainsley Davis, College Pitcher"
+          }
+        },
+        "c1a_8": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-poster-football-ugc-1.webp",
+            "t3": "“The ball feels like a feather.”",
+            "t4": "Peyton “Pop” Houston, Elite 11 Champ"
+          }
+        }
+      },
+      "block_order": [
+        "c1a_1",
+        "c1b_2",
+        "c1a_3",
+        "c1a_4",
+        "c1a_5",
+        "c1a_6",
+        "c1a_7",
+        "c1a_8"
+      ]
     },
     "kg_04": {
-      "type": "kg-s-f8760166",
-      "settings": {}
+      "type": "kg-645afe72",
+      "settings": {
+        "t2": "kg-chips-baseball-bottom-right.webp",
+        "t3": "Chips Performance wearing SpinGrip Baseball",
+        "t4": "Awarded by Chips",
+        "t5": "SpinGrip awarded",
+        "i6": "2026 Throwing <em>Product</em> of the Year",
+        "t7": "A must-have to get the most out of your throws.",
+        "t8": "Chips Performance · Throwing coach & diamond sport expert",
+        "u9": "https://shop.kittedgear.com/cdn/shop/videos/c/vp/7820ebad85bb489c9556b7c642763d16/7820ebad85bb489c9556b7c642763d16.HD-1080p-2.5Mbps-78683271.mp4",
+        "t10": "Watch",
+        "u11": "/collections/all",
+        "t12": "Shop SpinGrip"
+      }
     },
     "kg_05": {
-      "type": "kg-s-3d037d75",
-      "settings": {}
+      "type": "kg-f4059aff",
+      "settings": {
+        "t1": "Throwing formulas",
+        "t2": "Digital programs built around the SpinGrip release. Instant access, $150 value."
+      },
+      "blocks": {
+        "c1a_1": {
+          "type": "c1a",
+          "settings": {
+            "u1": "/products/spingrips-exclusive-throwing-blueprint",
+            "t3": "kg-formula-baseball.webp",
+            "t4": "SpinGrip Baseball's Exclusive Pro-Level Throwing Formula",
+            "t6": "kg-poster-formula-baseball.webp",
+            "i7": "<a href=\"/products/spingrips-exclusive-throwing-blueprint\">Baseball Pro-Level Throwing Formula</a>",
+            "t8": "The same throwing framework we use with elite arms, with instant digital access.",
+            "h9": "$19.95<s>$150</s>",
+            "t10": "Digital"
+          }
+        },
+        "c1a_2": {
+          "type": "c1a",
+          "settings": {
+            "u1": "/products/spingrip-softballs-d-1-throwing-formula-150-value-instant-digital-access",
+            "t3": "kg-formula-softball.webp",
+            "t4": "SpinGrip Softball's D-1 Throwing Formula",
+            "t6": "kg-poster-formula-softball.webp",
+            "i7": "<a href=\"/products/spingrip-softballs-d-1-throwing-formula-150-value-instant-digital-access\">Softball D-1 Throwing Formula</a>",
+            "t8": "Train with 2-time National Champion Kaydee Bennett, with instant digital access.",
+            "h9": "$19.95<s>$150</s>",
+            "t10": "Digital"
+          }
+        },
+        "c1a_3": {
+          "type": "c1a",
+          "settings": {
+            "u1": "/products/spingrip-footballs-d-1-throwing-formula-150-value-instant-digital-access",
+            "t3": "kg-formula-football.webp",
+            "t4": "SpinGrip Football's D-1 Throwing Formula",
+            "t6": "kg-poster-formula-football.webp",
+            "i7": "<a href=\"/products/spingrip-footballs-d-1-throwing-formula-150-value-instant-digital-access\">Football D-1 Throwing Formula</a>",
+            "t8": "The throwing framework we use with D-1 quarterbacks, with instant digital access.",
+            "h9": "$19.95<s>$150</s>",
+            "t10": "Digital"
+          }
+        }
+      },
+      "block_order": [
+        "c1a_1",
+        "c1a_2",
+        "c1a_3"
+      ]
     },
     "kg_06": {
-      "type": "kg-s-18c632ca",
-      "settings": {}
+      "type": "kg-5aa87e48",
+      "settings": {},
+      "blocks": {
+        "c1a_1": {
+          "type": "c1a",
+          "settings": {
+            "u1": "/pages/baseball",
+            "t3": "kg-baseball-card-home.webp",
+            "t4": "Pitcher throwing with SpinGrip Baseball",
+            "h5": "<span class=\"display tile__name\">Baseball</span><span class=\"tile__cta\">Shop now</span>"
+          }
+        },
+        "c1a_2": {
+          "type": "c1a",
+          "settings": {
+            "u1": "/pages/softball",
+            "t3": "kg-softball-card-home.webp",
+            "t4": "Softball player throwing with SpinGrip Softball",
+            "h5": "<span class=\"display tile__name\">Softball</span><span class=\"tile__cta\">Shop now</span>"
+          }
+        },
+        "c1a_3": {
+          "type": "c1a",
+          "settings": {
+            "u1": "/pages/football",
+            "t3": "kg-football-card-home.webp",
+            "t4": "Quarterback with SpinGrip Football",
+            "h5": "<span class=\"display tile__name\">Football</span><span class=\"tile__cta\">Shop now</span>"
+          }
+        }
+      },
+      "block_order": [
+        "c1a_1",
+        "c1a_2",
+        "c1a_3"
+      ]
     },
     "kg_07": {
-      "type": "kg-s-b29852c4",
-      "settings": {}
+      "type": "kg-9c2608af",
+      "settings": {
+        "t1": "First throws with SpinGrip",
+        "h2": "+4 mph<br/>in one use.",
+        "t3": "Grayson went from 49 to 53 mph on his first throws with SpinGrip. The glove puts the ball out on the fingertips, so the right release happens without thinking about it.",
+        "u4": "/products/spingrip",
+        "t5": "Shop SpinGrip Baseball",
+        "t7": "kg-grayson-one-use-full.webp",
+        "t8": "Grayson throwing with SpinGrip, a ring highlighting the glove on his throwing hand"
+      }
     },
     "kg_08": {
-      "type": "kg-s-b8fe3f58",
-      "settings": {}
+      "type": "kg-2b4b7be0",
+      "settings": {
+        "t1": "How SpinGrip works",
+        "t2": "SpinGrip's embedded palm-spacer harnesses the physics of an elite release by positioning the ball farther into your fingers, unlocking optimal spin, velocity, and accuracy."
+      },
+      "blocks": {
+        "c1a_1": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-football-step-1-slide-on.webp",
+            "t3": "Step 1 of 3",
+            "t4": "Slide it on",
+            "t5": "SpinGrip slides onto your throwing hand in seconds. Fasten the strap high and tight on the wrist."
+          }
+        },
+        "c1a_2": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-baseball-let-it-fly.webp",
+            "t3": "Step 2 of 3",
+            "t4": "Let it fly",
+            "t5": "The patent-pending design with embedded palm-spacer positions the ball in your fingers for the optimal grip on every throw."
+          }
+        },
+        "c1a_3": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-softball-spingrip-effect.webp",
+            "t3": "Step 3 of 3",
+            "t4": "Feel the SpinGrip Effect",
+            "t5": "Velocity, spin rate, and accuracy improve right away. Data-proven performance gains."
+          }
+        }
+      },
+      "block_order": [
+        "c1a_1",
+        "c1a_2",
+        "c1a_3"
+      ]
     },
     "kg_09": {
-      "type": "kg-s-c95627ed",
-      "settings": {}
+      "type": "kg-60a8067f",
+      "settings": {
+        "t1": "Make a play",
+        "t2": "There's never been a throwing tool like it.",
+        "u3": "/collections/all",
+        "t4": "Shop SpinGrip",
+        "t5": "BJ Brannon · USC commit"
+      },
+      "blocks": {
+        "c1a_1": {
+          "type": "c1a",
+          "settings": {
+            "t1": "+7",
+            "t2": "MPH"
+          }
+        },
+        "c1a_2": {
+          "type": "c1a",
+          "settings": {
+            "t1": "+350",
+            "t2": "RPM"
+          }
+        },
+        "c1a_3": {
+          "type": "c1a",
+          "settings": {
+            "t1": "+30%",
+            "t2": "Accuracy"
+          }
+        },
+        "c2a_4": {
+          "type": "c2a",
+          "settings": {
+            "t2": "kg-make-a-play-usc-cutout.webp",
+            "t3": "BJ Brannon, USC commit, wearing SpinGrip"
+          }
+        },
+        "c2a_5": {
+          "type": "c2a",
+          "settings": {
+            "t2": "kg-spingrip-white.png",
+            "t3": "SpinGrip"
+          }
+        }
+      },
+      "block_order": [
+        "c1a_1",
+        "c1a_2",
+        "c1a_3",
+        "c2a_4",
+        "c2a_5"
+      ]
     },
     "kg_10": {
-      "type": "kg-s-56583e7d",
-      "settings": {}
+      "type": "kg-51ae3de1",
+      "settings": {
+        "t1": "Used by athletes from top college & pro teams"
+      },
+      "blocks": {
+        "c1a_1": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-logo-ohiostate.webp",
+            "t3": "Ohio State"
+          }
+        },
+        "c1a_2": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-logo-iowa.webp",
+            "t3": "Iowa"
+          }
+        },
+        "c1a_3": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-logo-georgia.webp",
+            "t3": "Georgia"
+          }
+        },
+        "c1a_4": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-logo-indiana.webp",
+            "t3": "Indiana"
+          }
+        },
+        "c1a_5": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-logo-missouri.webp",
+            "t3": "Missouri"
+          }
+        },
+        "c1a_6": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-logo-kstate.webp",
+            "t3": "Kansas State"
+          }
+        },
+        "c1a_7": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-logo-oregon-state.webp",
+            "t3": "Oregon State"
+          }
+        },
+        "c1a_8": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-logo-oklahoma.webp",
+            "t3": "Oklahoma"
+          }
+        },
+        "c1a_9": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-logo-lsu.webp",
+            "t3": "LSU"
+          }
+        },
+        "c1a_10": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-logo-baylor.webp",
+            "t3": "Baylor"
+          }
+        },
+        "c1a_11": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-logo-tcu.webp",
+            "t3": "TCU"
+          }
+        },
+        "c1a_12": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-logo-alabama.webp",
+            "t3": "Alabama"
+          }
+        },
+        "c1a_13": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-logo-arkansas.webp",
+            "t3": "Arkansas"
+          }
+        },
+        "c1a_14": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-logo-florida.webp",
+            "t3": "Florida"
+          }
+        },
+        "c1a_15": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-logo-usc.webp",
+            "t3": "USC"
+          }
+        },
+        "c1a_16": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-logo-pitt.webp",
+            "t3": "Pittsburgh"
+          }
+        },
+        "c1a_17": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-logo-texas-longhorns.webp",
+            "t3": "Texas"
+          }
+        },
+        "c1a_18": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-logo-louisiana-tech.webp",
+            "t3": "Louisiana Tech"
+          }
+        },
+        "c2a_19": {
+          "type": "c2a",
+          "settings": {
+            "t2": "kg-logo-whitesox.webp",
+            "t3": "Chicago White Sox"
+          }
+        },
+        "c2a_20": {
+          "type": "c2a",
+          "settings": {
+            "t2": "kg-logo-rangers.webp",
+            "t3": "Texas Rangers"
+          }
+        },
+        "c2a_21": {
+          "type": "c2a",
+          "settings": {
+            "t2": "kg-logo-yankees.webp",
+            "t3": "New York Yankees"
+          }
+        },
+        "c2a_22": {
+          "type": "c2a",
+          "settings": {
+            "t2": "kg-logo-tigers.webp",
+            "t3": "Detroit Tigers"
+          }
+        },
+        "c2a_23": {
+          "type": "c2a",
+          "settings": {
+            "t2": "kg-logo-dodgers.webp",
+            "t3": "Los Angeles Dodgers"
+          }
+        },
+        "c2a_24": {
+          "type": "c2a",
+          "settings": {
+            "t2": "kg-logo-diamondbacks.webp",
+            "t3": "Arizona Diamondbacks"
+          }
+        },
+        "c2a_25": {
+          "type": "c2a",
+          "settings": {
+            "t2": "kg-logo-mets.webp",
+            "t3": "New York Mets"
+          }
+        },
+        "c2a_26": {
+          "type": "c2a",
+          "settings": {
+            "t2": "kg-logo-brewers.webp",
+            "t3": "Milwaukee Brewers"
+          }
+        },
+        "c2a_27": {
+          "type": "c2a",
+          "settings": {
+            "t2": "kg-logo-giants.webp",
+            "t3": "San Francisco Giants"
+          }
+        }
+      },
+      "block_order": [
+        "c1a_1",
+        "c1a_2",
+        "c1a_3",
+        "c1a_4",
+        "c1a_5",
+        "c1a_6",
+        "c1a_7",
+        "c1a_8",
+        "c1a_9",
+        "c1a_10",
+        "c1a_11",
+        "c1a_12",
+        "c1a_13",
+        "c1a_14",
+        "c1a_15",
+        "c1a_16",
+        "c1a_17",
+        "c1a_18",
+        "c2a_19",
+        "c2a_20",
+        "c2a_21",
+        "c2a_22",
+        "c2a_23",
+        "c2a_24",
+        "c2a_25",
+        "c2a_26",
+        "c2a_27"
+      ]
     },
     "kg_11": {
-      "type": "kg-s-591b0bc5",
-      "settings": {}
+      "type": "kg-b600cdce",
+      "settings": {
+        "t1": "The difference",
+        "t2": "4.8",
+        "t3": "199 reviews",
+        "t4": "Real reviews from SpinGrip customers. All athletes feel the proper grip right away, and most see metric gains within a week."
+      },
+      "blocks": {
+        "c1a_1": {
+          "type": "c1a",
+          "settings": {
+            "t1": "Mar 25, 2026",
+            "t2": "My 9 year old loves it",
+            "t3": "My 9 year old loves it. Haven’t even had it a week and while he was already a solid pitcher in his leagues, I can clearly see added velocity just from using this during throwing.",
+            "t4": "Christopher G.",
+            "t5": "Verified buyer"
+          }
+        },
+        "c1a_2": {
+          "type": "c1a",
+          "settings": {
+            "t1": "Mar 21, 2026",
+            "t2": "Great learning tool",
+            "t3": "Got this for my team. Worked great getting them to understand how to hold the ball. It’s a great tool for kinesthetic learners.",
+            "t4": "Coach N.",
+            "t5": "Verified buyer"
+          }
+        },
+        "c1a_3": {
+          "type": "c1a",
+          "settings": {
+            "t1": "Mar 20, 2026",
+            "t2": "Teaches naturally",
+            "t3": "Teaches naturally without having to think about it and becomes muscle memory after a few uses. Great product!",
+            "t4": "Jeremiah F.",
+            "t5": "Verified buyer"
+          }
+        },
+        "c1a_4": {
+          "type": "c1a",
+          "settings": {
+            "t1": "Mar 19, 2026",
+            "t2": "Amazing product!",
+            "t3": "It works beautifully. I wore it for about 3 innings in the outfield and catching the ball felt so amazing coming off my hand!",
+            "t4": "Gionni H.",
+            "t5": "Verified buyer"
+          }
+        },
+        "c1a_5": {
+          "type": "c1a",
+          "settings": {
+            "t1": "Mar 14, 2026",
+            "t2": "Immediately throwing better",
+            "t3": "My son immediately started throwing better with more spin and accuracy.",
+            "t4": "Jess S.",
+            "t5": "Verified buyer"
+          }
+        },
+        "c1a_6": {
+          "type": "c1a",
+          "settings": {
+            "t1": "Sep 22, 2026",
+            "t2": "Revolutionary",
+            "t3": "Revolutionary piece of baseball equipment! If I could only give it more stars!",
+            "t4": "Dweller Parker",
+            "t5": "Verified buyer"
+          }
+        }
+      },
+      "block_order": [
+        "c1a_1",
+        "c1a_2",
+        "c1a_3",
+        "c1a_4",
+        "c1a_5",
+        "c1a_6"
+      ]
     },
     "kg_12": {
-      "type": "kg-s-39720e37",
-      "settings": {}
+      "type": "kg-035962fe",
+      "settings": {
+        "t1": "Team up and save",
+        "t2": "SpinGrip Packs. Any glove, any size, either hand. The discount applies automatically.",
+        "i3": "2-Pack <strong>save 10%</strong>",
+        "i4": "5-Pack <strong>save 15%</strong>",
+        "i5": "10-Pack <strong>save 20%</strong>",
+        "u6": "/pages/packs",
+        "t7": "Build your pack"
+      }
     },
     "kg_13": {
       "type": "kg-kollective",

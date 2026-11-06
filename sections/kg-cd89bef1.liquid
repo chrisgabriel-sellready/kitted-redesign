@@ -1,0 +1,72 @@
+<div class="kg">
+<section class="section">
+<div class="wrap split split--media-first">
+<div class="split__media" style=""><div style="max-width:380px;margin-inline:auto"><figure class="vcard" style="margin:0">
+<div class="vcard__frame">
+{%- if section.settings.i1 != blank -%}{{ section.settings.i1 | image_url: width: 1800 | image_tag: alt: "", loading: "lazy", style: "position:absolute;inset:0;width:100%;height:100%;object-fit:cover" }}{%- else -%}<img src="{{ section.settings.t2 | asset_url }}" width="720" height="1280" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">{%- endif -%}
+</div>
+</figure></div></div>
+<div class="split__text">
+<p class="eyebrow">{{ section.settings.t3 }}</p>
+<h2 class="h-section">{{ section.settings.t4 }}</h2>
+<p class="lede">{{ section.settings.t5 }}</p>
+<div class="btn-row"><a class="btn" href="{{ section.settings.u6 }}">{{ section.settings.t7 }}<svg aria-hidden="true" class="arrow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>
+</div>
+</div>
+</section>
+</div>
+
+{% schema %}
+{
+ "name": "KITTED: A whole new dimen",
+ "tag": "div",
+ "class": "kg-section",
+ "settings": [
+  {
+   "type": "image_picker",
+   "id": "i1",
+   "label": "Image"
+  },
+  {
+   "type": "text",
+   "id": "t2",
+   "label": "Built-in image (used when no image is picked)",
+   "default": "kg-poster-softball-pitcher-dimension.webp"
+  },
+  {
+   "type": "text",
+   "id": "t3",
+   "label": "Eyebrow: Built for pitchers",
+   "default": "Built for pitchers"
+  },
+  {
+   "type": "text",
+   "id": "t4",
+   "label": "Heading: A whole new dimension of…",
+   "default": "A whole new dimension of spin & velo"
+  },
+  {
+   "type": "text",
+   "id": "t5",
+   "label": "Text: See how SpinGrip Softbal…",
+   "default": "See how SpinGrip Softball for Pitchers locks in your release and unlocks tighter, faster rotation."
+  },
+  {
+   "type": "url",
+   "id": "u6",
+   "label": "Button link"
+  },
+  {
+   "type": "text",
+   "id": "t7",
+   "label": "Link text: Shop SpinGrip for Pitche…",
+   "default": "Shop SpinGrip for Pitchers"
+  }
+ ],
+ "presets": [
+  {
+   "name": "KITTED: A whole new dimen"
+  }
+ ]
+}
+{% endschema %}

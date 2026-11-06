@@ -1,0 +1,68 @@
+<div class="kg">
+<section class="section band--stone" id="how" style="scroll-margin-top:calc(var(--header-h) + 8px)">
+<div class="wrap">
+<div class="section-head"><h2 class="h-section">{{ section.settings.t1 }}</h2><p class="lede muted">{{ section.settings.t2 }}</p></div>
+<div class="steps">{%- for block in section.blocks -%}{%- case block.type -%}{%- when "c1a" -%}<div {{ block.shopify_attributes }} class="step"><div class="step__img">{%- if block.settings.i1 != blank -%}{{ block.settings.i1 | image_url: width: 1800 | image_tag: alt: "", loading: "lazy" }}{%- else -%}<img src="{{ block.settings.t2 | asset_url }}" alt="" width="600" height="750" loading="lazy">{%- endif -%}</div><div class="stack" style="gap:10px"><p class="step__num">{{ block.settings.t3 }}</p><h3 class="step__title">{{ block.settings.t4 }}</h3><p>{{ block.settings.t5 }}</p></div></div>{%- endcase -%}{%- endfor -%}</div>
+</div>
+</section>
+</div>
+
+{% schema %}
+{
+ "name": "KITTED: How SpinGrip work",
+ "tag": "div",
+ "class": "kg-section",
+ "settings": [
+  {
+   "type": "text",
+   "id": "t1",
+   "label": "Heading: How SpinGrip works",
+   "default": "How SpinGrip works"
+  },
+  {
+   "type": "textarea",
+   "id": "t2",
+   "label": "Text: SpinGrip's embedded palm…",
+   "default": "SpinGrip's embedded palm-spacer harnesses the physics of an elite release by positioning the ball farther into your fingers, unlocking optimal spin, velocity, and accuracy."
+  }
+ ],
+ "blocks": [
+  {
+   "type": "c1a",
+   "name": "Step",
+   "settings": [
+    {
+     "type": "image_picker",
+     "id": "i1",
+     "label": "Image"
+    },
+    {
+     "type": "text",
+     "id": "t2",
+     "label": "Built-in image (used when no image is picked)"
+    },
+    {
+     "type": "text",
+     "id": "t3",
+     "label": "Text: Step 1 of 3"
+    },
+    {
+     "type": "text",
+     "id": "t4",
+     "label": "Heading: Slide it on"
+    },
+    {
+     "type": "text",
+     "id": "t5",
+     "label": "Text: SpinGrip slides onto you…"
+    }
+   ]
+  }
+ ],
+ "presets": [
+  {
+   "name": "KITTED: How SpinGrip work"
+  }
+ ]
+}
+{% endschema %}

@@ -1,0 +1,91 @@
+<div class="kg">
+<section aria-label="Trusted by thousands" class="section trusted">
+<div class="wrap center">
+<h2 class="h-section">{{ section.settings.t1 }}</h2>
+<div class="trusted__grid">{%- for block in section.blocks -%}{%- case block.type -%}{%- when "c1a" -%}<div {{ block.shopify_attributes }} class="trusted__item"><span class="trusted__icon"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M16 19v-1.5a3.5 3.5 0 0 0-3.5-3.5h-5A3.5 3.5 0 0 0 4 17.5V19"></path><circle cx="10" cy="7.5" r="3.5"></circle><path d="M20 19v-1.5a3.5 3.5 0 0 0-2.5-3.35M15.5 4.2a3.5 3.5 0 0 1 0 6.6"></path></svg></span><span class="trusted__big">{{ block.settings.t1 }}</span><span class="trusted__small">{{ block.settings.t2 }}</span></div>{%- when "c1b" -%}<div {{ block.shopify_attributes }} class="trusted__item"><span class="trusted__icon"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M4 20V4M4 20h16M8 16v-4M12 16V8M16 16v-6"></path></svg></span><span class="trusted__big">{{ block.settings.t1 }}</span><span class="trusted__small">{{ block.settings.t2 }}</span></div>{%- when "c1c" -%}<div {{ block.shopify_attributes }} class="trusted__item"><span class="trusted__icon"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"></circle><path d="M8.5 13.8 7 22l5-3 5 3-1.5-8.2"></path></svg></span><span class="trusted__big">{{ block.settings.t1 }}</span><span class="trusted__small">{{ block.settings.t2 }}</span></div>{%- endcase -%}{%- endfor -%}</div>
+<ul class="trusted__badges">{%- for block in section.blocks -%}{%- case block.type -%}{%- when "c2a" -%}<li {{ block.shopify_attributes }}>{{ block.settings.t1 }}</li>{%- endcase -%}{%- endfor -%}</ul>
+</div>
+</section>
+</div>
+
+{% schema %}
+{
+ "name": "KITTED: Trusted by thousa",
+ "tag": "div",
+ "class": "kg-section",
+ "settings": [
+  {
+   "type": "text",
+   "id": "t1",
+   "label": "Heading: Trusted by thousands",
+   "default": "Trusted by thousands"
+  }
+ ],
+ "blocks": [
+  {
+   "type": "c1a",
+   "name": "Item",
+   "settings": [
+    {
+     "type": "text",
+     "id": "t1",
+     "label": "Text: 50,000+"
+    },
+    {
+     "type": "text",
+     "id": "t2",
+     "label": "Text: Athletes using SpinGrip"
+    }
+   ]
+  },
+  {
+   "type": "c1b",
+   "name": "Item (layout 2)",
+   "settings": [
+    {
+     "type": "text",
+     "id": "t1",
+     "label": "Text: +7 MPH"
+    },
+    {
+     "type": "text",
+     "id": "t2",
+     "label": "Text: Avg. velocity gain"
+    }
+   ]
+  },
+  {
+   "type": "c1c",
+   "name": "Item (layout 3)",
+   "settings": [
+    {
+     "type": "text",
+     "id": "t1",
+     "label": "Text: Patent"
+    },
+    {
+     "type": "text",
+     "id": "t2",
+     "label": "Text: Pending technology"
+    }
+   ]
+  },
+  {
+   "type": "c2a",
+   "name": "Item",
+   "settings": [
+    {
+     "type": "text",
+     "id": "t1",
+     "label": "List item: 🔒 Secure checkout"
+    }
+   ]
+  }
+ ],
+ "presets": [
+  {
+   "name": "KITTED: Trusted by thousa"
+  }
+ ]
+}
+{% endschema %}

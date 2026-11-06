@@ -24,8 +24,16 @@ This is KITTED's Ride theme with the redesign built in. Upload it as a new theme
 | Softball D-1 Throwing Formula | product.formula-softball |
 | Football D-1 Throwing Formula | product.formula-football |
 
-## 3. Main menu (Online Store → Navigation → Main menu)
-Baseball → /pages/baseball · Softball → /pages/softball · Football → /pages/football · Shop all → /collections/all (add the 4 gloves + 3 formulas as sub-items for the mega menu) · The SpinGrip Effect → /pages/the-spingrip-effect · The Kollective → /pages/kollective
+## 3. Menu
+The top menu is the mockup's menu, built into the **KITTED header** section (Theme editor → Header). It doesn't use Shopify's Navigation menus, so "Bulk orders / How to use" from the old menu won't show. Add, remove, rename or reorder links there. "Shop all" is a dropdown block: pick its products and up to 3 extra links.
+
+## Editing in Shopify (like Kemp Beauty)
+Every section is editable in the theme editor (Online Store → Themes → Customize):
+- Text: headings, paragraphs, quotes, names and button labels are fields.
+- Images: each has an image picker. Until you pick one, the built-in image from the redesign shows.
+- Videos: each has a Shopify video picker (pre-set to KITTED's original file where one exists) plus a URL fallback.
+- Repeating items (video cards, FAQs, reviews, logos, steps, stats, tiles) are blocks: add, remove, reorder.
+- Every KITTED section is also available under "Add section", so you can reuse it on any page.
 
 ## 4. Pack discount
 The pack builder and product pages promise 10% off 2+ gloves, 15% off 5+, 20% off 10+. Shopify applies only what you set up under Discounts, so create that volume discount (or an app/Function for tiers) so checkout matches.

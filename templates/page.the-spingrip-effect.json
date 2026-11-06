@@ -1,20 +1,233 @@
 {
   "sections": {
     "kg_00": {
-      "type": "kg-s-5485f9ea",
-      "settings": {}
+      "type": "kg-0c0e664d",
+      "settings": {
+        "t2": "kg-pdp-bb-9.webp",
+        "t3": "Training guide",
+        "t4": "The SpinGrip Effect",
+        "t5": "Velocity, spin and accuracy are the three pillars of throwing better, and SpinGrip helps all three. They are all decided in the same place: the release. Here is how that works."
+      }
     },
     "kg_01": {
-      "type": "kg-s-97b2ce40",
-      "settings": {}
+      "type": "kg-e17a5b97",
+      "settings": {
+        "u1": "/",
+        "t2": "Home",
+        "t3": "/",
+        "t4": "The SpinGrip Effect"
+      }
     },
     "kg_02": {
-      "type": "kg-s-622a5dcb",
-      "settings": {}
+      "type": "kg-96eaa494",
+      "settings": {
+        "t1": "In this guide",
+        "t2": "The SpinGrip Effect",
+        "t3": "The release",
+        "t4": "For pitchers",
+        "t5": "For position players",
+        "t6": "For quarterbacks",
+        "t7": "FAQ",
+        "t8": "1. Physics that works for every thrower",
+        "t9": "This is not a baseball thing. It is physics. Any object you throw (a baseball, a softball, a football) obeys the same rules. Whatever energy your body builds has to transfer through the last point of contact: your fingertips. Whatever leaks into the palm never makes it into the ball.",
+        "t10": "That single moment decides the three pillars of throwing better, and SpinGrip helps all three:",
+        "t11": "Here is the part most players miss: all three are decided in the same split second, the release. Your legs and torso build the energy. Your fingertips decide how much of it actually gets into the ball, and in what direction. Finish out front on the fingertips and all three move at once.",
+        "t12": "The SpinGrip Effect is that this happens automatically. The glove creates space between the palm and the ball, so the correct physics is the path of least resistance. You do not have to think about it, cue it or film it. Every rep teaches the same clean release, whether you are a pitcher, an infielder, a softball player or a quarterback.",
+        "t13": "Extension ties into this too. Extension is how far out front you let the ball go. The further out front you release, the shorter the ball’s trip to the target: a 90 mph fastball with big extension plays like 92, a throw from the outfield gets there flatter and sooner, and a pass drops into a tighter window.",
+        "t15": "kg-space-between-palm-ball.webp",
+        "t16": "Elite pitchers at release, each with space between the palm and the ball",
+        "t17": "Space between the palm and the ball at release: the common thread among elite arms.",
+        "t18": "2. The release: where all three are won",
+        "t19": "Everything above builds energy. The release decides whether you keep it. When the ball sinks into the palm, slips early, or rolls off the side of the hand, you lose speed, you lose spin, and the ball misses your spot. Worse, it happens in milliseconds, far too fast to feel or fix by thinking about it mid-throw.",
+        "t20": "A great release is simple to describe and hard to repeat: space between the palm and the ball, pressure staying on the fingertips, and the ball let go out front. That is the release that produces high spin, clean velocity, repeatable accuracy and real extension.",
+        "t21": "That is exactly the problem SpinGrip was built to solve. It is the first throwing glove that creates that space between the palm and the ball and feeds immediate feedback into the athlete’s feel, on the throw itself, at real speed. The right release stops being an accident you get once a week and becomes the one your body owns and repeats.",
+        "t22": "Train the release",
+        "t23": "Keep the velo, spin and accuracy.",
+        "u24": "/collections/all",
+        "t25": "Shop SpinGrip",
+        "i26": "Also available for <a href=\"/pages/softball\" style=\"color:var(--paper)\">softball</a> and <a href=\"/pages/football\" style=\"color:var(--paper)\">football</a>.",
+        "t27": "3. For pitchers: spin, velo and pinpoint command",
+        "t28": "Pitchers are not just trying to throw hard. You want a fastball that rides, a breaking ball that bites, a changeup that dies, and all of it landing where you called it. Every one of those is a release story.",
+        "i29": "<strong>How to use SpinGrip:</strong> wear it from your very first warm-up throw and work all the way up through bullpen, long toss and flat grounds with it on. When you are warm, pull it off and let it fly; most arms describe a fifth gear, because the feel stays with you. Pitchers should clear in-game use with their umpire or league first.",
+        "t30": "4. For position players: stronger, truer throws",
+        "t31": "Infielders, outfielders and catchers are graded on a different set of results, but they come from the same release.",
+        "i32": "<strong>How to use SpinGrip:</strong> wear it for pregame catch, defensive work, drill work and long toss. Position players can also train and play in it.",
+        "t33": "5. For quarterbacks: stronger throws, tighter spirals",
+        "t34": "A football is a different shape, but the physics are identical. Velocity, spin and accuracy are still the three pillars, and they are still decided at the fingertips out front. With a football you can see the release with your own eyes: it is the spiral.",
+        "t35": "Most QBs describe SpinGrip Football as the ball suddenly feeling light, like a Nerf ball, because they are finally getting it off the fingertips every time. Wear it for warm-ups, route trees, footwork drills and 7-on-7 work.",
+        "t37": "kg-football-step-3-effect.webp",
+        "t38": "SpinGrip Football on the turf",
+        "t39": "FAQ"
+      },
+      "blocks": {
+        "c1a_1": {
+          "type": "c1a",
+          "settings": {
+            "t1": "Velocity",
+            "t2": "How hard the ball comes out."
+          }
+        },
+        "c1a_2": {
+          "type": "c1a",
+          "settings": {
+            "t1": "Spin",
+            "t2": "How much the ball rides, carries, breaks or spirals."
+          }
+        },
+        "c1a_3": {
+          "type": "c1a",
+          "settings": {
+            "t1": "Accuracy",
+            "t2": "Whether it goes exactly where you aimed it."
+          }
+        },
+        "c2a_4": {
+          "type": "c2a",
+          "settings": {
+            "i1": "<strong>Spin rate and spin efficiency</strong> come from clean fingertip pressure at the last instant. Choke the ball in the palm and you bleed both."
+          }
+        },
+        "c2a_5": {
+          "type": "c2a",
+          "settings": {
+            "i1": "<strong>Movement</strong> on every pitch is spin applied in a consistent direction. Consistent release point, consistent shape."
+          }
+        },
+        "c2a_6": {
+          "type": "c2a",
+          "settings": {
+            "i1": "<strong>Command</strong> is repeatability. Same finish, same slot, same spot."
+          }
+        },
+        "c2a_7": {
+          "type": "c2a",
+          "settings": {
+            "i1": "<strong>Extension</strong> makes your stuff play harder without adding a single mph."
+          }
+        },
+        "c3a_8": {
+          "type": "c3a",
+          "settings": {
+            "i1": "<strong>A stronger throw</strong> across the diamond or from the gap, without max effort."
+          }
+        },
+        "c3a_9": {
+          "type": "c3a",
+          "settings": {
+            "i1": "<strong>Better carry.</strong> Backspin created at the fingertips makes a ball hold its line instead of dying halfway."
+          }
+        },
+        "c3a_10": {
+          "type": "c3a",
+          "settings": {
+            "i1": "<strong>Truer ballflight.</strong> No tailing, cutting or sinking throws that pull your teammate off the bag."
+          }
+        },
+        "c3a_11": {
+          "type": "c3a",
+          "settings": {
+            "i1": "<strong>Accuracy under rush.</strong> A release you own holds up when you are off balance and hurrying."
+          }
+        },
+        "c3a_12": {
+          "type": "c3a",
+          "settings": {
+            "i1": "<strong>Extension</strong> gets the ball out front and on a line, which shows up as pop times and outs."
+          }
+        },
+        "c4a_13": {
+          "type": "c4a",
+          "settings": {
+            "i1": "<strong>Stronger throws.</strong> When the ball sits off the palm and comes off the fingertips, energy goes into the ball instead of dying in your hand."
+          }
+        },
+        "c4a_14": {
+          "type": "c4a",
+          "settings": {
+            "i1": "<strong>Tighter spirals.</strong> A clean index-finger finish means a tight, nose-down ball that cuts wind and rain instead of wobbling."
+          }
+        },
+        "c4a_15": {
+          "type": "c4a",
+          "settings": {
+            "i1": "<strong>Precise accuracy.</strong> A repeatable release point puts the ball on the receiver’s frame."
+          }
+        },
+        "c4a_16": {
+          "type": "c4a",
+          "settings": {
+            "i1": "<strong>Extension.</strong> Letting it go out front flattens the throw so you can fit it into tighter windows."
+          }
+        },
+        "c5a_17": {
+          "type": "c5a",
+          "settings": {
+            "t1": "How much velocity can I realistically add?",
+            "t2": "Most healthy throwers who stick to a real throwing and strength program add 2–5 mph over an off-season. Bigger jumps usually come from fixing one mechanical leak, cleaning up the release, or natural growth in younger athletes."
+          }
+        },
+        "c5a_18": {
+          "type": "c5a",
+          "settings": {
+            "t1": "Why do spin and accuracy matter as much as velocity?",
+            "t2": "Velocity gets the ball there. Spin makes it move or carry, and accuracy decides whether it plays. All three come from the same place: how cleanly the ball leaves your fingertips."
+          }
+        },
+        "c5a_19": {
+          "type": "c5a",
+          "settings": {
+            "t1": "What is extension and why should I care?",
+            "t2": "Extension is how far out front you release the ball. More extension means the ball is on the hitter sooner and the pitch plays harder than the radar reading. For position players, releasing out front means a flatter, truer throw."
+          }
+        },
+        "c5a_20": {
+          "type": "c5a",
+          "settings": {
+            "t1": "Does long toss actually build velocity?",
+            "t2": "Yes. Long toss builds arm strength, mobility and intent. It works best when you pull down on a line back to normal distance so the effort carries over to the mound or the field."
+          }
+        },
+        "c5a_21": {
+          "type": "c5a",
+          "settings": {
+            "t1": "Where does grip fit in?",
+            "t2": "A late, clean fingertip release keeps energy in the ball instead of leaking it into the palm. SpinGrip is the first throwing glove that gives you that feel instantly, at real training speed, so the good release becomes the one you repeat."
+          }
+        }
+      },
+      "block_order": [
+        "c1a_1",
+        "c1a_2",
+        "c1a_3",
+        "c2a_4",
+        "c2a_5",
+        "c2a_6",
+        "c2a_7",
+        "c3a_8",
+        "c3a_9",
+        "c3a_10",
+        "c3a_11",
+        "c3a_12",
+        "c4a_13",
+        "c4a_14",
+        "c4a_15",
+        "c4a_16",
+        "c5a_17",
+        "c5a_18",
+        "c5a_19",
+        "c5a_20",
+        "c5a_21"
+      ]
     },
     "kg_03": {
-      "type": "kg-s-9802d118",
-      "settings": {}
+      "type": "kg-f0093f4a",
+      "settings": {
+        "h1": "<span class=\"dot\"></span>Limited stock available",
+        "t2": "The pros do it. Now you can too.",
+        "t3": "Every throw without SpinGrip is a missed opportunity. Join the athletes throwing harder, spinning more, and hitting their spots with confidence.",
+        "u4": "/collections/all",
+        "t5": "Shop SpinGrip"
+      }
     }
   },
   "order": [

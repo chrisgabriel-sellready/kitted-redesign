@@ -1,0 +1,348 @@
+<div class="kg">
+<section class="section" style="padding-top:clamp(28px,4vw,48px)"><div class="wrap article">
+<aside><nav aria-label="In this guide" class="toc"><p class="eyebrow muted" style="margin-bottom:6px">{{ section.settings.t1 }}</p><a href="#effect">{{ section.settings.t2 }}</a><a href="#release">{{ section.settings.t3 }}</a><a href="#pitchers">{{ section.settings.t4 }}</a><a href="#position">{{ section.settings.t5 }}</a><a href="#qbs">{{ section.settings.t6 }}</a><a href="#faq">{{ section.settings.t7 }}</a></nav></aside>
+<article class="prose">
+<h2 id="effect" style="margin-top:0">{{ section.settings.t8 }}</h2>
+<p>{{ section.settings.t9 }}</p>
+<p>{{ section.settings.t10 }}</p>
+<div class="pillars">{%- for block in section.blocks -%}{%- case block.type -%}{%- when "c1a" -%}<div {{ block.shopify_attributes }}><b>{{ block.settings.t1 }}</b><span>{{ block.settings.t2 }}</span></div>{%- endcase -%}{%- endfor -%}</div>
+<p>{{ section.settings.t11 }}</p>
+<p>{{ section.settings.t12 }}</p>
+<p>{{ section.settings.t13 }}</p>
+<figure>{%- assign kg_alt = section.settings.t16 | escape -%}{%- if section.settings.i14 != blank -%}{{ section.settings.i14 | image_url: width: 1800 | image_tag: alt: kg_alt, loading: "lazy" }}{%- else -%}<img src="{{ section.settings.t15 | asset_url }}" alt="{{ section.settings.t16 | escape }}" width="1600" height="1275" loading="lazy">{%- endif -%}<figcaption>{{ section.settings.t17 }}</figcaption></figure>
+<h2 id="release">{{ section.settings.t18 }}</h2>
+<p>{{ section.settings.t19 }}</p>
+<p>{{ section.settings.t20 }}</p>
+<p>{{ section.settings.t21 }}</p>
+<div class="callout"><p class="eyebrow" style="color:var(--gold)">{{ section.settings.t22 }}</p><p class="display">{{ section.settings.t23 }}</p><div class="btn-row"><a class="btn btn--light" href="{{ section.settings.u24 }}">{{ section.settings.t25 }}<svg aria-hidden="true" class="arrow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div><p style="color:var(--mute-on-ink);font-size:13px">{{ section.settings.i26 }}</p></div>
+<h2 id="pitchers">{{ section.settings.t27 }}</h2>
+<p>{{ section.settings.t28 }}</p>
+<ul>{%- for block in section.blocks -%}{%- case block.type -%}{%- when "c2a" -%}<li {{ block.shopify_attributes }}>{{ block.settings.i1 }}</li>{%- endcase -%}{%- endfor -%}</ul>
+<p>{{ section.settings.i29 }}</p>
+<h2 id="position">{{ section.settings.t30 }}</h2>
+<p>{{ section.settings.t31 }}</p>
+<ul>{%- for block in section.blocks -%}{%- case block.type -%}{%- when "c3a" -%}<li {{ block.shopify_attributes }}>{{ block.settings.i1 }}</li>{%- endcase -%}{%- endfor -%}</ul>
+<p>{{ section.settings.i32 }}</p>
+<h2 id="qbs">{{ section.settings.t33 }}</h2>
+<p>{{ section.settings.t34 }}</p>
+<ul>{%- for block in section.blocks -%}{%- case block.type -%}{%- when "c4a" -%}<li {{ block.shopify_attributes }}>{{ block.settings.i1 }}</li>{%- endcase -%}{%- endfor -%}</ul>
+<p>{{ section.settings.t35 }}</p>
+<figure>{%- assign kg_alt = section.settings.t38 | escape -%}{%- if section.settings.i36 != blank -%}{{ section.settings.i36 | image_url: width: 1800 | image_tag: alt: kg_alt, loading: "lazy" }}{%- else -%}<img src="{{ section.settings.t37 | asset_url }}" alt="{{ section.settings.t38 | escape }}" width="1200" height="800" loading="lazy">{%- endif -%}</figure>
+<h2 id="faq">{{ section.settings.t39 }}</h2>
+<div class="faq-list" style="margin:0;max-width:none">{%- for block in section.blocks -%}{%- case block.type -%}{%- when "c5a" -%}<details {{ block.shopify_attributes }} class="acc"><summary>{{ block.settings.t1 }}<span aria-hidden="true" class="pm"></span></summary><div class="acc__body"><p>{{ block.settings.t2 }}</p></div></details>{%- endcase -%}{%- endfor -%}</div>
+</article>
+</div></section>
+</div>
+
+{% schema %}
+{
+ "name": "KITTED: 1. Physics that w",
+ "tag": "div",
+ "class": "kg-section",
+ "settings": [
+  {
+   "type": "text",
+   "id": "t1",
+   "label": "Eyebrow: In this guide",
+   "default": "In this guide"
+  },
+  {
+   "type": "text",
+   "id": "t2",
+   "label": "Link text: The SpinGrip Effect",
+   "default": "The SpinGrip Effect"
+  },
+  {
+   "type": "text",
+   "id": "t3",
+   "label": "Link text: The release",
+   "default": "The release"
+  },
+  {
+   "type": "text",
+   "id": "t4",
+   "label": "Link text: For pitchers",
+   "default": "For pitchers"
+  },
+  {
+   "type": "text",
+   "id": "t5",
+   "label": "Link text: For position players",
+   "default": "For position players"
+  },
+  {
+   "type": "text",
+   "id": "t6",
+   "label": "Link text: For quarterbacks",
+   "default": "For quarterbacks"
+  },
+  {
+   "type": "text",
+   "id": "t7",
+   "label": "Link text: FAQ",
+   "default": "FAQ"
+  },
+  {
+   "type": "text",
+   "id": "t8",
+   "label": "Heading: 1. Physics that works fo…",
+   "default": "1. Physics that works for every thrower"
+  },
+  {
+   "type": "textarea",
+   "id": "t9",
+   "label": "Text: This is not a baseball t…",
+   "default": "This is not a baseball thing. It is physics. Any object you throw (a baseball, a softball, a football) obeys the same rules. Whatever energy your body builds has to transfer through the last point of contact: your fingertips. Whatever leaks into the palm never makes it into the ball."
+  },
+  {
+   "type": "text",
+   "id": "t10",
+   "label": "Text: That single moment decid…",
+   "default": "That single moment decides the three pillars of throwing better, and SpinGrip helps all three:"
+  },
+  {
+   "type": "textarea",
+   "id": "t11",
+   "label": "Text: Here is the part most pl…",
+   "default": "Here is the part most players miss: all three are decided in the same split second, the release. Your legs and torso build the energy. Your fingertips decide how much of it actually gets into the ball, and in what direction. Finish out front on the fingertips and all three move at once."
+  },
+  {
+   "type": "textarea",
+   "id": "t12",
+   "label": "Text: The SpinGrip Effect is t…",
+   "default": "The SpinGrip Effect is that this happens automatically. The glove creates space between the palm and the ball, so the correct physics is the path of least resistance. You do not have to think about it, cue it or film it. Every rep teaches the same clean release, whether you are a pitcher, an infielder, a softball player or a quarterback."
+  },
+  {
+   "type": "textarea",
+   "id": "t13",
+   "label": "Text: Extension ties into this…",
+   "default": "Extension ties into this too. Extension is how far out front you let the ball go. The further out front you release, the shorter the ball’s trip to the target: a 90 mph fastball with big extension plays like 92, a throw from the outfield gets there flatter and sooner, and a pass drops into a tighter window."
+  },
+  {
+   "type": "image_picker",
+   "id": "i14",
+   "label": "Image"
+  },
+  {
+   "type": "text",
+   "id": "t15",
+   "label": "Built-in image (used when no image is picked)",
+   "default": "kg-space-between-palm-ball.webp"
+  },
+  {
+   "type": "text",
+   "id": "t16",
+   "label": "Image alt text",
+   "default": "Elite pitchers at release, each with space between the palm and the ball"
+  },
+  {
+   "type": "text",
+   "id": "t17",
+   "label": "Text: Space between the palm a…",
+   "default": "Space between the palm and the ball at release: the common thread among elite arms."
+  },
+  {
+   "type": "text",
+   "id": "t18",
+   "label": "Heading: 2. The release: where al…",
+   "default": "2. The release: where all three are won"
+  },
+  {
+   "type": "textarea",
+   "id": "t19",
+   "label": "Text: Everything above builds …",
+   "default": "Everything above builds energy. The release decides whether you keep it. When the ball sinks into the palm, slips early, or rolls off the side of the hand, you lose speed, you lose spin, and the ball misses your spot. Worse, it happens in milliseconds, far too fast to feel or fix by thinking about it mid-throw."
+  },
+  {
+   "type": "textarea",
+   "id": "t20",
+   "label": "Text: A great release is simpl…",
+   "default": "A great release is simple to describe and hard to repeat: space between the palm and the ball, pressure staying on the fingertips, and the ball let go out front. That is the release that produces high spin, clean velocity, repeatable accuracy and real extension."
+  },
+  {
+   "type": "textarea",
+   "id": "t21",
+   "label": "Text: That is exactly the prob…",
+   "default": "That is exactly the problem SpinGrip was built to solve. It is the first throwing glove that creates that space between the palm and the ball and feeds immediate feedback into the athlete’s feel, on the throw itself, at real speed. The right release stops being an accident you get once a week and becomes the one your body owns and repeats."
+  },
+  {
+   "type": "text",
+   "id": "t22",
+   "label": "Eyebrow: Train the release",
+   "default": "Train the release"
+  },
+  {
+   "type": "text",
+   "id": "t23",
+   "label": "Text: Keep the velo, spin and …",
+   "default": "Keep the velo, spin and accuracy."
+  },
+  {
+   "type": "url",
+   "id": "u24",
+   "label": "Button link"
+  },
+  {
+   "type": "text",
+   "id": "t25",
+   "label": "Link text: Shop SpinGrip",
+   "default": "Shop SpinGrip"
+  },
+  {
+   "type": "inline_richtext",
+   "id": "i26",
+   "label": "Text: Also available for softb…",
+   "default": "Also available for <a href=\"/pages/softball\" style=\"color:var(--paper)\">softball</a> and <a href=\"/pages/football\" style=\"color:var(--paper)\">football</a>."
+  },
+  {
+   "type": "text",
+   "id": "t27",
+   "label": "Heading: 3. For pitchers: spin, v…",
+   "default": "3. For pitchers: spin, velo and pinpoint command"
+  },
+  {
+   "type": "textarea",
+   "id": "t28",
+   "label": "Text: Pitchers are not just tr…",
+   "default": "Pitchers are not just trying to throw hard. You want a fastball that rides, a breaking ball that bites, a changeup that dies, and all of it landing where you called it. Every one of those is a release story."
+  },
+  {
+   "type": "inline_richtext",
+   "id": "i29",
+   "label": "Text: How to use SpinGrip: wea…",
+   "default": "<strong>How to use SpinGrip:</strong> wear it from your very first warm-up throw and work all the way up through bullpen, long toss and flat grounds with it on. When you are warm, pull it off and let it fly; most arms describe a fifth gear, because the feel stays with you. Pitchers should clear in-game use with their umpire or league first."
+  },
+  {
+   "type": "text",
+   "id": "t30",
+   "label": "Heading: 4. For position players:…",
+   "default": "4. For position players: stronger, truer throws"
+  },
+  {
+   "type": "textarea",
+   "id": "t31",
+   "label": "Text: Infielders, outfielders …",
+   "default": "Infielders, outfielders and catchers are graded on a different set of results, but they come from the same release."
+  },
+  {
+   "type": "inline_richtext",
+   "id": "i32",
+   "label": "Text: How to use SpinGrip: wea…",
+   "default": "<strong>How to use SpinGrip:</strong> wear it for pregame catch, defensive work, drill work and long toss. Position players can also train and play in it."
+  },
+  {
+   "type": "text",
+   "id": "t33",
+   "label": "Heading: 5. For quarterbacks: str…",
+   "default": "5. For quarterbacks: stronger throws, tighter spirals"
+  },
+  {
+   "type": "textarea",
+   "id": "t34",
+   "label": "Text: A football is a differen…",
+   "default": "A football is a different shape, but the physics are identical. Velocity, spin and accuracy are still the three pillars, and they are still decided at the fingertips out front. With a football you can see the release with your own eyes: it is the spiral."
+  },
+  {
+   "type": "textarea",
+   "id": "t35",
+   "label": "Text: Most QBs describe SpinGr…",
+   "default": "Most QBs describe SpinGrip Football as the ball suddenly feeling light, like a Nerf ball, because they are finally getting it off the fingertips every time. Wear it for warm-ups, route trees, footwork drills and 7-on-7 work."
+  },
+  {
+   "type": "image_picker",
+   "id": "i36",
+   "label": "Image"
+  },
+  {
+   "type": "text",
+   "id": "t37",
+   "label": "Built-in image (used when no image is picked)",
+   "default": "kg-football-step-3-effect.webp"
+  },
+  {
+   "type": "text",
+   "id": "t38",
+   "label": "Image alt text",
+   "default": "SpinGrip Football on the turf"
+  },
+  {
+   "type": "text",
+   "id": "t39",
+   "label": "Heading: FAQ",
+   "default": "FAQ"
+  }
+ ],
+ "blocks": [
+  {
+   "type": "c1a",
+   "name": "Item",
+   "settings": [
+    {
+     "type": "text",
+     "id": "t1",
+     "label": "Text: Velocity"
+    },
+    {
+     "type": "text",
+     "id": "t2",
+     "label": "Text: How hard the ball comes …"
+    }
+   ]
+  },
+  {
+   "type": "c2a",
+   "name": "Item",
+   "settings": [
+    {
+     "type": "inline_richtext",
+     "id": "i1",
+     "label": "List item: Spin rate and spin effic…"
+    }
+   ]
+  },
+  {
+   "type": "c3a",
+   "name": "Item",
+   "settings": [
+    {
+     "type": "inline_richtext",
+     "id": "i1",
+     "label": "List item: A stronger throw across …"
+    }
+   ]
+  },
+  {
+   "type": "c4a",
+   "name": "Item",
+   "settings": [
+    {
+     "type": "inline_richtext",
+     "id": "i1",
+     "label": "List item: Stronger throws. When th…"
+    }
+   ]
+  },
+  {
+   "type": "c5a",
+   "name": "Question",
+   "settings": [
+    {
+     "type": "text",
+     "id": "t1",
+     "label": "Question: How much velocity can I …"
+    },
+    {
+     "type": "textarea",
+     "id": "t2",
+     "label": "Text: Most healthy throwers wh…"
+    }
+   ]
+  }
+ ],
+ "presets": [
+  {
+   "name": "KITTED: 1. Physics that w"
+  }
+ ]
+}
+{% endschema %}

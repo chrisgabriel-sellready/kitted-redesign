@@ -1,0 +1,100 @@
+<div class="kg">
+<section class="section" id="formulas">
+<div class="wrap">
+<div class="section-head"><h2 class="h-section">{{ section.settings.t1 }}</h2><p class="lede muted">{{ section.settings.t2 }}</p></div>
+<div class="grid grid--3 grid--list-m">{%- for block in section.blocks -%}{%- case block.type -%}{%- when "c1a" -%}<article {{ block.shopify_attributes }} class="pcard pcard--formula">
+<a aria-label="SpinGrip Baseball's Exclusive Pro-Level Throwing Formula" class="pcard__media" href="{{ block.settings.u1 }}">{%- assign kg_alt = block.settings.t4 | escape -%}{%- if block.settings.i2 != blank -%}{{ block.settings.i2 | image_url: width: 1800 | image_tag: alt: kg_alt, loading: "lazy" }}{%- else -%}<img src="{{ block.settings.t3 | asset_url }}" alt="{{ block.settings.t4 | escape }}" width="600" height="600" loading="lazy">{%- endif -%}{%- if block.settings.i5 != blank -%}{{ block.settings.i5 | image_url: width: 1800 | image_tag: alt: "", loading: "lazy", style: "object-position:center 20%" }}{%- else -%}<img src="{{ block.settings.t6 | asset_url }}" alt="" width="600" height="600" loading="lazy" style="object-position:center 20%">{%- endif -%}</a>
+<div class="pcard__body">
+<h3 class="pcard__name">{{ block.settings.i7 }}</h3>
+<p class="pcard__blurb">{{ block.settings.t8 }}</p>
+<div class="pcard__foot"><span class="price">{{ block.settings.h9 }}</span><span class="eyebrow muted">{{ block.settings.t10 }}</span></div>
+</div>
+</article>{%- endcase -%}{%- endfor -%}</div>
+</div>
+</section>
+</div>
+
+{% schema %}
+{
+ "name": "KITTED: Throwing formulas",
+ "tag": "div",
+ "class": "kg-section",
+ "settings": [
+  {
+   "type": "text",
+   "id": "t1",
+   "label": "Heading: Throwing formulas",
+   "default": "Throwing formulas"
+  },
+  {
+   "type": "text",
+   "id": "t2",
+   "label": "Text: Digital programs built a…",
+   "default": "Digital programs built around the SpinGrip release. Instant access, $150 value."
+  }
+ ],
+ "blocks": [
+  {
+   "type": "c1a",
+   "name": "Card",
+   "settings": [
+    {
+     "type": "url",
+     "id": "u1",
+     "label": "Link"
+    },
+    {
+     "type": "image_picker",
+     "id": "i2",
+     "label": "Image"
+    },
+    {
+     "type": "text",
+     "id": "t3",
+     "label": "Built-in image (used when no image is picked)"
+    },
+    {
+     "type": "text",
+     "id": "t4",
+     "label": "Image alt text"
+    },
+    {
+     "type": "image_picker",
+     "id": "i5",
+     "label": "Image"
+    },
+    {
+     "type": "text",
+     "id": "t6",
+     "label": "Built-in image (used when no image is picked)"
+    },
+    {
+     "type": "inline_richtext",
+     "id": "i7",
+     "label": "Heading: Baseball Pro-Level Throw…"
+    },
+    {
+     "type": "text",
+     "id": "t8",
+     "label": "Text: The same throwing framew…"
+    },
+    {
+     "type": "html",
+     "id": "h9",
+     "label": "Text: $19.95 $150"
+    },
+    {
+     "type": "text",
+     "id": "t10",
+     "label": "Eyebrow: Digital"
+    }
+   ]
+  }
+ ],
+ "presets": [
+  {
+   "name": "KITTED: Throwing formulas"
+  }
+ ]
+}
+{% endschema %}

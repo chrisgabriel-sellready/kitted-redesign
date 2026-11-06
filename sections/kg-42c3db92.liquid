@@ -1,0 +1,67 @@
+<div class="kg">
+<section class="section">
+<div class="wrap split">
+<div class="split__media" style="order:2"><div style="max-width:380px;margin-inline:auto"><figure class="vcard" style="margin:0">
+<div class="vcard__frame">
+{%- if section.settings.i1 != blank -%}{{ section.settings.i1 | image_url: width: 1800 | image_tag: alt: "", loading: "lazy", style: "position:absolute;inset:0;width:100%;height:100%;object-fit:cover" }}{%- else -%}<img src="{{ section.settings.t2 | asset_url }}" width="720" height="1280" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">{%- endif -%}
+</div>
+</figure></div></div>
+<div class="split__text">
+<p class="eyebrow">{{ section.settings.t3 }}</p>
+<h2 class="h-section">{{ section.settings.t4 }}</h2>
+<p class="lede">{{ section.settings.t5 }}</p>
+<div class="btn-row"><a class="btn" href="#buy">{{ section.settings.t6 }}<svg aria-hidden="true" class="arrow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>
+</div>
+</div>
+</section>
+</div>
+
+{% schema %}
+{
+ "name": "KITTED: The #1 throwing m",
+ "tag": "div",
+ "class": "kg-section",
+ "settings": [
+  {
+   "type": "image_picker",
+   "id": "i1",
+   "label": "Image"
+  },
+  {
+   "type": "text",
+   "id": "t2",
+   "label": "Built-in image (used when no image is picked)",
+   "default": "kg-poster-softball-d1-problem.webp"
+  },
+  {
+   "type": "text",
+   "id": "t3",
+   "label": "Eyebrow: D1 athlete breaks it dow…",
+   "default": "D1 athlete breaks it down"
+  },
+  {
+   "type": "text",
+   "id": "t4",
+   "label": "Heading: The #1 throwing mistake …",
+   "default": "The #1 throwing mistake every softball player makes"
+  },
+  {
+   "type": "textarea",
+   "id": "t5",
+   "label": "Text: A former D1 softball ath…",
+   "default": "A former D1 softball athlete explains the grip problem killing your spin, velocity and accuracy, and how SpinGrip fixes it automatically."
+  },
+  {
+   "type": "text",
+   "id": "t6",
+   "label": "Link text: Shop SpinGrip",
+   "default": "Shop SpinGrip"
+  }
+ ],
+ "presets": [
+  {
+   "name": "KITTED: The #1 throwing m"
+  }
+ ]
+}
+{% endschema %}

@@ -1,0 +1,54 @@
+<div class="kg">
+<section class="section--tight">
+<div class="wrap">
+<div class="tiles">{%- for block in section.blocks -%}{%- case block.type -%}{%- when "c1a" -%}<a {{ block.shopify_attributes }} class="tile" href="{{ block.settings.u1 }}">{%- assign kg_alt = block.settings.t4 | escape -%}{%- if block.settings.i2 != blank -%}{{ block.settings.i2 | image_url: width: 1800 | image_tag: alt: kg_alt, loading: "lazy" }}{%- else -%}<img src="{{ block.settings.t3 | asset_url }}" alt="{{ block.settings.t4 | escape }}" width="900" height="1350" loading="lazy">{%- endif -%}<span class="tile__label">{{ block.settings.h5 }}</span></a>{%- endcase -%}{%- endfor -%}</div>
+</div>
+</section>
+</div>
+
+{% schema %}
+{
+ "name": "KITTED: Shop by sport",
+ "tag": "div",
+ "class": "kg-section",
+ "settings": [],
+ "blocks": [
+  {
+   "type": "c1a",
+   "name": "Tile",
+   "settings": [
+    {
+     "type": "url",
+     "id": "u1",
+     "label": "Link"
+    },
+    {
+     "type": "image_picker",
+     "id": "i2",
+     "label": "Image"
+    },
+    {
+     "type": "text",
+     "id": "t3",
+     "label": "Built-in image (used when no image is picked)"
+    },
+    {
+     "type": "text",
+     "id": "t4",
+     "label": "Image alt text"
+    },
+    {
+     "type": "html",
+     "id": "h5",
+     "label": "Text: Baseball Shop now"
+    }
+   ]
+  }
+ ],
+ "presets": [
+  {
+   "name": "KITTED: Shop by sport"
+  }
+ ]
+}
+{% endschema %}

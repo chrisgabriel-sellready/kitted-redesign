@@ -1,0 +1,110 @@
+<div class="kg">
+<section class="section">
+<div class="wrap">
+<div class="section-head section-head--row"><div><h2 class="h-spaced h-spaced--rule">{{ section.settings.t1 }}</h2></div><div class="carousel__nav"><button aria-label="Previous" class="carousel__btn" data-car="car-players" data-dir="-1" type="button"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"></path></svg></button><button aria-label="Next" class="carousel__btn" data-car="car-players" data-dir="1" type="button"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></button></div></div>
+<div class="carousel" id="car-players"><div class="carousel__track">{%- for block in section.blocks -%}{%- case block.type -%}{%- when "c1a" -%}<figure {{ block.shopify_attributes }} class="vcard" style="margin:0">
+<div class="vcard__frame">
+{%- if block.settings.i1 != blank -%}{{ block.settings.i1 | image_url: width: 1800 | image_tag: alt: "", loading: "lazy", style: "position:absolute;inset:0;width:100%;height:100%;object-fit:cover" }}{%- else -%}<img src="{{ block.settings.t2 | asset_url }}" width="720" height="1280" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">{%- endif -%}
+</div>
+<div class="vcard__cap"><p class="vcard__quote">{{ block.settings.t3 }}</p><p class="vcard__who">{{ block.settings.t4 }}</p></div>
+</figure>{%- when "c1b" -%}<figure {{ block.shopify_attributes }} class="vcard" data-video="" style="margin:0">
+<div class="vcard__frame">
+<video playsinline="" poster="{%- if block.settings.i3 != blank -%}{{ block.settings.i3 | image_url: width: 1200 }}{%- elsif block.settings.t4 != blank -%}{{ block.settings.t4 | asset_url }}{%- elsif block.settings.v1 != blank -%}{{ block.settings.v1.preview_image | image_url: width: 1200 }}{%- endif -%}" preload="none" src="{%- if block.settings.v1 != blank -%}{{ block.settings.v1.sources | where: "mime_type", "video/mp4" | map: "url" | first }}{%- else -%}{{ block.settings.u2 }}{%- endif -%}"></video>
+<button aria-label="Play video: Cody Freeman, Big Leaguer" class="vcard__play" type="button"><span><svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24"><path d="M7 4l13 8-13 8z"></path></svg></span></button>
+<button aria-label="Toggle sound" class="vcard__sound" type="button"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"></path><path d="M23 9l-6 6M17 9l6 6"></path></svg>{{ block.settings.t5 }}</button>
+</div>
+<div class="vcard__cap"><p class="vcard__quote">{{ block.settings.t6 }}</p><p class="vcard__who">{{ block.settings.t7 }}</p></div>
+</figure>{%- endcase -%}{%- endfor -%}</div></div>
+</div>
+</section>
+</div>
+
+{% schema %}
+{
+ "name": "KITTED: Players know 2",
+ "tag": "div",
+ "class": "kg-section",
+ "settings": [
+  {
+   "type": "text",
+   "id": "t1",
+   "label": "Heading: Players know",
+   "default": "Players know"
+  }
+ ],
+ "blocks": [
+  {
+   "type": "c1a",
+   "name": "Video card",
+   "settings": [
+    {
+     "type": "image_picker",
+     "id": "i1",
+     "label": "Image"
+    },
+    {
+     "type": "text",
+     "id": "t2",
+     "label": "Built-in image (used when no image is picked)"
+    },
+    {
+     "type": "text",
+     "id": "t3",
+     "label": "Quote: “It’s a simple training …"
+    },
+    {
+     "type": "text",
+     "id": "t4",
+     "label": "Name: Chip"
+    }
+   ]
+  },
+  {
+   "type": "c1b",
+   "name": "Video card (layout 2)",
+   "settings": [
+    {
+     "type": "video",
+     "id": "v1",
+     "label": "Video (Shopify file)"
+    },
+    {
+     "type": "url",
+     "id": "u2",
+     "label": "Video URL (used when no video is picked)"
+    },
+    {
+     "type": "image_picker",
+     "id": "i3",
+     "label": "Video cover image"
+    },
+    {
+     "type": "text",
+     "id": "t4",
+     "label": "Built-in cover image"
+    },
+    {
+     "type": "text",
+     "id": "t5",
+     "label": "Text: Tap for sound"
+    },
+    {
+     "type": "text",
+     "id": "t6",
+     "label": "Quote: “This just naturally hel…"
+    },
+    {
+     "type": "text",
+     "id": "t7",
+     "label": "Name: Cody Freeman, Big League…"
+    }
+   ]
+  }
+ ],
+ "presets": [
+  {
+   "name": "KITTED: Players know 2"
+  }
+ ]
+}
+{% endschema %}

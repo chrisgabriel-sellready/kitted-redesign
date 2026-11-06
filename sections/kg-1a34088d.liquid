@@ -1,0 +1,64 @@
+<div class="kg">
+<section class="section band--stone"><div class="wrap split"><div class="split__text"><p class="eyebrow">{{ section.settings.t1 }}</p><h2 class="h-section">{{ section.settings.t2 }}</h2><p class="lede">{{ section.settings.t3 }}</p><a class="btn" href="{{ section.settings.u4 }}">{{ section.settings.t5 }}<svg aria-hidden="true" class="arrow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div><div class="split__media"><figure class="frame" style="margin:0">{%- assign kg_alt = section.settings.t8 | escape -%}{%- if section.settings.i6 != blank -%}{{ section.settings.i6 | image_url: width: 1800 | image_tag: alt: kg_alt, loading: "lazy", style: "aspect-ratio:4/3;object-fit:cover;width:100%" }}{%- else -%}<img src="{{ section.settings.t7 | asset_url }}" alt="{{ section.settings.t8 | escape }}" width="900" height="1200" loading="lazy" style="aspect-ratio:4/3;object-fit:cover;width:100%">{%- endif -%}</figure></div></div></section>
+</div>
+
+{% schema %}
+{
+ "name": "KITTED: Team & bulk order",
+ "tag": "div",
+ "class": "kg-section",
+ "settings": [
+  {
+   "type": "text",
+   "id": "t1",
+   "label": "Eyebrow: Outfitting a team?",
+   "default": "Outfitting a team?"
+  },
+  {
+   "type": "text",
+   "id": "t2",
+   "label": "Heading: Team & bulk orders",
+   "default": "Team & bulk orders"
+  },
+  {
+   "type": "text",
+   "id": "t3",
+   "label": "Text: Clubs and organizations …",
+   "default": "Clubs and organizations ordering 10+ gloves save more: 20% off 10–50 gloves, 25% off 51–74, and 30% off 75+."
+  },
+  {
+   "type": "url",
+   "id": "u4",
+   "label": "Button link"
+  },
+  {
+   "type": "text",
+   "id": "t5",
+   "label": "Link text: Contact us",
+   "default": "Contact us"
+  },
+  {
+   "type": "image_picker",
+   "id": "i6",
+   "label": "Image"
+  },
+  {
+   "type": "text",
+   "id": "t7",
+   "label": "Built-in image (used when no image is picked)",
+   "default": "kg-pdp-bb-4.webp"
+  },
+  {
+   "type": "text",
+   "id": "t8",
+   "label": "Image alt text",
+   "default": "Jeffrey Claycomb, Ohio State commit, throwing with SpinGrip"
+  }
+ ],
+ "presets": [
+  {
+   "name": "KITTED: Team & bulk order"
+  }
+ ]
+}
+{% endschema %}

@@ -1,0 +1,32 @@
+<div class="kg">
+<section aria-label="An absolute no-brainer" class="nobrainer">
+<div class="wrap center"><h2 class="nobrainer__quote">{{ section.settings.h1 }}</h2><p class="nobrainer__line">{{ section.settings.h2 }}</p></div>
+</section>
+</div>
+
+{% schema %}
+{
+ "name": "KITTED: “An absolute no-b",
+ "tag": "div",
+ "class": "kg-section",
+ "settings": [
+  {
+   "type": "html",
+   "id": "h1",
+   "label": "Heading: “An absolute no-brainer”",
+   "default": "“An absolute<br/>no-brainer”"
+  },
+  {
+   "type": "html",
+   "id": "h2",
+   "label": "Text: The first-ever throwing …",
+   "default": "<span>The first-ever throwing glove</span>"
+  }
+ ],
+ "presets": [
+  {
+   "name": "KITTED: “An absolute no-b"
+  }
+ ]
+}
+{% endschema %}

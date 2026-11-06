@@ -1,0 +1,73 @@
+<div class="kg">
+<section class="section--tight band--stone">
+<div class="wrap center">
+<h2 class="h-card" style="font-size:clamp(20px,2.2vw,28px)">{{ section.settings.t1 }}</h2>
+<div class="logos"><div class="logos__row">{%- for kgc in (1..4) -%}{%- for block in section.blocks -%}{%- case block.type -%}{%- when "c1a" -%}{%- assign kg_alt = block.settings.t3 | escape -%}{%- if block.settings.i1 != blank -%}{{ block.settings.i1 | image_url: width: 1800 | image_tag: alt: kg_alt, loading: "lazy" }}{%- else -%}<img src="{{ block.settings.t2 | asset_url }}" alt="{{ block.settings.t3 | escape }}" width="56" height="56" loading="lazy">{%- endif -%}{%- endcase -%}{%- endfor -%}{%- endfor -%}</div></div><div class="logos"><div class="logos__row logos__row--rev">{%- for kgc in (1..6) -%}{%- for block in section.blocks -%}{%- case block.type -%}{%- when "c2a" -%}{%- assign kg_alt = block.settings.t3 | escape -%}{%- if block.settings.i1 != blank -%}{{ block.settings.i1 | image_url: width: 1800 | image_tag: alt: kg_alt, loading: "lazy" }}{%- else -%}<img src="{{ block.settings.t2 | asset_url }}" alt="{{ block.settings.t3 | escape }}" width="56" height="56" loading="lazy">{%- endif -%}{%- endcase -%}{%- endfor -%}{%- endfor -%}</div></div>
+</div>
+</section>
+</div>
+
+{% schema %}
+{
+ "name": "KITTED: Used by athletes",
+ "tag": "div",
+ "class": "kg-section",
+ "settings": [
+  {
+   "type": "text",
+   "id": "t1",
+   "label": "Heading: Used by athletes from to…",
+   "default": "Used by athletes from top college & pro teams"
+  }
+ ],
+ "blocks": [
+  {
+   "type": "c1a",
+   "name": "Logo",
+   "settings": [
+    {
+     "type": "image_picker",
+     "id": "i1",
+     "label": "Image"
+    },
+    {
+     "type": "text",
+     "id": "t2",
+     "label": "Built-in image (used when no image is picked)"
+    },
+    {
+     "type": "text",
+     "id": "t3",
+     "label": "Image alt text"
+    }
+   ]
+  },
+  {
+   "type": "c2a",
+   "name": "Logo",
+   "settings": [
+    {
+     "type": "image_picker",
+     "id": "i1",
+     "label": "Image"
+    },
+    {
+     "type": "text",
+     "id": "t2",
+     "label": "Built-in image (used when no image is picked)"
+    },
+    {
+     "type": "text",
+     "id": "t3",
+     "label": "Image alt text"
+    }
+   ]
+  }
+ ],
+ "presets": [
+  {
+   "name": "KITTED: Used by athletes"
+  }
+ ]
+}
+{% endschema %}

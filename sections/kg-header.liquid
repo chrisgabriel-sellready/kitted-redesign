@@ -1,0 +1,181 @@
+{%- liquid
+  assign logo = section.settings.logo | default: settings.logo
+-%}
+<div class="kg">
+<header class="site-header">
+  <div class="wrap masthead">
+    <div class="masthead__left">
+      <button class="icon-btn menu-toggle" type="button" data-kg-open="kg-mnav" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
+    </div>
+    <a class="masthead__logo" href="{{ routes.root_url }}" aria-label="{{ shop.name }} home">
+      {%- if logo != blank -%}{{ logo | image_url: width: 240 | image_tag: alt: shop.name, width: 54, height: 46, style: 'height:46px;width:auto' }}{%- else -%}<img src="{{ 'kg-kitted-logo-black.png' | asset_url }}" alt="{{ shop.name }}" width="54" height="46">{%- endif -%}
+    </a>
+    <div class="masthead__right">
+      <a class="icon-btn masthead__search" href="{{ routes.search_url }}" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></a>
+      <a class="icon-btn kg-cart" href="{{ routes.cart_url }}" id="cart-icon-bubble" aria-label="Open cart">
+        {%- if cart == empty -%}<span class="svg-wrapper">{{ 'icon-cart-empty.svg' | inline_asset_content }}</span>{%- else -%}<span class="svg-wrapper">{{ 'icon-cart.svg' | inline_asset_content }}</span>{%- endif -%}
+        <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
+        {%- if cart != empty -%}<div class="cart-count-bubble">{%- if cart.item_count < 100 -%}<span aria-hidden="true">{{ cart.item_count }}</span>{%- endif -%}<span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span></div>{%- endif -%}
+      </a>
+    </div>
+  </div>
+  <nav class="primary-nav" aria-label="Primary">
+    <ul>
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'link' -%}
+            <li {{ block.shopify_attributes }}><a href="{{ block.settings.url }}"{% if block.settings.url == request.path %} aria-current="page"{% endif %}>{{ block.settings.label }}</a></li>
+          {%- when 'shop_menu' -%}
+            <li class="has-menu" {{ block.shopify_attributes }}><button type="button" aria-expanded="false">{{ block.settings.label }} <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+              <div class="mega">
+                {%- for p in block.settings.products -%}<a href="{{ p.url }}">{%- if p.featured_media -%}{{ p.featured_media | image_url: width: 320 | image_tag: loading: 'lazy', alt: '', width: 160, height: 160 }}{%- endif -%}<span>{{ p.title | remove: 'SpinGrip ' }}</span></a>{%- endfor -%}
+                <div class="mega__more">
+                  {%- if block.settings.more_1_label != blank -%}<a href="{{ block.settings.more_1_url }}">{{ block.settings.more_1_label }}</a>{%- endif -%}
+                  {%- if block.settings.more_2_label != blank -%}<a href="{{ block.settings.more_2_url }}">{{ block.settings.more_2_label }}</a>{%- endif -%}
+                  {%- if block.settings.more_3_label != blank -%}<a href="{{ block.settings.more_3_url }}">{{ block.settings.more_3_label }}</a>{%- endif -%}
+                </div>
+              </div></li>
+        {%- endcase -%}
+      {%- endfor -%}
+    </ul>
+  </nav>
+</header>
+<div class="drawer drawer--left" id="kg-mnav" aria-hidden="true" role="dialog" aria-label="Menu">
+  <div class="drawer__scrim" data-kg-close></div>
+  <div class="drawer__panel">
+    <div class="drawer__head">{%- if logo != blank -%}{{ logo | image_url: width: 160 | image_tag: alt: shop.name, style: 'height:34px;width:auto' }}{%- else -%}<img src="{{ 'kg-kitted-logo-black.png' | asset_url }}" alt="{{ shop.name }}" width="40" height="34" style="height:34px;width:auto">{%- endif -%}<button class="icon-btn" type="button" data-kg-close aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+    <div class="drawer__body">
+      <nav class="mnav" aria-label="Mobile">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'link' -%}<a href="{{ block.settings.url }}">{{ block.settings.label }}{% if block.settings.mobile_note != blank %} <small>{{ block.settings.mobile_note }}</small>{% endif %}</a>
+          {%- elsif block.type == 'shop_menu' -%}
+            {%- for p in block.settings.products -%}<a href="{{ p.url }}">{{ p.title }} <small>Shop</small></a>{%- endfor -%}
+          {%- endif -%}
+        {%- endfor -%}
+        <div class="mnav__sub">
+          {%- for block in section.blocks -%}{%- if block.type == 'shop_menu' -%}
+            {%- if block.settings.more_1_label != blank -%}<a href="{{ block.settings.more_1_url }}">{{ block.settings.more_1_label }}</a>{%- endif -%}
+            {%- if block.settings.more_2_label != blank -%}<a href="{{ block.settings.more_2_url }}">{{ block.settings.more_2_label }}</a>{%- endif -%}
+            {%- if block.settings.more_3_label != blank -%}<a href="{{ block.settings.more_3_url }}">{{ block.settings.more_3_label }}</a>{%- endif -%}
+          {%- endif -%}{%- endfor -%}
+          <a href="/pages/contact">Contact &amp; team orders</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>
+</div>
+<script>
+  (function () {
+    var d = document.getElementById('kg-mnav'); if (!d) return;
+    function set(open) { d.classList.toggle('is-open', open); d.setAttribute('aria-hidden', open ? 'false' : 'true'); document.documentElement.classList.toggle('kg-lock', open); }
+    document.querySelectorAll('[data-kg-open="kg-mnav"]').forEach(function (b) { b.addEventListener('click', function () { set(true); }); });
+    d.querySelectorAll('[data-kg-close]').forEach(function (b) { b.addEventListener('click', function () { set(false); }); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
+    document.querySelectorAll('.kg .has-menu > button').forEach(function (b) {
+      b.addEventListener('click', function () { var li = b.parentElement, open = !li.classList.contains('is-open'); li.classList.toggle('is-open', open); b.setAttribute('aria-expanded', open); });
+    });
+  })();
+</script>
+{% schema %}
+{
+ "name": "KITTED header",
+ "tag": "div",
+ "class": "kg-header-section",
+ "enabled_on": {
+  "groups": [
+   "header"
+  ]
+ },
+ "settings": [
+  {
+   "type": "image_picker",
+   "id": "logo",
+   "label": "Logo",
+   "info": "Defaults to the logo in Theme settings."
+  }
+ ],
+ "blocks": [
+  {
+   "type": "link",
+   "name": "Menu link",
+   "settings": [
+    {
+     "type": "text",
+     "id": "label",
+     "label": "Label",
+     "default": "Baseball"
+    },
+    {
+     "type": "url",
+     "id": "url",
+     "label": "Link"
+    },
+    {
+     "type": "text",
+     "id": "mobile_note",
+     "label": "Mobile menu note",
+     "default": "Shop"
+    }
+   ]
+  },
+  {
+   "type": "shop_menu",
+   "name": "Shop dropdown",
+   "limit": 1,
+   "settings": [
+    {
+     "type": "text",
+     "id": "label",
+     "label": "Label",
+     "default": "Shop all"
+    },
+    {
+     "type": "product_list",
+     "id": "products",
+     "label": "Products",
+     "limit": 6
+    },
+    {
+     "type": "text",
+     "id": "more_1_label",
+     "label": "Extra link 1",
+     "default": "All SpinGrip"
+    },
+    {
+     "type": "url",
+     "id": "more_1_url",
+     "label": "Extra link 1 URL"
+    },
+    {
+     "type": "text",
+     "id": "more_2_label",
+     "label": "Extra link 2",
+     "default": "Build a pack"
+    },
+    {
+     "type": "url",
+     "id": "more_2_url",
+     "label": "Extra link 2 URL"
+    },
+    {
+     "type": "text",
+     "id": "more_3_label",
+     "label": "Extra link 3",
+     "default": "Throwing formulas"
+    },
+    {
+     "type": "url",
+     "id": "more_3_url",
+     "label": "Extra link 3 URL"
+    }
+   ]
+  }
+ ],
+ "presets": [
+  {
+   "name": "KITTED header"
+  }
+ ]
+}
+{% endschema %}
