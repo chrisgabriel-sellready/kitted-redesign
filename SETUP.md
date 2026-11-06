@@ -8,9 +8,9 @@ This repository is the unpublished `kitted-redesign/main` Ride theme. Continue u
 |---|---|---|
 | Baseball | `/products/spingrip` | Default product |
 | Softball | `/pages/spingrip-softball-is-here` | `page.softball-page` |
-| Football | `/products/spin-grip-football` | `product.football` |
+| Football | `/products/spin-grip-football?view=football` | `product.football` |
 | The SpinGrip Effect / How to use | `/pages/how-to-use-spingrip` | `page.about` |
-| The Kollective | `/#kollective` | Home-page sign-up section |
+| The Kollective | `/?view=kollective` | Standalone roster view (`index.kollective`) |
 | Bulk orders | `/pages/team-orders` | Existing `page.team-orders` |
 | Contact | `/pages/contact` | `page.new-contact` |
 | Returns | `/pages/returns` | Shared `page.contact` |
@@ -42,8 +42,8 @@ The extra standalone sport/pack page templates remain available for editing, but
 - **Kollective:** The draft uses a Shopify customer/newsletter form. SMS consent copy and a phone field do not establish an SMS integration. The promised 10% code also needs an existing verified delivery flow. Review the consent and integration before launch; no new flows, discounts or subscriptions have been configured.
 - **Pack builder:** The unlinked `page.packs` draft assumes automatic 10%/15%/20% discounts at 2/5/10 gloves. Those discounts have not been verified. Current navigation and promo links use the existing Bulk Orders inquiry page and preserve that workflow. Do not activate the builder or create discounts without approval.
 - **Returns/guarantee claims:** Several retained draft sections say “30-day guarantee”, while the existing Returns page describes a 14-day return window. Confirm the approved distinction/copy before launch.
-- **Media:** Videos reference KITTED's Shopify Files. Some testimonial tiles contain a still image rather than a playable video. Confirm missing clips in preview; do not substitute unrelated media.
-- **Editor behavior:** Sections expose editable settings/blocks. Interactive behavior is initialized on a page load; after adding or replacing sections in the editor, refresh the preview before testing interactions.
+- **Media:** Sport heroes reuse the original clips currently served by `kittedgear.com`; editable video pickers can replace them with Shopify Files. Some testimonial tiles contain a still image rather than a playable video. Confirm missing clips in preview; do not substitute unrelated media.
+- **Editor behavior:** Hero video playback initializes after editor section reloads, pauses offscreen and supports manual play/pause. Reduced-motion visitors see the poster until they choose Play video. Other interactions may need a preview refresh after a section is replaced.
 
 ## Completed code checks
 
@@ -58,3 +58,5 @@ The extra standalone sport/pack page templates remain available for editing, but
 KITTED's existing redirect to `kittedgear.com` is retained. It is skipped in design mode and on unpublished themes for preview. Publishing this theme alone will still redirect regular storefront visitors. A launch needs an approved domain/redirect plan and completed checks above.
 
 Products, pricing, inventory, discounts, apps, consent settings and live theme publication have not been changed by this repo repair.
+
+The standalone Kollective uses an alternate homepage template so the menu works without creating a new Shopify page record. Its white layout matches the live roster; embedded signup bands retain their existing layout. Football menu links explicitly select its alternate template until the product assignment can be updated. No product records, forms in marketing apps, consent settings or flows were created.

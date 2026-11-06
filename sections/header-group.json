@@ -39,7 +39,7 @@
           "type": "announcement",
           "settings": {
             "text": "New drop this fall: join the Kollective for early access",
-            "link": "/#kollective"
+            "link": "/?view=kollective"
           }
         }
       },
@@ -82,7 +82,7 @@
           "type": "link",
           "settings": {
             "label": "Football",
-            "url": "/products/spin-grip-football",
+            "url": "/products/spin-grip-football?view=football",
             "mobile_note": "Shop"
           }
         },
@@ -116,7 +116,7 @@
           "type": "link",
           "settings": {
             "label": "The Kollective",
-            "url": "/#kollective",
+            "url": "/?view=kollective",
             "mobile_note": "Early access"
           }
         }

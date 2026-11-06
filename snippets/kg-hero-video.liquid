@@ -1,0 +1,24 @@
+{% doc %}
+Renders responsive KITTED background videos with playback controls.
+@param {video} [desktop_video] - Hosted desktop clip
+@param {string} [desktop_url] - Desktop clip URL
+@param {video} [mobile_video] - Hosted mobile clip
+@param {string} [mobile_url] - Mobile clip URL
+@param {image} [desktop_image] - Desktop poster
+@param {string} [desktop_asset] - Desktop poster asset
+@param {image} [mobile_image] - Mobile poster
+@param {string} [mobile_asset] - Mobile poster asset
+{% enddoc %}
+{% liquid
+  assign wide_src = desktop_url
+  if desktop_video != blank
+    assign wide_src = desktop_video.sources | where: 'mime_type', 'video/mp4' | map: 'url' | first
+  endif
+  assign tall_src = mobile_url | default: wide_src
+  if mobile_video != blank
+    assign tall_src = mobile_video.sources | where: 'mime_type', 'video/mp4' | map: 'url' | first
+  endif
+%}
+<video class="shero__vid shero__vid--wide" data-loop data-hero-video loop muted playsinline preload="none" poster="{% if desktop_image != blank %}{{ desktop_image | image_url: width: 1800 }}{% elsif desktop_asset != blank %}{{ desktop_asset | asset_url }}{% elsif desktop_video != blank %}{{ desktop_video.preview_image | image_url: width: 1800 }}{% endif %}" src="{{ wide_src | escape }}"></video>
+<video class="shero__vid shero__vid--tall" data-loop data-hero-video loop muted playsinline preload="none" poster="{% if mobile_image != blank %}{{ mobile_image | image_url: width: 900 }}{% elsif mobile_asset != blank %}{{ mobile_asset | asset_url }}{% elsif mobile_video != blank %}{{ mobile_video.preview_image | image_url: width: 900 }}{% endif %}" src="{{ tall_src | escape }}"></video>
+<button class="shero__video-toggle" type="button" data-hero-toggle data-play-label="{{ 'kg.hero.play_video' | t }}" data-pause-label="{{ 'kg.hero.pause_video' | t }}" aria-pressed="false">{{ 'kg.hero.play_video' | t }}</button>

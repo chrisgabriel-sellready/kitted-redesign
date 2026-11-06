@@ -98,13 +98,56 @@
     return on ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 010 7M19 5a10 10 0 010 14"/></svg>Sound on'
       : '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M23 9l-6 6M17 9l6 6"/></svg>Tap for sound';
   }
-  /* autoplay muted loops when visible */
-  if ("IntersectionObserver" in window) {
-    var io = new IntersectionObserver(function (es) {
-      es.forEach(function (en) { var v = en.target; if (en.isIntersecting && !reduce) { v.play().catch(function () {}); } else { v.pause(); } });
-    }, { threshold: .2 });
-    $$("video[data-loop]").forEach(function (v) { io.observe(v); });
+  var loopVideos = new Set();
+  function syncLoop(v) {
+    var r = v.getBoundingClientRect(), hero = v.closest(".shero__media");
+    var visible = r.width > 0 && r.height > 0 && r.bottom > 0 && r.top < window.innerHeight;
+    var allowed = hero ? !hero.kgPaused && (!reduce || hero.kgMotionAllowed) : !reduce;
+    if (visible && allowed && !document.hidden) {
+      var p = v.play(); if (p && p.catch) p.catch(function () {});
+    } else { v.pause(); }
   }
+  var loopObserver = "IntersectionObserver" in window ? new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) { syncLoop(entry.target); });
+  }, { threshold: 0 }) : null;
+  function setupLoops(root) {
+    $$("video[data-loop]", root).forEach(function (v) {
+      if (loopVideos.has(v)) return;
+      loopVideos.add(v);
+      var hero = v.closest(".shero__media"), button = hero && $("[data-hero-toggle]", hero);
+      function label() {
+        if (!button || !v.getClientRects().length) return;
+        button.textContent = v.paused ? button.dataset.playLabel : button.dataset.pauseLabel;
+        button.setAttribute("aria-pressed", v.paused ? "false" : "true");
+      }
+      if (button) {
+        v.addEventListener("play", label); v.addEventListener("pause", label);
+        if (!button.kgReady) {
+          button.kgReady = true;
+          button.addEventListener("click", function () {
+            var active = $$("video[data-hero-video]", hero).find(function (item) { return item.getClientRects().length; });
+            if (!active) return;
+            hero.kgPaused = !active.paused; hero.kgMotionAllowed = true;
+            $$("video[data-hero-video]", hero).forEach(syncLoop);
+          });
+        }
+      }
+      if (loopObserver) loopObserver.observe(v);
+      syncLoop(v);
+    });
+  }
+  function syncLoops() {
+    loopVideos.forEach(function (v) {
+      if (!v.isConnected) { if (loopObserver) loopObserver.unobserve(v); loopVideos.delete(v); }
+      else syncLoop(v);
+    });
+  }
+  setupLoops(document);
+  document.addEventListener("shopify:section:load", function (event) { setupLoops(event.target); });
+  document.addEventListener("shopify:section:unload", syncLoops);
+  document.addEventListener("visibilitychange", syncLoops);
+  window.addEventListener("resize", syncLoops);
+  if (!loopObserver) window.addEventListener("scroll", syncLoops, { passive: true });
 
     /* ---------- product: gallery, variant picker, add to cart ---------- */
   $$("[data-gallery]").forEach(function (g) {

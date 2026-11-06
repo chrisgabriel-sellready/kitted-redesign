@@ -7,7 +7,7 @@
 <div class="btn-row"><a class="btn btn--light" href="#buy">{{ section.settings.t4 }}<svg aria-hidden="true" class="arrow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a class="btn btn--ghost-light" href="#how">{{ section.settings.t5 }}</a></div>
 </div>
 <div class="shero__media">
-{%- if section.settings.i6 != blank -%}{{ section.settings.i6 | image_url: width: 1800 | image_tag: alt: "", class: "shero__vid shero__vid--wide", loading: "eager" }}{%- else -%}<img src="{{ section.settings.t7 | asset_url }}" class="shero__vid shero__vid--wide" width="720" height="1280" alt="" loading="eager">{%- endif -%}{%- if section.settings.i8 != blank -%}{{ section.settings.i8 | image_url: width: 1800 | image_tag: alt: "", class: "shero__vid shero__vid--tall", loading: "eager" }}{%- else -%}<img src="{{ section.settings.t9 | asset_url }}" class="shero__vid shero__vid--tall" width="720" height="1280" alt="" loading="eager">{%- endif -%}
+{% render 'kg-hero-video', desktop_video: section.settings.desktop_video, desktop_url: section.settings.desktop_url, mobile_video: section.settings.mobile_video, mobile_url: section.settings.mobile_url, desktop_image: section.settings.i6, desktop_asset: section.settings.t7, mobile_image: section.settings.i8, mobile_asset: section.settings.t9 %}
 {%- assign kg_alt = section.settings.t12 | escape -%}{%- if section.settings.i10 != blank -%}{{ section.settings.i10 | image_url: width: 1800 | image_tag: alt: kg_alt, class: "shero__seal", loading: "lazy" }}{%- else -%}<img src="{{ section.settings.t11 | asset_url }}" class="shero__seal" alt="{{ section.settings.t12 | escape }}" width="96" height="94" loading="lazy">{%- endif -%}
 </div>
 </section>
@@ -81,6 +81,28 @@
    "type": "text",
    "id": "t12",
    "label": "Image alt text"
+  },
+  {
+   "type": "video",
+   "id": "desktop_video",
+   "label": "Desktop hero video"
+  },
+  {
+   "type": "url",
+   "id": "desktop_url",
+   "label": "Desktop video URL",
+   "default": "https://kittedgear.com/__l5e/assets-v1/1c55e06f-188b-40ff-aab3-ef9e1fdbf3d8/football-hero-fast-desktop.mp4"
+  },
+  {
+   "type": "video",
+   "id": "mobile_video",
+   "label": "Mobile hero video"
+  },
+  {
+   "type": "url",
+   "id": "mobile_url",
+   "label": "Mobile video URL",
+   "default": "https://kittedgear.com/__l5e/assets-v1/1c55e06f-188b-40ff-aab3-ef9e1fdbf3d8/football-hero-fast-desktop.mp4"
   }
  ],
  "presets": [
