@@ -152,3 +152,12 @@ html.kg-lock { overflow: hidden; }
 .announcement-bar-slider .slider-button { display: none !important; }
 .announcement-bar-slider { padding-inline: 0; }
 .announcement-bar-slider .slider { margin-inline: auto; }
+
+/* Video pop-up (Watch button): centred over a dark backdrop with an X to close, like kittedgear.com */
+dialog.vmodal { position: fixed; inset: 0; margin: auto; padding: 0; border: 0; background: transparent; width: min(92vw, 460px); max-width: none; max-height: 92svh; height: fit-content; overflow: visible; }
+dialog.vmodal::backdrop { background: rgba(8, 7, 6, .85); }
+dialog.vmodal .vmodal__video { display: block; width: 100%; max-height: 86svh; object-fit: contain; background: #000; border-radius: 8px; }
+dialog.vmodal .vmodal__close { position: absolute; top: -16px; right: -16px; z-index: 2; width: 40px; height: 40px; border-radius: 50%; border: 0; background: #fff; color: #0d0d0d; display: grid; place-items: center; cursor: pointer; box-shadow: 0 4px 14px rgba(0,0,0,.35); }
+dialog.vmodal .vmodal__close svg { width: 18px; height: 18px; }
+dialog.vmodal .vmodal__close:hover { background: #fab505; }
+@media (max-width: 520px) { dialog.vmodal .vmodal__close { top: -48px; right: 0; } }
