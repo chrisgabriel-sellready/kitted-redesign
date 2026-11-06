@@ -819,7 +819,7 @@
      "type": "c1c",
      "settings": {
       "t1": "Is SpinGrip available for baseball?",
-      "i2": "Yes. We have a baseball-specific SpinGrip. Visit our <a href=\"/pages/baseball\">baseball page</a> for more info."
+      "i2": "Yes. We have a baseball-specific SpinGrip. Visit our <a href=\"/products/spingrip\">baseball page</a> for more info."
      }
     }
    },
@@ -847,13 +847,13 @@
   "kg_20": {
    "type": "kg-035962fe",
    "settings": {
-    "t1": "Team up and save",
-    "t2": "SpinGrip Packs. Any glove, any size, either hand. The discount applies automatically.",
-    "i3": "2-Pack <strong>save 10%</strong>",
-    "i4": "5-Pack <strong>save 15%</strong>",
-    "i5": "10-Pack <strong>save 20%</strong>",
-    "u6": "/pages/packs",
-    "t7": "Build your pack"
+    "t1": "Bulk & team orders",
+    "t2": "Outfitting a team, club or organization? Contact KITTED for bulk and retail pricing.",
+    "i3": "",
+    "i4": "",
+    "i5": "",
+    "u6": "/pages/team-orders",
+    "t7": "Bulk orders"
    }
   },
   "kg_21": {
