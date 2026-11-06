@@ -1,3 +1,4 @@
+{%- if section.settings.page_handle == blank or page.handle == section.settings.page_handle -%}
 {{ 'video-section.css' | asset_url | stylesheet_tag }}
 {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
 
@@ -120,13 +121,17 @@
   </div>
 </div>
 
+{%- endif -%}
 {% schema %}
 {
   "name": "t:sections.video.name",
   "tag": "section",
   "class": "section",
   "disabled_on": {
-    "groups": ["header", "footer"]
+    "groups": [
+      "header",
+      "footer"
+    ]
   },
   "settings": [
     {
@@ -189,7 +194,10 @@
     {
       "type": "video_url",
       "id": "video_url",
-      "accept": ["youtube", "vimeo"],
+      "accept": [
+        "youtube",
+        "vimeo"
+      ],
       "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
       "label": "t:sections.video.settings.video_url.label",
       "info": "t:sections.video.settings.video_url.info"
@@ -244,6 +252,12 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    },
+    {
+      "type": "text",
+      "id": "page_handle",
+      "label": "Only show on page handle",
+      "info": "Leave empty to show on every page using this section."
     }
   ],
   "presets": [

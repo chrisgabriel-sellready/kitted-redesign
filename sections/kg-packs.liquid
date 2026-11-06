@@ -13,7 +13,7 @@
       [{%- for p in gloves -%}{%- liquid
         assign desc = p.metafields.custom.blurb | default: p.description | strip_html | truncatewords: 16
       -%}{"title": {{ p.title | json }}, "img": {{ p.featured_media | image_url: width: 300 | json }}, "desc": {{ desc | json }},
-        "options": [{%- for o in p.options_with_values -%}{"name": {{ o.name | json }}, "values": {{ o.values | json }}}{% unless forloop.last %},{% endunless %}{%- endfor -%}],
+        "options": [{%- for o in p.options_with_values -%}{"name": {{ o.name | json }}, "values": {{ o.values | map: 'name' | json }}}{% unless forloop.last %},{% endunless %}{%- endfor -%}],
         "variants": [{%- for v in p.variants -%}{"id": {{ v.id }}, "options": {{ v.options | json }}, "price": {{ v.price }}, "available": {{ v.available | json }}}{% unless forloop.last %},{% endunless %}{%- endfor -%}]}{% unless forloop.last %},{% endunless %}{%- endfor -%}]
     </script>
     <fieldset class="option" style="margin-bottom:clamp(24px,3vw,36px)"><legend class="sr-only">Pack size</legend><div class="pack-tiers">

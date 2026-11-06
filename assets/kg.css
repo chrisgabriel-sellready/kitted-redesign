@@ -338,6 +338,7 @@
 .kg .crumbs a:hover{text-decoration: underline;}
 .kg .page-head{padding-block: clamp(36px, 5vw, 64px) clamp(24px, 3vw, 40px); display: grid; gap: 14px;}
 .kg .page-title{font-family: var(--display); font-weight: 700; text-transform: uppercase; font-size: clamp(40px, 6vw, 76px); line-height: .95;}
+.kg [hidden]{display:none!important;}
 .kg .pdp{display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr); gap: clamp(28px, 4.5vw, 72px); align-items: start; padding-block: 24px clamp(48px, 6vw, 80px);}
 .kg .gallery{display: grid; gap: 12px; position: sticky; top: calc(var(--header-h) + 16px);}
 .kg .gallery__main{position: relative; aspect-ratio: 1; background: var(--ink); overflow: hidden;}

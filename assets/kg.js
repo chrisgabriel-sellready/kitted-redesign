@@ -18,12 +18,13 @@
     return fetch((window.routes && window.routes.cart_add_url ? window.routes.cart_add_url : "/cart/add") + ".js", {
       method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify(body)
     }).then(function (r) { return r.json(); }).then(function (res) {
-      if (res.status) { if (msgEl) { msgEl.textContent = res.description || res.message || "Could not add to cart."; msgEl.classList.add("is-warn"); } return; }
+      if (res.status) { if (msgEl) { msgEl.textContent = res.description || res.message || "Could not add to cart."; msgEl.classList.add("is-warn"); } return false; }
       if (drawer && res.sections) {
         drawer.classList.remove("is-empty");
         drawer.renderContents(res);
       } else { window.location.href = (window.routes && window.routes.cart_url) || "/cart"; }
-    }).catch(function () { if (msgEl) { msgEl.textContent = "Could not add to cart. Please try again."; msgEl.classList.add("is-warn"); } })
+      return true;
+    }).catch(function () { if (msgEl) { msgEl.textContent = "Could not add to cart. Please try again."; msgEl.classList.add("is-warn"); } return false; })
       .finally(function () { if (btn) { btn.disabled = false; btn.removeAttribute("aria-busy"); } });
   }
   window.kgAddItems = addItems;
@@ -124,7 +125,7 @@
     var data = JSON.parse($("script[data-product-json]", f.closest("[data-kg-product]") || f).textContent);
     var msg = $(".buy__msg", f), qtyEl = $("[data-qty]", f), qty = 1, idIn = $("input[name=id]", f), btn = $("[type=submit]", f);
     var priceEl = $("[data-price]", f.closest("[data-kg-product]")), gallery = $("[data-gallery]", f.closest("[data-kg-product]"));
-    var digital = f.hasAttribute("data-digital");
+    var digital = f.dataset.kgDigital === "true";
     $$("[data-qd]", f).forEach(function (b) { b.addEventListener("click", function () { qty = Math.max(1, qty + (+b.dataset.qd)); qtyEl.textContent = qty; refresh(); }); });
     function chosen() {
       var vals = [], missing = [];
@@ -146,7 +147,7 @@
       if (c.missing.length) label = "Select " + c.missing[0];
       else if (!v || !v.available) label = "Sold out";
       else label = (digital ? "Get instant access — " : "Add to cart — ") + money(v.price * qty);
-      btn.textContent = label; btn.disabled = !!(v && !v.available);
+      btn.textContent = label; btn.disabled = !c.missing.length && (!v || !v.available);
       var sb = $("#sticky-btn"); if (sb) sb.textContent = label;
       return v;
     }
@@ -161,7 +162,7 @@
       }
       var v = refresh(); if (!v || !v.available) return;
       msg.classList.remove("is-warn"); msg.textContent = "";
-      addItems([{ id: v.id, quantity: qty }], msg, btn);
+      addItems([{ id: v.id, quantity: qty }], msg, btn).then(function () { refresh(); });
     });
     refresh();
   });
@@ -225,7 +226,7 @@
     $("#pk-add").addEventListener("click", function () {
       var byId = {}; slots.forEach(function (s) { byId[s.id] = (byId[s.id] || 0) + 1; });
       addItems(Object.keys(byId).map(function (id) { return { id: +id, quantity: byId[id] }; }), $("#pk-msg"), $("#pk-add"))
-        .then(function () { slots = []; render(); });
+        .then(function (added) { if (added) slots = []; render(); });
     });
     tier(); preview();
   }

@@ -1,3 +1,4 @@
+{%- if section.settings.page_handle == blank or page.handle == section.settings.page_handle -%}
 {{ 'section-multicolumn.css' | asset_url | stylesheet_tag }}
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 
@@ -190,13 +191,17 @@
   </div>
 </div>
 
+{%- endif -%}
 {% schema %}
 {
   "name": "t:sections.multicolumn.name",
   "class": "section",
   "tag": "section",
   "disabled_on": {
-    "groups": ["header", "footer"]
+    "groups": [
+      "header",
+      "footer"
+    ]
   },
   "settings": [
     {
@@ -384,6 +389,12 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    },
+    {
+      "type": "text",
+      "id": "page_handle",
+      "label": "Only show on page handle",
+      "info": "Leave empty to show on every page using this section."
     }
   ],
   "blocks": [

@@ -8,6 +8,8 @@
   if v.requires_shipping == false
     assign digital = true
   endif
+  assign panel_key = section.id | append: '-' | append: key
+  assign form_id = 'kg-product-form-' | append: panel_key
 -%}
 <div class="pdp" data-kg-product data-panel="{{ key }}"{% if hidden %} hidden{% endif %}>
   <div class="gallery" data-gallery>
@@ -29,7 +31,7 @@
     {%- endif -%}
   </div>
 
-  {%- form 'product', p, class: 'buy', novalidate: 'novalidate', data-kg-buy: '' -%}
+  {%- form 'product', p, class: 'buy', id: form_id, novalidate: 'novalidate', data-kg-buy: '', data-kg-digital: digital -%}
     <script type="application/json" data-product-json>{{ p | json }}</script>
     <input type="hidden" name="id" value="{{ v.id }}">
     {%- if s.banner != blank -%}<div class="buy__banner"><span class="dot"></span>{{ s.banner }}</div>{%- endif -%}
@@ -63,7 +65,7 @@
         {%- if option.name contains 'Size' -%}{%- assign preselect = false -%}{%- endif -%}
         <fieldset class="option" data-label="{{ option.name | escape }}"><legend>{{ option.name }}{% if option.name contains 'Size' %} <span>Fits by age</span>{% endif %}</legend><div class="chips">
           {%- for value in option.values -%}
-            <label class="chip"><input type="radio" name="kg-{{ key }}-opt-{{ forloop.parentloop.index0 }}" value="{{ value | escape }}"{% if preselect and option.selected_value == value %} checked{% endif %}><span>{{ value }}</span></label>
+            <label class="chip"><input type="radio" name="kg-{{ panel_key }}-opt-{{ forloop.parentloop.index0 }}" value="{{ value | escape }}"{% if preselect and value.selected %} checked{% endif %}><span>{{ value }}</span></label>
           {%- endfor -%}
         </div></fieldset>
       {%- endfor -%}
@@ -92,7 +94,7 @@
       </ul>
     {%- endif -%}
     {%- if s.show_pack_callout -%}
-      <div class="pack-callout"><p class="eyebrow">Buying more than one? Save up to 20%</p><div class="tiers"><span class="tier">2-Pack <b>save 10%</b></span><span class="tier">5-Pack <b>save 15%</b></span><span class="tier">10-Pack <b>save 20%</b></span></div><p class="muted" style="font-size:13px">Mix &amp; match any glove, size, or hand. The discount applies automatically at checkout.</p><a href="{{ s.pack_link | default: '/pages/packs' }}">Build your pack</a></div>
+      <div class="pack-callout"><p class="eyebrow">Bulk &amp; team orders</p><p class="muted" style="font-size:13px">Outfitting a team, club or organization? Contact KITTED for bulk pricing.</p><a href="{{ s.pack_link | default: '/pages/team-orders' }}">Bulk orders</a></div>
     {%- endif -%}
 
     <div>

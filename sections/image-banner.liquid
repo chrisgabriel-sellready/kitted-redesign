@@ -1,3 +1,4 @@
+{%- if section.settings.page_handle == blank or page.handle == section.settings.page_handle -%}
 {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
 
 {%- if section.settings.image_height == 'adapt' and section.settings.image != blank -%}
@@ -166,13 +167,17 @@
   </div>
 </div>
 
+{%- endif -%}
 {% schema %}
 {
   "name": "t:sections.image-banner.name",
   "tag": "section",
   "class": "section",
   "disabled_on": {
-    "groups": ["header", "footer"]
+    "groups": [
+      "header",
+      "footer"
+    ]
   },
   "settings": [
     {
@@ -359,6 +364,12 @@
       "id": "show_text_below",
       "default": true,
       "label": "t:sections.image-banner.settings.show_text_below.label"
+    },
+    {
+      "type": "text",
+      "id": "page_handle",
+      "label": "Only show on page handle",
+      "info": "Leave empty to show on every page using this section."
     }
   ],
   "blocks": [
