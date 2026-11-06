@@ -1,0 +1,163 @@
+{
+  "sections": {
+    "kg_00": {
+      "type": "kg-s-dd0f1991",
+      "settings": {}
+    },
+    "kg_01": {
+      "type": "kg-s-f6862bb7",
+      "settings": {}
+    },
+    "kg_02": {
+      "type": "kg-s-98404260",
+      "settings": {}
+    },
+    "kg_03": {
+      "type": "kg-s-f0881b99",
+      "settings": {}
+    },
+    "kg_04": {
+      "type": "kg-s-d6aa745d",
+      "settings": {}
+    },
+    "kg_05": {
+      "type": "kg-s-2238a847",
+      "settings": {}
+    },
+    "kg_06": {
+      "type": "kg-s-547dc8ad",
+      "settings": {}
+    },
+    "kg_07": {
+      "type": "kg-s-c43cf03c",
+      "settings": {}
+    },
+    "kg_08": {
+      "type": "kg-s-a8960e89",
+      "settings": {}
+    },
+    "kg_09": {
+      "type": "kg-s-442f91ca",
+      "settings": {}
+    },
+    "kg_10": {
+      "type": "kg-s-4baca70c",
+      "settings": {}
+    },
+    "kg_11": {
+      "type": "kg-product",
+      "settings": {
+        "show_crumbs": false,
+        "title_tag": "h2",
+        "anchor": "buy",
+        "kicker": "SpinGrip Softball",
+        "heading": "Start throwing like the pros",
+        "as_section": true,
+        "product": "spingrip-softball",
+        "alt_product": "spingrip-softball-pitcher",
+        "banner": "Guaranteed to increase velo, spin and accuracy",
+        "eyebrow": "",
+        "rating_text": "4.8 · 199 reviews",
+        "value_tag": "",
+        "lede": "",
+        "seal": "yellow",
+        "digital": false,
+        "show_used_by": true,
+        "show_trust": true,
+        "show_pack_callout": false
+      },
+      "blocks": {
+        "result_0": {
+          "type": "result",
+          "settings": {
+            "label": "MPH velocity",
+            "value": "Up to +7"
+          }
+        },
+        "result_1": {
+          "type": "result",
+          "settings": {
+            "label": "RPM spin rate",
+            "value": "+350"
+          }
+        },
+        "result_2": {
+          "type": "result",
+          "settings": {
+            "label": "Accuracy increase",
+            "value": "30%"
+          }
+        }
+      },
+      "block_order": [
+        "result_0",
+        "result_1",
+        "result_2"
+      ]
+    },
+    "kg_12": {
+      "type": "kg-s-0fc6c33c",
+      "settings": {}
+    },
+    "kg_13": {
+      "type": "kg-s-3af97e03",
+      "settings": {}
+    },
+    "kg_14": {
+      "type": "kg-s-3ef1261f",
+      "settings": {}
+    },
+    "kg_15": {
+      "type": "kg-s-47888240",
+      "settings": {}
+    },
+    "kg_16": {
+      "type": "kg-s-6f2a790c",
+      "settings": {}
+    },
+    "kg_17": {
+      "type": "kg-s-b1bbeea6",
+      "settings": {}
+    },
+    "kg_18": {
+      "type": "kg-s-cd0b7fe8",
+      "settings": {}
+    },
+    "kg_19": {
+      "type": "kg-s-3c2d209f",
+      "settings": {}
+    },
+    "kg_20": {
+      "type": "kg-s-39720e37",
+      "settings": {}
+    },
+    "kg_21": {
+      "type": "kg-kollective",
+      "settings": {}
+    }
+  },
+  "order": [
+    "kg_00",
+    "kg_01",
+    "kg_02",
+    "kg_03",
+    "kg_04",
+    "kg_05",
+    "kg_06",
+    "kg_07",
+    "kg_08",
+    "kg_09",
+    "kg_10",
+    "kg_11",
+    "kg_12",
+    "kg_13",
+    "kg_14",
+    "kg_15",
+    "kg_16",
+    "kg_17",
+    "kg_18",
+    "kg_19",
+    "kg_20",
+    "kg_21"
+  ]
+}

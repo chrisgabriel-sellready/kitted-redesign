@@ -1,0 +1,39 @@
+{%- liquid
+  assign total = collection.products_count
+-%}
+<div class="kg">
+<div class="wrap">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ routes.root_url }}">Home</a><span aria-hidden="true">/</span><span>{{ collection.title }}</span></nav>
+  <div class="coll-head">
+    <div class="filters" aria-label="Filter by sport">
+      {%- if section.settings.filter_menu.links.size > 0 -%}
+        {%- for link in section.settings.filter_menu.links -%}<a href="{{ link.url }}"{% if link.url == collection.url %} aria-current="page"{% endif %}>{{ link.title }}</a>{%- endfor -%}
+      {%- else -%}
+        {%- assign defaults = 'All|/collections/all,Baseball|/collections/baseball,Softball|/collections/spingrip-softball,Football|/products/spin-grip-football' | split: ',' -%}
+        {%- for d in defaults -%}{%- assign dp = d | split: '|' -%}<a href="{{ dp[1] }}"{% if dp[1] == collection.url %} aria-current="page"{% endif %}>{{ dp[0] }}</a>{%- endfor -%}
+      {%- endif -%}
+    </div>
+    <p class="coll-count">{{ total }} product{% if total != 1 %}s{% endif %}</p>
+  </div>
+  {%- paginate collection.products by 48 -%}
+  {%- capture physical -%}{%- for p in collection.products -%}{%- if p.selected_or_first_available_variant.requires_shipping -%}{%- render 'kg-card', p: p -%}{%- endif -%}{%- endfor -%}{%- endcapture -%}
+  {%- capture digital -%}{%- for p in collection.products -%}{%- unless p.selected_or_first_available_variant.requires_shipping -%}{%- render 'kg-card', p: p -%}{%- endunless -%}{%- endfor -%}{%- endcapture -%}
+  {%- if physical != blank -%}<h2 class="eyebrow" style="margin-bottom:16px">{{ section.settings.gloves_heading }}</h2><div class="grid grid--5">{{ physical }}</div>{%- endif -%}
+  {%- if digital != blank -%}<h2 class="eyebrow" style="margin:clamp(32px,5vw,56px) 0 16px">{{ section.settings.digital_heading }}</h2><div class="grid grid--5">{{ digital }}</div>{%- endif -%}
+  {%- if physical == blank and digital == blank -%}<p class="muted">No products in this collection yet.</p>{%- endif -%}
+  {%- if paginate.pages > 1 -%}<div style="margin-top:32px">{{ paginate | default_pagination }}</div>{%- endif -%}
+  {%- endpaginate -%}
+</div>
+</div>
+{% schema %}
+{
+  "name": "KITTED collection grid",
+  "tag": "div",
+  "class": "kg-section",
+  "settings": [
+    { "type": "link_list", "id": "filter_menu", "label": "Sport filter menu", "info": "A menu with links to your sport collections (All, Baseball, Softball, Football)." },
+    { "type": "text", "id": "gloves_heading", "label": "Gloves heading", "default": "Throwing gloves" },
+    { "type": "text", "id": "digital_heading", "label": "Digital programs heading", "default": "Throwing formulas · instant digital access" }
+  ]
+}
+{% endschema %}

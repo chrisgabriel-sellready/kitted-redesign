@@ -1,0 +1,36 @@
+{%- comment -%} KITTED product card. Params: p (product) {%- endcomment -%}
+{%- liquid
+  assign v = p.selected_or_first_available_variant
+  assign digital = false
+  if v.requires_shipping == false
+    assign digital = true
+  endif
+  assign h = p.handle
+  assign cw = 'baseball'
+  if h contains 'pitcher'
+    assign cw = 'pitcher'
+  elsif h contains 'softball'
+    assign cw = 'softball'
+  elsif h contains 'football'
+    assign cw = 'football'
+  endif
+  assign blurb = p.metafields.custom.blurb | default: p.description | strip_html | truncatewords: 14
+  assign badge = p.metafields.custom.badge
+  assign second = p.media[1]
+-%}
+<article class="pcard{% if digital %} pcard--formula{% endif %}">
+  <a class="pcard__media" href="{{ p.url }}" aria-label="{{ p.title | escape }}">
+    {%- if badge != blank -%}<span class="pcard__tag">{{ badge }}</span>{%- endif -%}
+    {%- if p.featured_media -%}{{ p.featured_media | image_url: width: 700 | image_tag: loading: 'lazy', widths: '360, 540, 700', sizes: '(min-width: 990px) 20vw, 50vw', alt: p.title }}{%- endif -%}
+    {%- if second and second.media_type == 'image' -%}{{ second | image_url: width: 700 | image_tag: loading: 'lazy', widths: '360, 540, 700', sizes: '(min-width: 990px) 20vw, 50vw', alt: '' }}{%- endif -%}
+  </a>
+  <div class="pcard__body">
+    <h3 class="pcard__name"><a href="{{ p.url }}">{{ p.title }}</a></h3>
+    {%- if blurb != blank -%}<p class="pcard__blurb">{{ blurb }}</p>{%- endif -%}
+    <div class="pcard__foot">
+      <span class="price">{{ v.price | money_without_trailing_zeros }}{% if v.compare_at_price > v.price %}<s>{{ v.compare_at_price | money_without_trailing_zeros }}</s>{% endif %}</span>
+      {%- if digital -%}<span class="eyebrow muted">Digital</span>{%- else -%}<span class="swatches"><span class="swatch" style="background:var(--cw-{{ cw }})" title="{{ cw | capitalize }} colourway"></span></span>{%- endif -%}
+    </div>
+    {%- unless digital -%}<span class="rating">{% render 'kg-stars' %} 4.8</span>{%- endunless -%}
+  </div>
+</article>

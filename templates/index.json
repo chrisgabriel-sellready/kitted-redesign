@@ -1,0 +1,79 @@
+{
+  "sections": {
+    "kg_00": {
+      "type": "kg-s-898a57f9",
+      "settings": {}
+    },
+    "kg_01": {
+      "type": "kg-s-cf2c01d5",
+      "settings": {}
+    },
+    "kg_02": {
+      "type": "kg-product-grid",
+      "settings": {
+        "collection": "all",
+        "button_link": "/collections/all"
+      }
+    },
+    "kg_03": {
+      "type": "kg-s-67bc492d",
+      "settings": {}
+    },
+    "kg_04": {
+      "type": "kg-s-f8760166",
+      "settings": {}
+    },
+    "kg_05": {
+      "type": "kg-s-3d037d75",
+      "settings": {}
+    },
+    "kg_06": {
+      "type": "kg-s-18c632ca",
+      "settings": {}
+    },
+    "kg_07": {
+      "type": "kg-s-b29852c4",
+      "settings": {}
+    },
+    "kg_08": {
+      "type": "kg-s-b8fe3f58",
+      "settings": {}
+    },
+    "kg_09": {
+      "type": "kg-s-c95627ed",
+      "settings": {}
+    },
+    "kg_10": {
+      "type": "kg-s-56583e7d",
+      "settings": {}
+    },
+    "kg_11": {
+      "type": "kg-s-591b0bc5",
+      "settings": {}
+    },
+    "kg_12": {
+      "type": "kg-s-39720e37",
+      "settings": {}
+    },
+    "kg_13": {
+      "type": "kg-kollective",
+      "settings": {}
+    }
+  },
+  "order": [
+    "kg_00",
+    "kg_01",
+    "kg_02",
+    "kg_03",
+    "kg_04",
+    "kg_05",
+    "kg_06",
+    "kg_07",
+    "kg_08",
+    "kg_09",
+    "kg_10",
+    "kg_11",
+    "kg_12",
+    "kg_13"
+  ]
+}

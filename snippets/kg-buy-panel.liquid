@@ -1,0 +1,107 @@
+{%- comment -%}
+  One product's gallery + buy form, in the KITTED redesign style.
+  Params: p (product), s (section.settings), blocks (section.blocks), hidden (bool), key (string)
+{%- endcomment -%}
+{%- liquid
+  assign v = p.selected_or_first_available_variant
+  assign digital = s.digital
+  if v.requires_shipping == false
+    assign digital = true
+  endif
+-%}
+<div class="pdp" data-kg-product data-panel="{{ key }}"{% if hidden %} hidden{% endif %}>
+  <div class="gallery" data-gallery>
+    <div class="gallery__main">
+      {%- if p.featured_media -%}
+        {{ p.featured_media | image_url: width: 1400 | image_tag: loading: 'eager', sizes: '(min-width: 990px) 55vw, 100vw', widths: '600, 900, 1200, 1400', alt: p.featured_media.alt | default: p.title }}
+      {%- endif -%}
+      {%- if s.seal != 'none' -%}<img class="gallery__seal" src="{{ s.seal | append: '.webp' | prepend: 'kg-patent-seal-' | asset_url }}" alt="Patent pending, filed for U.S. and international patents" width="104" height="102">{%- endif -%}
+      {%- if p.media.size > 1 -%}
+      <div class="gallery__arrows"><button type="button" data-g="-1" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button><button type="button" data-g="1" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button></div>
+      {%- endif -%}
+    </div>
+    {%- if p.media.size > 1 -%}
+    <div class="gallery__thumbs">
+      {%- for m in p.media -%}{%- if m.media_type == 'image' -%}
+        <button type="button" data-media-id="{{ m.id }}" data-src="{{ m | image_url: width: 1400 }}" data-alt="{{ m.alt | default: p.title | escape }}" aria-label="Show image {{ forloop.index }}" aria-current="{% if forloop.first %}true{% else %}false{% endif %}">{{ m | image_url: width: 240 | image_tag: loading: 'lazy', alt: '' }}</button>
+      {%- endif -%}{%- endfor -%}
+    </div>
+    {%- endif -%}
+  </div>
+
+  {%- form 'product', p, class: 'buy', novalidate: 'novalidate', data-kg-buy: '' -%}
+    <script type="application/json" data-product-json>{{ p | json }}</script>
+    <input type="hidden" name="id" value="{{ v.id }}">
+    {%- if s.banner != blank -%}<div class="buy__banner"><span class="dot"></span>{{ s.banner }}</div>{%- endif -%}
+    <div class="stack" style="gap:10px">
+      {%- if s.eyebrow != blank -%}<p class="eyebrow muted">{{ s.eyebrow }}</p>{%- endif -%}
+      {%- if s.title_tag == 'h1' -%}<h1 class="buy__title">{{ p.title }}</h1>{%- else -%}<h2 class="buy__title">{{ p.title }}</h2>{%- endif -%}
+      {%- if s.rating_text != blank -%}<a class="rating" href="#reviews">{% render 'kg-stars' %} {{ s.rating_text }}</a>{%- endif -%}
+    </div>
+    <div class="buy__price"><span data-price>{{ v.price | money_without_currency | prepend: '$' }} USD</span>
+      {%- if v.compare_at_price > v.price -%}<s>{{ v.compare_at_price | money_without_trailing_zeros }}</s>{%- endif -%}
+      {%- if s.value_tag != blank -%}<span class="save-tag">{{ s.value_tag }}</span>{%- endif -%}
+    </div>
+    {%- if s.lede != blank -%}<p class="lede">{{ s.lede }}</p>{%- endif -%}
+
+    {%- assign results = blocks | where: 'type', 'result' -%}
+    {%- if results.size > 0 -%}
+      <div class="buy__results"><p class="eyebrow muted">{{ s.results_heading }}</p>
+        {%- for b in results -%}<div class="result-row" {{ b.shopify_attributes }}><span>{{ b.settings.label }}</span><b>{{ b.settings.value }}</b></div>{%- endfor -%}
+      </div>
+    {%- endif -%}
+    {%- assign inside = blocks | where: 'type', 'inside' -%}
+    {%- if inside.size > 0 -%}
+      <div class="buy__results"><p class="eyebrow muted" style="margin-bottom:12px">{{ s.inside_heading }}</p><ul style="display:grid;gap:12px;padding-bottom:14px;font-size:14px">
+        {%- for b in inside -%}<li style="display:grid;grid-template-columns:22px 1fr;gap:10px" {{ b.shopify_attributes }}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>{{ b.settings.text }}</span></li>{%- endfor -%}
+      </ul></div>
+    {%- endif -%}
+
+    {%- unless p.has_only_default_variant -%}
+      {%- for option in p.options_with_values -%}
+        {%- assign preselect = true -%}
+        {%- if option.name contains 'Size' -%}{%- assign preselect = false -%}{%- endif -%}
+        <fieldset class="option" data-label="{{ option.name | escape }}"><legend>{{ option.name }}{% if option.name contains 'Size' %} <span>Fits by age</span>{% endif %}</legend><div class="chips">
+          {%- for value in option.values -%}
+            <label class="chip"><input type="radio" name="kg-{{ key }}-opt-{{ forloop.parentloop.index0 }}" value="{{ value | escape }}"{% if preselect and option.selected_value == value %} checked{% endif %}><span>{{ value }}</span></label>
+          {%- endfor -%}
+        </div></fieldset>
+      {%- endfor -%}
+    {%- endunless -%}
+
+    {%- if digital -%}
+      <button class="btn btn--lg btn--block" type="submit">Get instant access</button>
+    {%- else -%}
+      <div class="buy__row"><div class="qty" aria-label="Quantity"><button type="button" data-qd="-1" aria-label="Decrease quantity">−</button><span data-qty>1</span><button type="button" data-qd="1" aria-label="Increase quantity">+</button></div><button class="btn btn--lg btn--block" type="submit">Add to cart</button></div>
+    {%- endif -%}
+    <p class="buy__msg" role="status" aria-live="polite"></p>
+
+    {%- if s.show_used_by -%}
+      <div class="used-by"><span>Used by athletes from</span><div>
+        {%- assign logos = 'tcu:TCU,florida:Florida,alabama:Alabama,usc:USC,arkansas:Arkansas,pitt:Pittsburgh,ohiostate:Ohio State,kstate:Kansas State' | split: ',' -%}
+        {%- for l in logos -%}{%- assign lp = l | split: ':' -%}<img src="{{ 'kg-logo-' | append: lp[0] | append: '.webp' | asset_url }}" alt="{{ lp[1] }}" width="26" height="26" loading="lazy">{%- endfor -%}
+      </div></div>
+    {%- endif -%}
+    {%- if s.show_trust -%}
+      <ul class="trust">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="17.5" r="1.5"/><circle cx="17" cy="17.5" r="1.5"/></svg><span>Free shipping $100+</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12a8 8 0 1 0 3-6.2M4 4v4h4"/></svg><span>Easy returns</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="1.5"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><span>Secure checkout</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3 5 6v5c0 4.5 3 8.3 7 10 4-1.7 7-5.5 7-10V6z"/></svg><span>30-day guarantee</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1M4 13h3v6H4zM17 13h3v6h-3z"/></svg><span>Customer support</span></li>
+      </ul>
+    {%- endif -%}
+    {%- if s.show_pack_callout -%}
+      <div class="pack-callout"><p class="eyebrow">Buying more than one? Save up to 20%</p><div class="tiers"><span class="tier">2-Pack <b>save 10%</b></span><span class="tier">5-Pack <b>save 15%</b></span><span class="tier">10-Pack <b>save 20%</b></span></div><p class="muted" style="font-size:13px">Mix &amp; match any glove, size, or hand. The discount applies automatically at checkout.</p><a href="{{ s.pack_link | default: '/pages/packs' }}">Build your pack</a></div>
+    {%- endif -%}
+
+    <div>
+      {%- if s.show_description and p.description != blank -%}
+        <details class="acc" open><summary>{{ s.description_label }}<span class="pm" aria-hidden="true"></span></summary><div class="acc__body">{{ p.description }}</div></details>
+      {%- endif -%}
+      {%- for b in blocks -%}{%- if b.type == 'accordion' -%}
+        <details class="acc" {{ b.shopify_attributes }}><summary>{{ b.settings.title }}<span class="pm" aria-hidden="true"></span></summary><div class="acc__body">{{ b.settings.content }}</div></details>
+      {%- endif -%}{%- endfor -%}
+    </div>
+  {%- endform -%}
+</div>

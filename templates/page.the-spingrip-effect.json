@@ -1,0 +1,26 @@
+{
+  "sections": {
+    "kg_00": {
+      "type": "kg-s-5485f9ea",
+      "settings": {}
+    },
+    "kg_01": {
+      "type": "kg-s-97b2ce40",
+      "settings": {}
+    },
+    "kg_02": {
+      "type": "kg-s-622a5dcb",
+      "settings": {}
+    },
+    "kg_03": {
+      "type": "kg-s-9802d118",
+      "settings": {}
+    }
+  },
+  "order": [
+    "kg_00",
+    "kg_01",
+    "kg_02",
+    "kg_03"
+  ]
+}
