@@ -113,19 +113,21 @@
 
   /* ---------- hero slideshow ---------- */
   $$(".hero").forEach(function (hero) {
-    var slides = $$(".hero__slide", hero), dots = $$(".hero__dot", hero), pause = $(".hero__pause", hero), i = 0, t, playing = !reduce;
+    var slides = $$(".hero__slide", hero), dots = $$(".hero__dot", hero), pause = $(".hero__pause", hero), i = 0, t, playing = true, DELAY = 6500;
     if (slides.length < 2) return;
+    hero.style.setProperty("--hero-delay", DELAY + "ms");
     function go(n) {
       i = (n + slides.length) % slides.length;
       slides.forEach(function (s, j) { s.classList.toggle("is-on", j === i); s.setAttribute("aria-hidden", j === i ? "false" : "true"); $$("a,button", s).forEach(function (a) { a.tabIndex = j === i ? 0 : -1; }); });
-      dots.forEach(function (d, j) { d.setAttribute("aria-current", j === i ? "true" : "false"); });
+      dots.forEach(function (d, j) { d.setAttribute("aria-current", j === i ? "true" : "false"); d.classList.remove("is-run"); });
+      if (dots[i]) { void dots[i].offsetWidth; dots[i].classList.add("is-run"); }
     }
-    function start() { clearInterval(t); if (playing) t = setInterval(function () { go(i + 1); }, 6500); }
+    function start() { clearInterval(t); hero.classList.toggle("is-paused", !playing); if (playing) t = setInterval(function () { go(i + 1); }, DELAY); }
     dots.forEach(function (d, j) { d.addEventListener("click", function () { go(j); start(); }); });
     if (pause) {
       var setIcon = function () { pause.innerHTML = playing ? '<svg viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>' : '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4l13 8-13 8z"/></svg>'; pause.setAttribute("aria-label", playing ? "Pause slideshow" : "Play slideshow"); };
       setIcon();
-      pause.addEventListener("click", function () { playing = !playing; setIcon(); start(); });
+      pause.addEventListener("click", function () { playing = !playing; setIcon(); if (playing) go(i); start(); });
     }
     var x0 = null;
     hero.addEventListener("touchstart", function (e) { x0 = e.touches[0].clientX; }, { passive: true });

@@ -253,7 +253,11 @@ ul { margin: 0; padding: 0; list-style: none; }
 .hero__dots { position: absolute; z-index: 3; left: 50%; bottom: 26px; transform: translateX(-50%); display: flex; gap: 10px; align-items: center; }
 .hero__dot { width: 34px; height: 24px; display: grid; place-items: center; }
 .hero__dot::before { content: ""; width: 100%; height: 2px; background: rgba(255,255,255,.35); transition: background .3s; }
-.hero__dot[aria-current="true"]::before { background: var(--paper); }
+.hero__dot { position: relative; }
+.hero__dot::after { content: ""; position: absolute; left: 0; top: 50%; width: 100%; height: 2px; margin-top: -1px; background: var(--paper); transform: scaleX(0); transform-origin: left; }
+.hero__dot.is-run::after { animation: hero-progress var(--hero-delay, 6500ms) linear forwards; }
+.hero.is-paused .hero__dot[aria-current="true"]::after { animation: none; transform: scaleX(1); }
+@keyframes hero-progress { to { transform: scaleX(1); } }
 .hero__pause { width: 30px; height: 30px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.4); border-radius: 50%; margin-left: 6px; }
 .hero__pause svg { width: 12px; height: 12px; }
 
