@@ -845,3 +845,30 @@ ul { margin: 0; padding: 0; list-style: none; }
 .vmodal__close svg { width: 18px; height: 18px; }
 @media (min-width: 761px) and (max-width: 1000px) { .award__inner { grid-template-columns: 280px minmax(0, 1fr); } }
 .award { display: block; } .award > .award__inner { width: 100%; margin-inline: auto; }
+
+/* ---------- "An absolute no-brainer" quote strip ---------- */
+.nobrainer { background: var(--paper); padding-block: clamp(40px, 5vw, 64px); }
+.nobrainer__quote { font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: clamp(40px, 5vw, 64px); line-height: .92; letter-spacing: -.005em; }
+.nobrainer__line { display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 18px; font: 700 11px/1 var(--body); letter-spacing: .3em; text-transform: uppercase; color: var(--mute); }
+.nobrainer__line::before, .nobrainer__line::after { content: ""; width: clamp(32px, 6vw, 60px); height: 2px; background: var(--ink); }
+
+/* ---------- Trusted by thousands ---------- */
+.trusted__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; max-width: 980px; margin: clamp(28px, 4vw, 44px) auto 0; }
+.trusted__item { display: grid; justify-items: center; gap: 10px; }
+.trusted__icon { width: 58px; height: 58px; border-radius: 50%; border: 1px solid var(--line); display: grid; place-items: center; background: var(--stone); }
+.trusted__icon svg { width: 22px; height: 22px; }
+.trusted__big { font-family: var(--display); font-weight: 600; font-size: clamp(30px, 3vw, 40px); line-height: 1; text-transform: uppercase; }
+.trusted__small { font-size: 14px; color: var(--mute); }
+.trusted__badges { list-style: none; padding: 0; margin: clamp(28px, 4vw, 48px) 0 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+.trusted__badges li { border: 1px solid var(--line); border-radius: 999px; padding: 10px 20px; font-size: 14px; }
+@media (max-width: 760px) { .trusted__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 28px; } }
+
+/* ---------- Kollective: centred card with glowing edges (kittedgear.com style) ---------- */
+.roster-band--stacked { background: #000; padding-block: 0; }
+.roster-band--stacked::before { display: none; }
+.roster-band--stacked > .wrap { max-width: 820px; padding-block: clamp(48px, 6vw, 72px); border-inline: 2px solid rgba(255, 122, 26, .85); box-shadow: -10px 0 26px -12px rgba(255, 110, 0, .9), 10px 0 26px -12px rgba(255, 110, 0, .9); }
+.roster-band--stacked .kollective { grid-template-columns: minmax(0, 1fr); gap: 22px; }
+.roster-band--stacked .jersey { background: none; border: 0; padding: 0; max-width: 420px; margin-inline: auto; }
+.roster-band--stacked .jersey > p, .roster-band--stacked .jersey figcaption { display: none; }
+@media (max-width: 760px) { .roster-band--stacked > .wrap { border-inline-width: 1px; } }
+@media (max-width: 760px) { .nobrainer__line { letter-spacing: .16em; gap: 10px; } .nobrainer__line span { white-space: nowrap; } .nobrainer__line::before, .nobrainer__line::after { width: 28px; } }
