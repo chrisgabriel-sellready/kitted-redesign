@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
  "sections": {
   "kg_00": {
@@ -61,7 +70,7 @@
      "type": "accordion",
      "settings": {
       "title": "Shipping & returns",
-      "content": "<p>Orders ship within 1–2 business days. Standard delivery is 3–7 business days. Free domestic shipping on orders $100+. See the <a href=\"/pages/returns\">return policy</a>.</p>"
+      "content": "<p>Orders ship within 1–2 business days. Standard delivery is 3–7 business days. Free domestic shipping on orders $100+. See the <a href=\"/policies/refund-policy\">return policy</a>.</p>"
      }
     }
    },
@@ -84,7 +93,7 @@
     "t6": "Watch it in action",
     "t7": "How to wear SpinGrip",
     "t8": "Index finger and thumb in an “L”, slide in, pull tight on the wrist, fasten the strap, and throw normally.",
-    "u9": "/pages/how-to-use-spingrip",
+    "u9": "/pages/the-spingrip-effect",
     "t10": "Read the full guide"
    }
   },
@@ -419,13 +428,13 @@
   "kg_06": {
    "type": "kg-035962fe",
    "settings": {
-    "t1": "Bulk & team orders",
-    "t2": "Outfitting a team, club or organization? Contact KITTED for bulk and retail pricing.",
-    "i3": "",
-    "i4": "",
-    "i5": "",
-    "u6": "/pages/team-orders",
-    "t7": "Bulk orders"
+    "t1": "Team up and save",
+    "t2": "SpinGrip Packs. Any glove, any size, either hand. The discount applies automatically.",
+    "i3": "2-Pack <strong>save 10%</strong>",
+    "i4": "5-Pack <strong>save 15%</strong>",
+    "i5": "10-Pack <strong>save 20%</strong>",
+    "u6": "/pages/packs",
+    "t7": "Build your pack"
    }
   }
  },

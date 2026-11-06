@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
  "sections": {
   "kg_00": {
@@ -9,21 +18,21 @@
     "t5": "Introducing the KITTED SpinGrip Baseball",
     "t6": "Own the Diamond",
     "t7": "Proven to increase velocity, spin rate, and accuracy.",
-    "u8": "/products/spingrip",
+    "u8": "/pages/baseball",
     "t9": "Shop Baseball",
     "t11": "kg-softball-hero-desktop.webp",
     "h12": "18U Team Mercado<br/>Texas Select",
     "t13": "Introducing the KITTED SpinGrip Softball",
     "t14": "The Time is Now",
     "t15": "Tighter spins, stronger throws.",
-    "u16": "/pages/spingrip-softball-is-here",
+    "u16": "/pages/softball",
     "t17": "Shop Softball",
     "t19": "kg-pop-hero-desktop.webp",
     "h20": "Peyton “Pop” Houston<br/>Elite 11 Champ",
     "t21": "Introducing the KITTED SpinGrip Football",
     "t22": "Calling All QB1s",
     "t23": "The first and only QB throwing glove built to enhance spirals, velocity and accuracy.",
-    "u24": "/products/spin-grip-football",
+    "u24": "/pages/football",
     "t25": "Shop Football"
    }
   },
@@ -34,7 +43,7 @@
     "t2": "The first-ever throwing glove. A patent-pending embedded palm-spacer moves the ball out to your fingertips, where velocity, spin and accuracy are decided.",
     "t4": "kg-spingrip-engineering.webp",
     "t5": "SpinGrip engineering: index finger opening, ergonomic coding for real-game feel, TPU grip print, thumb opening, 4-way stretch ultra-light neoprene body, patent-pending palm-spacer and flex-soft comfort strap",
-    "u6": "/pages/how-to-use-spingrip",
+    "u6": "/pages/the-spingrip-effect",
     "t7": "Read the guide"
    }
   },
@@ -206,7 +215,7 @@
     "c1a_1": {
      "type": "c1a",
      "settings": {
-      "u1": "/products/spingrip",
+      "u1": "/pages/baseball",
       "t3": "kg-baseball-card-home.webp",
       "t4": "Pitcher throwing with SpinGrip Baseball",
       "h5": "<span class=\"display tile__name\">Baseball</span><span class=\"tile__cta\">Shop now</span>"
@@ -215,7 +224,7 @@
     "c1a_2": {
      "type": "c1a",
      "settings": {
-      "u1": "/pages/spingrip-softball-is-here",
+      "u1": "/pages/softball",
       "t3": "kg-softball-card-home.webp",
       "t4": "Softball player throwing with SpinGrip Softball",
       "h5": "<span class=\"display tile__name\">Softball</span><span class=\"tile__cta\">Shop now</span>"
@@ -224,7 +233,7 @@
     "c1a_3": {
      "type": "c1a",
      "settings": {
-      "u1": "/products/spin-grip-football",
+      "u1": "/pages/football",
       "t3": "kg-football-card-home.webp",
       "t4": "Quarterback with SpinGrip Football",
       "h5": "<span class=\"display tile__name\">Football</span><span class=\"tile__cta\">Shop now</span>"
@@ -652,13 +661,13 @@
   "kg_12": {
    "type": "kg-035962fe",
    "settings": {
-    "t1": "Bulk & team orders",
-    "t2": "Outfitting a team, club or organization? Contact KITTED for bulk and retail pricing.",
-    "i3": "",
-    "i4": "",
-    "i5": "",
-    "u6": "/pages/team-orders",
-    "t7": "Bulk orders"
+    "t1": "Team up and save",
+    "t2": "SpinGrip Packs. Any glove, any size, either hand. The discount applies automatically.",
+    "i3": "2-Pack <strong>save 10%</strong>",
+    "i4": "5-Pack <strong>save 15%</strong>",
+    "i5": "10-Pack <strong>save 20%</strong>",
+    "u6": "/pages/packs",
+    "t7": "Build your pack"
    }
   },
   "kg_13": {

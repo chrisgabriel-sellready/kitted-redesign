@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -55,8 +64,7 @@
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
-        "show_text_below": false,
-        "page_handle": "testimonials"
+        "show_text_below": false
       }
     },
     "video_CE43e8": {
@@ -72,8 +80,7 @@
         "full_width": false,
         "color_scheme": "",
         "padding_top": 36,
-        "padding_bottom": 36,
-        "page_handle": "testimonials"
+        "padding_bottom": 36
       }
     },
     "video_MpDn3K": {
@@ -88,8 +95,7 @@
         "full_width": false,
         "color_scheme": "",
         "padding_top": 36,
-        "padding_bottom": 36,
-        "page_handle": "testimonials"
+        "padding_bottom": 36
       }
     },
     "video_Qftnia": {
@@ -104,8 +110,7 @@
         "full_width": false,
         "color_scheme": "",
         "padding_top": 36,
-        "padding_bottom": 36,
-        "page_handle": "testimonials"
+        "padding_bottom": 36
       }
     },
     "video_A3UfPf": {
@@ -121,8 +126,7 @@
         "full_width": false,
         "color_scheme": "",
         "padding_top": 36,
-        "padding_bottom": 36,
-        "page_handle": "testimonials"
+        "padding_bottom": 36
       }
     },
     "multirow_tPQLKE": {
@@ -180,8 +184,7 @@
         "row_color_scheme": "scheme-3",
         "mobile_content_alignment": "left",
         "padding_top": 36,
-        "padding_bottom": 36,
-        "page_handle": "testimonials"
+        "padding_bottom": 36
       }
     },
     "multicolumn_n8pmAY": {
@@ -244,8 +247,7 @@
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 0,
-        "padding_bottom": 20,
-        "page_handle": "testimonials"
+        "padding_bottom": 20
       }
     }
   },
