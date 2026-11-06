@@ -1,218 +1,218 @@
 {
-  "sections": {
-    "kg_00": {
-      "type": "kg-product",
-      "settings": {
-        "show_crumbs": true,
-        "title_tag": "h1",
-        "anchor": "",
-        "kicker": "",
-        "heading": "",
-        "as_section": false,
-        "banner": "Instant digital access · guaranteed results",
-        "eyebrow": "Baseball · Digital program",
-        "rating_text": "",
-        "value_tag": "$150 value",
-        "lede": "Work 1-on-1 with a former MLB athlete to guarantee results from your SpinGrip.",
-        "seal": "none",
-        "digital": true,
-        "show_used_by": false,
-        "show_trust": false,
-        "show_pack_callout": false,
-        "description_label": "About the program"
-      },
-      "blocks": {
-        "inside_0": {
-          "type": "inside",
-          "settings": {
-            "text": "Step-by-step throwing progressions"
-          }
-        },
-        "inside_1": {
-          "type": "inside",
-          "settings": {
-            "text": "Warm-up, long toss & recovery blueprint"
-          }
-        },
-        "inside_2": {
-          "type": "inside",
-          "settings": {
-            "text": "How to train the SpinGrip release for real velo"
-          }
-        },
-        "inside_3": {
-          "type": "inside",
-          "settings": {
-            "text": "Instant digital access, start today"
-          }
-        },
-        "accordion_4": {
-          "type": "accordion",
-          "settings": {
-            "title": "Pairs with",
-            "content": "<p>Built around the fingertip release that <a href=\"/products/spingrip\">SpinGrip Baseball</a> makes automatic. Use them together for the fastest results.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "inside_0",
-        "inside_1",
-        "inside_2",
-        "inside_3",
-        "accordion_4"
-      ]
+ "sections": {
+  "kg_00": {
+   "type": "kg-product",
+   "settings": {
+    "show_crumbs": true,
+    "title_tag": "h1",
+    "anchor": "",
+    "kicker": "",
+    "heading": "",
+    "as_section": false,
+    "banner": "Instant digital access · guaranteed results",
+    "eyebrow": "Baseball · Digital program",
+    "rating_text": "",
+    "value_tag": "$150 value",
+    "lede": "Work 1-on-1 with a former MLB athlete to guarantee results from your SpinGrip.",
+    "seal": "none",
+    "digital": true,
+    "show_used_by": false,
+    "show_trust": false,
+    "show_pack_callout": false,
+    "description_label": "About the program"
+   },
+   "blocks": {
+    "inside_0": {
+     "type": "inside",
+     "settings": {
+      "text": "Step-by-step throwing progressions"
+     }
     },
-    "kg_01": {
-      "type": "kg-80b1e18a",
-      "settings": {
-        "t2": "kg-poster-formula-baseball.webp",
-        "t3": "Program preview",
-        "t4": "See the formula in action",
-        "t5": "Work 1-on-1 with a former MLB athlete to guarantee results from your SpinGrip.",
-        "t6": "Get instant access"
-      }
+    "inside_1": {
+     "type": "inside",
+     "settings": {
+      "text": "Warm-up, long toss & recovery blueprint"
+     }
     },
-    "kg_02": {
-      "type": "kg-03be4538",
-      "settings": {
-        "t1": "Real players. Real results.",
-        "t2": "Don’t take our word for it. See what athletes and coaches are saying about SpinGrip."
-      },
-      "blocks": {
-        "c1a_1": {
-          "type": "c1a",
-          "settings": {
-            "t2": "kg-poster-ugc-2.webp",
-            "t3": "“It’s a simple training tool that leaves a big impact.”",
-            "t4": "Chip"
-          }
-        },
-        "c1b_2": {
-          "type": "c1b",
-          "settings": {
-            "v1": "shopify://files/videos/copy_3C3DF899-FBD7-4310-A09D-5C3643315F1C.MOV",
-            "u2": "https://shop.kittedgear.com/cdn/shop/videos/c/vp/833085947e8d471483e7cd68f101d3d9/833085947e8d471483e7cd68f101d3d9.HD-1080p-4.8Mbps-80246359.mp4",
-            "t4": "kg-poster-ugc-3.webp",
-            "t5": "Tap for sound",
-            "t6": "“This just naturally helped me get that grip every time.”",
-            "t7": "Cody Freeman, Big Leaguer"
-          }
-        },
-        "c1a_3": {
-          "type": "c1a",
-          "settings": {
-            "t2": "kg-poster-ugc-4.webp",
-            "t3": "“I highly approve and recommend the SpinGrip.”",
-            "t4": "Pro Pitching Instructor"
-          }
-        },
-        "c1a_4": {
-          "type": "c1a",
-          "settings": {
-            "t2": "kg-poster-ugc-6.webp",
-            "t3": "“It’s effortless power.”",
-            "t4": "Youth Ballplayers"
-          }
-        },
-        "c1a_5": {
-          "type": "c1a",
-          "settings": {
-            "t2": "kg-poster-ugc-15.webp",
-            "t3": "“It’s forcing me to use my fingertips.”",
-            "t4": "Donte Lewis, D1 Player"
-          }
-        },
-        "c1a_6": {
-          "type": "c1a",
-          "settings": {
-            "t2": "kg-poster-ugc-16.webp",
-            "t3": "“It puts the ball in the right position in my hand.”",
-            "t4": "Will Brennan, Big Leaguer"
-          }
-        },
-        "c1a_7": {
-          "type": "c1a",
-          "settings": {
-            "t2": "kg-poster-ugc-17.webp",
-            "t3": "“There’s no tension. Everything is loose.”",
-            "t4": "Blake Rogers, Pro Player"
-          }
-        },
-        "c1a_8": {
-          "type": "c1a",
-          "settings": {
-            "t2": "kg-poster-ugc-19.webp",
-            "t3": "“I don’t feel like I’m choking the ball.”",
-            "t4": "Youth Player"
-          }
-        }
-      },
-      "block_order": [
-        "c1a_1",
-        "c1b_2",
-        "c1a_3",
-        "c1a_4",
-        "c1a_5",
-        "c1a_6",
-        "c1a_7",
-        "c1a_8"
-      ]
+    "inside_2": {
+     "type": "inside",
+     "settings": {
+      "text": "How to train the SpinGrip release for real velo"
+     }
     },
-    "kg_03": {
-      "type": "kg-5fc65833",
-      "settings": {
-        "t1": "Frequently asked"
-      },
-      "blocks": {
-        "c1a_1": {
-          "type": "c1a",
-          "settings": {
-            "t1": "How do I get access?",
-            "t2": "It's 100% digital. Right after checkout you'll receive an email with instant access. Nothing ships, and you can start the same day."
-          }
-        },
-        "c1a_2": {
-          "type": "c1a",
-          "settings": {
-            "t1": "Do I need a SpinGrip to use it?",
-            "t2": "You don't need one to follow the program, but it's built to pair with SpinGrip. The progressions are designed around the fingertip release that SpinGrip makes automatic, so the two together produce the fastest results."
-          }
-        },
-        "c1a_3": {
-          "type": "c1a",
-          "settings": {
-            "t1": "Who is this for?",
-            "t2": "Pitchers and position players of any age who want more spin, velocity, and accuracy, plus coaches and parents who want a clear, safe throwing structure to follow."
-          }
-        },
-        "c1a_4": {
-          "type": "c1a",
-          "settings": {
-            "t1": "How long is the program?",
-            "t2": "It's built as a repeatable framework rather than a fixed calendar, so you can run it through an offseason block or fold the routines into your in-season throwing week."
-          }
-        },
-        "c1a_5": {
-          "type": "c1a",
-          "settings": {
-            "t1": "Is it refundable?",
-            "t2": "Because it's an instant digital product, access is delivered immediately and sales are final. Reach out to our team if anything doesn't work and we'll take care of you."
-          }
-        }
-      },
-      "block_order": [
-        "c1a_1",
-        "c1a_2",
-        "c1a_3",
-        "c1a_4",
-        "c1a_5"
-      ]
+    "inside_3": {
+     "type": "inside",
+     "settings": {
+      "text": "Instant digital access, start today"
+     }
+    },
+    "accordion_4": {
+     "type": "accordion",
+     "settings": {
+      "title": "Pairs with",
+      "content": "<p>Built around the fingertip release that <a href=\"/products/spingrip\">SpinGrip Baseball</a> makes automatic. Use them together for the fastest results.</p>"
+     }
     }
+   },
+   "block_order": [
+    "inside_0",
+    "inside_1",
+    "inside_2",
+    "inside_3",
+    "accordion_4"
+   ]
   },
-  "order": [
-    "kg_00",
-    "kg_01",
-    "kg_02",
-    "kg_03"
-  ]
+  "kg_01": {
+   "type": "kg-80b1e18a",
+   "settings": {
+    "t2": "kg-poster-formula-baseball.webp",
+    "t3": "Program preview",
+    "t4": "See the formula in action",
+    "t5": "Work 1-on-1 with a former MLB athlete to guarantee results from your SpinGrip.",
+    "t6": "Get instant access"
+   }
+  },
+  "kg_02": {
+   "type": "kg-03be4538",
+   "settings": {
+    "t1": "Real players. Real results.",
+    "t2": "Don’t take our word for it. See what athletes and coaches are saying about SpinGrip."
+   },
+   "blocks": {
+    "c1a_1": {
+     "type": "c1a",
+     "settings": {
+      "t2": "kg-poster-ugc-2.webp",
+      "t3": "“It’s a simple training tool that leaves a big impact.”",
+      "t4": "Chip"
+     }
+    },
+    "c1b_2": {
+     "type": "c1b",
+     "settings": {
+      "v1": "shopify://files/videos/copy_3C3DF899-FBD7-4310-A09D-5C3643315F1C.MOV",
+      "u2": "https://shop.kittedgear.com/cdn/shop/videos/c/vp/833085947e8d471483e7cd68f101d3d9/833085947e8d471483e7cd68f101d3d9.HD-1080p-4.8Mbps-80246359.mp4",
+      "t4": "kg-poster-ugc-3.webp",
+      "t5": "Tap for sound",
+      "t6": "“This just naturally helped me get that grip every time.”",
+      "t7": "Cody Freeman, Big Leaguer"
+     }
+    },
+    "c1a_3": {
+     "type": "c1a",
+     "settings": {
+      "t2": "kg-poster-ugc-4.webp",
+      "t3": "“I highly approve and recommend the SpinGrip.”",
+      "t4": "Pro Pitching Instructor"
+     }
+    },
+    "c1a_4": {
+     "type": "c1a",
+     "settings": {
+      "t2": "kg-poster-ugc-6.webp",
+      "t3": "“It’s effortless power.”",
+      "t4": "Youth Ballplayers"
+     }
+    },
+    "c1a_5": {
+     "type": "c1a",
+     "settings": {
+      "t2": "kg-poster-ugc-15.webp",
+      "t3": "“It’s forcing me to use my fingertips.”",
+      "t4": "Donte Lewis, D1 Player"
+     }
+    },
+    "c1a_6": {
+     "type": "c1a",
+     "settings": {
+      "t2": "kg-poster-ugc-16.webp",
+      "t3": "“It puts the ball in the right position in my hand.”",
+      "t4": "Will Brennan, Big Leaguer"
+     }
+    },
+    "c1a_7": {
+     "type": "c1a",
+     "settings": {
+      "t2": "kg-poster-ugc-17.webp",
+      "t3": "“There’s no tension. Everything is loose.”",
+      "t4": "Blake Rogers, Pro Player"
+     }
+    },
+    "c1a_8": {
+     "type": "c1a",
+     "settings": {
+      "t2": "kg-poster-ugc-19.webp",
+      "t3": "“I don’t feel like I’m choking the ball.”",
+      "t4": "Youth Player"
+     }
+    }
+   },
+   "block_order": [
+    "c1a_1",
+    "c1b_2",
+    "c1a_3",
+    "c1a_4",
+    "c1a_5",
+    "c1a_6",
+    "c1a_7",
+    "c1a_8"
+   ]
+  },
+  "kg_03": {
+   "type": "kg-5fc65833",
+   "settings": {
+    "t1": "Frequently asked"
+   },
+   "blocks": {
+    "c1a_1": {
+     "type": "c1a",
+     "settings": {
+      "t1": "How do I get access?",
+      "t2": "It's 100% digital. Right after checkout you'll receive an email with instant access. Nothing ships, and you can start the same day."
+     }
+    },
+    "c1a_2": {
+     "type": "c1a",
+     "settings": {
+      "t1": "Do I need a SpinGrip to use it?",
+      "t2": "You don't need one to follow the program, but it's built to pair with SpinGrip. The progressions are designed around the fingertip release that SpinGrip makes automatic, so the two together produce the fastest results."
+     }
+    },
+    "c1a_3": {
+     "type": "c1a",
+     "settings": {
+      "t1": "Who is this for?",
+      "t2": "Pitchers and position players of any age who want more spin, velocity, and accuracy, plus coaches and parents who want a clear, safe throwing structure to follow."
+     }
+    },
+    "c1a_4": {
+     "type": "c1a",
+     "settings": {
+      "t1": "How long is the program?",
+      "t2": "It's built as a repeatable framework rather than a fixed calendar, so you can run it through an offseason block or fold the routines into your in-season throwing week."
+     }
+    },
+    "c1a_5": {
+     "type": "c1a",
+     "settings": {
+      "t1": "Is it refundable?",
+      "t2": "Because it's an instant digital product, access is delivered immediately and sales are final. Reach out to our team if anything doesn't work and we'll take care of you."
+     }
+    }
+   },
+   "block_order": [
+    "c1a_1",
+    "c1a_2",
+    "c1a_3",
+    "c1a_4",
+    "c1a_5"
+   ]
+  }
+ },
+ "order": [
+  "kg_00",
+  "kg_01",
+  "kg_02",
+  "kg_03"
+ ]
 }

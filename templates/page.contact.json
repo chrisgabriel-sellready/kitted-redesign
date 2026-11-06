@@ -1,11 +1,11 @@
 {
-  "sections": {
-    "kg_00": {
-      "type": "kg-contact",
-      "settings": {}
-    }
-  },
-  "order": [
-    "kg_00"
-  ]
+ "sections": {
+  "kg_00": {
+   "type": "kg-contact",
+   "settings": {}
+  }
+ },
+ "order": [
+  "kg_00"
+ ]
 }

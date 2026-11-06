@@ -1,258 +1,258 @@
 {
-  "sections": {
-    "kg_00": {
-      "type": "kg-packs",
-      "settings": {
-        "gloves": [
-          "spingrip",
-          "spingrip-softball",
-          "spingrip-softball-pitcher",
-          "spin-grip-football"
-        ]
-      }
-    },
-    "kg_01": {
-      "type": "kg-1a34088d",
-      "settings": {
-        "t1": "Outfitting a team?",
-        "t2": "Team & bulk orders",
-        "t3": "Clubs and organizations ordering 10+ gloves save more: 20% off 10–50 gloves, 25% off 51–74, and 30% off 75+.",
-        "u4": "/pages/contact",
-        "t5": "Contact us",
-        "t7": "kg-pdp-bb-4.webp",
-        "t8": "Jeffrey Claycomb, Ohio State commit, throwing with SpinGrip"
-      }
-    },
-    "kg_02": {
-      "type": "kg-51ae3de1",
-      "settings": {
-        "t1": "Used by athletes from top college & pro teams"
-      },
-      "blocks": {
-        "c1a_1": {
-          "type": "c1a",
-          "settings": {
-            "t2": "kg-logo-ohiostate.webp",
-            "t3": "Ohio State"
-          }
-        },
-        "c1a_2": {
-          "type": "c1a",
-          "settings": {
-            "t2": "kg-logo-iowa.webp",
-            "t3": "Iowa"
-          }
-        },
-        "c1a_3": {
-          "type": "c1a",
-          "settings": {
-            "t2": "kg-logo-georgia.webp",
-            "t3": "Georgia"
-          }
-        },
-        "c1a_4": {
-          "type": "c1a",
-          "settings": {
-            "t2": "kg-logo-indiana.webp",
-            "t3": "Indiana"
-          }
-        },
-        "c1a_5": {
-          "type": "c1a",
-          "settings": {
-            "t2": "kg-logo-missouri.webp",
-            "t3": "Missouri"
-          }
-        },
-        "c1a_6": {
-          "type": "c1a",
-          "settings": {
-            "t2": "kg-logo-kstate.webp",
-            "t3": "Kansas State"
-          }
-        },
-        "c1a_7": {
-          "type": "c1a",
-          "settings": {
-            "t2": "kg-logo-oregon-state.webp",
-            "t3": "Oregon State"
-          }
-        },
-        "c1a_8": {
-          "type": "c1a",
-          "settings": {
-            "t2": "kg-logo-oklahoma.webp",
-            "t3": "Oklahoma"
-          }
-        },
-        "c1a_9": {
-          "type": "c1a",
-          "settings": {
-            "t2": "kg-logo-lsu.webp",
-            "t3": "LSU"
-          }
-        },
-        "c1a_10": {
-          "type": "c1a",
-          "settings": {
-            "t2": "kg-logo-baylor.webp",
-            "t3": "Baylor"
-          }
-        },
-        "c1a_11": {
-          "type": "c1a",
-          "settings": {
-            "t2": "kg-logo-tcu.webp",
-            "t3": "TCU"
-          }
-        },
-        "c1a_12": {
-          "type": "c1a",
-          "settings": {
-            "t2": "kg-logo-alabama.webp",
-            "t3": "Alabama"
-          }
-        },
-        "c1a_13": {
-          "type": "c1a",
-          "settings": {
-            "t2": "kg-logo-arkansas.webp",
-            "t3": "Arkansas"
-          }
-        },
-        "c1a_14": {
-          "type": "c1a",
-          "settings": {
-            "t2": "kg-logo-florida.webp",
-            "t3": "Florida"
-          }
-        },
-        "c1a_15": {
-          "type": "c1a",
-          "settings": {
-            "t2": "kg-logo-usc.webp",
-            "t3": "USC"
-          }
-        },
-        "c1a_16": {
-          "type": "c1a",
-          "settings": {
-            "t2": "kg-logo-pitt.webp",
-            "t3": "Pittsburgh"
-          }
-        },
-        "c1a_17": {
-          "type": "c1a",
-          "settings": {
-            "t2": "kg-logo-texas-longhorns.webp",
-            "t3": "Texas"
-          }
-        },
-        "c1a_18": {
-          "type": "c1a",
-          "settings": {
-            "t2": "kg-logo-louisiana-tech.webp",
-            "t3": "Louisiana Tech"
-          }
-        },
-        "c2a_19": {
-          "type": "c2a",
-          "settings": {
-            "t2": "kg-logo-whitesox.webp",
-            "t3": "Chicago White Sox"
-          }
-        },
-        "c2a_20": {
-          "type": "c2a",
-          "settings": {
-            "t2": "kg-logo-rangers.webp",
-            "t3": "Texas Rangers"
-          }
-        },
-        "c2a_21": {
-          "type": "c2a",
-          "settings": {
-            "t2": "kg-logo-yankees.webp",
-            "t3": "New York Yankees"
-          }
-        },
-        "c2a_22": {
-          "type": "c2a",
-          "settings": {
-            "t2": "kg-logo-tigers.webp",
-            "t3": "Detroit Tigers"
-          }
-        },
-        "c2a_23": {
-          "type": "c2a",
-          "settings": {
-            "t2": "kg-logo-dodgers.webp",
-            "t3": "Los Angeles Dodgers"
-          }
-        },
-        "c2a_24": {
-          "type": "c2a",
-          "settings": {
-            "t2": "kg-logo-diamondbacks.webp",
-            "t3": "Arizona Diamondbacks"
-          }
-        },
-        "c2a_25": {
-          "type": "c2a",
-          "settings": {
-            "t2": "kg-logo-mets.webp",
-            "t3": "New York Mets"
-          }
-        },
-        "c2a_26": {
-          "type": "c2a",
-          "settings": {
-            "t2": "kg-logo-brewers.webp",
-            "t3": "Milwaukee Brewers"
-          }
-        },
-        "c2a_27": {
-          "type": "c2a",
-          "settings": {
-            "t2": "kg-logo-giants.webp",
-            "t3": "San Francisco Giants"
-          }
-        }
-      },
-      "block_order": [
-        "c1a_1",
-        "c1a_2",
-        "c1a_3",
-        "c1a_4",
-        "c1a_5",
-        "c1a_6",
-        "c1a_7",
-        "c1a_8",
-        "c1a_9",
-        "c1a_10",
-        "c1a_11",
-        "c1a_12",
-        "c1a_13",
-        "c1a_14",
-        "c1a_15",
-        "c1a_16",
-        "c1a_17",
-        "c1a_18",
-        "c2a_19",
-        "c2a_20",
-        "c2a_21",
-        "c2a_22",
-        "c2a_23",
-        "c2a_24",
-        "c2a_25",
-        "c2a_26",
-        "c2a_27"
-      ]
-    }
+ "sections": {
+  "kg_00": {
+   "type": "kg-packs",
+   "settings": {
+    "gloves": [
+     "spingrip",
+     "spingrip-softball",
+     "spingrip-softball-pitcher",
+     "spin-grip-football"
+    ]
+   }
   },
-  "order": [
-    "kg_00",
-    "kg_01",
-    "kg_02"
-  ]
+  "kg_01": {
+   "type": "kg-1a34088d",
+   "settings": {
+    "t1": "Outfitting a team?",
+    "t2": "Team & bulk orders",
+    "t3": "Clubs and organizations ordering 10+ gloves save more: 20% off 10–50 gloves, 25% off 51–74, and 30% off 75+.",
+    "u4": "/pages/contact",
+    "t5": "Contact us",
+    "t7": "kg-pdp-bb-4.webp",
+    "t8": "Jeffrey Claycomb, Ohio State commit, throwing with SpinGrip"
+   }
+  },
+  "kg_02": {
+   "type": "kg-51ae3de1",
+   "settings": {
+    "t1": "Used by athletes from top college & pro teams"
+   },
+   "blocks": {
+    "c1a_1": {
+     "type": "c1a",
+     "settings": {
+      "t2": "kg-logo-ohiostate.webp",
+      "t3": "Ohio State"
+     }
+    },
+    "c1a_2": {
+     "type": "c1a",
+     "settings": {
+      "t2": "kg-logo-iowa.webp",
+      "t3": "Iowa"
+     }
+    },
+    "c1a_3": {
+     "type": "c1a",
+     "settings": {
+      "t2": "kg-logo-georgia.webp",
+      "t3": "Georgia"
+     }
+    },
+    "c1a_4": {
+     "type": "c1a",
+     "settings": {
+      "t2": "kg-logo-indiana.webp",
+      "t3": "Indiana"
+     }
+    },
+    "c1a_5": {
+     "type": "c1a",
+     "settings": {
+      "t2": "kg-logo-missouri.webp",
+      "t3": "Missouri"
+     }
+    },
+    "c1a_6": {
+     "type": "c1a",
+     "settings": {
+      "t2": "kg-logo-kstate.webp",
+      "t3": "Kansas State"
+     }
+    },
+    "c1a_7": {
+     "type": "c1a",
+     "settings": {
+      "t2": "kg-logo-oregon-state.webp",
+      "t3": "Oregon State"
+     }
+    },
+    "c1a_8": {
+     "type": "c1a",
+     "settings": {
+      "t2": "kg-logo-oklahoma.webp",
+      "t3": "Oklahoma"
+     }
+    },
+    "c1a_9": {
+     "type": "c1a",
+     "settings": {
+      "t2": "kg-logo-lsu.webp",
+      "t3": "LSU"
+     }
+    },
+    "c1a_10": {
+     "type": "c1a",
+     "settings": {
+      "t2": "kg-logo-baylor.webp",
+      "t3": "Baylor"
+     }
+    },
+    "c1a_11": {
+     "type": "c1a",
+     "settings": {
+      "t2": "kg-logo-tcu.webp",
+      "t3": "TCU"
+     }
+    },
+    "c1a_12": {
+     "type": "c1a",
+     "settings": {
+      "t2": "kg-logo-alabama.webp",
+      "t3": "Alabama"
+     }
+    },
+    "c1a_13": {
+     "type": "c1a",
+     "settings": {
+      "t2": "kg-logo-arkansas.webp",
+      "t3": "Arkansas"
+     }
+    },
+    "c1a_14": {
+     "type": "c1a",
+     "settings": {
+      "t2": "kg-logo-florida.webp",
+      "t3": "Florida"
+     }
+    },
+    "c1a_15": {
+     "type": "c1a",
+     "settings": {
+      "t2": "kg-logo-usc.webp",
+      "t3": "USC"
+     }
+    },
+    "c1a_16": {
+     "type": "c1a",
+     "settings": {
+      "t2": "kg-logo-pitt.webp",
+      "t3": "Pittsburgh"
+     }
+    },
+    "c1a_17": {
+     "type": "c1a",
+     "settings": {
+      "t2": "kg-logo-texas-longhorns.webp",
+      "t3": "Texas"
+     }
+    },
+    "c1a_18": {
+     "type": "c1a",
+     "settings": {
+      "t2": "kg-logo-louisiana-tech.webp",
+      "t3": "Louisiana Tech"
+     }
+    },
+    "c2a_19": {
+     "type": "c2a",
+     "settings": {
+      "t2": "kg-logo-whitesox.webp",
+      "t3": "Chicago White Sox"
+     }
+    },
+    "c2a_20": {
+     "type": "c2a",
+     "settings": {
+      "t2": "kg-logo-rangers.webp",
+      "t3": "Texas Rangers"
+     }
+    },
+    "c2a_21": {
+     "type": "c2a",
+     "settings": {
+      "t2": "kg-logo-yankees.webp",
+      "t3": "New York Yankees"
+     }
+    },
+    "c2a_22": {
+     "type": "c2a",
+     "settings": {
+      "t2": "kg-logo-tigers.webp",
+      "t3": "Detroit Tigers"
+     }
+    },
+    "c2a_23": {
+     "type": "c2a",
+     "settings": {
+      "t2": "kg-logo-dodgers.webp",
+      "t3": "Los Angeles Dodgers"
+     }
+    },
+    "c2a_24": {
+     "type": "c2a",
+     "settings": {
+      "t2": "kg-logo-diamondbacks.webp",
+      "t3": "Arizona Diamondbacks"
+     }
+    },
+    "c2a_25": {
+     "type": "c2a",
+     "settings": {
+      "t2": "kg-logo-mets.webp",
+      "t3": "New York Mets"
+     }
+    },
+    "c2a_26": {
+     "type": "c2a",
+     "settings": {
+      "t2": "kg-logo-brewers.webp",
+      "t3": "Milwaukee Brewers"
+     }
+    },
+    "c2a_27": {
+     "type": "c2a",
+     "settings": {
+      "t2": "kg-logo-giants.webp",
+      "t3": "San Francisco Giants"
+     }
+    }
+   },
+   "block_order": [
+    "c1a_1",
+    "c1a_2",
+    "c1a_3",
+    "c1a_4",
+    "c1a_5",
+    "c1a_6",
+    "c1a_7",
+    "c1a_8",
+    "c1a_9",
+    "c1a_10",
+    "c1a_11",
+    "c1a_12",
+    "c1a_13",
+    "c1a_14",
+    "c1a_15",
+    "c1a_16",
+    "c1a_17",
+    "c1a_18",
+    "c2a_19",
+    "c2a_20",
+    "c2a_21",
+    "c2a_22",
+    "c2a_23",
+    "c2a_24",
+    "c2a_25",
+    "c2a_26",
+    "c2a_27"
+   ]
+  }
+ },
+ "order": [
+  "kg_00",
+  "kg_01",
+  "kg_02"
+ ]
 }
