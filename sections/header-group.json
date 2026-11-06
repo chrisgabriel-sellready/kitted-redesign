@@ -1,0 +1,77 @@
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement-kg0": {
+          "type": "announcement",
+          "settings": {
+            "text": "★★★★★ 50,000+ athletes trust SpinGrip",
+            "link": ""
+          }
+        },
+        "announcement-kg1": {
+          "type": "announcement",
+          "settings": {
+            "text": "Free domestic shipping on orders $100+",
+            "link": ""
+          }
+        },
+        "announcement-kg2": {
+          "type": "announcement",
+          "settings": {
+            "text": "Used by professional & D1 programs",
+            "link": ""
+          }
+        },
+        "announcement-kg3": {
+          "type": "announcement",
+          "settings": {
+            "text": "New drop this fall: join the Kollective for early access",
+            "link": "shopify://pages/kollective"
+          }
+        }
+      },
+      "block_order": [
+        "announcement-kg0",
+        "announcement-kg1",
+        "announcement-kg2",
+        "announcement-kg3"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "show_line_separator": true,
+        "show_social": false,
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "enable_country_selector": false,
+        "enable_language_selector": false
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "logo_position": "top-center",
+        "menu": "main-menu",
+        "menu_type_desktop": "mega",
+        "sticky_header_type": "always",
+        "show_line_separator": true,
+        "color_scheme": "scheme-20949acd-2f0a-4bf7-9681-1c3d7282fa5f",
+        "menu_color_scheme": "scheme-20949acd-2f0a-4bf7-9681-1c3d7282fa5f",
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "enable_customer_avatar": true,
+        "mobile_logo_position": "center",
+        "margin_bottom": 0,
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
+}

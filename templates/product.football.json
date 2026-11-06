@@ -1,0 +1,106 @@
+{
+  "sections": {
+    "kg_00": {
+      "type": "kg-product",
+      "settings": {
+        "show_crumbs": true,
+        "title_tag": "h1",
+        "anchor": "",
+        "kicker": "",
+        "heading": "",
+        "as_section": false,
+        "banner": "Guaranteed to increase velo, spin and accuracy",
+        "eyebrow": "Football",
+        "rating_text": "",
+        "value_tag": "",
+        "lede": "",
+        "seal": "green",
+        "digital": false,
+        "show_used_by": false,
+        "show_trust": true,
+        "show_pack_callout": true,
+        "description_label": "Description"
+      },
+      "blocks": {
+        "result_0": {
+          "type": "result",
+          "settings": {
+            "label": "More consistent spiral",
+            "value": "Tighter"
+          }
+        },
+        "result_1": {
+          "type": "result",
+          "settings": {
+            "label": "Increased throwing velocity",
+            "value": "Faster"
+          }
+        },
+        "result_2": {
+          "type": "result",
+          "settings": {
+            "label": "Improved accuracy & control",
+            "value": "Truer"
+          }
+        },
+        "accordion_3": {
+          "type": "accordion",
+          "settings": {
+            "title": "Sizing guide",
+            "content": "<p>Youth6–9 · Small/Medium10–14 · Large/XLarge15+</p><p class=\"muted\">Between sizes? Size by age first; the strap adjusts high and tight on the wrist.</p>"
+          }
+        },
+        "accordion_4": {
+          "type": "accordion",
+          "settings": {
+            "title": "How SpinGrip works",
+            "content": "<p>Put your throwing hand's index finger and thumb in an “L” shape, slide the index finger into the top hole and the thumb into the side hole, pull tight on the wrist, and fasten the velcro.</p><p>Grab a ball and throw normally.</p><p>We recommend wearing the grip from the very first throw and working all the way up to full speed with it on. When you're good and warm, take it off and keep letting it fly. You'll feel a fifth gear every time.</p>"
+          }
+        },
+        "accordion_5": {
+          "type": "accordion",
+          "settings": {
+            "title": "Shipping & returns",
+            "content": "<p>Orders ship within 1–2 business days. Standard delivery is 3–7 business days. Free domestic shipping on orders $100+. See the <a href=\"/policies/refund-policy\">return policy</a>.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "result_0",
+        "result_1",
+        "result_2",
+        "accordion_3",
+        "accordion_4",
+        "accordion_5"
+      ]
+    },
+    "kg_01": {
+      "type": "kg-s-d4c3c240",
+      "settings": {}
+    },
+    "kg_02": {
+      "type": "kg-s-ff485348",
+      "settings": {}
+    },
+    "kg_03": {
+      "type": "kg-s-dd604f66",
+      "settings": {}
+    },
+    "kg_04": {
+      "type": "kg-s-66186077",
+      "settings": {}
+    },
+    "kg_05": {
+      "type": "kg-s-39720e37",
+      "settings": {}
+    }
+  },
+  "order": [
+    "kg_00",
+    "kg_01",
+    "kg_02",
+    "kg_03",
+    "kg_04",
+    "kg_05"
+  ]
+}

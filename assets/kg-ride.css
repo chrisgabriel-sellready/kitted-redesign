@@ -1,0 +1,55 @@
+/* KITTED brand applied to Ride's own UI (header, menus, cart drawer, footer, account pages). */
+:root {
+  --font-body-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  --font-body-style: normal;
+  --font-body-weight: 400;
+  --font-heading-family: 'Barlow Condensed', 'Arial Narrow', Impact, sans-serif;
+  --font-heading-style: normal;
+  --font-heading-weight: 800;
+  --kg-gold: #fab505;
+  --kg-ink: #0d0d0d;
+}
+body { font-family: var(--font-body-family); letter-spacing: 0; }
+h1, h2, h3, h4, h5, .h0, .h1, .h2, .h3, .h4, .h5 { font-family: var(--font-heading-family); font-weight: 800; text-transform: uppercase; letter-spacing: .005em; }
+
+/* buttons */
+.button, .shopify-challenge__button, .customer button, button.shopify-payment-button__button--unbranded {
+  font-family: var(--font-body-family); font-weight: 600; font-size: 1.2rem; letter-spacing: .16em; text-transform: uppercase; border-radius: 4px;
+}
+
+/* announcement bar */
+.announcement-bar-section .utility-bar { background: var(--kg-ink); border-bottom: 0; }
+.announcement-bar__message { font-family: var(--font-body-family); font-size: 1.2rem; font-weight: 500; letter-spacing: .06em; color: #fff; }
+
+/* header: centred logo, tracked uppercase menu */
+.header-wrapper { background: #fff; }
+.header__menu-item, .header__menu-item span, .menu-drawer__menu-item, .mega-menu__link { font-family: var(--font-body-family); font-size: 1.2rem; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; color: var(--kg-ink); }
+.header__menu-item:hover span, .header__active-menu-item { text-decoration-color: var(--kg-ink); text-underline-offset: .6rem; }
+.header__icon .svg-wrapper, .header__icon svg { color: var(--kg-ink); }
+
+/* cart drawer */
+.drawer__heading, .cart-item__name, .totals__total { font-family: var(--font-heading-family); text-transform: uppercase; letter-spacing: .02em; }
+.cart-item__name { font-size: 1.6rem; font-weight: 700; }
+.drawer .cart__checkout-button, .cart__checkout-button { background: var(--kg-ink); color: #fff; }
+.cart-count-bubble { background: var(--kg-gold); color: var(--kg-ink); }
+
+/* footer: KITTED "Night Game" dark */
+.footer, .section-footer-padding, .footer.gradient {
+  background: radial-gradient(ellipse 55% 60% at 50% 0%, rgba(250,181,5,.12), rgba(250,181,5,0) 70%), linear-gradient(180deg, #14110d 0%, #0a0908 100%) !important;
+  color: #fff; border-top: 1px solid rgba(250,181,5,.55);
+}
+.footer a, .footer .list-menu__item--link, .footer-block__heading, .footer__copyright, .copyright__content { color: #fff; }
+.footer-block__heading { font-family: var(--font-heading-family); letter-spacing: .12em; }
+.footer .list-menu__item--link { font-size: 1.2rem; letter-spacing: .16em; text-transform: uppercase; opacity: .85; }
+.footer .list-menu__item--link:hover { opacity: 1; }
+.newsletter__wrapper .field__input { border-radius: 0; }
+
+/* redesign sections sit edge to edge inside Ride */
+.kg-section { margin: 0; }
+.kg { font-family: 'Inter', system-ui, sans-serif; color: var(--ink); }
+.kg .display, .kg .h-section, .kg .page-title, .kg h1, .kg h2, .kg h3 { font-family: 'Barlow Condensed', 'Arial Narrow', Impact, sans-serif; }
+.kg .form-msg.is-ok { color: #3ccf8e; }
+.kg .form-msg.is-warn { color: #e5484d; }
+.kg { letter-spacing: normal; line-height: 1.6; }
+/* Ride colours every heading with its scheme text colour; inside the redesign, headings follow their section (white on dark bands). */
+.kg h1, .kg h2, .kg h3, .kg h4, .kg h5, .kg h6 { color: inherit; }

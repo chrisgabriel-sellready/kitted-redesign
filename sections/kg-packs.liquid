@@ -1,0 +1,77 @@
+{%- liquid
+  assign gloves = section.settings.gloves
+-%}
+<div class="kg">
+<div class="wrap">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ routes.root_url }}">Home</a><span aria-hidden="true">/</span><span>{{ section.settings.heading }}</span></nav>
+  <div class="page-head center" style="justify-items:center"><p class="eyebrow muted">{{ section.settings.eyebrow }}</p><h1 class="page-title">{{ section.settings.heading }}</h1><p class="lede muted">{{ section.settings.text }}</p></div>
+  {%- if gloves == blank or gloves.count == 0 -%}
+    <p class="muted center">Choose the gloves for the pack builder in the theme editor.</p>
+  {%- else -%}
+  <div data-pack style="padding-bottom:clamp(48px,6vw,80px)">
+    <script type="application/json" data-pack-json>
+      [{%- for p in gloves -%}{%- liquid
+        assign desc = p.metafields.custom.blurb | default: p.description | strip_html | truncatewords: 16
+      -%}{"title": {{ p.title | json }}, "img": {{ p.featured_media | image_url: width: 300 | json }}, "desc": {{ desc | json }},
+        "options": [{%- for o in p.options_with_values -%}{"name": {{ o.name | json }}, "values": {{ o.values | json }}}{% unless forloop.last %},{% endunless %}{%- endfor -%}],
+        "variants": [{%- for v in p.variants -%}{"id": {{ v.id }}, "options": {{ v.options | json }}, "price": {{ v.price }}, "available": {{ v.available | json }}}{% unless forloop.last %},{% endunless %}{%- endfor -%}]}{% unless forloop.last %},{% endunless %}{%- endfor -%}]
+    </script>
+    <fieldset class="option" style="margin-bottom:clamp(24px,3vw,36px)"><legend class="sr-only">Pack size</legend><div class="pack-tiers">
+      <label class="pack-tier"><input type="radio" name="tier" value="2" data-disc="0.1" checked><span><b>2-Pack</b><em>Save 10%</em><small>Sibling, friend, parent-child</small></span></label>
+      <label class="pack-tier"><input type="radio" name="tier" value="5" data-disc="0.15"><span><b>5-Pack</b><em>Save 15%</em><small>The crew</small></span></label>
+      <label class="pack-tier"><input type="radio" name="tier" value="10" data-disc="0.2"><span><b>10-Pack</b><em>Save 20%</em><small>The whole team</small></span></label>
+    </div></fieldset>
+    <div class="packs">
+      <div class="pack-builder">
+        {%- assign first = gloves | first -%}
+        <div class="pack-preview"><img id="pv-img" src="{{ first.featured_media | image_url: width: 300 }}" alt="" width="120" height="120"><div class="stack" style="gap:6px"><p class="pcard__name" id="pv-name">{{ first.title }}</p><p class="muted" style="font-size:13px" id="pv-desc"></p><p class="price">{{ first.price | money_without_trailing_zeros }} each</p></div></div>
+        <fieldset class="option" data-label="Glove"><legend>SpinGrip glove</legend><div class="chips">
+          {%- for p in gloves -%}
+            {%- liquid
+              assign cw = 'baseball'
+              if p.handle contains 'pitcher'
+                assign cw = 'pitcher'
+              elsif p.handle contains 'softball'
+                assign cw = 'softball'
+              elsif p.handle contains 'football'
+                assign cw = 'football'
+              endif
+            -%}
+            <label class="chip"><input type="radio" name="glove" value="{{ forloop.index0 }}"{% if forloop.first %} checked{% endif %}><span><span class="swatch" style="background:var(--cw-{{ cw }})"></span>{{ p.title | remove: 'SpinGrip ' }}</span></label>
+          {%- endfor -%}
+        </div></fieldset>
+        <div id="pk-options"></div>
+        <button class="btn btn--lg btn--block" type="button" id="pk-addslot">Add to pack</button>
+        <p class="buy__msg" id="pk-msg" role="status" aria-live="polite"></p>
+      </div>
+      <aside class="pack-summary" aria-label="Your pack">
+        <div class="pack-summary__head"><h2 class="h-card">Your pack</h2><span class="muted" id="pack-count" style="font-size:13px">0 of 2 selected</span></div>
+        <div class="slots" id="slots"></div>
+        <div class="stack" style="gap:8px;border-top:1px solid var(--line);padding-top:14px">
+          <div class="cart-row"><span>Subtotal</span><span id="pk-sub">$0.00</span></div>
+          <div class="cart-row"><span>Pack savings (<span id="pk-disc">10</span>%)</span><span id="pk-save" style="color:var(--green)">−$0.00</span></div>
+          <div class="cart-row cart-row--total"><span>Total</span><span id="pk-total">$0.00</span></div>
+        </div>
+        <button class="btn btn--lg btn--block" type="button" id="pk-add" disabled>Pick 2 more gloves</button>
+        <p class="cart-note">{{ section.settings.note }}</p>
+      </aside>
+    </div>
+  </div>
+  {%- endif -%}
+</div>
+</div>
+{% schema %}
+{
+  "name": "KITTED pack builder",
+  "tag": "div",
+  "class": "kg-section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Mix & match" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Build your pack" },
+    { "type": "textarea", "id": "text", "label": "Text", "default": "Any SpinGrip. Any size. Either hand. The more you stack, the more you save, and the discount applies automatically at checkout." },
+    { "type": "product_list", "id": "gloves", "label": "Gloves", "limit": 8 },
+    { "type": "textarea", "id": "note", "label": "Note under the button", "default": "Pack discounts don’t combine with other promo codes, but free shipping still applies." },
+    { "type": "paragraph", "content": "The savings shown here are applied at checkout by a Shopify discount (2+ gloves 10%, 5+ 15%, 10+ 20%). Set that up under Discounts so the checkout total matches." }
+  ]
+}
+{% endschema %}

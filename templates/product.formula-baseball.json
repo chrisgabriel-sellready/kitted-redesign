@@ -1,0 +1,84 @@
+{
+  "sections": {
+    "kg_00": {
+      "type": "kg-product",
+      "settings": {
+        "show_crumbs": true,
+        "title_tag": "h1",
+        "anchor": "",
+        "kicker": "",
+        "heading": "",
+        "as_section": false,
+        "banner": "Instant digital access · guaranteed results",
+        "eyebrow": "Baseball · Digital program",
+        "rating_text": "",
+        "value_tag": "$150 value",
+        "lede": "Work 1-on-1 with a former MLB athlete to guarantee results from your SpinGrip.",
+        "seal": "none",
+        "digital": true,
+        "show_used_by": false,
+        "show_trust": false,
+        "show_pack_callout": false,
+        "description_label": "About the program"
+      },
+      "blocks": {
+        "inside_0": {
+          "type": "inside",
+          "settings": {
+            "text": "Step-by-step throwing progressions"
+          }
+        },
+        "inside_1": {
+          "type": "inside",
+          "settings": {
+            "text": "Warm-up, long toss & recovery blueprint"
+          }
+        },
+        "inside_2": {
+          "type": "inside",
+          "settings": {
+            "text": "How to train the SpinGrip release for real velo"
+          }
+        },
+        "inside_3": {
+          "type": "inside",
+          "settings": {
+            "text": "Instant digital access, start today"
+          }
+        },
+        "accordion_4": {
+          "type": "accordion",
+          "settings": {
+            "title": "Pairs with",
+            "content": "<p>Built around the fingertip release that <a href=\"/products/spingrip\">SpinGrip Baseball</a> makes automatic. Use them together for the fastest results.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "inside_0",
+        "inside_1",
+        "inside_2",
+        "inside_3",
+        "accordion_4"
+      ]
+    },
+    "kg_01": {
+      "type": "kg-s-ca24ca28",
+      "settings": {}
+    },
+    "kg_02": {
+      "type": "kg-s-a37162af",
+      "settings": {}
+    },
+    "kg_03": {
+      "type": "kg-s-29a2d5a5",
+      "settings": {}
+    }
+  },
+  "order": [
+    "kg_00",
+    "kg_01",
+    "kg_02",
+    "kg_03"
+  ]
+}

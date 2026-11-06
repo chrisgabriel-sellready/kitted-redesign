@@ -1,0 +1,98 @@
+{
+  "sections": {
+    "kg_00": {
+      "type": "kg-product",
+      "settings": {
+        "show_crumbs": true,
+        "title_tag": "h1",
+        "anchor": "",
+        "kicker": "",
+        "heading": "",
+        "as_section": false,
+        "banner": "Instant digital access · guaranteed results",
+        "eyebrow": "Softball · Digital program",
+        "rating_text": "",
+        "value_tag": "$150 value",
+        "lede": "Train with 2-time National Champion Kaydee Bennett to guarantee results from your SpinGrip.",
+        "seal": "none",
+        "digital": true,
+        "show_used_by": false,
+        "show_trust": false,
+        "show_pack_callout": false,
+        "description_label": "About the program"
+      },
+      "blocks": {
+        "inside_0": {
+          "type": "inside",
+          "settings": {
+            "text": "Train with 2-time National Champion Kaydee Bennett (former Texas Longhorn)"
+          }
+        },
+        "inside_1": {
+          "type": "inside",
+          "settings": {
+            "text": "Division 1 level warm up"
+          }
+        },
+        "inside_2": {
+          "type": "inside",
+          "settings": {
+            "text": "Elite-level throwing progressions"
+          }
+        },
+        "inside_3": {
+          "type": "inside",
+          "settings": {
+            "text": "Position-player specific tips"
+          }
+        },
+        "inside_4": {
+          "type": "inside",
+          "settings": {
+            "text": "Guaranteed results with your SpinGrip, or your money back"
+          }
+        },
+        "inside_5": {
+          "type": "inside",
+          "settings": {
+            "text": "Instant digital access, start today"
+          }
+        },
+        "accordion_6": {
+          "type": "accordion",
+          "settings": {
+            "title": "Pairs with",
+            "content": "<p>Built around the fingertip release that <a href=\"/products/spingrip-softball\">SpinGrip Softball</a> makes automatic. Use them together for the fastest results.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "inside_0",
+        "inside_1",
+        "inside_2",
+        "inside_3",
+        "inside_4",
+        "inside_5",
+        "accordion_6"
+      ]
+    },
+    "kg_01": {
+      "type": "kg-s-e6a91cd2",
+      "settings": {}
+    },
+    "kg_02": {
+      "type": "kg-s-7406e390",
+      "settings": {}
+    },
+    "kg_03": {
+      "type": "kg-s-72dc8b79",
+      "settings": {}
+    }
+  },
+  "order": [
+    "kg_00",
+    "kg_01",
+    "kg_02",
+    "kg_03"
+  ]
+}

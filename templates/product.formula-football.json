@@ -1,0 +1,84 @@
+{
+  "sections": {
+    "kg_00": {
+      "type": "kg-product",
+      "settings": {
+        "show_crumbs": true,
+        "title_tag": "h1",
+        "anchor": "",
+        "kicker": "",
+        "heading": "",
+        "as_section": false,
+        "banner": "Instant digital access · guaranteed results",
+        "eyebrow": "Football · Digital program",
+        "rating_text": "",
+        "value_tag": "$150 value",
+        "lede": "Work 1-on-1 with a former D-1 QB to guarantee results from your SpinGrip.",
+        "seal": "none",
+        "digital": true,
+        "show_used_by": false,
+        "show_trust": false,
+        "show_pack_callout": false,
+        "description_label": "About the program"
+      },
+      "blocks": {
+        "inside_0": {
+          "type": "inside",
+          "settings": {
+            "text": "Step-by-step QB throwing progressions"
+          }
+        },
+        "inside_1": {
+          "type": "inside",
+          "settings": {
+            "text": "Warm-up, footwork & recovery blueprint"
+          }
+        },
+        "inside_2": {
+          "type": "inside",
+          "settings": {
+            "text": "How to train the SpinGrip release for tighter spirals"
+          }
+        },
+        "inside_3": {
+          "type": "inside",
+          "settings": {
+            "text": "Instant digital access, start today"
+          }
+        },
+        "accordion_4": {
+          "type": "accordion",
+          "settings": {
+            "title": "Pairs with",
+            "content": "<p>Built around the fingertip release that <a href=\"/products/spin-grip-football\">SpinGrip Football</a> makes automatic. Use them together for the fastest results.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "inside_0",
+        "inside_1",
+        "inside_2",
+        "inside_3",
+        "accordion_4"
+      ]
+    },
+    "kg_01": {
+      "type": "kg-s-efbb8062",
+      "settings": {}
+    },
+    "kg_02": {
+      "type": "kg-s-5927b00d",
+      "settings": {}
+    },
+    "kg_03": {
+      "type": "kg-s-9a1c9b69",
+      "settings": {}
+    }
+  },
+  "order": [
+    "kg_00",
+    "kg_01",
+    "kg_02",
+    "kg_03"
+  ]
+}

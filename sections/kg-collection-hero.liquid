@@ -1,0 +1,22 @@
+<div class="kg">
+<section class="coll-hero">
+  {%- if section.settings.image != blank -%}{{ section.settings.image | image_url: width: 2000 | image_tag: loading: 'eager', sizes: '100vw', alt: '' }}
+  {%- elsif collection.image -%}{{ collection.image | image_url: width: 2000 | image_tag: loading: 'eager', sizes: '100vw', alt: '' }}
+  {%- else -%}<img src="{{ section.settings.fallback_asset | asset_url }}" alt="" width="1200" height="1200">{%- endif -%}
+  <div class="wrap"><p class="eyebrow">{{ section.settings.eyebrow }}</p><h1 class="page-title">{{ section.settings.title | default: collection.title }}</h1>{% if section.settings.text != blank %}<p class="lede">{{ section.settings.text }}</p>{% elsif collection.description != blank %}<div class="lede">{{ collection.description }}</div>{% endif %}</div>
+</section>
+</div>
+{% schema %}
+{
+  "name": "KITTED collection hero",
+  "tag": "div",
+  "class": "kg-section",
+  "settings": [
+    { "type": "image_picker", "id": "image", "label": "Image", "info": "Falls back to the collection image." },
+    { "type": "text", "id": "fallback_asset", "label": "Fallback theme image", "default": "kg-pdp-sb-9.webp" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Throwing gloves & programs" },
+    { "type": "text", "id": "title", "label": "Title", "info": "Leave empty to use the collection title." },
+    { "type": "text", "id": "text", "label": "Text" }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,28 @@
+{
+  "sections": {
+    "kg_00": {
+      "type": "kg-packs",
+      "settings": {
+        "gloves": [
+          "spingrip",
+          "spingrip-softball",
+          "spingrip-softball-pitcher",
+          "spin-grip-football"
+        ]
+      }
+    },
+    "kg_01": {
+      "type": "kg-s-9171d16e",
+      "settings": {}
+    },
+    "kg_02": {
+      "type": "kg-s-56583e7d",
+      "settings": {}
+    }
+  },
+  "order": [
+    "kg_00",
+    "kg_01",
+    "kg_02"
+  ]
+}
