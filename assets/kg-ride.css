@@ -81,6 +81,7 @@ h1, h2, h3, h4, h5, .h0, .h1, .h2, .h3, .h4, .h5 { font-family: var(--font-headi
 
 /* ---------- KITTED header (kg-header section) ---------- */
 .kg-header-section { position: sticky; top: 0; z-index: 40; }
+.kg-header-section > .kg { overflow: visible; }
 .kg-header-section .site-header { position: relative; top: auto; }
 .kg .site-header .primary-nav a, .kg .site-header .primary-nav button { color: var(--ink); }
 .kg .kg-cart .svg-wrapper svg { width: 22px; height: 22px; }
