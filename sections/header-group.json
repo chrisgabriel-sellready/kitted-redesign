@@ -30,7 +30,7 @@
           "type": "announcement",
           "settings": {
             "text": "New drop this fall: join the Kollective for early access",
-            "link": "shopify://pages/kollective"
+            "link": "/#kollective"
           }
         }
       },
@@ -57,7 +57,7 @@
           "type": "link",
           "settings": {
             "label": "Baseball",
-            "url": "/pages/baseball",
+            "url": "/products/spingrip",
             "mobile_note": "Shop"
           }
         },
@@ -65,7 +65,7 @@
           "type": "link",
           "settings": {
             "label": "Softball",
-            "url": "/pages/softball",
+            "url": "/pages/spingrip-softball-is-here",
             "mobile_note": "Shop"
           }
         },
@@ -73,7 +73,7 @@
           "type": "link",
           "settings": {
             "label": "Football",
-            "url": "/pages/football",
+            "url": "/products/spin-grip-football",
             "mobile_note": "Shop"
           }
         },
@@ -89,8 +89,8 @@
             ],
             "more_1_label": "All SpinGrip",
             "more_1_url": "/collections/all",
-            "more_2_label": "Build a pack",
-            "more_2_url": "/pages/packs",
+            "more_2_label": "Bulk orders",
+            "more_2_url": "/pages/team-orders",
             "more_3_label": "Throwing formulas",
             "more_3_url": "/collections/all"
           }
@@ -99,7 +99,7 @@
           "type": "link",
           "settings": {
             "label": "The SpinGrip Effect",
-            "url": "/pages/the-spingrip-effect",
+            "url": "/pages/how-to-use-spingrip",
             "mobile_note": ""
           }
         },
@@ -107,7 +107,7 @@
           "type": "link",
           "settings": {
             "label": "The Kollective",
-            "url": "/pages/kollective",
+            "url": "/#kollective",
             "mobile_note": "Early access"
           }
         }

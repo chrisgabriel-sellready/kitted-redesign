@@ -1,92 +1,40 @@
 {
  "sections": {
   "kg_00": {
-   "type": "kg-product",
+   "type": "kg-b2de3e87",
    "settings": {
-    "show_crumbs": true,
-    "title_tag": "h1",
-    "anchor": "",
-    "kicker": "",
-    "heading": "",
-    "as_section": false,
-    "banner": "Guaranteed to increase velo, spin and accuracy",
-    "eyebrow": "Football",
-    "rating_text": "",
-    "value_tag": "",
-    "lede": "",
-    "seal": "green",
-    "digital": false,
-    "show_used_by": false,
-    "show_trust": true,
-    "show_pack_callout": true,
-    "description_label": "Description"
-   },
-   "blocks": {
-    "result_0": {
-     "type": "result",
-     "settings": {
-      "label": "More consistent spiral",
-      "value": "Tighter"
-     }
-    },
-    "result_1": {
-     "type": "result",
-     "settings": {
-      "label": "Increased throwing velocity",
-      "value": "Faster"
-     }
-    },
-    "result_2": {
-     "type": "result",
-     "settings": {
-      "label": "Improved accuracy & control",
-      "value": "Truer"
-     }
-    },
-    "accordion_3": {
-     "type": "accordion",
-     "settings": {
-      "title": "Sizing guide",
-      "content": "<p>Youth6–9 · Small/Medium10–14 · Large/XLarge15+</p><p>Between sizes? Size by age first; the strap adjusts high and tight on the wrist.</p>"
-     }
-    },
-    "accordion_4": {
-     "type": "accordion",
-     "settings": {
-      "title": "How SpinGrip works",
-      "content": "<p>Put your throwing hand's index finger and thumb in an “L” shape, slide the index finger into the top hole and the thumb into the side hole, pull tight on the wrist, and fasten the velcro.</p><p>Grab a ball and throw normally.</p><p>We recommend wearing the grip from the very first throw and working all the way up to full speed with it on. When you're good and warm, take it off and keep letting it fly. You'll feel a fifth gear every time.</p>"
-     }
-    },
-    "accordion_5": {
-     "type": "accordion",
-     "settings": {
-      "title": "Shipping & returns",
-      "content": "<p>Orders ship within 1–2 business days. Standard delivery is 3–7 business days. Free domestic shipping on orders $100+. See the <a href=\"/policies/refund-policy\">return policy</a>.</p>"
-     }
-    }
-   },
-   "block_order": [
-    "result_0",
-    "result_1",
-    "result_2",
-    "accordion_3",
-    "accordion_4",
-    "accordion_5"
-   ]
+    "t1": "SpinGrip Football",
+    "h2": "<span>Tighter spirals.</span><span>Precision accuracy.</span><span>Stronger throws.</span>",
+    "t3": "Introducing SpinGrip Football, the first-ever throwing glove. Patent pending, data-proven, and built for ages 6+.",
+    "t4": "Shop SpinGrip",
+    "t5": "How it works",
+    "t7": "kg-football-hero-wide-poster.webp",
+    "t9": "kg-football-hero-tall-poster.webp",
+    "t11": "kg-patent-seal-green.webp",
+    "t12": "Patent pending"
+   }
   },
   "kg_01": {
-   "type": "kg-eace0522",
+   "type": "kg-a748ee90",
    "settings": {
-    "t2": "kg-poster-football-howto.webp",
-    "t3": "Watch it in action",
-    "t4": "How to wear SpinGrip",
-    "t5": "Index finger and thumb in an “L”, slide in, pull tight on the wrist, fasten the strap, and throw normally.",
-    "u6": "/pages/the-spingrip-effect",
-    "t7": "Read the full guide"
+    "h1": "“An absolute<br/>no-brainer”",
+    "h2": "<span>The first-ever throwing glove</span>"
    }
   },
   "kg_02": {
-   "type": "kg-2b4b7be0",
+   "type": "kg-3c78a220",
+   "settings": {
+    "t2": "kg-poster-football-ugc-1.webp",
+    "t3": "Must watch",
+    "t4": "Peyton “Pop” Houston using SpinGrip Football",
+    "t5": "Elite 11 champ Peyton “Pop” Houston puts SpinGrip Football to work.",
+    "t6": "“Now it just feels like a Nerf ball.”",
+    "t7": "Peyton “Pop” Houston",
+    "t8": "Shop SpinGrip"
+   }
+  },
+  "kg_03": {
+   "type": "kg-20adc143",
    "settings": {
     "t1": "How SpinGrip works",
     "t2": "SpinGrip's embedded palm-spacer harnesses the physics of an elite release by positioning the ball farther into your fingers, unlocking optimal spin, velocity, and accuracy."
@@ -126,11 +74,124 @@
     "c1a_3"
    ]
   },
-  "kg_03": {
-   "type": "kg-41e8b7cc",
+  "kg_04": {
+   "type": "kg-7fbc63a8",
    "settings": {
-    "t1": "Real QBs. Real results.",
-    "t2": "Don’t take our word for it. See what athletes and coaches are saying about SpinGrip."
+    "t1": "The difference",
+    "t2": "The problem with traditional throwing, and the fix."
+   },
+   "blocks": {
+    "c1a_1": {
+     "type": "c1a",
+     "settings": {
+      "t1": "Without SpinGrip",
+      "t2": "The problem",
+      "t3": "Palming the football",
+      "t4": "Inconsistent spirals",
+      "t5": "Lower confidence in throwing",
+      "t6": "Sloppy release & mechanics",
+      "t7": "Weak wrist (U-shaped release)"
+     }
+    },
+    "c1b_2": {
+     "type": "c1b",
+     "settings": {
+      "t1": "With SpinGrip",
+      "t2": "The fix",
+      "t3": "Finger-snap release",
+      "t4": "Tight spiral",
+      "t5": "Certainty in every throw",
+      "t6": "Elite-level grip",
+      "t7": "Strong wrist (C-shaped release)"
+     }
+    }
+   },
+   "block_order": [
+    "c1a_1",
+    "c1b_2"
+   ]
+  },
+  "kg_05": {
+   "type": "kg-product",
+   "settings": {
+    "show_crumbs": false,
+    "title_tag": "h2",
+    "anchor": "buy",
+    "kicker": "SpinGrip Football",
+    "heading": "Start throwing like the pros",
+    "as_section": true,
+    "banner": "Guaranteed to increase velo, spin and accuracy",
+    "eyebrow": "",
+    "rating_text": "",
+    "value_tag": "",
+    "lede": "",
+    "seal": "green",
+    "digital": false,
+    "show_used_by": false,
+    "show_trust": true,
+    "show_pack_callout": false
+   },
+   "blocks": {
+    "result_0": {
+     "type": "result",
+     "settings": {
+      "label": "More consistent spiral",
+      "value": "Tighter"
+     }
+    },
+    "result_1": {
+     "type": "result",
+     "settings": {
+      "label": "Increased throwing velocity",
+      "value": "Faster"
+     }
+    },
+    "result_2": {
+     "type": "result",
+     "settings": {
+      "label": "Improved accuracy & control",
+      "value": "Truer"
+     }
+    }
+   },
+   "block_order": [
+    "result_0",
+    "result_1",
+    "result_2"
+   ]
+  },
+  "kg_06": {
+   "type": "kg-8e2f6cce",
+   "settings": {
+    "t1": "Grip it like the pros",
+    "t2": "A clean index-finger finish means a tight, nose-down ball. SpinGrip Football keeps the ball off the palm so it comes off the fingertips every time."
+   },
+   "blocks": {
+    "c1a_1": {
+     "type": "c1a",
+     "settings": {
+      "t2": "kg-pdp-fb-4.webp",
+      "t3": "Quarterback throwing with SpinGrip Football"
+     }
+    },
+    "c1a_2": {
+     "type": "c1a",
+     "settings": {
+      "t2": "kg-spingrip-engineering-football.webp",
+      "t3": "SpinGrip engineering diagram"
+     }
+    }
+   },
+   "block_order": [
+    "c1a_1",
+    "c1a_2"
+   ]
+  },
+  "kg_07": {
+   "type": "kg-ef0fd64d",
+   "settings": {
+    "t1": "QBs know",
+    "t2": "Spirals, velocity and accuracy, straight from the quarterbacks wearing it."
    },
    "blocks": {
     "c1a_1": {
@@ -173,10 +234,20 @@
     "c1a_4"
    ]
   },
-  "kg_04": {
-   "type": "kg-f168bd38",
+  "kg_08": {
+   "type": "kg-e861099f",
    "settings": {
-    "t1": "Frequently asked"
+    "t2": "kg-poster-football-howto.webp",
+    "t3": "How to",
+    "t4": "Get set up with SpinGrip Football",
+    "t5": "Slide it on, strap it high and tight, and throw. Here’s the full walkthrough.",
+    "t6": "Shop SpinGrip"
+   }
+  },
+  "kg_09": {
+   "type": "kg-9138b004",
+   "settings": {
+    "t1": "Got questions?"
    },
    "blocks": {
     "c1a_1": {
@@ -231,17 +302,30 @@
     "c1a_6"
    ]
   },
-  "kg_05": {
+  "kg_10": {
+   "type": "kg-614e87f8",
+   "settings": {
+    "h1": "<span class=\"dot\"></span>Limited stock available",
+    "t2": "The pros do it. Now you can too.",
+    "t3": "Every throw without SpinGrip is a missed opportunity. Join the quarterbacks throwing harder, spinning more, and hitting their spots with confidence.",
+    "t4": "Shop SpinGrip"
+   }
+  },
+  "kg_11": {
    "type": "kg-035962fe",
    "settings": {
-    "t1": "Team up and save",
-    "t2": "SpinGrip Packs. Any glove, any size, either hand. The discount applies automatically.",
-    "i3": "2-Pack <strong>save 10%</strong>",
-    "i4": "5-Pack <strong>save 15%</strong>",
-    "i5": "10-Pack <strong>save 20%</strong>",
-    "u6": "/pages/packs",
-    "t7": "Build your pack"
+    "t1": "Bulk & team orders",
+    "t2": "Outfitting a team, club or organization? Contact KITTED for bulk and retail pricing.",
+    "i3": "",
+    "i4": "",
+    "i5": "",
+    "u6": "/pages/team-orders",
+    "t7": "Bulk orders"
    }
+  },
+  "kg_12": {
+   "type": "kg-kollective",
+   "settings": {}
   }
  },
  "order": [
@@ -250,6 +334,13 @@
   "kg_02",
   "kg_03",
   "kg_04",
-  "kg_05"
+  "kg_05",
+  "kg_06",
+  "kg_07",
+  "kg_08",
+  "kg_09",
+  "kg_10",
+  "kg_11",
+  "kg_12"
  ]
 }

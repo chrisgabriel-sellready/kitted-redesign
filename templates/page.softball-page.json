@@ -1,675 +1,879 @@
 {
   "sections": {
-    "video_bC9eGR": {
-      "type": "video",
-      "name": "t:sections.video.presets.name",
+    "kg_00": {
+      "type": "kg-66508dc3",
       "settings": {
-        "heading": "",
-        "heading_size": "h2",
-        "enable_video_looping": true,
-        "video": "shopify://files/videos/TRAIN TO GAME (4 x 3 in) (4 x 2 in_e670d39b-eb40-4ae2-ac69-d621fbf47dab.mp4",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "description": "",
-        "full_width": true,
-        "color_scheme": "scheme-6e709354-0934-4d75-82de-a8778f9c9c78",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "t1": "SpinGrip Softball",
+        "h2": "<span>Throw harder.</span><span>Increase spin.</span><span>Enhance accuracy.</span>",
+        "t3": "Introducing SpinGrip Softball, the first-ever throwing glove. Patent pending, data-proven, and built for ages 6+.",
+        "t4": "Shop SpinGrip",
+        "t5": "How it works",
+        "t6": "4.8 across thousands of player experiences",
+        "v7": "shopify://files/videos/TRAIN TO GAME (4 x 3 in) (4 x 2 in_e670d39b-eb40-4ae2-ac69-d621fbf47dab.mp4",
+        "u8": "https://shop.kittedgear.com/cdn/shop/videos/c/vp/e168d125e95e47e1ab04572afb449460/e168d125e95e47e1ab04572afb449460.HD-720p-3.0Mbps-53239431.mp4",
+        "t10": "kg-softball-hero-wide-poster.webp",
+        "v11": "shopify://files/videos/TRAIN TO GAME (4 x 3 in) (4 x 2 in_e670d39b-eb40-4ae2-ac69-d621fbf47dab.mp4",
+        "u12": "https://shop.kittedgear.com/cdn/shop/videos/c/vp/e168d125e95e47e1ab04572afb449460/e168d125e95e47e1ab04572afb449460.HD-720p-3.0Mbps-53239431.mp4",
+        "t14": "kg-softball-hero-tall-poster.webp",
+        "t16": "kg-patent-seal-yellow.webp",
+        "t17": "Patent pending"
       }
     },
-    "main": {
-      "type": "main-page",
-      "disabled": true,
+    "kg_01": {
+      "type": "kg-c6c9abf8",
       "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
+        "t2": "kg-chips-softball-bottom-right.webp",
+        "t3": "Chips Performance wearing SpinGrip Softball",
+        "t4": "Awarded by Chips",
+        "t5": "SpinGrip awarded",
+        "i6": "2026 Throwing <em>Product</em> of the Year",
+        "t7": "A must-have to get the most out of your throws.",
+        "t8": "Chips Performance · Throwing coach & diamond sport expert",
+        "u9": "https://shop.kittedgear.com/cdn/shop/videos/c/vp/7820ebad85bb489c9556b7c642763d16/7820ebad85bb489c9556b7c642763d16.HD-1080p-2.5Mbps-78683271.mp4",
+        "t10": "Watch",
+        "t11": "Shop SpinGrip"
       }
     },
-    "rich_text_rqBz4b": {
-      "type": "rich-text",
+    "kg_02": {
+      "type": "kg-a748ee90",
+      "settings": {
+        "h1": "“An absolute<br/>no-brainer”",
+        "h2": "<span>The first-ever throwing glove</span>"
+      }
+    },
+    "kg_03": {
+      "type": "kg-43fa8a3c",
+      "settings": {
+        "v1": "shopify://files/videos/copy_9D2BB33A-703F-4B53-A814-8D591DA638F9.mov",
+        "u2": "https://shop.kittedgear.com/cdn/shop/videos/c/vp/cc5f833362a8483f8125a27790a089d2/cc5f833362a8483f8125a27790a089d2.HD-1080p-2.5Mbps-53615158.mp4",
+        "t4": "kg-poster-softball-founder.webp",
+        "t5": "Tap for sound",
+        "t6": "SpinGrip Softball is here",
+        "t7": "A word from the founder",
+        "t8": "Steele Walker built SpinGrip so every athlete can feel the release that took the best arms in the game years to develop. Now it’s built for fastpitch.",
+        "t9": "“You can’t death grip the ball.”",
+        "t10": "Steele Walker, founder",
+        "t11": "Shop SpinGrip"
+      }
+    },
+    "kg_04": {
+      "type": "kg-ecd32107",
+      "settings": {
+        "t1": "Used by athletes from top college & pro teams"
+      },
       "blocks": {
-        "caption_bX7Gbb": {
-          "type": "caption",
+        "c1a_1": {
+          "type": "c1a",
           "settings": {
-            "caption": "Softball's First-Ever throwing glove proven to enhance velocity, spin rate, and accuracy.",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium"
+            "t2": "kg-logo-ohiostate.webp",
+            "t3": "Ohio State"
           }
         },
-        "heading_8bKkyt": {
-          "type": "heading",
+        "c1a_2": {
+          "type": "c1a",
           "settings": {
-            "heading": "THROW HARDER WITH MORE SPIN AND ACCURACY - GUARANTEED.",
-            "heading_size": "h1"
+            "t2": "kg-logo-iowa.webp",
+            "t3": "Iowa"
           }
         },
-        "button_rPaNex": {
-          "type": "button",
+        "c1a_3": {
+          "type": "c1a",
           "settings": {
-            "button_label": "Shop SpinGrip Softball",
-            "button_link": "shopify://collections/spingrip-softball",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "shopify://products/spingrip-softball-pitcher",
-            "button_style_secondary_2": false
+            "t2": "kg-logo-georgia.webp",
+            "t3": "Georgia"
           }
         },
-        "text_WQqrHF": {
-          "type": "text",
+        "c1a_4": {
+          "type": "c1a",
           "settings": {
-            "text": "<p>Whether training or in-game, grip the ball the right way, every time.</p>"
+            "t2": "kg-logo-indiana.webp",
+            "t3": "Indiana"
           }
         },
-        "text_Vk9X4w": {
-          "type": "text",
+        "c1a_5": {
+          "type": "c1a",
           "settings": {
-            "text": "<p>Athletes often over-grip the ball during throws -- not anymore. SpinGrip Softball is opening a whole new dimension of throwing for softball athletes.</p>"
+            "t2": "kg-logo-missouri.webp",
+            "t3": "Missouri"
+          }
+        },
+        "c1a_6": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-logo-kstate.webp",
+            "t3": "Kansas State"
+          }
+        },
+        "c1a_7": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-logo-oregon-state.webp",
+            "t3": "Oregon State"
+          }
+        },
+        "c1a_8": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-logo-oklahoma.webp",
+            "t3": "Oklahoma"
+          }
+        },
+        "c1a_9": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-logo-lsu.webp",
+            "t3": "LSU"
+          }
+        },
+        "c1a_10": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-logo-baylor.webp",
+            "t3": "Baylor"
+          }
+        },
+        "c1a_11": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-logo-tcu.webp",
+            "t3": "TCU"
+          }
+        },
+        "c1a_12": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-logo-alabama.webp",
+            "t3": "Alabama"
+          }
+        },
+        "c1a_13": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-logo-arkansas.webp",
+            "t3": "Arkansas"
+          }
+        },
+        "c1a_14": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-logo-florida.webp",
+            "t3": "Florida"
+          }
+        },
+        "c1a_15": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-logo-usc.webp",
+            "t3": "USC"
+          }
+        },
+        "c1a_16": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-logo-pitt.webp",
+            "t3": "Pittsburgh"
+          }
+        },
+        "c1a_17": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-logo-texas-longhorns.webp",
+            "t3": "Texas"
+          }
+        },
+        "c1a_18": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-logo-louisiana-tech.webp",
+            "t3": "Louisiana Tech"
           }
         }
       },
       "block_order": [
-        "caption_bX7Gbb",
-        "heading_8bKkyt",
-        "button_rPaNex",
-        "text_WQqrHF",
-        "text_Vk9X4w"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-6e709354-0934-4d75-82de-a8778f9c9c78",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
+        "c1a_1",
+        "c1a_2",
+        "c1a_3",
+        "c1a_4",
+        "c1a_5",
+        "c1a_6",
+        "c1a_7",
+        "c1a_8",
+        "c1a_9",
+        "c1a_10",
+        "c1a_11",
+        "c1a_12",
+        "c1a_13",
+        "c1a_14",
+        "c1a_15",
+        "c1a_16",
+        "c1a_17",
+        "c1a_18"
+      ]
     },
-    "image_banner_LkTjh6": {
-      "type": "image-banner",
+    "kg_05": {
+      "type": "kg-55ae27be",
+      "settings": {
+        "t1": "Players know",
+        "t2": "Get to work in it. Trust it. And see the results for yourself."
+      },
       "blocks": {
-        "heading_aHzneh": {
-          "type": "heading",
-          "disabled": true,
+        "c1a_1": {
+          "type": "c1a",
           "settings": {
-            "heading": "Image banner",
-            "heading_size": "h1"
+            "t2": "kg-poster-softball-ugc-1.webp",
+            "t3": "“It’s making me pull down my throws.”",
+            "t4": "Annie Kay, All-American"
           }
         },
-        "text_JKfAMb": {
-          "type": "text",
-          "disabled": true,
+        "c1a_2": {
+          "type": "c1a",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
+            "t2": "kg-poster-softball-ugc-2.webp",
+            "t3": "“I feel everything in the finger tips.”",
+            "t4": "HS Softball Players"
           }
         },
-        "buttons_ich9hy": {
-          "type": "buttons",
+        "c1a_3": {
+          "type": "c1a",
           "settings": {
-            "button_label_1": "Shop SpinGrip Softball",
-            "button_link_1": "shopify://collections/spingrip-softball",
-            "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "t2": "kg-poster-softball-ugc-3.webp",
+            "t3": "“It’s letting me feel where I release the ball.”",
+            "t4": "Ainsley Davis, College Pitcher"
+          }
+        },
+        "c1a_4": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-poster-softball-ugc-4.webp",
+            "t3": "“You can’t death grip the ball.”",
+            "t4": "Steele Walker, Founder"
+          }
+        },
+        "c1a_5": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-poster-softball-ugc-5.webp",
+            "t3": "“This offers game changing benefits.”",
+            "t4": "Softball Coach"
+          }
+        },
+        "c1a_6": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-poster-softball-ugc-6.webp",
+            "t3": "“My throws are way more accurate now.”",
+            "t4": "Fastpitch athlete"
+          }
+        },
+        "c1a_7": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-poster-softball-ugc-7.webp",
+            "t3": "“This is the only tool on the market that does this.”",
+            "t4": "Fastpitch athlete"
+          }
+        },
+        "c1a_8": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-poster-softball-ugc-8.webp",
+            "t3": "“The ball just jumps out of my hand.”",
+            "t4": "Pitcher"
+          }
+        },
+        "c1a_9": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-poster-softball-ugc-9.webp",
+            "t3": "“No more bad grips.”",
+            "t4": "Fastpitch athlete"
+          }
+        },
+        "c1a_10": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-poster-softball-ugc-10.webp",
+            "t3": "“Hits her spots every throw.”",
+            "t4": "Softball dad"
           }
         }
       },
       "block_order": [
-        "heading_aHzneh",
-        "text_JKfAMb",
-        "buttons_ich9hy"
-      ],
-      "name": "t:sections.image-banner.presets.name",
+        "c1a_1",
+        "c1a_2",
+        "c1a_3",
+        "c1a_4",
+        "c1a_5",
+        "c1a_6",
+        "c1a_7",
+        "c1a_8",
+        "c1a_9",
+        "c1a_10"
+      ]
+    },
+    "kg_06": {
+      "type": "kg-534515bc",
       "settings": {
-        "image": "shopify://shop_images/Quote._Quote_tamplate._Quote_Poster._Instagram_post._Photo_6.png",
-        "image_overlay_opacity": 0,
-        "image_height": "adapt",
-        "desktop_content_position": "middle-center",
-        "show_text_box": true,
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3dd770b4-0edb-4861-a83f-616ac0a95409",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
+        "t2": "kg-poster-softball-call.webp",
+        "t3": "Listen to the call",
+        "t4": "A softball dad shocked by SpinGrip results",
+        "t5": "If you’re not using SpinGrip, you’re not getting the most out of your throws.",
+        "t6": "Shop SpinGrip"
       }
     },
-    "image_banner_KyPPUQ": {
-      "type": "image-banner",
+    "kg_07": {
+      "type": "kg-cd89bef1",
+      "settings": {
+        "t2": "kg-poster-softball-pitcher-dimension.webp",
+        "t3": "Built for pitchers",
+        "t4": "A whole new dimension of spin & velo",
+        "t5": "See how SpinGrip Softball for Pitchers locks in your release and unlocks tighter, faster rotation.",
+        "u6": "/products/spingrip-softball-pitcher",
+        "t7": "Shop SpinGrip for Pitchers"
+      }
+    },
+    "kg_08": {
+      "type": "kg-20adc143",
+      "settings": {
+        "t1": "How SpinGrip works",
+        "t2": "SpinGrip's embedded palm-spacer harnesses the physics of an elite release by positioning the ball farther into your fingers, unlocking optimal spin, velocity, and accuracy."
+      },
       "blocks": {
-        "heading_XmG3pY": {
-          "type": "heading",
-          "disabled": true,
+        "c1a_1": {
+          "type": "c1a",
           "settings": {
-            "heading": "Image banner",
-            "heading_size": "h1"
+            "t2": "kg-softball-slide-on.webp",
+            "t3": "Step 1 of 3",
+            "t4": "Slide it on",
+            "t5": "SpinGrip slides onto your throwing hand in seconds. Fasten the strap high and tight on the wrist."
           }
         },
-        "text_xNPkVr": {
-          "type": "text",
-          "disabled": true,
+        "c1a_2": {
+          "type": "c1a",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
+            "t2": "kg-softball-let-it-fly.webp",
+            "t3": "Step 2 of 3",
+            "t4": "Let it fly",
+            "t5": "The patent-pending design with embedded palm-spacer positions the ball in your fingers for the optimal grip on every throw."
           }
         },
-        "buttons_UYEBfd": {
-          "type": "buttons",
-          "disabled": true,
+        "c1a_3": {
+          "type": "c1a",
           "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "",
-            "button_style_secondary_1": false,
-            "button_label_2": "Button label",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "t2": "kg-softball-spingrip-effect.webp",
+            "t3": "Step 3 of 3",
+            "t4": "Feel the SpinGrip Effect",
+            "t5": "Velocity, spin rate, and accuracy improve right away. Data-proven performance gains."
           }
         }
       },
       "block_order": [
-        "heading_XmG3pY",
-        "text_xNPkVr",
-        "buttons_UYEBfd"
-      ],
-      "name": "t:sections.image-banner.presets.name",
+        "c1a_1",
+        "c1a_2",
+        "c1a_3"
+      ]
+    },
+    "kg_09": {
+      "type": "kg-42c3db92",
       "settings": {
-        "image": "shopify://shop_images/2_b8ae3818-a638-485b-b03d-a500959f4361.png",
-        "image_overlay_opacity": 0,
-        "image_height": "adapt",
-        "desktop_content_position": "middle-center",
-        "show_text_box": true,
-        "desktop_content_alignment": "center",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
+        "t2": "kg-poster-softball-d1-problem.webp",
+        "t3": "D1 athlete breaks it down",
+        "t4": "The #1 throwing mistake every softball player makes",
+        "t5": "A former D1 softball athlete explains the grip problem killing your spin, velocity and accuracy, and how SpinGrip fixes it automatically.",
+        "t6": "Shop SpinGrip"
       }
     },
-    "rich_text_DpVreB": {
-      "type": "rich-text",
+    "kg_10": {
+      "type": "kg-b88d6204",
+      "settings": {
+        "t1": "The difference",
+        "t2": "The problem with traditional throwing, and the fix."
+      },
       "blocks": {
-        "heading_XeQRWT": {
-          "type": "heading",
-          "disabled": true,
+        "c1a_1": {
+          "type": "c1a",
           "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
+            "t1": "Without SpinGrip",
+            "t2": "The problem",
+            "t3": "Inconsistent grip",
+            "t4": "Over-gripping kills spin rate and velocity",
+            "t5": "No way to develop optimal feel",
+            "t6": "Stagnant throws and a low ceiling"
           }
         },
-        "text_iKWAfG": {
-          "type": "text",
-          "disabled": true,
+        "c1b_2": {
+          "type": "c1b",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
-          }
-        },
-        "button_XzyPmV": {
-          "type": "button",
-          "settings": {
-            "button_label": "Shop SpinGrip Softball",
-            "button_link": "shopify://products/spingrip-softball",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "t1": "With SpinGrip",
+            "t2": "The fix",
+            "t3": "Optimal grip, every time",
+            "t4": "More spin, velocity and accuracy",
+            "t5": "Develop and establish optimal feel",
+            "t6": "Proven results across all metrics"
           }
         }
       },
       "block_order": [
-        "heading_XeQRWT",
-        "text_iKWAfG",
-        "button_XzyPmV"
-      ],
-      "disabled": true,
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-3dd770b4-0edb-4861-a83f-616ac0a95409",
-        "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
+        "c1a_1",
+        "c1b_2"
+      ]
     },
-    "video_YDFDdd": {
-      "type": "video",
-      "name": "t:sections.video.presets.name",
+    "kg_11": {
+      "type": "kg-product",
       "settings": {
-        "heading": "College Starting Pitcher: \"The SpinGrip Softball Pushes the Ball into Your Fingers Which is Where Your Force Comes From.\"",
-        "heading_size": "h2",
-        "enable_video_looping": false,
-        "video": "shopify://files/videos/Ainsley dissecting glove.mov",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "scheme-3dd770b4-0edb-4861-a83f-616ac0a95409",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "video_FKcJyY": {
-      "type": "video",
-      "name": "t:sections.video.presets.name",
-      "settings": {
-        "heading": "Gold Glover and College All-American: \"It's making me throw harder. I love it.\"",
-        "heading_size": "h2",
-        "enable_video_looping": true,
-        "video": "shopify://files/videos/copy_51C1264C-3F98-4B41-BB89-2F7A50F28D0A.mov",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "scheme-3dd770b4-0edb-4861-a83f-616ac0a95409",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "rich_text_4BYPqr": {
-      "type": "rich-text",
+        "show_crumbs": false,
+        "title_tag": "h2",
+        "anchor": "buy",
+        "kicker": "SpinGrip Softball",
+        "heading": "Start throwing like the pros",
+        "as_section": true,
+        "product": "spingrip-softball",
+        "alt_product": "spingrip-softball-pitcher",
+        "banner": "Guaranteed to increase velo, spin and accuracy",
+        "eyebrow": "",
+        "rating_text": "4.8 · 199 reviews",
+        "value_tag": "",
+        "lede": "",
+        "seal": "yellow",
+        "digital": false,
+        "show_used_by": true,
+        "show_trust": true,
+        "show_pack_callout": false
+      },
       "blocks": {
-        "heading_F4aBMe": {
-          "type": "heading",
-          "disabled": true,
+        "result_0": {
+          "type": "result",
           "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
+            "label": "MPH velocity",
+            "value": "Up to +7"
           }
         },
-        "text_dtyDWy": {
-          "type": "text",
-          "disabled": true,
+        "result_1": {
+          "type": "result",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+            "label": "RPM spin rate",
+            "value": "+350"
           }
         },
-        "button_4c8wqN": {
-          "type": "button",
+        "result_2": {
+          "type": "result",
           "settings": {
-            "button_label": "Shop SpinGrip Softball",
-            "button_link": "shopify://collections/spingrip-softball",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "label": "Accuracy increase",
+            "value": "30%"
           }
         }
       },
       "block_order": [
-        "heading_F4aBMe",
-        "text_dtyDWy",
-        "button_4c8wqN"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-3dd770b4-0edb-4861-a83f-616ac0a95409",
-        "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 40
-      }
+        "result_0",
+        "result_1",
+        "result_2"
+      ]
     },
-    "image_with_text_G8KLRc": {
-      "type": "image-with-text",
+    "kg_12": {
+      "type": "kg-e9c67d7c",
+      "settings": {
+        "t1": "Something you’ve never felt before",
+        "t2": "The embedded palm-spacer keeps the ball out of the palm on every throw, for infielders, outfielders, catchers and pitchers."
+      },
       "blocks": {
-        "heading_ktARCN": {
-          "type": "heading",
+        "c1a_1": {
+          "type": "c1a",
           "settings": {
-            "heading": "SpinGrip Softball Makes Gripping the Ball the Right Way Automatic",
-            "heading_size": "h1"
+            "t2": "kg-annie-kay-quote.webp",
+            "t3": "Annie Kay, former college All-American and Golden Glove winner: It’s something you’ve never felt before. It makes your ball go faster. It’s really a game changer."
           }
         },
-        "button_KAtPcL": {
-          "type": "button",
+        "c1a_2": {
+          "type": "c1a",
           "settings": {
-            "button_label": "Shop SpinGrip Softball",
-            "button_link": "shopify://collections/spingrip-softball",
-            "button_style_secondary": false
-          }
-        },
-        "text_YKdYAK": {
-          "type": "text",
-          "settings": {
-            "text": "<p>With its built-in EVA palm spacer, SpinGrip Softball trains your hand to hold the ball out in the fingers—doing all the work for you and allowing you to feel what the best arms in the world feel when they release the softball.</p><p>The result is more spin, sharper accuracy, and increased velocity.</p><p>Now it’s your turn.</p>",
-            "text_style": "body"
+            "t2": "kg-spingrip-engineering-softball.webp",
+            "t3": "SpinGrip engineering diagram"
           }
         }
       },
       "block_order": [
-        "heading_ktARCN",
-        "button_KAtPcL",
-        "text_YKdYAK"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/11.png",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "center",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "scheme-3dd770b4-0edb-4861-a83f-616ac0a95409",
-        "color_scheme": "scheme-6e709354-0934-4d75-82de-a8778f9c9c78",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "padding_top": 0,
-        "padding_bottom": 24
-      }
+        "c1a_1",
+        "c1a_2"
+      ]
     },
-    "video_HGpFWE": {
-      "type": "video",
-      "name": "t:sections.video.presets.name",
+    "kg_13": {
+      "type": "kg-ab73a6b0",
       "settings": {
-        "heading": "Top Ranked Collegiate Arm Blown Away by the All-New SpinGrip Softball",
-        "heading_size": "h2",
-        "enable_video_looping": false,
-        "video": "shopify://files/videos/TRAIN TO GAME (4 x 3 in) (8).mp4",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "scheme-3dd770b4-0edb-4861-a83f-616ac0a95409",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "image_with_text_jcere8": {
-      "type": "image-with-text",
+        "t1": "4.8 from real players",
+        "t2": "4.8",
+        "t3": "Thousands of player experiences, youth to the pros",
+        "t4": "All athletes experience immediate proper grip results. Most see metric gains within 1 week of use."
+      },
       "blocks": {
-        "heading_iQ7d6f": {
-          "type": "heading",
+        "c1a_1": {
+          "type": "c1a",
           "settings": {
-            "heading": "The All-New ‘No-Brainer’ SpinGrip Softball",
-            "heading_size": "h1"
+            "t1": "Softball Dad",
+            "t2": "“My 12 yr old loves it. Says it helps with her spin and using more of her fingertips.”",
+            "t3": "Antonio C."
           }
         },
-        "text_aFzK9H": {
-          "type": "text",
+        "c1a_2": {
+          "type": "c1a",
           "settings": {
-            "text": "<p>Select players, collegiate starters, top arms around the nation — all experiencing the ‘no-brainer’ game-changing benefits of the SpinGrip Softball. Like never before, they are reaching higher velocities, increased spin, and improved accuracy. All from using the SpinGrip Softball.</p><p>Now it’s your turn.</p>",
-            "text_style": "body"
+            "t1": "Verified Buyer",
+            "t2": "“Very great item. Fixes throwing posture.”",
+            "t3": "Richard M."
           }
         },
-        "button_9Dnr3C": {
-          "type": "button",
+        "c1a_3": {
+          "type": "c1a",
           "settings": {
-            "button_label": "Shop SpinGrip Softball",
-            "button_link": "shopify://collections/spingrip-softball",
-            "button_style_secondary": false
+            "t1": "Verified Buyer",
+            "t2": "“It helps my daughter with her spin. Nice product.”",
+            "t3": "John"
+          }
+        },
+        "c1a_4": {
+          "type": "c1a",
+          "settings": {
+            "t1": "Verified Buyer",
+            "t2": "“Well-made and delivers instant results.”",
+            "t3": "Ric Rooney"
+          }
+        },
+        "c1b_5": {
+          "type": "c1b",
+          "settings": {
+            "t1": "Sep 9, 2026",
+            "t2": "Bought two",
+            "t3": "I bought SpinGrip Softball for myself and loved it so much I bought one for my grandson for the little league baseball team I coach as well. He loves it too!",
+            "t4": "Chris Picciano",
+            "t5": "Verified buyer"
+          }
+        },
+        "c1b_6": {
+          "type": "c1b",
+          "settings": {
+            "t1": "Mar 14, 2026",
+            "t2": "Immediately throwing better",
+            "t3": "My son immediately started throwing better with more spin and accuracy.",
+            "t4": "Jess S.",
+            "t5": "Verified buyer"
           }
         }
       },
       "block_order": [
-        "heading_iQ7d6f",
-        "text_aFzK9H",
-        "button_9Dnr3C"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/TRAIN_TO_GAME_4_x_2_in_4_x_1_in_4_x_2_in_bcfd3ada-c999-4ba4-a6c2-3387852da21e.png",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "center",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "scheme-6e709354-0934-4d75-82de-a8778f9c9c78",
-        "color_scheme": "scheme-3dd770b4-0edb-4861-a83f-616ac0a95409",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
+        "c1a_1",
+        "c1a_2",
+        "c1a_3",
+        "c1a_4",
+        "c1b_5",
+        "c1b_6"
+      ]
     },
-    "video_H8mKEi": {
-      "type": "video",
-      "name": "t:sections.video.presets.name",
+    "kg_14": {
+      "type": "kg-4c6d96bc",
       "settings": {
-        "heading": "\"I don't know if it gets much bettter than that.\"",
-        "heading_size": "h2",
-        "enable_video_looping": false,
-        "video": "shopify://files/videos/Annie glove off part 1.mov",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "scheme-3dd770b4-0edb-4861-a83f-616ac0a95409",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "rich_text_WmPK4f": {
-      "type": "rich-text",
+        "t1": "Tested. Proven. Measured.",
+        "t2": "Every major throwing metric improves with SpinGrip. Results were measured with Trackman, and a cleaner fingertip release also reduces unnecessary strain on the throwing arm."
+      },
       "blocks": {
-        "heading_LJwTnU": {
-          "type": "heading",
-          "disabled": true,
+        "c1a_1": {
+          "type": "c1a",
           "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
+            "t1": "7 mph",
+            "t2": "Velocity increase",
+            "t3": "Athletes have seen up to 7 mph gains by automatically optimizing their grip and release."
           }
         },
-        "text_RXjmGL": {
-          "type": "text",
-          "disabled": true,
+        "c1a_2": {
+          "type": "c1a",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+            "t1": "+350",
+            "t2": "RPM spin rate",
+            "t3": "Proper finger placement on the ball increases spin rate, adding more life to every throw."
           }
         },
-        "button_WRJEzb": {
-          "type": "button",
+        "c1a_3": {
+          "type": "c1a",
           "settings": {
-            "button_label": "Shop SpinGrip Softball",
-            "button_link": "shopify://collections/spingrip-softball",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "t1": "30%",
+            "t2": "Accuracy increase",
+            "t3": "A consistent grip means a consistent release point. Athletes see up to 30% accuracy improvements."
+          }
+        },
+        "c1a_4": {
+          "type": "c1a",
+          "settings": {
+            "t1": "6 in",
+            "t2": "Extension increase",
+            "t3": "Releasing the ball out in the fingers naturally leads to up to 6 inches more extension."
           }
         }
       },
       "block_order": [
-        "heading_LJwTnU",
-        "text_RXjmGL",
-        "button_WRJEzb"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-3dd770b4-0edb-4861-a83f-616ac0a95409",
-        "full_width": true,
-        "padding_top": 8,
-        "padding_bottom": 40
-      }
+        "c1a_1",
+        "c1a_2",
+        "c1a_3",
+        "c1a_4"
+      ]
     },
-    "video_ngnMqm": {
-      "type": "video",
-      "name": "t:sections.video.presets.name",
+    "kg_15": {
+      "type": "kg-6ce829fb",
       "settings": {
-        "heading": "How to Put on SpinGrip Softball",
-        "heading_size": "h2",
-        "enable_video_looping": false,
-        "video": "shopify://files/videos/Ainsley how to put on.mov",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "scheme-3dd770b4-0edb-4861-a83f-616ac0a95409",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "video_r8gCde": {
-      "type": "video",
-      "name": "t:sections.video.presets.name",
-      "settings": {
-        "heading": "SpinGrip Softball Is Here...A Word From The Founder",
-        "heading_size": "h2",
-        "enable_video_looping": true,
-        "video": "shopify://files/videos/copy_9D2BB33A-703F-4B53-A814-8D591DA638F9.mov",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "",
-        "padding_top": 32,
-        "padding_bottom": 16
-      }
-    },
-    "image_banner_4xePxE": {
-      "type": "image-banner",
+        "t1": "Trusted by thousands"
+      },
       "blocks": {
-        "heading_QGPyiG": {
-          "type": "heading",
+        "c1a_1": {
+          "type": "c1a",
           "settings": {
-            "heading": "Tested. Proven. Trusted by Top Arms Around the Country.",
-            "heading_size": "h1"
+            "t1": "50,000+",
+            "t2": "Athletes using SpinGrip"
           }
         },
-        "buttons_yjz6ey": {
-          "type": "buttons",
+        "c1b_2": {
+          "type": "c1b",
           "settings": {
-            "button_label_1": "Shop SpinGrip Softball",
-            "button_link_1": "shopify://collections/spingrip-softball",
-            "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "t1": "+7 MPH",
+            "t2": "Avg. velocity gain"
           }
         },
-        "text_DeiBDR": {
-          "type": "text",
+        "c1c_3": {
+          "type": "c1c",
           "settings": {
-            "text": "Through testing with collegiate athletes and coaches, we’ve seen the light bulb moments when players realize elite throws aren’t rare…they’re repeatable. SpinGrip Softball gives instant feedback and builds muscle memory so you form the feel of the finger release and throw like the best in the world.",
-            "text_style": "body"
+            "t1": "Patent",
+            "t2": "Pending technology"
+          }
+        },
+        "c1b_4": {
+          "type": "c1b",
+          "settings": {
+            "t1": "100%",
+            "t2": "Money-back guarantee"
+          }
+        },
+        "c2a_5": {
+          "type": "c2a",
+          "settings": {
+            "t1": "🔒 Secure checkout"
+          }
+        },
+        "c2a_6": {
+          "type": "c2a",
+          "settings": {
+            "t1": "🚚 Fast shipping"
+          }
+        },
+        "c2a_7": {
+          "type": "c2a",
+          "settings": {
+            "t1": "🇺🇸 Ships from USA"
+          }
+        },
+        "c2a_8": {
+          "type": "c2a",
+          "settings": {
+            "t1": "⚡ Patent-pending"
           }
         }
       },
       "block_order": [
-        "heading_QGPyiG",
-        "buttons_yjz6ey",
-        "text_DeiBDR"
-      ],
-      "name": "t:sections.image-banner.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/13.png",
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "desktop_content_position": "middle-center",
-        "show_text_box": true,
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3dd770b4-0edb-4861-a83f-616ac0a95409",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
-      }
+        "c1a_1",
+        "c1b_2",
+        "c1c_3",
+        "c1b_4",
+        "c2a_5",
+        "c2a_6",
+        "c2a_7",
+        "c2a_8"
+      ]
     },
-    "image_banner_7JqHyh": {
-      "type": "image-banner",
+    "kg_16": {
+      "type": "kg-0aa01591",
+      "settings": {
+        "t1": "Coaches & players love SpinGrip",
+        "t2": "Hear it directly from the athletes and coaches who use SpinGrip every day."
+      },
       "blocks": {
-        "heading_nL6BbB": {
-          "type": "heading",
+        "c1a_1": {
+          "type": "c1a",
           "settings": {
-            "heading": "SpinGrip Softball Is Bringing A Whole New Dimension To How Athletes Throw A Softball",
-            "heading_size": "h1"
+            "t2": "kg-poster-softball-testimonial-1.webp",
+            "t3": "“This will maximize your speed and spin.”",
+            "t4": "Jaymee Lynn · Pitching Coach, 20 years of coaching"
           }
         },
-        "buttons_Ff9LKK": {
-          "type": "buttons",
+        "c1a_2": {
+          "type": "c1a",
           "settings": {
-            "button_label_1": "Shop SpinGrip Softball",
-            "button_link_1": "shopify://collections/spingrip-softball",
-            "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "t2": "kg-poster-softball-testimonial-2.webp",
+            "t3": "“It locks players into the right grip every single throw.”",
+            "t4": "Kevin Starr · Coach"
           }
         },
-        "text_njMAEc": {
-          "type": "text",
+        "c1a_3": {
+          "type": "c1a",
           "settings": {
-            "text": "This is more than a training aid—it’s a revolution. This is a whole new dimension to throwing a softball and will define the next generation of elite arms. SpinGrip Softball is helping players break barriers they didn’t know existed and reach performance levels they never thought possible.",
-            "text_style": "body"
+            "t2": "kg-poster-softball-testimonial-3.webp",
+            "t3": "“I can see her ball staying on track because of the SpinGrip.”",
+            "t4": "Julie Wyrick · HS Softball Coach, 600+ career wins"
+          }
+        },
+        "c1a_4": {
+          "type": "c1a",
+          "settings": {
+            "t2": "kg-poster-softball-testimonial-4.webp",
+            "t3": "“I feel like I have a lot more spin and control.”",
+            "t4": "Annie Kay · All-American Softball Player"
           }
         }
       },
       "block_order": [
-        "heading_nL6BbB",
-        "buttons_Ff9LKK",
-        "text_njMAEc"
-      ],
-      "name": "t:sections.image-banner.presets.name",
+        "c1a_1",
+        "c1a_2",
+        "c1a_3",
+        "c1a_4"
+      ]
+    },
+    "kg_17": {
+      "type": "kg-9dbc25e5",
       "settings": {
-        "image": "shopify://shop_images/10.png",
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "desktop_content_position": "middle-center",
-        "show_text_box": true,
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3dd770b4-0edb-4861-a83f-616ac0a95409",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
+        "v1": "shopify://files/videos/copy_51C1264C-3F98-4B41-BB89-2F7A50F28D0A.mov",
+        "u2": "https://shop.kittedgear.com/cdn/shop/videos/c/vp/e6b91bb5a87d4568b52e2317ef2fefbd/e6b91bb5a87d4568b52e2317ef2fefbd.HD-1080p-7.2Mbps-51880539.mp4",
+        "t4": "kg-poster-softball-real-results.webp",
+        "t5": "Tap for sound",
+        "t6": "Real results",
+        "t7": "College All-American and Gold Glover",
+        "t8": "Experiences the SpinGrip Effect after training with it.",
+        "t9": "Shop SpinGrip"
       }
     },
-    "1764789539ca6c866e": {
-      "type": "apps",
+    "kg_18": {
+      "type": "kg-f2fddfc1",
+      "settings": {
+        "t1": "Got questions?"
+      },
       "blocks": {
-        "moast_carousel_JxDjah": {
-          "type": "shopify://apps/moast/blocks/carousel/1ac7547b-5443-446c-868c-7fab4566ee16",
+        "c1a_1": {
+          "type": "c1a",
           "settings": {
-            "dynamic": false,
-            "feed": "4ddd6026-ea33-433c-92ac-ed71596afede",
-            "feed_usage": "back_up",
-            "header": "",
-            "slide_type": "cards",
-            "product_cards": "none",
-            "autoplay_mode": "all",
-            "autoscroll_duration": 0,
-            "slide_size": "300",
-            "aspect_ratio": "vertical",
-            "border": 3,
-            "border_color": "linear-gradient(90deg, rgba(215, 255, 0, 1), rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%)",
-            "slide_rounding": "6",
-            "slide_spacing": 16,
-            "padding_top": 12,
-            "pagination": "below",
-            "alignment": "center",
-            "click_action": "fullscreen",
-            "float_location": "bottom_right",
-            "float_size": "medium",
-            "show_captions": false,
-            "custom_css": ""
+            "t1": "How does SpinGrip actually work?",
+            "t2": "SpinGrip is physics. The most optimal way to throw a round object is from the fingers. SpinGrip does this the most optimal way and automatically, without you thinking about anything. Just put on the grip and get to work. SpinGrip's embedded palm-spacer will place the ball where it needs to be in the fingers and do everything for you, so your mind and body can feel what it's like to release the ball the way the best arms on the planet do. It's repeatable and guaranteed to make you more optimal."
+          }
+        },
+        "c1b_2": {
+          "type": "c1b",
+          "settings": {
+            "t1": "Can I use SpinGrip in a game?",
+            "h2": "Yes, you can use SpinGrip in a game. For pitchers the rules are stricter, so speak with your umpire or league coordinator first. We recommend training with SpinGrip on: bullpens, long toss, flat grounds. Work with it on for every pitch from first throw to fully warmed up, then take the grip off at the end of your session and feel the most optimal you've ever felt.<br/><br/>We have both position players and pitchers using SpinGrip in-game. Every time you throw, warm up, long toss, train defensively or do drill work, you can wear it. It implements the automatic optimal release consistently every time.<br/><br/>We are running active health studies suggesting SpinGrip may alleviate arm stress, which may allow it to be worn in more games in the future. We'll update customers as we learn more."
+          }
+        },
+        "c1b_3": {
+          "type": "c1b",
+          "settings": {
+            "t1": "How do I wear it?",
+            "h2": "Put your throwing hand's index finger and thumb in an “L” shape, slide the index finger into the top hole and the thumb into the side hole, pull tight on the wrist, and fasten the velcro.<br/><br/>Grab a ball and throw normally.<br/><br/>We recommend wearing the grip from the very first throw and working all the way up to full speed with it on. When you're good and warm, take it off and keep letting it fly. You'll feel a fifth gear every time."
+          }
+        },
+        "c1a_4": {
+          "type": "c1a",
+          "settings": {
+            "t1": "What ages/sizes is SpinGrip available in?",
+            "t2": "SpinGrip comes in three sizes: Youth (Ages 6-9), Small/Medium (Ages 10-14), and Large/XLarge (Ages 15+). It fits throwing hands of all sizes within these ranges."
+          }
+        },
+        "c1a_5": {
+          "type": "c1a",
+          "settings": {
+            "t1": "Is the data real? How were results measured?",
+            "t2": "Absolutely. Results were measured using Trackman technology."
+          }
+        },
+        "c1a_6": {
+          "type": "c1a",
+          "settings": {
+            "t1": "When will I start seeing results?",
+            "t2": "It's common for players to see results immediately. If SpinGrip feels uncomfortable or “not working” at first, that is a clear sign you have been choking the ball and should keep using it to recalibrate your mechanics."
+          }
+        },
+        "c1a_7": {
+          "type": "c1a",
+          "settings": {
+            "t1": "Do results last?",
+            "t2": "Yes. Because SpinGrip trains the feel of the optimal release, data shows throwing metrics increase with the glove on and continue to improve after taking it off. It imparts a consistent feel of the fingertip release that athletes can own and reproduce as they grow and train."
+          }
+        },
+        "c1a_8": {
+          "type": "c1a",
+          "settings": {
+            "t1": "How long does shipping take?",
+            "t2": "Orders ship within 1–2 business days. Standard delivery is 3–7 business days."
+          }
+        },
+        "c1c_9": {
+          "type": "c1c",
+          "settings": {
+            "t1": "Is SpinGrip available for baseball?",
+            "i2": "Yes. We have a baseball-specific SpinGrip. Visit our <a href=\"/products/spingrip\">baseball page</a> for more info."
           }
         }
       },
       "block_order": [
-        "moast_carousel_JxDjah"
-      ],
+        "c1a_1",
+        "c1b_2",
+        "c1b_3",
+        "c1a_4",
+        "c1a_5",
+        "c1a_6",
+        "c1a_7",
+        "c1a_8",
+        "c1c_9"
+      ]
+    },
+    "kg_19": {
+      "type": "kg-614e87f8",
       "settings": {
-        "include_margins": true
+        "h1": "<span class=\"dot\"></span>Limited stock available",
+        "t2": "The pros do it. Now you can too.",
+        "t3": "Every throw without SpinGrip is a missed opportunity. Join the fastpitch athletes throwing harder, spinning more, and hitting their spots with confidence.",
+        "t4": "Shop SpinGrip"
       }
+    },
+    "kg_20": {
+      "type": "kg-035962fe",
+      "settings": {
+        "t1": "Bulk & team orders",
+        "t2": "Outfitting a team, club or organization? Contact KITTED for bulk and retail pricing.",
+        "i3": "",
+        "i4": "",
+        "i5": "",
+        "u6": "/pages/team-orders",
+        "t7": "Bulk orders"
+      }
+    },
+    "kg_21": {
+      "type": "kg-kollective",
+      "settings": {}
     }
   },
   "order": [
-    "video_bC9eGR",
-    "main",
-    "rich_text_rqBz4b",
-    "image_banner_LkTjh6",
-    "image_banner_KyPPUQ",
-    "rich_text_DpVreB",
-    "video_YDFDdd",
-    "video_FKcJyY",
-    "rich_text_4BYPqr",
-    "image_with_text_G8KLRc",
-    "video_HGpFWE",
-    "image_with_text_jcere8",
-    "video_H8mKEi",
-    "rich_text_WmPK4f",
-    "video_ngnMqm",
-    "video_r8gCde",
-    "image_banner_4xePxE",
-    "image_banner_7JqHyh",
-    "1764789539ca6c866e"
+    "kg_00",
+    "kg_01",
+    "kg_02",
+    "kg_03",
+    "kg_04",
+    "kg_05",
+    "kg_06",
+    "kg_07",
+    "kg_08",
+    "kg_09",
+    "kg_10",
+    "kg_11",
+    "kg_12",
+    "kg_13",
+    "kg_14",
+    "kg_15",
+    "kg_16",
+    "kg_17",
+    "kg_18",
+    "kg_19",
+    "kg_20",
+    "kg_21"
   ]
 }

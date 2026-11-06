@@ -1,45 +1,11 @@
 {
  "sections": {
-  "contact_form_cqDhAY": {
-   "type": "contact-form",
-   "name": "t:sections.contact-form.presets.name",
-   "settings": {
-    "heading": "Contact Us",
-    "heading_size": "h1",
-    "color_scheme": "",
-    "padding_top": 36,
-    "padding_bottom": 36
-   }
-  },
-  "main": {
-   "type": "main-page",
-   "disabled": true,
-   "settings": {
-    "padding_top": 20,
-    "padding_bottom": 0
-   }
-  },
-  "video_BEDUXR": {
-   "type": "video",
-   "disabled": true,
-   "name": "t:sections.video.presets.name",
-   "settings": {
-    "heading": "Watch Before Training With SpinGrip",
-    "heading_size": "h1",
-    "enable_video_looping": false,
-    "video": "shopify://files/videos/End side table design (2 x 3 in) (1).mp4",
-    "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-    "description": "",
-    "full_width": false,
-    "color_scheme": "scheme-4",
-    "padding_top": 20,
-    "padding_bottom": 20
-   }
+  "kg_contact": {
+   "type": "kg-contact",
+   "settings": {}
   }
  },
  "order": [
-  "contact_form_cqDhAY",
-  "main",
-  "video_BEDUXR"
+  "kg_contact"
  ]
 }

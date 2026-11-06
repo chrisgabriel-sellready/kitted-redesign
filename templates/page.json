@@ -55,7 +55,8 @@
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
-        "show_text_below": false
+        "show_text_below": false,
+        "page_handle": "testimonials"
       }
     },
     "video_CE43e8": {
@@ -71,7 +72,8 @@
         "full_width": false,
         "color_scheme": "",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 36,
+        "page_handle": "testimonials"
       }
     },
     "video_MpDn3K": {
@@ -86,7 +88,8 @@
         "full_width": false,
         "color_scheme": "",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 36,
+        "page_handle": "testimonials"
       }
     },
     "video_Qftnia": {
@@ -101,7 +104,8 @@
         "full_width": false,
         "color_scheme": "",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 36,
+        "page_handle": "testimonials"
       }
     },
     "video_A3UfPf": {
@@ -117,7 +121,8 @@
         "full_width": false,
         "color_scheme": "",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 36,
+        "page_handle": "testimonials"
       }
     },
     "multirow_tPQLKE": {
@@ -175,7 +180,8 @@
         "row_color_scheme": "scheme-3",
         "mobile_content_alignment": "left",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 36,
+        "page_handle": "testimonials"
       }
     },
     "multicolumn_n8pmAY": {
@@ -238,7 +244,8 @@
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 0,
-        "padding_bottom": 20
+        "padding_bottom": 20,
+        "page_handle": "testimonials"
       }
     }
   },
