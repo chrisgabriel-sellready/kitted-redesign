@@ -41,7 +41,8 @@
             >
           {%- endif -%}
           <p class="announcement-bar__message h5">
-            <span>{{ section.blocks.first.settings.text | escape }}</span>
+            {%- if section.blocks.first.settings.text contains '★★★★★' -%}<span class="kg-announcement-stars" aria-hidden="true">★★★★★</span>{%- elsif section.blocks.first.settings.text contains 'shipping' -%}<svg class="kg-announcement-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 18V6a2 2 0 00-2-2H4a2 2 0 00-2 2v11a1 1 0 001 1h2m10 0H9m10 0h2a1 1 0 001-1v-4l-4-5h-3"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>{%- elsif section.blocks.first.settings.text contains 'Used by' -%}<svg class="kg-announcement-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="m8.5 13-1 8 4.5-3 4.5 3-1-8"/></svg>{%- endif -%}
+            <span>{{ section.blocks.first.settings.text | remove: '★★★★★' | strip | escape }}</span>
             {%- if section.blocks.first.settings.link != blank -%}
               {{- 'icon-arrow.svg' | inline_asset_content -}}
             {%- endif -%}
@@ -102,7 +103,8 @@
                       >
                     {%- endif -%}
                     <p class="announcement-bar__message h5">
-                      <span>{{ block.settings.text | escape }}</span>
+                      {%- if block.settings.text contains '★★★★★' -%}<span class="kg-announcement-stars" aria-hidden="true">★★★★★</span>{%- elsif block.settings.text contains 'shipping' -%}<svg class="kg-announcement-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 18V6a2 2 0 00-2-2H4a2 2 0 00-2 2v11a1 1 0 001 1h2m10 0H9m10 0h2a1 1 0 001-1v-4l-4-5h-3"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>{%- elsif block.settings.text contains 'Used by' -%}<svg class="kg-announcement-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="m8.5 13-1 8 4.5-3 4.5 3-1-8"/></svg>{%- endif -%}
+            <span>{{ block.settings.text | remove: '★★★★★' | strip | escape }}</span>
                       {%- if block.settings.link != blank -%}
                         {{- 'icon-arrow.svg' | inline_asset_content -}}
                       {%- endif -%}

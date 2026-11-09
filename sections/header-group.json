@@ -24,30 +24,22 @@
         "announcement-kg1": {
           "type": "announcement",
           "settings": {
-            "text": "Free domestic shipping on orders $100+",
+            "text": "FREE domestic shipping on orders $100+",
             "link": ""
           }
         },
         "announcement-kg2": {
           "type": "announcement",
           "settings": {
-            "text": "Used by professional & D1 programs",
+            "text": "Used by Professional & D1 programs",
             "link": ""
-          }
-        },
-        "announcement-kg3": {
-          "type": "announcement",
-          "settings": {
-            "text": "New drop this fall: join the Kollective for early access",
-            "link": "/?view=kollective"
           }
         }
       },
       "block_order": [
         "announcement-kg0",
         "announcement-kg1",
-        "announcement-kg2",
-        "announcement-kg3"
+        "announcement-kg2"
       ],
       "settings": {
         "color_scheme": "scheme-1",

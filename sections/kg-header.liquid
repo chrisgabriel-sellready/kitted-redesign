@@ -2,43 +2,31 @@
   assign logo = section.settings.logo | default: settings.logo
 -%}
 <div class="kg">
-<header class="site-header">
+<header class="site-header site-header--current">
+  <a class="header__roster-bar" href="/?view=kollective">New Drop This Fall: Join the Kollective for early access <span aria-hidden="true">→</span></a>
   <div class="wrap masthead">
-    <div class="masthead__left">
-      <button class="icon-btn menu-toggle" type="button" data-kg-open="kg-mnav" aria-label="Open menu" aria-controls="kg-mnav" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path class="menu-toggle__bars" d="M3 7h18M3 12h18M3 17h18"/><path class="menu-toggle__close" d="M6 6l12 12M18 6L6 18"/></svg></button>
-    </div>
     <a class="masthead__logo" href="{{ routes.root_url }}" aria-label="{{ shop.name }} home">
-      {%- if logo != blank -%}{{ logo | image_url: width: 240 | image_tag: alt: shop.name, width: 54, height: 46, style: 'height:46px;width:auto' }}{%- else -%}<img src="{{ 'kg-kitted-logo-black.png' | asset_url }}" alt="{{ shop.name }}" width="54" height="46">{%- endif -%}
+      {%- if logo != blank -%}{{ logo | image_url: width: 160 | image_tag: alt: shop.name, width: 40, height: 34 }}{%- else -%}<img src="{{ 'kg-kitted-logo-black.png' | asset_url }}" alt="{{ shop.name }}" width="40" height="34">{%- endif -%}
     </a>
     <div class="masthead__right">
-      <a class="icon-btn masthead__search" href="{{ routes.search_url }}" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></a>
+      <nav class="primary-nav" aria-label="Primary"><ul>
+        {%- for block in section.blocks -%}
+          {%- assign header_label = block.settings.label | downcase -%}
+          {%- if block.type == 'link' -%}
+            {%- if header_label == 'baseball' or header_label == 'softball' or header_label == 'football' or header_label contains 'kollective' -%}
+              <li {{ block.shopify_attributes }}><a href="{{ block.settings.url }}"{% if block.settings.url == request.path %} aria-current="page"{% endif %}>{{ block.settings.label }}</a></li>
+            {%- endif -%}
+          {%- endif -%}
+        {%- endfor -%}
+      </ul></nav>
       <a class="icon-btn kg-cart" href="{{ routes.cart_url }}" id="cart-icon-bubble" aria-label="Open cart">
         {%- if cart == empty -%}<span class="svg-wrapper">{{ 'icon-cart-empty.svg' | inline_asset_content }}</span>{%- else -%}<span class="svg-wrapper">{{ 'icon-cart.svg' | inline_asset_content }}</span>{%- endif -%}
         <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
         {%- if cart != empty -%}<div class="cart-count-bubble">{%- if cart.item_count < 100 -%}<span aria-hidden="true">{{ cart.item_count }}</span>{%- endif -%}<span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span></div>{%- endif -%}
       </a>
+      <button class="icon-btn menu-toggle" type="button" data-kg-open="kg-mnav" aria-label="Open menu" aria-controls="kg-mnav" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path class="menu-toggle__bars" d="M4 6h16M4 12h16M4 18h16"/><path class="menu-toggle__close" d="M6 6l12 12M18 6L6 18"/></svg></button>
     </div>
   </div>
-  <nav class="primary-nav" aria-label="Primary">
-    <ul>
-      {%- for block in section.blocks -%}
-        {%- case block.type -%}
-          {%- when 'link' -%}
-            <li {{ block.shopify_attributes }}><a href="{{ block.settings.url }}"{% if block.settings.url == request.path %} aria-current="page"{% endif %}>{{ block.settings.label }}</a></li>
-          {%- when 'shop_menu' -%}
-            <li class="has-menu" {{ block.shopify_attributes }}><button type="button" aria-expanded="false">{{ block.settings.label }} <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
-              <div class="mega">
-                {%- for p in block.settings.products -%}<a href="{% render 'kg-product-url', p: p %}">{%- if p.featured_media -%}{{ p.featured_media | image_url: width: 320 | image_tag: loading: 'lazy', alt: '', width: 160, height: 160 }}{%- endif -%}<span>{{ p.title | remove: 'SpinGrip ' }}</span></a>{%- endfor -%}
-                <div class="mega__more">
-                  {%- if block.settings.more_1_label != blank -%}<a href="{{ block.settings.more_1_url }}">{{ block.settings.more_1_label }}</a>{%- endif -%}
-                  {%- if block.settings.more_2_label != blank -%}<a href="{{ block.settings.more_2_url }}">{{ block.settings.more_2_label }}</a>{%- endif -%}
-                  {%- if block.settings.more_3_label != blank -%}<a href="{{ block.settings.more_3_url }}">{{ block.settings.more_3_label }}</a>{%- endif -%}
-                </div>
-              </div></li>
-        {%- endcase -%}
-      {%- endfor -%}
-    </ul>
-  </nav>
 </header>
 <div class="drawer drawer--left" id="kg-mnav" aria-hidden="true" role="dialog" aria-label="Menu">
   <div class="drawer__scrim" data-kg-close></div>
@@ -83,12 +71,14 @@
   (function () {
     var d = document.getElementById('kg-mnav'); if (!d) return;
     var header = d.previousElementSibling;
+    function announcementHeight() { var bar = document.querySelector('.announcement-bar-section'); document.documentElement.style.setProperty('--kg-announcement-height', (bar ? bar.getBoundingClientRect().height : 0) + 'px'); }
+    announcementHeight();
     function position() { if (header) d.style.setProperty('--kg-menu-top', Math.max(0, header.getBoundingClientRect().bottom) + 'px'); }
     function set(open) { if (open) position(); d.classList.toggle('is-open', open); d.setAttribute('aria-hidden', open ? 'false' : 'true'); document.documentElement.classList.toggle('kg-lock', open); document.querySelectorAll('[data-kg-open="kg-mnav"]').forEach(function (b) { b.setAttribute('aria-expanded', open ? 'true' : 'false'); b.setAttribute('aria-label', open ? 'Close menu' : 'Open menu'); }); }
     document.querySelectorAll('[data-kg-open="kg-mnav"]').forEach(function (b) { b.addEventListener('click', function () { set(!d.classList.contains('is-open')); }); });
     d.querySelectorAll('[data-kg-close]').forEach(function (b) { b.addEventListener('click', function () { set(false); }); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
-    window.addEventListener('resize', function () { if (window.innerWidth > 900) set(false); else if (d.classList.contains('is-open')) position(); });
+    window.addEventListener('resize', function () { announcementHeight(); if (d.classList.contains('is-open')) position(); });
     d.querySelectorAll('[data-kg-submenu]').forEach(function (b) {
       b.addEventListener('click', function () {
         var panel = document.getElementById(b.getAttribute('aria-controls'));
