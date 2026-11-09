@@ -1,11 +1,9 @@
 <div class="kg">
 <section class="section">
 <div class="wrap split split--media-first">
-<div class="split__media" style=""><div style="max-width:380px;margin-inline:auto"><figure class="vcard" data-video="" style="margin:0">
+<div class="split__media" style=""><div style="max-width:380px;margin-inline:auto"><figure class="vcard" style="margin:0">
 <div class="vcard__frame">
-<video playsinline="" poster="{%- if section.settings.i3 != blank -%}{{ section.settings.i3 | image_url: width: 1200 }}{%- elsif section.settings.t4 != blank -%}{{ section.settings.t4 | asset_url }}{%- elsif section.settings.v1 != blank -%}{{ section.settings.v1.preview_image | image_url: width: 1200 }}{%- endif -%}" preload="none" src="{%- if section.settings.v1 != blank -%}{{ section.settings.v1.sources | where: "mime_type", "video/mp4" | map: "url" | first }}{%- else -%}{{ section.settings.u2 }}{%- endif -%}"></video>
-<button aria-label="Play video: what-is-spingrip" class="vcard__play" type="button"><span><svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24"><path d="M7 4l13 8-13 8z"></path></svg></span></button>
-<button aria-label="Toggle sound" class="vcard__sound" type="button"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"></path><path d="M23 9l-6 6M17 9l6 6"></path></svg>{{ section.settings.t5 }}</button>
+<video autoplay muted loop playsinline poster="{%- if section.settings.i3 != blank -%}{{ section.settings.i3 | image_url: width: 1200 }}{%- elsif section.settings.t4 != blank -%}{{ section.settings.t4 | asset_url }}{%- elsif section.settings.v1 != blank -%}{{ section.settings.v1.preview_image | image_url: width: 1200 }}{%- endif -%}" preload="metadata" src="{%- if section.settings.v1 != blank -%}{{ section.settings.v1.sources | where: "mime_type", "video/mp4" | map: "url" | first }}{%- else -%}{{ section.settings.u2 }}{%- endif -%}"></video>
 </div>
 </figure></div></div>
 <div class="split__text">
