@@ -5,7 +5,7 @@
 <header class="site-header">
   <div class="wrap masthead">
     <div class="masthead__left">
-      <button class="icon-btn menu-toggle" type="button" data-kg-open="kg-mnav" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
+      <button class="icon-btn menu-toggle" type="button" data-kg-open="kg-mnav" aria-label="Open menu" aria-controls="kg-mnav" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
     </div>
     <a class="masthead__logo" href="{{ routes.root_url }}" aria-label="{{ shop.name }} home">
       {%- if logo != blank -%}{{ logo | image_url: width: 240 | image_tag: alt: shop.name, width: 54, height: 46, style: 'height:46px;width:auto' }}{%- else -%}<img src="{{ 'kg-kitted-logo-black.png' | asset_url }}" alt="{{ shop.name }}" width="54" height="46">{%- endif -%}
@@ -46,22 +46,36 @@
     <div class="drawer__head">{%- if logo != blank -%}{{ logo | image_url: width: 160 | image_tag: alt: shop.name, style: 'height:34px;width:auto' }}{%- else -%}<img src="{{ 'kg-kitted-logo-black.png' | asset_url }}" alt="{{ shop.name }}" width="40" height="34" style="height:34px;width:auto">{%- endif -%}<button class="icon-btn" type="button" data-kg-close aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
     <div class="drawer__body">
       <nav class="mnav" aria-label="Mobile">
+        <a href="{{ routes.root_url }}">Home</a>
         {%- for block in section.blocks -%}
-          {%- if block.type == 'link' -%}<a href="{{ block.settings.url }}">{{ block.settings.label }}{% if block.settings.mobile_note != blank %} <small>{{ block.settings.mobile_note }}</small>{% endif %}</a>
-          {%- elsif block.type == 'shop_menu' -%}
-            {%- for p in block.settings.products -%}<a href="{% render 'kg-product-url', p: p %}">{{ p.title }} <small>Shop</small></a>{%- endfor -%}
+          {%- if block.type != 'link' -%}{%- continue -%}{%- endif -%}
+          {%- liquid
+            assign menu_label = block.settings.label | downcase
+            assign submenu_links = ''
+            case menu_label
+              when 'baseball'
+                assign submenu_links = '/products/spingrip|SpinGrip Baseball,/products/spingrips-exclusive-throwing-blueprint?view=formula-baseball|Baseball Pro-Level Throwing Formula'
+              when 'softball'
+                assign submenu_links = '/products/spingrip-softball?view=softball|SpinGrip Softball,/products/spingrip-softball-pitcher?view=softball-pitcher|SpinGrip Softball for Pitchers,/products/spingrip-softballs-d-1-throwing-formula-150-value-instant-digital-access?view=formula-softball|Softball D-1 Throwing Formula'
+              when 'football'
+                assign submenu_links = '/products/spin-grip-football?view=football|SpinGrip Football,/products/spingrip-footballs-d-1-throwing-formula-150-value-instant-digital-access?view=formula-football|Football D-1 Throwing Formula'
+            endcase
+          -%}
+          {%- if submenu_links != blank -%}
+            <div class="mnav__group">
+              <div class="mnav__row"><a href="{{ block.settings.url }}">{{ block.settings.label }}</a><button class="mnav__toggle" type="button" data-kg-submenu aria-label="Toggle {{ block.settings.label | escape }} submenu" aria-expanded="false" aria-controls="kg-submenu-{{ section.id }}-{{ forloop.index }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button></div>
+              <div class="mnav__submenu" id="kg-submenu-{{ section.id }}-{{ forloop.index }}" hidden>
+                {%- assign submenu_items = submenu_links | split: ',' -%}
+                {%- for item in submenu_items -%}{%- assign item_parts = item | split: '|' -%}<a href="{{ item_parts[0] }}">{{ item_parts[1] }}</a>{%- endfor -%}
+              </div>
+            </div>
+          {%- elsif menu_label contains 'kollective' -%}
+            <a href="{{ block.settings.url }}">{{ block.settings.label }}</a>
           {%- endif -%}
         {%- endfor -%}
-        <div class="mnav__sub">
-          <a href="{{ routes.search_url }}">Search</a>
-          {%- for block in section.blocks -%}{%- if block.type == 'shop_menu' -%}
-            {%- if block.settings.more_1_label != blank -%}<a href="{{ block.settings.more_1_url }}">{{ block.settings.more_1_label }}</a>{%- endif -%}
-            {%- if block.settings.more_2_label != blank -%}<a href="{{ block.settings.more_2_url }}">{{ block.settings.more_2_label }}</a>{%- endif -%}
-            {%- if block.settings.more_3_label != blank -%}<a href="{{ block.settings.more_3_url }}">{{ block.settings.more_3_label }}</a>{%- endif -%}
-          {%- endif -%}{%- endfor -%}
-          <a href="/pages/contact">Contact</a>
-        </div>
+        <a href="/pages/contact">Contact</a>
       </nav>
+      <div class="mnav__promo"><p>Be the first to hear of our newest releases as a <strong>KOLLECTIVE</strong> member.</p><a class="mnav__join" href="/?view=kollective">Join</a><img src="{{ 'kg-kitted-logo-black.png' | asset_url }}" alt="KITTED" width="47" height="40" loading="lazy"></div>
     </div>
   </div>
 </div>
@@ -69,10 +83,19 @@
 <script>
   (function () {
     var d = document.getElementById('kg-mnav'); if (!d) return;
-    function set(open) { d.classList.toggle('is-open', open); d.setAttribute('aria-hidden', open ? 'false' : 'true'); document.documentElement.classList.toggle('kg-lock', open); }
+    function set(open) { d.classList.toggle('is-open', open); d.setAttribute('aria-hidden', open ? 'false' : 'true'); document.documentElement.classList.toggle('kg-lock', open); document.querySelectorAll('[data-kg-open="kg-mnav"]').forEach(function (b) { b.setAttribute('aria-expanded', open ? 'true' : 'false'); }); }
     document.querySelectorAll('[data-kg-open="kg-mnav"]').forEach(function (b) { b.addEventListener('click', function () { set(true); }); });
     d.querySelectorAll('[data-kg-close]').forEach(function (b) { b.addEventListener('click', function () { set(false); }); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
+    d.querySelectorAll('[data-kg-submenu]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var panel = document.getElementById(b.getAttribute('aria-controls'));
+        if (!panel) return;
+        var open = b.getAttribute('aria-expanded') !== 'true';
+        b.setAttribute('aria-expanded', open ? 'true' : 'false');
+        panel.hidden = !open;
+      });
+    });
     document.querySelectorAll('.kg .has-menu > button').forEach(function (b) {
       b.addEventListener('click', function () { var li = b.parentElement, open = !li.classList.contains('is-open'); li.classList.toggle('is-open', open); b.setAttribute('aria-expanded', open); });
     });
