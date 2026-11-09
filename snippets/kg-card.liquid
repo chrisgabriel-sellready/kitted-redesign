@@ -18,14 +18,15 @@
   assign badge = p.metafields.custom.badge
   assign second = p.media[1]
 -%}
+{%- capture product_url -%}{%- render 'kg-product-url', p: p -%}{%- endcapture -%}
 <article class="pcard{% if digital %} pcard--formula{% endif %}">
-  <a class="pcard__media" href="{{ p.url }}" aria-label="{{ p.title | escape }}">
+  <a class="pcard__media" href="{{ product_url }}" aria-label="{{ p.title | escape }}">
     {%- if badge != blank -%}<span class="pcard__tag">{{ badge }}</span>{%- endif -%}
     {%- if p.featured_media -%}{{ p.featured_media | image_url: width: 700 | image_tag: loading: 'lazy', widths: '360, 540, 700', sizes: '(min-width: 990px) 20vw, 50vw', alt: p.title }}{%- endif -%}
     {%- if second and second.media_type == 'image' -%}{{ second | image_url: width: 700 | image_tag: loading: 'lazy', widths: '360, 540, 700', sizes: '(min-width: 990px) 20vw, 50vw', alt: '' }}{%- endif -%}
   </a>
   <div class="pcard__body">
-    <h3 class="pcard__name"><a href="{{ p.url }}">{{ p.title }}</a></h3>
+    <h3 class="pcard__name"><a href="{{ product_url }}">{{ p.title }}</a></h3>
     {%- if blurb != blank -%}<p class="pcard__blurb">{{ blurb }}</p>{%- endif -%}
     <div class="pcard__foot">
       <span class="price">{{ v.price | money_without_trailing_zeros }}{% if v.compare_at_price > v.price %}<s>{{ v.compare_at_price | money_without_trailing_zeros }}</s>{% endif %}</span>

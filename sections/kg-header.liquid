@@ -28,7 +28,7 @@
           {%- when 'shop_menu' -%}
             <li class="has-menu" {{ block.shopify_attributes }}><button type="button" aria-expanded="false">{{ block.settings.label }} <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
               <div class="mega">
-                {%- for p in block.settings.products -%}<a href="{{ p.url }}">{%- if p.featured_media -%}{{ p.featured_media | image_url: width: 320 | image_tag: loading: 'lazy', alt: '', width: 160, height: 160 }}{%- endif -%}<span>{{ p.title | remove: 'SpinGrip ' }}</span></a>{%- endfor -%}
+                {%- for p in block.settings.products -%}<a href="{% render 'kg-product-url', p: p %}">{%- if p.featured_media -%}{{ p.featured_media | image_url: width: 320 | image_tag: loading: 'lazy', alt: '', width: 160, height: 160 }}{%- endif -%}<span>{{ p.title | remove: 'SpinGrip ' }}</span></a>{%- endfor -%}
                 <div class="mega__more">
                   {%- if block.settings.more_1_label != blank -%}<a href="{{ block.settings.more_1_url }}">{{ block.settings.more_1_label }}</a>{%- endif -%}
                   {%- if block.settings.more_2_label != blank -%}<a href="{{ block.settings.more_2_url }}">{{ block.settings.more_2_label }}</a>{%- endif -%}
@@ -49,10 +49,11 @@
         {%- for block in section.blocks -%}
           {%- if block.type == 'link' -%}<a href="{{ block.settings.url }}">{{ block.settings.label }}{% if block.settings.mobile_note != blank %} <small>{{ block.settings.mobile_note }}</small>{% endif %}</a>
           {%- elsif block.type == 'shop_menu' -%}
-            {%- for p in block.settings.products -%}<a href="{{ p.url }}">{{ p.title }} <small>Shop</small></a>{%- endfor -%}
+            {%- for p in block.settings.products -%}<a href="{% render 'kg-product-url', p: p %}">{{ p.title }} <small>Shop</small></a>{%- endfor -%}
           {%- endif -%}
         {%- endfor -%}
         <div class="mnav__sub">
+          <a href="{{ routes.search_url }}">Search</a>
           {%- for block in section.blocks -%}{%- if block.type == 'shop_menu' -%}
             {%- if block.settings.more_1_label != blank -%}<a href="{{ block.settings.more_1_url }}">{{ block.settings.more_1_label }}</a>{%- endif -%}
             {%- if block.settings.more_2_label != blank -%}<a href="{{ block.settings.more_2_url }}">{{ block.settings.more_2_label }}</a>{%- endif -%}

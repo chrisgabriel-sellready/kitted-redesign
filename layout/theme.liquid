@@ -32,6 +32,19 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    {%- if template.name == 'product' and template.suffix == blank and request.design_mode != true -%}
+      {%- capture kg_product_url -%}{%- render 'kg-product-url', p: product -%}{%- endcapture -%}
+      {%- if kg_product_url contains '?view=' -%}
+        <script>
+          (function () {
+            var target = new URL({{ kg_product_url | json }}, window.location.origin);
+            var current = new URL(window.location.href);
+            current.searchParams.set('view', target.searchParams.get('view'));
+            window.location.replace(current.href);
+          })();
+        </script>
+      {%- endif -%}
+    {%- endif -%}
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
 
