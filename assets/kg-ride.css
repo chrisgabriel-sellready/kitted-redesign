@@ -207,6 +207,7 @@ dialog.vmodal .vmodal__close:hover { background: #fab505; }
 .announcement-bar-section .utility-bar__grid{height:100%;max-width:none;padding-inline:12px;}
 .announcement-bar-section .announcement-bar,.announcement-bar-section .announcement-bar-slider,.announcement-bar-section .announcement-bar-slider .slider,.announcement-bar-section .announcement-bar__announcement{height:100%;min-height:0;}
 .announcement-bar-section .announcement-bar__message{display:flex;align-items:center;justify-content:center;gap:6px;min-height:0;height:40px;margin:0;padding:0;color:#fff;font:500 13.8125px/20px var(--font-body-family);letter-spacing:.025em;text-transform:none;white-space:nowrap;}
+.announcement-bar-section .announcement-bar{min-width:0;}
 .kg-announcement-stars{color:#fab505;font-size:16px;letter-spacing:1px;}
 .kg-announcement-icon{display:block;flex:0 0 15px;width:15px;height:15px;}
 .kg-header-section{top:var(--kg-announcement-height);}
