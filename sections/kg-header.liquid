@@ -5,7 +5,7 @@
 <header class="site-header">
   <div class="wrap masthead">
     <div class="masthead__left">
-      <button class="icon-btn menu-toggle" type="button" data-kg-open="kg-mnav" aria-label="Open menu" aria-controls="kg-mnav" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
+      <button class="icon-btn menu-toggle" type="button" data-kg-open="kg-mnav" aria-label="Open menu" aria-controls="kg-mnav" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path class="menu-toggle__bars" d="M3 7h18M3 12h18M3 17h18"/><path class="menu-toggle__close" d="M6 6l12 12M18 6L6 18"/></svg></button>
     </div>
     <a class="masthead__logo" href="{{ routes.root_url }}" aria-label="{{ shop.name }} home">
       {%- if logo != blank -%}{{ logo | image_url: width: 240 | image_tag: alt: shop.name, width: 54, height: 46, style: 'height:46px;width:auto' }}{%- else -%}<img src="{{ 'kg-kitted-logo-black.png' | asset_url }}" alt="{{ shop.name }}" width="54" height="46">{%- endif -%}
@@ -43,7 +43,6 @@
 <div class="drawer drawer--left" id="kg-mnav" aria-hidden="true" role="dialog" aria-label="Menu">
   <div class="drawer__scrim" data-kg-close></div>
   <div class="drawer__panel">
-    <div class="drawer__head">{%- if logo != blank -%}{{ logo | image_url: width: 160 | image_tag: alt: shop.name, style: 'height:34px;width:auto' }}{%- else -%}<img src="{{ 'kg-kitted-logo-black.png' | asset_url }}" alt="{{ shop.name }}" width="40" height="34" style="height:34px;width:auto">{%- endif -%}<button class="icon-btn" type="button" data-kg-close aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
     <div class="drawer__body">
       <nav class="mnav" aria-label="Mobile">
         <a href="{{ routes.root_url }}">Home</a>
@@ -83,10 +82,13 @@
 <script>
   (function () {
     var d = document.getElementById('kg-mnav'); if (!d) return;
-    function set(open) { d.classList.toggle('is-open', open); d.setAttribute('aria-hidden', open ? 'false' : 'true'); document.documentElement.classList.toggle('kg-lock', open); document.querySelectorAll('[data-kg-open="kg-mnav"]').forEach(function (b) { b.setAttribute('aria-expanded', open ? 'true' : 'false'); }); }
-    document.querySelectorAll('[data-kg-open="kg-mnav"]').forEach(function (b) { b.addEventListener('click', function () { set(true); }); });
+    var header = d.previousElementSibling;
+    function position() { if (header) d.style.setProperty('--kg-menu-top', Math.max(0, header.getBoundingClientRect().bottom) + 'px'); }
+    function set(open) { if (open) position(); d.classList.toggle('is-open', open); d.setAttribute('aria-hidden', open ? 'false' : 'true'); document.documentElement.classList.toggle('kg-lock', open); document.querySelectorAll('[data-kg-open="kg-mnav"]').forEach(function (b) { b.setAttribute('aria-expanded', open ? 'true' : 'false'); b.setAttribute('aria-label', open ? 'Close menu' : 'Open menu'); }); }
+    document.querySelectorAll('[data-kg-open="kg-mnav"]').forEach(function (b) { b.addEventListener('click', function () { set(!d.classList.contains('is-open')); }); });
     d.querySelectorAll('[data-kg-close]').forEach(function (b) { b.addEventListener('click', function () { set(false); }); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
+    window.addEventListener('resize', function () { if (window.innerWidth > 900) set(false); else if (d.classList.contains('is-open')) position(); });
     d.querySelectorAll('[data-kg-submenu]').forEach(function (b) {
       b.addEventListener('click', function () {
         var panel = document.getElementById(b.getAttribute('aria-controls'));
