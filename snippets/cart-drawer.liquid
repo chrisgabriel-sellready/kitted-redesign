@@ -42,7 +42,8 @@
                   {{- 'icon-close.svg' | inline_asset_content -}}
                 </span>
               </button>
-              <a href="{{ routes.all_products_collection_url }}" class="button">
+              <p>{{ 'sections.cart.empty_hint' | t }}</p>
+              <a href="{{ routes.root_url }}" class="button">
                 {{ 'general.continue_shopping' | t }}
               </a>
 
@@ -62,7 +63,7 @@
         </div>
       {%- endif -%}
       <div class="drawer__header">
-        <h2 class="drawer__heading">{{ 'sections.cart.title' | t }}</h2>
+        <h2 class="drawer__heading"><span class="svg-wrapper">{{ 'icon-cart.svg' | inline_asset_content }}</span>{{ 'sections.cart.title' | t }} <span class="kg-cart-count">({{ cart.item_count }})</span></h2>
         <button
           class="drawer__close"
           type="button"
@@ -170,17 +171,9 @@
                             or item.selling_plan_allocation != null
                           -%}
                             <dl>
-                              {%- if item.product.has_only_default_variant == false -%}
-                                {%- for option in item.options_with_values -%}
-                                  <div class="product-option">
-                                    <dt>{{ option.name }}:</dt>
-                                    <dd>
-                                      {{ option.value -}}
-                                      {%- unless forloop.last %}, {% endunless %}
-                                    </dd>
-                                  </div>
-                                {%- endfor -%}
-                              {%- endif -%}
+{%- if item.product.has_only_default_variant == false -%}
+                                  <div class="kg-cart-variants">{%- for option in item.options_with_values -%}{{ option.value | escape }}{%- unless forloop.last %} • {% endunless -%}{%- endfor -%}</div>
+                                {%- endif -%}
 
                               {%- for property in item.properties -%}
                                 {%- assign property_first_char = property.first | slice: 0 -%}
@@ -447,6 +440,7 @@
                 </table>
               </div>
             {%- endif -%}
+            {% if cart != empty %}{% render 'kg-cart-recommendations', context: 'drawer' %}{% endif %}
             <p id="CartDrawer-LiveRegionText" class="visually-hidden" role="status"></p>
             <p id="CartDrawer-LineItemStatus" class="visually-hidden" aria-hidden="true" role="status">
               {{ 'accessibility.loading' | t }}
@@ -495,7 +489,7 @@
           </div>
 
           <div class="totals" role="status">
-            <h2 class="totals__total">{{ 'sections.cart.estimated_total' | t }}</h2>
+            <h2 class="totals__total">{{ 'sections.cart.subtotal' | t }}</h2>
             <p class="totals__total-value">{{ cart.total_price | money_with_currency }}</p>
           </div>
 
@@ -529,7 +523,7 @@
               {%- endif -%}
             {%- elsif cart.duties_included == false and cart.taxes_included == false -%}
               {%- if shop.shipping_policy.body == blank -%}
-                {{ 'sections.cart.taxes_at_checkout_shipping_at_checkout_without_policy' | t }}
+                {{ 'sections.cart.shipping_taxes' | t }}
               {%- else -%}
                 {{
                   'sections.cart.taxes_at_checkout_shipping_at_checkout_with_policy_html'
@@ -553,9 +547,11 @@
               disabled
             {% endif %}
           >
-            {{ 'sections.cart.checkout' | t }}
+            <span class="svg-wrapper">{{ 'icon-lock.svg' | inline_asset_content }}</span>{{ 'sections.cart.checkout' | t }} — {{ cart.total_price | money }}
           </button>
         </div>
+        <a class="kg-cart-view" href="{{ routes.cart_url }}">{{ 'sections.cart.view_cart' | t }}</a>
+        {% render 'kg-cart-trust' %}
       </div>
     </div>
   </div>

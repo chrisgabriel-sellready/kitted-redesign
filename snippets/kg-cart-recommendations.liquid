@@ -1,0 +1,36 @@
+{% doc %}
+  Renders the live site's four cart recommendations with explicit variant selection.
+  @param {string} context - Unique location, drawer or page.
+  @example
+  {% render 'kg-cart-recommendations', context: 'drawer' %}
+{% enddoc %}
+<div class="kg-cart-recommendations">
+  <h3>{{ 'sections.cart.recommendations' | t }}</h3>
+  {%- assign recommendation_handles = 'spingrips-exclusive-throwing-blueprint,spingrip,spingrip-softball,spin-grip-football' | split: ',' -%}
+  {%- for handle in recommendation_handles -%}
+    {%- assign recommendation = all_products[handle] -%}
+    {%- if recommendation != blank and recommendation.available -%}
+      {%- capture recommendation_url -%}{% render 'kg-product-url', p: recommendation %}{%- endcapture -%}
+      <div class="kg-cart-recommendation">
+        <a class="kg-cart-recommendation__image" href="{{ recommendation_url }}">{{ recommendation.featured_image | image_url: width: 140 | image_tag: loading: 'lazy', widths: '70,140', sizes: '70px' }}</a>
+        <div class="kg-cart-recommendation__details"><a href="{{ recommendation_url }}">{{ recommendation.title | escape }}</a><p>{{ recommendation.price | money_with_currency }}</p></div>
+        {% if recommendation.has_only_default_variant %}
+          <button type="button" class="kg-cart-add" data-kg-cart-add="{{ recommendation.selected_or_first_available_variant.id }}" aria-label="{{ 'sections.cart.add' | t }} {{ recommendation.title | escape }}">+ {{ 'sections.cart.add' | t }}</button>
+        {% else %}
+          <details class="kg-cart-choose">
+            <summary class="kg-cart-add" aria-label="{{ 'sections.cart.add' | t }} {{ recommendation.title | escape }}">+ {{ 'sections.cart.add' | t }}</summary>
+            <div class="kg-cart-choose__panel">
+              <label for="kg-variant-{{ context }}-{{ recommendation.id }}">{{ 'sections.cart.choose_variant' | t }}</label>
+              <select id="kg-variant-{{ context }}-{{ recommendation.id }}" data-kg-cart-variant>
+                <option value="">{{ 'sections.cart.choose_variant' | t }}</option>
+                {% for variant in recommendation.variants %}{% if variant.available %}<option value="{{ variant.id }}">{{ variant.title | escape }} — {{ variant.price | money }}</option>{% endif %}{% endfor %}
+              </select>
+              <button type="button" class="kg-cart-add" data-kg-cart-add="choose">{{ 'sections.cart.add_to_order' | t }}</button>
+            </div>
+          </details>
+        {% endif %}
+        <p class="kg-cart-add-error" role="alert"></p>
+      </div>
+    {%- endif -%}
+  {%- endfor -%}
+</div>

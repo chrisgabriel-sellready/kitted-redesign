@@ -1,0 +1,10 @@
+{% doc %}
+  Renders the cart's existing store reassurance labels.
+  @example
+  {% render 'kg-cart-trust' %}
+{% enddoc %}
+<div class="kg-cart-trust">
+  <span>{{ 'icon-lock.svg' | inline_asset_content }}{{ 'sections.cart.secure' | t }}</span>
+  <span>{{ 'icon-truck.svg' | inline_asset_content }}{{ 'sections.cart.fast_shipping' | t }}</span>
+  <span>{{ 'icon-return.svg' | inline_asset_content }}{{ 'sections.cart.easy_returns' | t }}</span>
+</div>
