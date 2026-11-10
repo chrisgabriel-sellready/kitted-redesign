@@ -141,6 +141,7 @@ class CartItems extends HTMLElement {
         section: document.getElementById('main-cart-footer').dataset.id,
         selector: '.js-contents',
       },
+      { id: 'CartDrawer', section: 'cart-drawer', selector: '.drawer__inner' },
     ];
   }
 
@@ -161,8 +162,8 @@ class CartItems extends HTMLElement {
       .then((state) => {
         const parsedState = JSON.parse(state);
         const quantityElement =
-          document.getElementById(`Quantity-${line}`) || document.getElementById(`Drawer-quantity-${line}`);
-        const items = document.querySelectorAll('.cart-item');
+          this.querySelector(`#Quantity-${line}`) || this.querySelector(`#Drawer-quantity-${line}`);
+        const items = this.querySelectorAll('.cart-item');
 
         if (parsedState.errors) {
           quantityElement.value = quantityElement.getAttribute('value');
@@ -171,7 +172,7 @@ class CartItems extends HTMLElement {
         }
 
         document.querySelectorAll('[data-kg-cart-count]').forEach((count) => { count.textContent = `(${parsedState.item_count})`; });
-        this.classList.toggle('is-empty', parsedState.item_count === 0);
+        document.querySelectorAll('cart-items, cart-drawer-items').forEach((element) => element.classList.toggle('is-empty', parsedState.item_count === 0));
         const cartDrawerWrapper = document.querySelector('cart-drawer');
         const cartFooter = document.getElementById('main-cart-footer');
 
@@ -198,14 +199,14 @@ class CartItems extends HTMLElement {
         this.updateLiveRegions(line, message);
 
         const lineItem =
-          document.getElementById(`CartItem-${line}`) || document.getElementById(`CartDrawer-Item-${line}`);
+          this.querySelector(`#CartItem-${line}`) || this.querySelector(`#CartDrawer-Item-${line}`);
         if (lineItem && lineItem.querySelector(`[name="${name}"]`)) {
-          cartDrawerWrapper
+          cartDrawerWrapper && cartDrawerWrapper.classList.contains('active')
             ? trapFocus(cartDrawerWrapper, lineItem.querySelector(`[name="${name}"]`))
             : lineItem.querySelector(`[name="${name}"]`).focus();
-        } else if (parsedState.item_count === 0 && cartDrawerWrapper) {
+        } else if (parsedState.item_count === 0 && cartDrawerWrapper && cartDrawerWrapper.classList.contains('active')) {
           trapFocus(cartDrawerWrapper.querySelector('.drawer__inner-empty'), cartDrawerWrapper.querySelector('a'));
-        } else if (document.querySelector('.cart-item') && cartDrawerWrapper) {
+        } else if (document.querySelector('.cart-item') && cartDrawerWrapper && cartDrawerWrapper.classList.contains('active')) {
           trapFocus(cartDrawerWrapper, document.querySelector('.cart-item__name'));
         }
 
