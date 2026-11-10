@@ -71,3 +71,5 @@ cart-drawer .cart-item__quantity,cart-drawer .cart-item__quantity-wrapper,cart-d
 cart-drawer .drawer__heading{font-weight:700;font-size:2.2rem}cart-drawer .cart-item__name{font-weight:600;font-size:1.6rem}cart-drawer .cart__checkout-button{font-family:var(--font-body-family);font-weight:700}
 .kg-cart-recommendation__details a{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:600}.kg-cart-recommendation__details{min-width:0}
 .cart__checkout-button .icon-lock{fill:currentColor}.kg-cart-page .cart__checkout-button{font-family:var(--font-body-family);font-weight:700}
+/* The cart content is constrained; its white canvas continues to both viewport edges. */
+body:has(main.kg-cart-page){background:#fff}
