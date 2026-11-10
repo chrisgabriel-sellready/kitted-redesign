@@ -23,7 +23,7 @@
               <label for="kg-variant-{{ context }}-{{ recommendation.id }}">{{ 'sections.cart.choose_variant' | t }}</label>
               <select id="kg-variant-{{ context }}-{{ recommendation.id }}" data-kg-cart-variant>
                 <option value="">{{ 'sections.cart.choose_variant' | t }}</option>
-                {% for variant in recommendation.variants %}{% if variant.available %}<option value="{{ variant.id }}">{{ variant.title | escape }} — {{ variant.price | money }}</option>{% endif %}{% endfor %}
+                {% for variant in recommendation.variants %}{% if variant.available %}<option value="{{ variant.id }}">{{ variant.title | escape }}</option>{% endif %}{% endfor %}
               </select>
               <button type="button" class="kg-cart-add" data-kg-cart-add="choose">{{ 'sections.cart.add_to_order' | t }}</button>
             </div>

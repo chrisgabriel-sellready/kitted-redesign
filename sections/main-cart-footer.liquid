@@ -95,10 +95,7 @@
                     {%- if shop.shipping_policy.body == blank -%}
                       {{ 'sections.cart.shipping_taxes' | t }}
                     {%- else -%}
-                      {{
-                        'sections.cart.taxes_at_checkout_shipping_at_checkout_with_policy_html'
-                        | t: link: shop.shipping_policy.url
-                      }}
+                      {{ 'sections.cart.shipping_taxes' | t }}
                     {%- endif -%}
                   {%- endif -%}
                 </small>
@@ -115,7 +112,7 @@
                   {% endif %}
                   form="cart"
                 >
-                  <span class="svg-wrapper">{{ 'icon-lock.svg' | inline_asset_content }}</span>{{ 'sections.cart.checkout' | t }} — {{ cart.total_price | money }}
+                  <span class="svg-wrapper">{{ 'icon-lock.svg' | inline_asset_content }}</span>{{ 'sections.cart.checkout_label' | t }} — {{ cart.total_price | money }}
                 </button>
               </div>
           {%- endcase -%}

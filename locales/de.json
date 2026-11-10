@@ -276,7 +276,7 @@
     "cart": {
       "free_shipping_remaining_html": "Spend <strong>{{ amount }}</strong> more for <strong>FREE US SHIPPING</strong>",
       "free_shipping_unlocked": "You've unlocked FREE US SHIPPING",
-      "free_shipping_label": "Free US shipping progress","subtotal":"Subtotal","view_cart":"View cart page","order_summary":"Order summary","empty_hint":"Add SpinGrip to get started.","recommendations":"Add these to your order","secure":"Secure","fast_shipping":"Fast Shipping","easy_returns":"Easy Returns","add":"Add","choose_variant":"Choose size and hand","close":"Close","add_to_order":"Add to order","shipping_taxes":"Shipping & taxes calculated at checkout",
+      "free_shipping_label": "Free US shipping progress","checkout_label":"Checkout","subtotal":"Subtotal","view_cart":"View cart page","order_summary":"Order summary","empty_hint":"Add SpinGrip to get started.","recommendations":"Add these to your order","secure":"Secure","fast_shipping":"Fast Shipping","easy_returns":"Easy Returns","add":"Add","choose_variant":"Choose size and hand","close":"Close","add_to_order":"Add to order","shipping_taxes":"Shipping & taxes calculated at checkout",
 
       "title": "Dein Warenkorb",
       "caption": "Artikel im Warenkorb",
