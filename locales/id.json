@@ -274,6 +274,10 @@
       }
     },
     "cart": {
+      "free_shipping_remaining_html": "Spend <strong>{{ amount }}</strong> more for <strong>FREE US SHIPPING</strong>",
+      "free_shipping_unlocked": "You've unlocked FREE US SHIPPING",
+      "free_shipping_label": "Free US shipping progress",
+
       "title": "Keranjang Anda",
       "caption": "Item di keranjang",
       "remove_title": "Hapus {{ title }}",

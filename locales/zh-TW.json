@@ -274,6 +274,10 @@
       }
     },
     "cart": {
+      "free_shipping_remaining_html": "Spend <strong>{{ amount }}</strong> more for <strong>FREE US SHIPPING</strong>",
+      "free_shipping_unlocked": "You've unlocked FREE US SHIPPING",
+      "free_shipping_label": "Free US shipping progress",
+
       "title": "您的購物車",
       "caption": "購物車商品",
       "remove_title": "移除 {{ title }}",

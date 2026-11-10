@@ -1,0 +1,103 @@
+{% doc %}
+  Renders progress toward the USD 100 US shipping threshold for a physical-goods cart.
+  @example
+  {% render 'kg-free-shipping' %}
+{% enddoc %}
+
+{%- if cart != empty and cart.requires_shipping and cart.currency.iso_code == 'USD' -%}
+  {%- liquid
+    assign shipping_threshold = 10000
+    assign shipping_remaining = shipping_threshold | minus: cart.total_price | at_least: 0
+    assign shipping_progress = cart.total_price | at_least: 0 | at_most: shipping_threshold
+    assign shipping_remaining_money = shipping_remaining | money
+  -%}
+  {%- capture shipping_message -%}
+    {%- if shipping_remaining > 0 -%}
+      {{- 'sections.cart.free_shipping_remaining_html' | t: amount: shipping_remaining_money -}}
+    {%- else -%}
+      {{- 'sections.cart.free_shipping_unlocked' | t -}}
+    {%- endif -%}
+  {%- endcapture -%}
+  <div class="kg-free-shipping">
+    <p class="kg-free-shipping__message" role="status" aria-live="polite" aria-atomic="true">
+      {{- shipping_message -}}
+    </p>
+    <div class="kg-free-shipping__track">
+      <progress
+        class="kg-free-shipping__progress"
+        value="{{ shipping_progress }}"
+        max="{{ shipping_threshold }}"
+        aria-label="{{ 'sections.cart.free_shipping_label' | t | escape }}"
+        aria-valuetext="{{ shipping_message | strip_html | escape }}"
+      ></progress>
+      <span class="kg-free-shipping__icon" aria-hidden="true">{{ 'icon-truck.svg' | inline_asset_content }}</span>
+    </div>
+    <p class="kg-free-shipping__threshold">{{ shipping_threshold | money_with_currency }}</p>
+  </div>
+{%- endif -%}
+
+{% stylesheet %}
+  .kg-free-shipping {
+    margin-block: 0 2rem;
+    padding-block: 1.4rem 1.8rem;
+    border-bottom: 1px solid rgba(var(--color-foreground), 0.2);
+    color: rgb(var(--color-foreground));
+  }
+  .kg-free-shipping__message {
+    margin: 0 0 1.8rem;
+    text-align: center;
+    font: 500 1.3rem/1.5 var(--font-body-family);
+    letter-spacing: 0;
+  }
+  .kg-free-shipping__track {
+    position: relative;
+    padding-inline-end: 1.2rem;
+  }
+  .kg-free-shipping__progress {
+    display: block;
+    width: 100%;
+    height: 0.6rem;
+    border: 0;
+    border-radius: 999px;
+    overflow: hidden;
+    appearance: none;
+    background: rgba(var(--color-foreground), 0.2);
+    accent-color: currentColor;
+  }
+  .kg-free-shipping__progress::-webkit-progress-bar {
+    background: rgba(var(--color-foreground), 0.2);
+    border-radius: 999px;
+  }
+  .kg-free-shipping__progress::-webkit-progress-value {
+    background: currentColor;
+    border-radius: 999px;
+  }
+  .kg-free-shipping__progress::-moz-progress-bar {
+    background: currentColor;
+    border-radius: 999px;
+  }
+  .kg-free-shipping__icon {
+    position: absolute;
+    inset-inline-end: 0;
+    top: 50%;
+    display: grid;
+    place-items: center;
+    width: 2.4rem;
+    height: 2.4rem;
+    border: 1px solid rgba(var(--color-foreground), 0.3);
+    border-radius: 50%;
+    background: rgb(var(--color-background));
+    transform: translateY(-50%);
+  }
+  .kg-free-shipping__icon svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: currentColor;
+  }
+  .kg-free-shipping__threshold {
+    margin: 1rem 0 0;
+    text-align: end;
+    font: 400 1.1rem/1.4 var(--font-body-family);
+    opacity: 0.7;
+  }
+{% endstylesheet %}
