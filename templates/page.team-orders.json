@@ -46,47 +46,66 @@
         "phone": "724-263-4031"
       }
     },
-    "1755362176b48e53f3": {
-      "type": "apps",
+    "from_field": {
+      "type": "kg-c448db8b",
+      "settings": {
+        "t1": "From the field",
+        "t2": ""
+      },
       "blocks": {
-        "moast_carousel_bTjDwt": {
-          "type": "shopify://apps/moast/blocks/carousel/1ac7547b-5443-446c-868c-7fab4566ee16",
+        "drew": {
+          "type": "c1a",
           "settings": {
-            "dynamic": false,
-            "feed": "8a8a02d7-0b61-4430-bcda-036ce17aea36",
-            "feed_usage": "back_up",
-            "header": "",
-            "slide_type": "cards",
-            "product_cards": "none",
-            "autoplay_mode": "all",
-            "autoscroll_duration": 7,
-            "slide_size": "250",
-            "aspect_ratio": "vertical",
-            "border": 2,
-            "border_color": "linear-gradient(90deg, rgba(131, 58, 180, 1), rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%)",
-            "slide_rounding": "6",
-            "slide_spacing": 12,
-            "padding_top": 20,
-            "pagination": "overlay",
-            "alignment": "center",
-            "click_action": "fullscreen",
-            "float_location": "bottom_right",
-            "float_size": "medium",
-            "show_captions": false,
-            "custom_css": ""
+            "v1": "shopify://files/videos/copy_565D2F3F-7EA2-47A1-BA13-E654B4A6995A.mov",
+            "u2": "https://shop.kittedgear.com/cdn/shop/videos/c/vp/2fc1fcc117074d88932e6ed219bd86a2/2fc1fcc117074d88932e6ed219bd86a2.HD-1080p-7.2Mbps-64400765.mp4",
+            "t4": "kg-poster-ugc-7.webp",
+            "t5": "Tap for sound",
+            "t6": "“It’s just popping out of my hand. Before it didn’t feel like that.”",
+            "t7": "Drew Cross · D1 Commit"
+          }
+        },
+        "cody": {
+          "type": "c1a",
+          "settings": {
+            "v1": "shopify://files/videos/copy_3C3DF899-FBD7-4310-A09D-5C3643315F1C.MOV",
+            "u2": "https://shop.kittedgear.com/cdn/shop/videos/c/vp/833085947e8d471483e7cd68f101d3d9/833085947e8d471483e7cd68f101d3d9.HD-1080p-4.8Mbps-80246359.mp4",
+            "t4": "kg-poster-ugc-3.webp",
+            "t5": "Tap for sound",
+            "t6": "“This just naturally helped me get that grip every time.”",
+            "t7": "Cody Freeman, Big Leaguer"
+          }
+        },
+        "jackson": {
+          "type": "c1a",
+          "settings": {
+            "v1": "shopify://files/videos/v12044gd0000d4o7pjfog65s9nne6090.MP4",
+            "u2": "https://shop.kittedgear.com/cdn/shop/videos/c/vp/75c7ae78fd904357a94a282cbf88f01b/75c7ae78fd904357a94a282cbf88f01b.HD-720p-1.6Mbps-80246712.mp4",
+            "t4": "kg-poster-ugc-8.webp",
+            "t5": "Tap for sound",
+            "t6": "“It’s like jumping out of my hand. It’s like a slingshot!”",
+            "t7": "Jackson Jones · D1 Player"
+          }
+        },
+        "coach": {
+          "type": "c1b",
+          "settings": {
+            "t2": "kg-poster-ugc-21.webp",
+            "t3": "“It’s forcing your brain to really focus on what your hand is doing.”",
+            "t4": "D1 Pitching Coach · Kansas State",
+            "kg_video_url": "https://kittedgear.com/videos/ugc-21.mp4"
           }
         }
       },
       "block_order": [
-        "moast_carousel_bTjDwt"
-      ],
-      "settings": {
-        "include_margins": true
-      }
+        "drew",
+        "cody",
+        "jackson",
+        "coach"
+      ]
     }
   },
   "order": [
     "main",
-    "1755362176b48e53f3"
+    "from_field"
   ]
 }
