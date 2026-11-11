@@ -34,9 +34,26 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    {%- comment -%} Safety net until each product is assigned its template in Shopify admin: load the right layout, then keep the address bar clean. {%- endcomment -%}
-    {%- if template.name == 'product' and request.design_mode != true -%}
-      {%- capture kg_view -%}{%- render 'kg-product-view', p: product -%}{%- endcapture -%}
+    {%- comment -%} Safety net until each product (and the Baseball/Football pages) is assigned its template in Shopify admin: load the right layout, then keep the address bar clean. {%- endcomment -%}
+    {%- assign kg_view_check = false -%}
+    {%- if template.name == 'product' or template.name == 'page' -%}{%- assign kg_view_check = true -%}{%- endif -%}
+    {%- if request.design_mode == true -%}{%- assign kg_view_check = false -%}{%- endif -%}
+    {%- if kg_view_check -%}
+      {%- liquid
+        if template.name == 'product'
+          capture kg_view
+            render 'kg-product-view', p: product
+          endcapture
+        else
+          assign kg_view = ''
+          case page.handle
+            when 'baseball'
+              assign kg_view = 'baseball'
+            when 'football'
+              assign kg_view = 'football'
+          endcase
+        endif
+      -%}
       {%- if template.suffix == blank and kg_view != blank -%}
         <script>
           (function () {

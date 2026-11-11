@@ -27,11 +27,11 @@ Product links are plain `/products/<handle>`. Until a product is assigned its te
 1. **Collections** (Products → Collections):
    - Create **SpinGrip Football**, manual, URL handle `football`, products: SpinGrip Football + SpinGrip Football's D-1 Throwing Formula. Online Store channel on.
    - Add **SpinGrip Softball's D-1 Throwing Formula** to the existing **SpinGrip Softball** collection (`spingrip-softball`).
-2. **Pages** (Online Store → Pages):
-   - Create **Baseball**, handle `baseball`, template `page.baseball`.
-   - Create **Football**, handle `football`, template `page.football`.
-   - Open the existing softball page, change its URL handle from `spingrip-softball-is-here` to `softball` and keep "Create a URL redirect" ticked. Template stays `page.softball-page`.
-3. **Product templates** (each product → Theme template):
+2. **Pages** (Online Store → Pages). Template dropdowns only list the *published* theme's templates, so before launch:
+   - Create **Baseball** (handle `baseball`) and **Football** (handle `football`) with the **Default page** template. This theme shows their landing designs anyway (it loads `?view=baseball` / `?view=football` and hides it from the address bar).
+   - After this theme is published, switch them to the `baseball` and `football` templates.
+   - Done: the softball page handle is now `softball` (template `page.softball-page`, redirect from the old handle created).
+3. **Product templates** (each product → Theme template). Only possible after this theme is published; until then the theme falls back to the right layout on its own:
 
 | Product | Template |
 |---|---|
@@ -43,7 +43,7 @@ Product links are plain `/products/<handle>`. Until a product is assigned its te
 | Softball D-1 Throwing Formula | `formula-softball` |
 | Football D-1 Throwing Formula | `formula-football` |
 
-4. **URL redirects for the domain swap** (Online Store → Navigation → URL Redirects). Shopify only uses these when the path does not exist, so they are safe to add before the swap:
+4. **URL redirects for the domain swap.** Already in place except three that still point at products: at the swap, edit `/baseball` → `/pages/baseball`, `/softball` → `/pages/softball`, `/football` → `/pages/football`. Full list (Online Store → Navigation → URL Redirects). Shopify only uses these when the path does not exist, so they are safe to add before the swap:
 
 | Redirect from | Redirect to |
 |---|---|
@@ -70,7 +70,7 @@ Product links are plain `/products/<handle>`. Until a product is assigned its te
 - **Product assignments and visual QA:** Store pages were inspected in Shopify admin. Product assignments, final GitHub sync, mobile/desktop preview, cart behavior and the restored baseball training clip still require confirmation in the connected store. The browser disconnected during review.
 - **Guarantee:** The existing `/pages/spingrip-1-2-3-guarantee` page is assigned `spingrip-1-2-3-guarantee`, which is absent from the original exported theme and this repo. Its page body is empty. Recover the approved content/template before linking or launching it; do not invent a policy.
 - **Kollective:** The draft uses a Shopify customer/newsletter form. SMS consent copy and a phone field do not establish an SMS integration. The promised 10% code also needs an existing verified delivery flow. Review the consent and integration before launch; no new flows, discounts or subscriptions have been configured.
-- **Pack discounts on collection pages:** The SpinGrip Bundle card and "Team up and save" banner copy live's "Save up to 20%" (2/5/10-pack). Both link to `/pages/team-orders` by default (editable in the collection grid section). Confirm the pack discounts exist in Shopify → Discounts before launch, or turn both off in the theme editor.
+- **Pack discounts on collection pages:** The SpinGrip Bundle card and "Team up and save" banner copy live's "Save up to 20%" (2/5/10-pack). Both link to `/pages/team-orders` by default (editable in the collection grid section). Shopify has no automatic 2/5/10-pack discounts: the 10/15/20% deals exist only as single-use codes ("Mix & Match 2-Pack (10%)", etc.) that an app creates one by one for the current kittedgear.com site. On this theme nothing applies them, so before launch either create automatic discounts (2/5/10 items → 10/15/20%) or turn the card and banner off in the theme editor.
 - **Pack builder:** The unlinked `page.packs` draft assumes automatic 10%/15%/20% discounts at 2/5/10 gloves. Those discounts have not been verified. Current navigation and promo links use the existing Bulk Orders inquiry page and preserve that workflow. Do not activate the builder or create discounts without approval.
 - **Returns/guarantee claims:** Several retained draft sections say “30-day guarantee”, while the existing Returns page describes a 14-day return window. Confirm the approved distinction/copy before launch.
 - **Media:** Sport heroes reuse the original clips currently served by `kittedgear.com`; editable video pickers can replace them with Shopify Files. Some testimonial tiles contain a still image rather than a playable video. Confirm missing clips in preview; do not substitute unrelated media.
