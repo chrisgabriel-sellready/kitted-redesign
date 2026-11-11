@@ -31,7 +31,10 @@
   document.querySelectorAll('[data-kg-switch]').forEach(function (r) {
     r.addEventListener('change', function () {
       var root = r.closest('section');
-      root.querySelectorAll('[data-panel]').forEach(function (pnl) { pnl.hidden = pnl.dataset.panel !== r.value; });
+      root.querySelectorAll('[data-panel]').forEach(function (pnl) {
+        pnl.hidden = pnl.dataset.panel !== r.value;
+        if (pnl.hidden) pnl.querySelectorAll('video').forEach(function (video) { video.pause(); });
+      });
     });
   });
 </script>
