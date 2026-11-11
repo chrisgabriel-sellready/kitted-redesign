@@ -1,8 +1,8 @@
-<div class="kg">
+<div class="kg{% if template.name == 'product' %} kg-live-faq{% endif %}">
 <section class="section">
 <div class="wrap">
 <h2 class="h-section" style="margin-bottom:clamp(20px,3vw,32px)">{{ section.settings.t1 }}</h2>
-<div class="faq-panel"><div class="faq-list">{%- for block in section.blocks -%}{%- case block.type -%}{%- when "c1a" -%}<details {{ block.shopify_attributes }} class="acc"><summary>{{ block.settings.t1 }}<span aria-hidden="true" class="pm"></span></summary><div class="acc__body"><p>{{ block.settings.t2 }}</p></div></details>{%- endcase -%}{%- endfor -%}</div></div>
+<div class="faq-panel"><div class="faq-list">{%- for block in section.blocks -%}{%- case block.type -%}{%- when "c1a" -%}<details {{ block.shopify_attributes }} class="acc"><summary>{{ block.settings.t1 }}{% if template.name == 'product' %}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>{% else %}<span aria-hidden="true" class="pm"></span>{% endif %}</summary><div class="acc__body"><p>{{ block.settings.t2 }}</p></div></details>{%- endcase -%}{%- endfor -%}</div></div>
 </div>
 </section>
 </div>

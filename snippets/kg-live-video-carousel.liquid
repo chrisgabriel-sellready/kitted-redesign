@@ -1,0 +1,46 @@
+{% doc %}
+  Live product-page athlete carousel using the section's existing clips and captions.
+  @param {object[]} blocks - Existing video card blocks.
+  @param {string} title - Section heading.
+  @param {string} text - Supporting copy.
+{% enddoc %}
+{%- assign title_lines = title | split: '. ' -%}
+<div class="kg kg-live-videos" data-kg-live-videos data-mute-label="{{ 'kg.live.mute_videos' | t }}" data-unmute-label="{{ 'kg.live.unmute_videos' | t }}">
+  <section class="kg-live-videos__wrap">
+    <h2>{% for line in title_lines %}{% unless forloop.first %}<br>{% endunless %}{{ line | escape }}{% unless forloop.last %}.{% endunless %}{% endfor %}</h2>
+    <div class="kg-live-videos__viewport" tabindex="0" aria-label="{{ title | escape }}">
+      <div class="kg-live-videos__track">
+        {%- for repeat in (1..2) -%}<div class="kg-live-videos__set"{% if repeat == 2 %} aria-hidden="true" inert{% endif %}>
+          {%- for block in blocks -%}
+            {%- liquid
+              assign video = block.settings.kg_video
+              assign url = block.settings.kg_video_url
+              assign poster = block.settings.t2
+              assign cover_image = block.settings.i1
+              assign quote = block.settings.t3
+              assign who = block.settings.t4
+              if block.type == 'c1b'
+                assign video = block.settings.v1
+                assign url = block.settings.u2
+                assign poster = block.settings.t4
+                assign cover_image = block.settings.i3
+                assign quote = block.settings.t6
+                assign who = block.settings.t7
+              endif
+            -%}
+            <figure class="kg-live-videos__card"{% if repeat == 1 %} {{ block.shopify_attributes }}{% endif %}>
+              {%- capture cover -%}{% if cover_image != blank %}{{ cover_image | image_url: width: 600 }}{% else %}{{ poster | asset_url }}{% endif %}{%- endcapture -%}
+              {%- if video != blank -%}
+                {{ video | video_tag: muted: true, loop: true, playsinline: true, preload: 'none', controls: false, poster: cover }}
+              {%- elsif url != blank -%}<video src="{{ url | escape }}" poster="{{ cover }}" muted loop playsinline preload="none"></video>
+              {%- else -%}<img src="{{ cover }}" width="360" height="640" alt="" loading="lazy">{%- endif -%}
+              <button class="kg-live-videos__sound" type="button" aria-label="{{ 'kg.live.unmute_videos' | t }}" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path data-kg-muted d="m17 9 6 6m0-6-6 6"/><path data-kg-audible style="display:none" d="M15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14"/></svg></button>
+              <figcaption><div class="kg-live-videos__stars" aria-hidden="true">★★★★★</div><p>{{ quote | escape }}</p><span>— {{ who | escape }}</span></figcaption>
+            </figure>
+          {%- endfor -%}
+        </div>{%- endfor -%}
+      </div>
+    </div>
+    {%- if text != blank -%}<p class="kg-live-videos__text">{{ text | escape }}</p>{%- endif -%}
+  </section>
+</div>

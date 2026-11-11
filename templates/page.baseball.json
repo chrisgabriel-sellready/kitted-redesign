@@ -357,53 +357,49 @@
    ]
   },
   "kg_07": {
-   "type": "kg-product",
+   "type": "kg-live-pdp",
    "settings": {
-    "show_crumbs": false,
-    "title_tag": "h2",
-    "anchor": "buy",
-    "kicker": "SpinGrip Baseball",
-    "heading": "Start throwing like the pros",
-    "as_section": true,
     "product": "spingrip",
-    "banner": "Guaranteed to increase velo, spin and accuracy",
-    "eyebrow": "",
-    "rating_text": "4.8 · 199 reviews",
-    "value_tag": "",
-    "lede": "",
-    "seal": "red",
-    "digital": false,
-    "show_used_by": true,
+    "landing_offer": true,
+    "anchor": "buy",
+    "banner": "🔥 START THROWING LIKE THE PROS 🔥",
+    "seal": "none",
+    "offer_text": "The first-ever patent-pending throwing glove that improves every metric.",
+    "show_used_by": false,
     "show_trust": true,
-    "show_pack_callout": false
+    "show_pack": false
    },
    "blocks": {
     "result_0": {
      "type": "result",
      "settings": {
-      "label": "MPH velocity",
-      "value": "Up to +7"
+      "text": "Up to +7 MPH velocity"
      }
     },
     "result_1": {
      "type": "result",
      "settings": {
-      "label": "RPM spin rate",
-      "value": "+350"
+      "text": "+350 RPM spin rate"
      }
     },
     "result_2": {
      "type": "result",
      "settings": {
-      "label": "Accuracy increase",
-      "value": "30%"
+      "text": "30% accuracy increase"
+     }
+    },
+    "result_3": {
+     "type": "result",
+     "settings": {
+      "text": "Patent-pending design"
      }
     }
    },
    "block_order": [
     "result_0",
     "result_1",
-    "result_2"
+    "result_2",
+    "result_3"
    ]
   },
   "kg_08": {

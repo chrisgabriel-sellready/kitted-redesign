@@ -571,6 +571,14 @@
       "total": "Total quantity",
       "details": "Anything else? Sizes, colors, timeline…",
       "submit": "Submit"
+    },
+    "live": {
+      "unmute_videos": "Unmute videos",
+      "mute_videos": "Mute videos"
+    },
+    "hero": {
+      "play_video": "Play video",
+      "pause_video": "Pause video"
     }
   }
 }

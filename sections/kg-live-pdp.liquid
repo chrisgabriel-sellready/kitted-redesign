@@ -23,8 +23,8 @@
     assign atc_template = section.settings.atc_label | append: ' — [price] USD'
   endif
 -%}
-<div class="kg lpdp-wrap">
-<section class="lpdp" data-kg-product>
+<div class="kg lpdp-wrap{% if section.settings.landing_offer %} lpdp-wrap--offer{% endif %}">
+<section class="lpdp" data-kg-product{% if section.settings.anchor != blank %} id="{{ section.settings.anchor | escape }}"{% endif %}>
   {%- if p == blank -%}
     <p class="muted" style="padding:40px 16px">Choose a product for this section in the theme editor.</p>
   {%- else -%}
@@ -35,15 +35,21 @@
       {%- if section.settings.back_url != blank -%}
         <a class="lpdp__back" href="{{ section.settings.back_url }}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>{{ section.settings.back_label }}</a>
       {%- endif -%}
+      {%- unless section.settings.landing_offer -%}
       <div class="lpdp__head">
         <h1 class="lpdp__title">{{ p.title | split: ' (' | first }}</h1>
         <span class="lpdp__price" data-price>{{ v.price | money_without_currency | prepend: '$' }} USD</span>
       </div>
+      {%- endunless -%}
       <div class="lpdp__grid">
         <div class="lpdp__media">
           <div class="lpdp__gallery" data-gallery>
             <div class="lpdp__stage">
-              {%- if section.settings.seal != 'none' -%}<img class="lpdp__seal" src="{{ 'kg-patent-seal-' | append: section.settings.seal | append: '.webp' | asset_url }}" alt="Patent Pending" width="56" height="56">{%- endif -%}
+              {%- if section.settings.seal != 'none' and section.settings.landing_offer == false -%}<img class="lpdp__seal" src="{{ 'kg-patent-seal-' | append: section.settings.seal | append: '.webp' | asset_url }}" alt="Patent Pending" width="56" height="56">{%- endif -%}
+              {%- if section.settings.landing_offer -%}
+                {%- assign offer_images = 'https://kittedgear.com/assets/product-grip-side-DWWA9Dq3.webp|https://kittedgear.com/assets/product-baseball-2-BHQik3k4.webp|https://kittedgear.com/assets/product-baseball-3-COQYaFOF.webp' | split: '|' -%}
+                {%- for image in offer_images -%}<div class="lpdp__slide" data-gallery-media="offer-{{ forloop.index }}"{% unless forloop.first %} hidden{% endunless %}><img src="{{ image }}" alt="{{ p.title | escape }}" width="960" height="960" loading="lazy"></div>{%- endfor -%}
+              {%- else -%}
               {%- for m in p.media -%}
                 <div class="lpdp__slide" data-gallery-media="{{ m.id }}"{% unless m.id == first_media.id %} hidden{% endunless %}>
                   {%- case m.media_type -%}
@@ -62,28 +68,34 @@
                   {%- endcase -%}
                 </div>
               {%- endfor -%}
+              {%- endif -%}
               {%- if p.media.size > 1 -%}
                 <button type="button" class="lpdp__arrow lpdp__arrow--prev" data-g="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg><span class="visually-hidden">Previous slide</span></button>
                 <button type="button" class="lpdp__arrow lpdp__arrow--next" data-g="1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg><span class="visually-hidden">Next slide</span></button>
               {%- endif -%}
             </div>
             {%- if p.media.size > 1 -%}
-              <div class="gallery__thumbs lpdp__thumbs">
+              <div class="gallery__thumbs lpdp__thumbs"{% if section.settings.landing_offer %} hidden{% endif %}>
+                {%- if section.settings.landing_offer -%}
+                  {%- for image in offer_images -%}<button type="button" data-media-id="offer-{{ forloop.index }}" aria-current="{% if forloop.first %}true{% else %}false{% endif %}">{{ forloop.index }}</button>{%- endfor -%}
+                {%- else -%}
                 {%- for m in p.media -%}
                   <button type="button" data-media-id="{{ m.id }}" aria-label="{{ 'kg.storefront.show_media' | t: index: forloop.index }}" aria-current="{% if m.id == first_media.id %}true{% else %}false{% endif %}">{{ m.preview_image | image_url: width: 200 | image_tag: loading: 'lazy', alt: '' }}</button>
                 {%- endfor -%}
+                {%- endif -%}
               </div>
             {%- endif -%}
           </div>
         </div>
 
         <div class="lpdp__offer">
+          {%- if section.settings.landing_offer -%}<div class="lpdp__head"><h2 class="lpdp__title">{{ p.title | escape }}</h2><p class="lpdp__lede">{{ section.settings.offer_text | escape }}</p></div><p class="lpdp__price" data-price>{{ v.price | money_without_currency | prepend: '$' }} USD</p>{%- endif -%}
           {%- form 'product', p, id: form_id, novalidate: 'novalidate', data-kg-buy: '', data-kg-digital: digital, data-kg-atc: atc_template, class: 'lpdp__form' -%}
             <input type="hidden" name="id" value="{{ v.id }}">
             {%- if digital -%}
               {%- if section.settings.value_tag != blank -%}<p class="lpdp__value">{{ section.settings.value_tag }}</p>{%- endif -%}
               {%- if section.settings.lede != blank -%}<p class="lpdp__lede">{{ section.settings.lede }}</p>{%- endif -%}
-            {%- else -%}
+            {%- elsif section.settings.landing_offer == false -%}
               <div class="lpdp__rating" data-kg-rating{% if rating_count == 0 %} hidden{% endif %}>
                 <span class="lpdp__stars" aria-hidden="true">{%- for i in (1..5) -%}<svg viewBox="0 0 24 24"><path d="M11.5 2.3a.53.53 0 0 1 .95 0l2.31 4.68a2.12 2.12 0 0 0 1.6 1.16l5.16.76a.53.53 0 0 1 .3.9l-3.74 3.64a2.12 2.12 0 0 0-.61 1.87l.88 5.14a.53.53 0 0 1-.77.56l-4.62-2.43a2.12 2.12 0 0 0-1.97 0L6.4 21.01a.53.53 0 0 1-.77-.56l.88-5.14a2.12 2.12 0 0 0-.61-1.87L2.17 9.8a.53.53 0 0 1 .3-.9l5.16-.76a2.12 2.12 0 0 0 1.6-1.16z"/></svg>{%- endfor -%}</span>
                 <span class="lpdp__rating-text"><b data-kg-avg>{{ rating }}</b> · <span data-kg-count>{{ rating_count }}</span> reviews</span>
@@ -93,7 +105,7 @@
             {%- assign results = section.blocks | where: 'type', 'result' -%}
             {%- if results.size > 0 -%}
               <div class="lpdp__results">
-                <h3>{{ section.settings.results_heading }}</h3>
+                {% unless section.settings.landing_offer %}<h3>{{ section.settings.results_heading }}</h3>{% endunless %}
                 {%- for b in results -%}<div class="lpdp__check" {{ b.shopify_attributes }}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>{{ b.settings.text }}</span></div>{%- endfor -%}
               </div>
             {%- endif -%}
@@ -222,6 +234,9 @@
  "tag": "div",
  "class": "kg-section",
  "settings": [
+  { "type": "checkbox", "id": "landing_offer", "label": "Landing-page offer layout", "default": false },
+  { "type": "text", "id": "anchor", "label": "Section anchor" },
+  { "type": "textarea", "id": "offer_text", "label": "Offer introduction" },
   { "type": "product", "id": "product", "label": "Product", "info": "Leave empty on product pages to use the page's product." },
   { "type": "text", "id": "banner", "label": "Banner", "default": "Guaranteed to Increase Velo, Spin and Accuracy" },
   { "type": "url", "id": "back_url", "label": "Back link" },

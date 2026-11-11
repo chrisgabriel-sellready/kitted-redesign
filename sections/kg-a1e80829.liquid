@@ -1,3 +1,6 @@
+{% if template.name == 'product' %}
+{% render 'kg-live-video-carousel', blocks: section.blocks, title: section.settings.t1, text: section.settings.t2 %}
+{% else %}
 <div class="kg">
 <section class="section">
 <div class="wrap">
@@ -10,6 +13,7 @@
 </section>
 </div>
 
+{% endif %}
 {% schema %}
 {
  "name": "KITTED: Real players. 3",
