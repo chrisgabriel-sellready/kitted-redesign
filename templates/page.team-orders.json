@@ -61,7 +61,7 @@
             "t4": "kg-poster-ugc-7.webp",
             "t5": "Tap for sound",
             "t6": "“It’s just popping out of my hand. Before it didn’t feel like that.”",
-            "t7": "Drew Cross · D1 Commit"
+            "t7": "Drew Cross · Alabama"
           }
         },
         "cody": {
@@ -83,7 +83,7 @@
             "t4": "kg-poster-ugc-8.webp",
             "t5": "Tap for sound",
             "t6": "“It’s like jumping out of my hand. It’s like a slingshot!”",
-            "t7": "Jackson Jones · D1 Player"
+            "t7": "Jackson Jones · Louisiana Tech"
           }
         },
         "coach": {
@@ -91,12 +91,22 @@
           "settings": {
             "t2": "kg-poster-ugc-21.webp",
             "t3": "“It’s forcing your brain to really focus on what your hand is doing.”",
-            "t4": "D1 Pitching Coach · Kansas State",
+            "t4": "Pitching Coach · Kansas State",
             "kg_video_url": "https://kittedgear.com/videos/ugc-21.mp4"
+          }
+        },
+        "donte": {
+          "type": "c1b",
+          "settings": {
+            "t2": "kg-poster-ugc-15.webp",
+            "t3": "",
+            "t4": "Donte Lewis · Kansas State",
+            "kg_video_url": "https://kittedgear.com/videos/ugc-15.mp4"
           }
         }
       },
       "block_order": [
+        "donte",
         "drew",
         "cody",
         "jackson",
