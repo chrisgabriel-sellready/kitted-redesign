@@ -217,7 +217,7 @@
       var label;
       if (c.missing.length) label = "Select " + c.missing[0];
       else if (!v || !v.available) label = "Sold out";
-      else if (f.dataset.kgAtc) label = f.dataset.kgAtc.replace("{price}", money(v.price * qty));
+      else if (f.dataset.kgAtc) label = f.dataset.kgAtc.replace("[price]", money(v.price * qty));
       else label = (digital ? "Get instant access — " : "Add to cart — ") + money(v.price * qty);
       btn.textContent = label; btn.disabled = !c.missing.length && (!v || !v.available);
       var sb = $("#sticky-btn"); if (sb) sb.textContent = label;

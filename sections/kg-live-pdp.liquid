@@ -18,9 +18,9 @@
   assign rating_count = p.metafields.reviews.rating_count.value | default: 0
   assign price_str = v.price | money_without_currency | prepend: '$'
   if digital
-    assign atc_template = section.settings.digital_label | append: ' — {price} USD'
+    assign atc_template = section.settings.digital_label | append: ' — [price] USD'
   else
-    assign atc_template = section.settings.atc_label | append: ' — {price} USD'
+    assign atc_template = section.settings.atc_label | append: ' — [price] USD'
   endif
 -%}
 <div class="kg lpdp-wrap">
@@ -141,7 +141,7 @@
               {%- endfor -%}
             {%- endunless -%}
 
-            <button class="lpdp__atc" type="submit">{{ atc_template | replace: '{price}', price_str }}</button>
+            <button class="lpdp__atc" type="submit">{{ atc_template | replace: '[price]', price_str }}</button>
             <p class="buy__msg lpdp__msg" role="status" aria-live="polite"></p>
           {%- endform -%}
 
