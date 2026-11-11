@@ -276,8 +276,21 @@
     "cart": {
       "free_shipping_remaining_html": "Spend <strong>{{ amount }}</strong> more for <strong>FREE US SHIPPING</strong>",
       "free_shipping_unlocked": "You've unlocked FREE US SHIPPING",
-      "free_shipping_label": "Free US shipping progress","checkout_label":"Checkout","subtotal":"Subtotal","view_cart":"View cart page","order_summary":"Order summary","empty_hint":"Add SpinGrip to get started.","recommendations":"Add these to your order","secure":"Secure","fast_shipping":"Fast Shipping","easy_returns":"Easy Returns","add":"Add","choose_variant":"Choose size and hand","close":"Close","add_to_order":"Add to order","shipping_taxes":"Shipping & taxes calculated at checkout",
-
+      "free_shipping_label": "Free US shipping progress",
+      "checkout_label": "Checkout",
+      "subtotal": "Subtotal",
+      "view_cart": "View cart page",
+      "order_summary": "Order summary",
+      "empty_hint": "Add SpinGrip to get started.",
+      "recommendations": "Add these to your order",
+      "secure": "Secure",
+      "fast_shipping": "Fast Shipping",
+      "easy_returns": "Easy Returns",
+      "add": "Add",
+      "choose_variant": "Choose size and hand",
+      "close": "Close",
+      "add_to_order": "Add to order",
+      "shipping_taxes": "Shipping & taxes calculated at checkout",
       "title": "Ostoskorisi",
       "caption": "Ostoskorin tuotteet",
       "remove_title": "Poista {{ title }}",
@@ -527,6 +540,37 @@
       "send_on_label": "Lähetä (valinnainen)",
       "expanded": "Lahjakortin saajalomake laajennettuna",
       "collapsed": "Lahjakortin saajalomake pienennettynä"
+    }
+  },
+  "kg": {
+    "storefront": {
+      "show_media": "Show media {{ index }}",
+      "sizing": "Sizing guide",
+      "softball_fit": "Designed for girls’ and women’s hands.",
+      "size": "Size",
+      "age": "Age",
+      "palm": "Palm length",
+      "measure": "Palm length: measure from the middle of the crease where your palm meets your wrist up to the base of your middle finger.",
+      "size_tip": "We recommend sizing by age first, then palm length. SpinGrip is a fingerless glove and does stretch, and age has worked well for sizing.",
+      "team_orders": "Team Orders",
+      "play": "Play video",
+      "pause": "Pause video",
+      "sound": "Toggle sound",
+      "sound_hint": "Tap for sound"
+    },
+    "team": {
+      "discounts": "Bulk discounts",
+      "quantity": "Quantity",
+      "discount": "Discount",
+      "contact": "Contact",
+      "quote": "Request a team quote",
+      "coach": "Coach name",
+      "school": "Team / school",
+      "mobile": "Mobile phone",
+      "products": "Products you’re looking for",
+      "total": "Total quantity",
+      "details": "Anything else? Sizes, colors, timeline…",
+      "submit": "Submit"
     }
   }
 }

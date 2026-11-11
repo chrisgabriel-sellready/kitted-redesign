@@ -32,6 +32,6 @@
       <span class="price">{{ v.price | money_without_trailing_zeros }}{% if v.compare_at_price > v.price %}<s>{{ v.compare_at_price | money_without_trailing_zeros }}</s>{% endif %}</span>
       {%- if digital -%}<span class="eyebrow muted">Digital</span>{%- else -%}<span class="swatches"><span class="swatch" style="background:var(--cw-{{ cw }})" title="{{ cw | capitalize }} colourway"></span></span>{%- endif -%}
     </div>
-    {%- unless digital -%}<span class="rating">{% render 'kg-stars' %} 4.8</span>{%- endunless -%}
+    {%- render 'kg-review-badge', p: p -%}
   </div>
 </article>

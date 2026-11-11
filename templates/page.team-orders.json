@@ -9,208 +9,45 @@
  */
 {
   "sections": {
-    "rich_text_b3VhC3": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_dzN3zL": {
-          "type": "heading",
-          "settings": {
-            "heading": "Bulk Orders",
-            "heading_size": "h1"
-          }
-        },
-        "text_nppCYn": {
-          "type": "text",
-          "settings": {
-            "text": "<p>SpinGrip is the first-ever throwing glove proven to enhance velocity, spin, and accuracy.</p><p>NFHS approved uses:</p><p><strong>Pitchers: For Practice, Bullpens, Long-Toss, Flat Ground, Etc.</strong></p><p><strong>Position Players: For In-Game Use & All Training</strong></p><p>Just put the SpinGrip on and get to work.</p>"
-          }
-        },
-        "button_HCQEwt": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_dzN3zL",
-        "text_nppCYn",
-        "button_HCQEwt"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
-      }
-    },
-    "1755362176b48e53f3": {
-      "type": "apps",
-      "blocks": {
-        "moast_carousel_bTjDwt": {
-          "type": "shopify://apps/moast/blocks/carousel/1ac7547b-5443-446c-868c-7fab4566ee16",
-          "settings": {
-            "dynamic": false,
-            "feed": "8a8a02d7-0b61-4430-bcda-036ce17aea36",
-            "feed_usage": "back_up",
-            "header": "",
-            "slide_type": "cards",
-            "product_cards": "none",
-            "autoplay_mode": "all",
-            "autoscroll_duration": 7,
-            "slide_size": "250",
-            "aspect_ratio": "vertical",
-            "border": 2,
-            "border_color": "linear-gradient(90deg, rgba(131, 58, 180, 1), rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%)",
-            "slide_rounding": "6",
-            "slide_spacing": 12,
-            "padding_top": 20,
-            "pagination": "overlay",
-            "alignment": "center",
-            "click_action": "fullscreen",
-            "float_location": "bottom_right",
-            "float_size": "medium",
-            "show_captions": false,
-            "custom_css": ""
-          }
-        }
-      },
-      "block_order": [
-        "moast_carousel_bTjDwt"
-      ],
-      "settings": {
-        "include_margins": true
-      }
-    },
-    "rich_text_tbFWmM": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_TkfQfL": {
-          "type": "heading",
-          "disabled": true,
-          "settings": {
-            "heading": "Team Orders",
-            "heading_size": "h1"
-          }
-        },
-        "text_QDTMqK": {
-          "type": "text",
-          "settings": {
-            "text": "<p>For any and all bulk order inquiries, please text, call, or email us at:</p><p><a href=\"tel:7242634031\">724-263-4031</a><br><a href=\"mailto:grouporders@kittedgear.com\">grouporders@kittedgear.com</a></p><p><strong>*Tiered Bulk Discounts*</strong><br>10-30 gloves: 20% off<br>31-50 gloves: 30% off<br>51-74+ gloves: 35% off</p><p><strong>*Retail Discount*</strong><br>40% off at 75+ gloves</p>"
-          }
-        },
-        "button_gcGgqp": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_TkfQfL",
-        "text_QDTMqK",
-        "button_gcGgqp"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-20949acd-2f0a-4bf7-9681-1c3d7282fa5f",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
-    "contact_form_cqDhAY": {
-      "type": "contact-form",
-      "disabled": true,
-      "name": "t:sections.contact-form.presets.name",
-      "settings": {
-        "heading": "",
-        "heading_size": "h2",
-        "color_scheme": "scheme-20949acd-2f0a-4bf7-9681-1c3d7282fa5f",
-        "padding_top": 0,
-        "padding_bottom": 36
-      }
-    },
     "main": {
-      "type": "main-page",
-      "disabled": true,
+      "type": "kg-team-orders",
+      "blocks": {
+        "tier_1": {
+          "type": "tier",
+          "settings": {
+            "quantity": "10–50 per SKU",
+            "discount": "20% off"
+          }
+        },
+        "tier_2": {
+          "type": "tier",
+          "settings": {
+            "quantity": "51–74 per SKU",
+            "discount": "25% off"
+          }
+        },
+        "tier_3": {
+          "type": "tier",
+          "settings": {
+            "quantity": "75+ per SKU",
+            "discount": "30% off"
+          }
+        }
+      },
+      "block_order": [
+        "tier_1",
+        "tier_2",
+        "tier_3"
+      ],
       "settings": {
-        "padding_top": 20,
-        "padding_bottom": 0
-      }
-    },
-    "video_BEDUXR": {
-      "type": "video",
-      "disabled": true,
-      "name": "t:sections.video.presets.name",
-      "settings": {
-        "heading": "Watch Before Training With SpinGrip",
-        "heading_size": "h1",
-        "enable_video_looping": false,
-        "video": "shopify://files/videos/End side table design (2 x 3 in) (1).mp4",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "scheme-4",
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
-    },
-    "custom_liquid_aJWYAh": {
-      "type": "custom-liquid",
-      "disabled": true,
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<div class=\"klaviyo-form-XJ23NK\"></div>",
-        "color_scheme": "scheme-1",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
-    "featured_blog_TFHjFC": {
-      "type": "featured-blog",
-      "name": "t:sections.featured-blog.presets.name",
-      "settings": {
-        "heading": "Click the photo below to read the data report on how SpinGrip enhances every major throwing metric.",
-        "heading_size": "h2",
-        "blog": "data-research-spingrip-improves-every-major-throwing-metric",
-        "post_limit": 2,
-        "columns_desktop": 3,
-        "color_scheme": "",
-        "show_image": true,
-        "show_date": true,
-        "show_author": false,
-        "show_view_all": true,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "heading": "Team Orders",
+        "text": "Outfit your whole roster. Tell us what you need and we'll build your quote.",
+        "email": "grouporders@kittedgear.com",
+        "phone": "724-263-4031"
       }
     }
   },
   "order": [
-    "rich_text_b3VhC3",
-    "1755362176b48e53f3",
-    "rich_text_tbFWmM",
-    "contact_form_cqDhAY",
-    "main",
-    "video_BEDUXR",
-    "custom_liquid_aJWYAh",
-    "featured_blog_TFHjFC"
+    "main"
   ]
 }

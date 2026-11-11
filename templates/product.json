@@ -631,97 +631,11 @@
    ]
   },
   "kg_13": {
-   "type": "kg-d22ba674",
+   "type": "kg-product-reviews",
    "settings": {
-    "t1": "4.8+ from real players",
-    "t2": "4.8",
-    "t3": "Thousands of player experiences, youth to MLB",
-    "t4": "All athletes experience immediate proper grip results. Most see metric gains within 1 week of use."
-   },
-   "blocks": {
-    "c1a_1": {
-     "type": "c1a",
-     "settings": {
-      "t1": "Baseball Mom",
-      "t2": "“My son went from the #4 pitcher to #1 after training with SpinGrip for a month. Worth every penny.”",
-      "t3": "Jennifer L."
-     }
-    },
-    "c1a_2": {
-     "type": "c1a",
-     "settings": {
-      "t1": "D2 Pitching Coach",
-      "t2": "“I recommend SpinGrip to every pitcher I work with. The grip consistency it builds is unmatched.”",
-      "t3": "Coach Williams"
-     }
-    },
-    "c1a_3": {
-     "type": "c1a",
-     "settings": {
-      "t1": "14U Player",
-      "t2": "“My fastball went from 58 to 63 mph. I’m throwing harder than kids two years older than me.”",
-      "t3": "Ryan K."
-     }
-    },
-    "c1a_4": {
-     "type": "c1a",
-     "settings": {
-      "t1": "Private Instructor",
-      "t2": "“SpinGrip is the most impactful training tool I’ve used in 20 years of coaching. Period.”",
-      "t3": "David M."
-     }
-    },
-    "c1b_5": {
-     "type": "c1b",
-     "settings": {
-      "t1": "Mar 25, 2026",
-      "t2": "My 9 year old loves it",
-      "t3": "My 9 year old loves it. Haven’t even had it a week and while he was already a solid pitcher in his leagues, I can clearly see added velocity just from using this during throwing.",
-      "t4": "Christopher G.",
-      "t5": "Verified buyer"
-     }
-    },
-    "c1b_6": {
-     "type": "c1b",
-     "settings": {
-      "t1": "Mar 21, 2026",
-      "t2": "Great learning tool",
-      "t3": "Got this for my team. Worked great getting them to understand how to hold the ball. It’s a great tool for kinesthetic learners.",
-      "t4": "Coach N.",
-      "t5": "Verified buyer"
-     }
-    },
-    "c1b_7": {
-     "type": "c1b",
-     "settings": {
-      "t1": "Mar 20, 2026",
-      "t2": "Teaches naturally",
-      "t3": "Teaches naturally without having to think about it and becomes muscle memory after a few uses. Great product!",
-      "t4": "Jeremiah F.",
-      "t5": "Verified buyer"
-     }
-    },
-    "c1b_8": {
-     "type": "c1b",
-     "settings": {
-      "t1": "Mar 19, 2026",
-      "t2": "Amazing product!",
-      "t3": "It works beautifully. I wore it for about 3 innings in the outfield and catching the ball felt so amazing coming off my hand!",
-      "t4": "Gionni H.",
-      "t5": "Verified buyer"
-     }
-    }
-   },
-   "block_order": [
-    "c1a_1",
-    "c1a_2",
-    "c1a_3",
-    "c1a_4",
-    "c1b_5",
-    "c1b_6",
-    "c1b_7",
-    "c1b_8"
-   ]
+    "heading": "Customer reviews",
+    "stone": false
+   }
   },
   "kg_14": {
    "type": "kg-14a5dab0",

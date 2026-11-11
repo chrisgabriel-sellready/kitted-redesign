@@ -161,11 +161,19 @@
 
     /* ---------- product: gallery, variant picker, add to cart ---------- */
   $$("[data-gallery]").forEach(function (g) {
-    var main = $(".gallery__main img", g), thumbs = $$(".gallery__thumbs button", g), i = 0;
+    var panels = $$("[data-gallery-media]", g), thumbs = $$(".gallery__thumbs button", g), i = Math.max(0, thumbs.findIndex(function (t) { return t.getAttribute("aria-current") === "true"; }));
     function show(n) {
       if (!thumbs.length) return;
       i = (n + thumbs.length) % thumbs.length;
-      var b = thumbs[i]; main.src = b.dataset.src; main.srcset = ""; main.alt = b.dataset.alt || "";
+      var b = thumbs[i];
+      panels.forEach(function (panel) {
+        var selected = panel.dataset.galleryMedia === b.dataset.mediaId;
+        if (!selected) {
+          $$("video", panel).forEach(function (v) { v.pause(); });
+          $$("iframe", panel).forEach(function (frame) { if (!panel.hidden) frame.src = frame.src; });
+        }
+        panel.hidden = !selected;
+      });
       thumbs.forEach(function (t, j) { t.setAttribute("aria-current", j === i ? "true" : "false"); });
       b.scrollIntoView({ block: "nearest", inline: "nearest", behavior: reduce ? "auto" : "smooth" });
     }

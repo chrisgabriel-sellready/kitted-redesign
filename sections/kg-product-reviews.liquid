@@ -1,0 +1,8 @@
+{%- assign review_product = section.settings.product | default: product -%}
+<div class="kg"><section class="section{% if section.settings.stone %} band--stone{% endif %}" id="reviews" style="scroll-margin-top:calc(var(--header-h) + 12px)"><div class="wrap">
+  <div class="section-head"><h2 class="h-section">{{ section.settings.heading | escape }}</h2></div>
+  {%- render 'kg-reviews', p: review_product -%}
+</div></section></div>
+{% schema %}
+{"name":"KITTED product reviews","tag":"div","class":"kg-section","settings":[{"type":"text","id":"heading","label":"Heading","default":"Customer reviews"},{"type":"product","id":"product","label":"Product","info":"Leave empty on product pages to use that product's reviews."},{"type":"checkbox","id":"stone","label":"Stone background","default":false}],"presets":[{"name":"KITTED product reviews"}]}
+{% endschema %}

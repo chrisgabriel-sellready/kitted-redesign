@@ -857,6 +857,14 @@
     "kg_21": {
       "type": "kg-kollective",
       "settings": {}
+    },
+    "kg_reviews": {
+      "type": "kg-product-reviews",
+      "settings": {
+        "heading": "Customer reviews",
+        "stone": false,
+        "product": "spingrip-softball"
+      }
     }
   },
   "order": [
@@ -879,6 +887,7 @@
     "kg_16",
     "kg_17",
     "kg_18",
+    "kg_reviews",
     "kg_19",
     "kg_20",
     "kg_21"

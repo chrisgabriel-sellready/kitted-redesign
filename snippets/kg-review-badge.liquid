@@ -1,0 +1,7 @@
+{% doc %}
+  Render the existing Judge.me badge for a product, with no copied rating fallback.
+  @param {product} p - Product whose reviews are shown.
+{% enddoc %}
+{%- if p.metafields.judgeme.badge != blank -%}
+  <div class="rating jdgm-widget jdgm-preview-badge" data-id="{{ p.id }}">{{ p.metafields.judgeme.badge }}</div>
+{%- endif -%}

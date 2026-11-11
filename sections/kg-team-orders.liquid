@@ -1,0 +1,33 @@
+<div class="kg"><section class="section"><div class="wrap">
+  <div class="page-head"><h1 class="page-title">{{ section.settings.heading | escape }}</h1><p class="lede muted">{{ section.settings.text | escape }}</p></div>
+  <div class="contact">
+    <aside class="stack" style="gap:24px">
+      <div class="bulk"><h2 class="h-card">{{ 'kg.team.discounts' | t }}</h2><table class="kg-team-tiers"><thead><tr><th scope="col">{{ 'kg.team.quantity' | t }}</th><th scope="col">{{ 'kg.team.discount' | t }}</th></tr></thead><tbody>
+        {%- for block in section.blocks -%}<tr {{ block.shopify_attributes }}><td>{{ block.settings.quantity | escape }}</td><td>{{ block.settings.discount | escape }}</td></tr>{%- endfor -%}
+      </tbody></table></div>
+      <div class="stack" style="gap:8px"><p class="eyebrow">{{ 'kg.team.contact' | t }}</p><a href="mailto:{{ section.settings.email | escape }}">{{ section.settings.email | escape }}</a><a href="tel:{{ section.settings.phone | remove: '-' | escape }}">{{ section.settings.phone | escape }}</a></div>
+    </aside>
+    <div><h2 class="h-card" style="margin-bottom:24px">{{ 'kg.team.quote' | t }}</h2>
+      {%- assign form_id = 'kg-team-' | append: section.id -%}
+      {%- form 'contact', id: form_id, class: 'form-grid' -%}
+        <input type="hidden" name="contact[Inquiry type]" value="Team order quote">
+        {%- if form.posted_successfully? -%}<p class="form-msg full is-ok" role="status">{{ 'templates.contact.form.post_success' | t }}</p>{%- endif -%}
+        {%- if form.errors -%}<div class="form-msg full is-warn" role="alert">{{ form.errors | default_errors }}</div>{%- endif -%}
+        <div class="kg-field"><label for="{{ form_id }}-name">{{ 'kg.team.coach' | t }}</label><input id="{{ form_id }}-name" name="contact[name]" autocomplete="name" required value="{{ form.name | escape }}"></div>
+        <div class="kg-field"><label for="{{ form_id }}-school">{{ 'kg.team.school' | t }}</label><input id="{{ form_id }}-school" name="contact[Team or school]" autocomplete="organization" required></div>
+        <div class="kg-field"><label for="{{ form_id }}-email">{{ 'templates.contact.form.email' | t }}</label><input id="{{ form_id }}-email" name="contact[email]" type="email" autocomplete="email" required value="{{ form.email | escape }}"></div>
+        <div class="kg-field"><label for="{{ form_id }}-phone">{{ 'kg.team.mobile' | t }}</label><input id="{{ form_id }}-phone" name="contact[phone]" type="tel" autocomplete="tel" value="{{ form.phone | escape }}"></div>
+        <fieldset class="full kg-team-products"><legend>{{ 'kg.team.products' | t }}</legend>
+          {%- assign labels = 'SpinGrip Baseball|SpinGrip Softball|SpinGrip Softball for Pitchers|SpinGrip Football|Throwing Formula courses' | split: '|' -%}
+          {%- for label in labels -%}<label><input type="checkbox" name="contact[{{ label | escape }}]" value="Yes"> <span>{{ label | escape }}</span></label>{%- endfor -%}
+        </fieldset>
+        <div class="kg-field full"><label for="{{ form_id }}-quantity">{{ 'kg.team.total' | t }}</label><input id="{{ form_id }}-quantity" name="contact[Total quantity]" type="number" min="1" step="1" required></div>
+        <div class="kg-field full"><label for="{{ form_id }}-message">{{ 'kg.team.details' | t }}</label><textarea id="{{ form_id }}-message" name="contact[body]">{{ form.body | escape }}</textarea></div>
+        <div class="full"><button class="btn btn--lg" type="submit">{{ 'kg.team.submit' | t }}</button></div>
+      {%- endform -%}
+    </div>
+  </div>
+</div></section></div>
+{% schema %}
+{"name":"KITTED team orders","tag":"div","class":"kg-section","settings":[{"type":"text","id":"heading","label":"Heading","default":"Team Orders"},{"type":"textarea","id":"text","label":"Intro","default":"Outfit your whole roster. Tell us what you need and we'll build your quote."},{"type":"text","id":"email","label":"Contact email","default":"grouporders@kittedgear.com"},{"type":"text","id":"phone","label":"Contact phone","default":"724-263-4031"}],"blocks":[{"type":"tier","name":"Bulk discount tier","settings":[{"type":"text","id":"quantity","label":"Quantity"},{"type":"text","id":"discount","label":"Discount"}]}],"presets":[{"name":"KITTED team orders"}]}
+{% endschema %}

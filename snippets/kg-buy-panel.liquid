@@ -14,19 +14,38 @@
 <div class="pdp" data-kg-product data-panel="{{ key }}"{% if hidden %} hidden{% endif %}>
   <div class="gallery" data-gallery>
     <div class="gallery__main">
-      {%- if p.featured_media -%}
-        {{ p.featured_media | image_url: width: 1400 | image_tag: loading: 'eager', sizes: '(min-width: 990px) 55vw, 100vw', widths: '600, 900, 1200, 1400', alt: p.featured_media.alt | default: p.title }}
-      {%- endif -%}
+      {%- assign first_media = p.featured_media | default: p.media.first -%}
+      {%- for m in p.media -%}
+        <div class="gallery__item" data-gallery-media="{{ m.id }}"{% unless m.id == first_media.id %} hidden{% endunless %}>
+          {%- case m.media_type -%}
+            {%- when 'image' -%}
+              {%- if m.id == first_media.id -%}
+                {{ m | image_url: width: 1400 | image_tag: loading: 'eager', fetchpriority: 'high', sizes: '(min-width: 990px) 55vw, 100vw', widths: '600, 900, 1200, 1400', alt: m.alt | default: p.title }}
+              {%- else -%}
+                {{ m | image_url: width: 1400 | image_tag: loading: 'lazy', sizes: '(min-width: 990px) 55vw, 100vw', widths: '600, 900, 1200, 1400', alt: m.alt | default: p.title }}
+              {%- endif -%}
+            {%- when 'video' -%}
+              {{ m | video_tag: controls: true, preload: 'none', image_size: '900x', playsinline: true }}
+            {%- when 'external_video' -%}
+              {{ m | external_video_tag: loading: 'lazy', class: 'gallery__external' }}
+            {%- when 'model' -%}
+              {{ m | model_viewer_tag: reveal: 'interaction', toggleable: true }}
+          {%- endcase -%}
+        </div>
+      {%- endfor -%}
       {%- if s.seal != 'none' -%}<img class="gallery__seal" src="{{ s.seal | append: '.webp' | prepend: 'kg-patent-seal-' | asset_url }}" alt="Patent pending, filed for U.S. and international patents" width="104" height="102">{%- endif -%}
       {%- if p.media.size > 1 -%}
-      <div class="gallery__arrows"><button type="button" data-g="-1" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button><button type="button" data-g="1" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button></div>
+      <div class="gallery__arrows"><button type="button" data-g="-1" aria-label="{{ 'general.slider.previous_slide' | t }}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button><button type="button" data-g="1" aria-label="{{ 'general.slider.next_slide' | t }}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button></div>
       {%- endif -%}
     </div>
     {%- if p.media.size > 1 -%}
     <div class="gallery__thumbs">
-      {%- for m in p.media -%}{%- if m.media_type == 'image' -%}
-        <button type="button" data-media-id="{{ m.id }}" data-src="{{ m | image_url: width: 1400 }}" data-alt="{{ m.alt | default: p.title | escape }}" aria-label="Show image {{ forloop.index }}" aria-current="{% if forloop.first %}true{% else %}false{% endif %}">{{ m | image_url: width: 240 | image_tag: loading: 'lazy', alt: '' }}</button>
-      {%- endif -%}{%- endfor -%}
+      {%- for m in p.media -%}
+        <button type="button" data-media-id="{{ m.id }}" aria-label="{{ 'kg.storefront.show_media' | t: index: forloop.index }}" aria-current="{% if m.id == first_media.id %}true{% else %}false{% endif %}">
+          {{ m.preview_image | image_url: width: 240 | image_tag: loading: 'lazy', alt: '' }}
+          {%- if m.media_type == 'video' or m.media_type == 'external_video' -%}<span class="gallery__video-icon" aria-hidden="true">▶</span>{%- endif -%}
+        </button>
+      {%- endfor -%}
     </div>
     {%- endif -%}
   </div>
@@ -38,7 +57,7 @@
     <div class="stack" style="gap:10px">
       {%- if s.eyebrow != blank -%}<p class="eyebrow muted">{{ s.eyebrow }}</p>{%- endif -%}
       {%- if s.title_tag == 'h1' -%}<h1 class="buy__title">{{ p.title }}</h1>{%- else -%}<h2 class="buy__title">{{ p.title }}</h2>{%- endif -%}
-      {%- if s.rating_text != blank -%}<a class="rating" href="#reviews">{% render 'kg-stars' %} {{ s.rating_text }}</a>{%- endif -%}
+      {%- render 'kg-review-badge', p: p -%}
     </div>
     <div class="buy__price"><span data-price>{{ v.price | money_without_currency | prepend: '$' }} USD</span>
       {%- if v.compare_at_price > v.price -%}<s>{{ v.compare_at_price | money_without_trailing_zeros }}</s>{%- endif -%}
@@ -70,6 +89,8 @@
         </div></fieldset>
       {%- endfor -%}
     {%- endunless -%}
+
+    {%- unless digital -%}{%- render 'kg-sizing-guide', p: p -%}{%- endunless -%}
 
     {%- if digital -%}
       <button class="btn btn--lg btn--block" type="submit">Get instant access</button>

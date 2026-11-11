@@ -1,0 +1,22 @@
+{% doc %}
+  Show the live sport-specific SpinGrip sizing and measuring instructions.
+  @param {product} p - Physical SpinGrip product.
+{% enddoc %}
+{%- liquid
+  assign rows = 'Youth|Ages 6–9|3.0"–3.75";S/M|Ages 10–14|3.75"–4.5";L/XL|Ages 15+|4.5"–5.25"'
+  if p.handle contains 'softball-pitcher'
+    assign rows = 'S/M|Ages 8–14|3.25"–4.25";L/XL|Ages 15+|4.25"–4.9"'
+  elsif p.handle contains 'softball'
+    assign rows = 'Youth|Ages 6–9|2.75"–3.5";S/M|Ages 10–14|3.5"–4.25";L/XL|Ages 15+|4.25"–4.9"'
+  endif
+  assign rows = rows | split: ';'
+-%}
+{%- if p.handle == 'spingrip' or p.handle == 'spin-grip-football' or p.handle == 'spingrip-softball' or p.handle == 'spingrip-softball-pitcher' -%}
+<details class="acc kg-sizing"><summary>{{ 'kg.storefront.sizing' | t }}<span class="pm" aria-hidden="true"></span></summary><div class="acc__body">
+  <p>{{ p.title | escape }}{% if p.handle contains 'softball' %} — {{ 'kg.storefront.softball_fit' | t }}{% endif %}</p>
+  <table><thead><tr><th scope="col">{{ 'kg.storefront.size' | t }}</th><th scope="col">{{ 'kg.storefront.age' | t }}</th><th scope="col">{{ 'kg.storefront.palm' | t }}</th></tr></thead><tbody>
+  {%- for row in rows -%}{%- assign cells = row | split: '|' -%}<tr>{%- for cell in cells -%}<td>{{ cell }}</td>{%- endfor -%}</tr>{%- endfor -%}
+  </tbody></table>
+  <p>{{ 'kg.storefront.measure' | t }}</p><p>{{ 'kg.storefront.size_tip' | t }}</p>
+</div></details>
+{%- endif -%}
