@@ -178,8 +178,14 @@
 .kg .hero__dot.is-run::after{animation: hero-progress var(--hero-delay, 6500ms) linear forwards;}
 .kg .hero.is-paused .hero__dot[aria-current="true"]::after{animation: none; transform: scaleX(1);}
 @keyframes hero-progress{ to { transform: scaleX(1); } }
-.kg .hero__pause{width: 30px; height: 30px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.4); border-radius: 50%; margin-left: 6px;}
-.kg .hero__pause svg{width: 12px; height: 12px;}
+.kg .hero__pause{position: relative; width: 26px; height: 26px; flex: 0 0 26px; display: inline-flex; align-items: center; justify-content: center; padding: 0; border: 0; border-radius: 50%; margin-left: 8px; color: #fff; background: transparent; cursor: pointer;}
+.kg .hero__pause-backdrop{position: absolute; inset: 2px; border-radius: 50%; background: rgba(255,255,255,.2);}
+.kg .hero__pause .hero__pause-ring{position: absolute; inset: 0; width: 100%; height: 100%; transform: rotate(-90deg);}
+.kg .hero__pause .hero__pause-icon{position: relative; width: 13px; height: 13px;}
+.kg .hero__pause-progress.is-counting{animation: hero-ring-countdown var(--hero-delay, 7000ms) linear forwards;}
+.kg .hero.is-paused .hero__pause-progress{animation-play-state: paused;}
+.kg .hero__pause:focus-visible{outline: 2px solid #fff; outline-offset: 4px;}
+@keyframes hero-ring-countdown{from{stroke-dashoffset: 0;}to{stroke-dashoffset: 69.12;}}
 .kg .grid{display: grid; gap: clamp(12px, 1.6vw, 20px);}
 .kg .grid--5{grid-template-columns: repeat(5, minmax(0, 1fr));}
 .kg .grid--4{grid-template-columns: repeat(4, minmax(0, 1fr));}
