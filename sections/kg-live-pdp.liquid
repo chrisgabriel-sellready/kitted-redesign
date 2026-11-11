@@ -28,7 +28,7 @@
   {%- if p == blank -%}
     <p class="muted" style="padding:40px 16px">Choose a product for this section in the theme editor.</p>
   {%- else -%}
-  <script type="application/json" data-product-json>{{ p | json }}</script>
+  <script type="application/json" data-product-json>{"options":[{% for option in p.options_with_values %}{{ option.name | json }}{% unless forloop.last %},{% endunless %}{% endfor %}],"variants":[{% for variant in p.variants %}{"id":{{ variant.id }},"options":{{ variant.options | json }},"price":{{ variant.price }},"available":{{ variant.available | json }},"featured_media":{% if variant.featured_media %}{"id":{{ variant.featured_media.id }}}{% else %}null{% endif %}}{% unless forloop.last %},{% endunless %}{% endfor %}]}</script>
   <div class="lpdp__card">
     {%- if section.settings.banner != blank -%}<div class="lpdp__banner"><p>{{ section.settings.banner }}</p></div>{%- endif -%}
     <div class="lpdp__inner">

@@ -82,7 +82,7 @@
   });
   document.querySelectorAll('[data-kg-live-videos]').forEach(function (root) {
     var viewport = root.querySelector('.kg-live-videos__viewport'), group = root.querySelector('.kg-live-videos__set');
-    var videos = Array.from(root.querySelectorAll('video')), audible = false, visible = false, interacting = false, last = 0;
+    var videos = Array.from(root.querySelectorAll('video')), audible = false, visible = false, interacting = false, last = 0, position = 0;
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         var video = entry.target;
@@ -111,8 +111,11 @@
     viewport.addEventListener('focusin', function () { interacting = true; });
     viewport.addEventListener('focusout', function () { interacting = false; });
     function move(time) {
-      if (last && visible && !interacting && !document.hidden && !reduce) viewport.scrollLeft += Math.min(time - last, 40) * .035;
-      if (viewport.scrollLeft >= group.offsetWidth) viewport.scrollLeft -= group.offsetWidth;
+      if (last && visible && !interacting && !document.hidden && !reduce) {
+        position += Math.min(time - last, 40) * .035;
+        if (position >= group.offsetWidth) position -= group.offsetWidth;
+        viewport.scrollLeft = position;
+      } else { position = viewport.scrollLeft; }
       last = time; requestAnimationFrame(move);
     }
     requestAnimationFrame(move);

@@ -1048,3 +1048,4 @@
  .kg.lpdp-wrap--offer .lpdp__inner{padding:25.5px;}
 }
 @media(max-width:639px){.kg-live-videos__card{width:calc((100vw - 34px)*.45);}.kg-live-videos figcaption{padding:51px 12px 12px;}.kg-live-videos figcaption p{font-size:13px;}.kg-live-videos figcaption span{font-size:11px;}}
+.kg.lpdp-wrap--offer .lpdp__card{margin-inline:auto;}
