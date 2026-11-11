@@ -58,7 +58,7 @@
           "type": "link",
           "settings": {
             "label": "Baseball",
-            "url": "/products/spingrip",
+            "url": "/pages/baseball",
             "mobile_note": "Shop"
           }
         },
@@ -66,7 +66,7 @@
           "type": "link",
           "settings": {
             "label": "Softball",
-            "url": "/pages/spingrip-softball-is-here",
+            "url": "/pages/softball",
             "mobile_note": "Shop"
           }
         },
@@ -74,7 +74,7 @@
           "type": "link",
           "settings": {
             "label": "Football",
-            "url": "/products/spin-grip-football?view=football",
+            "url": "/pages/football",
             "mobile_note": "Shop"
           }
         },

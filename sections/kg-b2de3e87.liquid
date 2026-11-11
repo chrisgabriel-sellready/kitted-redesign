@@ -4,7 +4,7 @@
 <p class="eyebrow" style="color:var(--gold)">{{ section.settings.t1 }}</p>
 <h1 class="display shero__title">{{ section.settings.h2 }}</h1>
 <p class="shero__sub">{{ section.settings.t3 }}</p>
-<div class="btn-row"><a class="btn btn--light" href="#buy">{{ section.settings.t4 }}<svg aria-hidden="true" class="arrow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a class="btn btn--ghost-light" href="#how">{{ section.settings.t5 }}</a></div>
+<div class="btn-row"><a class="btn btn--light" href="{{ section.settings.kg_shop_url | default: '#buy' }}">{{ section.settings.t4 }}<svg aria-hidden="true" class="arrow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a class="btn btn--ghost-light" href="#how">{{ section.settings.t5 }}</a></div>
 </div>
 <div class="shero__media">
 {% assign kg_football_wide = section.settings.desktop_url | default: 'https://kittedgear.com/__l5e/assets-v1/1c55e06f-188b-40ff-aab3-ef9e1fdbf3d8/football-hero-fast-desktop.mp4' %}
@@ -103,6 +103,12 @@
    "type": "url",
    "id": "mobile_url",
    "label": "Mobile video URL"
+  },
+  {
+   "type": "url",
+   "id": "kg_shop_url",
+   "label": "Shop button link",
+   "info": "Leave empty to scroll to the buy box on this page."
   }
  ],
  "presets": [

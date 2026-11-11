@@ -5,7 +5,9 @@
 <div class="kg">
 <section class="{% if section.settings.as_section %}section{% endif %}"{% if section.settings.anchor != blank %} id="{{ section.settings.anchor }}" style="scroll-margin-top:calc(var(--header-h, 80px) + 8px)"{% endif %}>
   <div class="wrap">
-    {%- if section.settings.show_crumbs -%}
+    {%- if section.settings.show_crumbs and section.settings.back_url != blank -%}
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ section.settings.back_url }}"><span aria-hidden="true">‹</span> {{ section.settings.back_label | default: section.settings.eyebrow | default: 'Back' }}</a></nav>
+    {%- elsif section.settings.show_crumbs -%}
       <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ routes.root_url }}">Home</a><span aria-hidden="true">/</span>{% if collection %}<a href="{{ collection.url }}">{{ collection.title }}</a><span aria-hidden="true">/</span>{% endif %}<span>{{ p.title }}</span></nav>
     {%- endif -%}
     {%- if section.settings.heading != blank -%}
@@ -83,6 +85,18 @@
    "default": true
   },
   {
+   "type": "url",
+   "id": "back_url",
+   "label": "Back link",
+   "info": "e.g. the sport landing page. Replaces the Home / product breadcrumb."
+  },
+  {
+   "type": "text",
+   "id": "back_label",
+   "label": "Back link text",
+   "info": "Defaults to the eyebrow, e.g. Baseball."
+  },
+  {
    "type": "checkbox",
    "id": "as_section",
    "label": "Section spacing",
@@ -136,7 +150,7 @@
    "type": "text",
    "id": "rating_text",
    "label": "Rating text",
-   "default": "4.8 \u00b7 199 reviews"
+   "default": "4.8 · 199 reviews"
   },
   {
    "type": "text",
@@ -164,7 +178,7 @@
    "type": "text",
    "id": "inside_heading",
    "label": "What's inside heading",
-   "default": "What\u2019s inside"
+   "default": "What’s inside"
   },
   {
    "type": "select",
@@ -275,7 +289,7 @@
      "type": "richtext",
      "id": "content",
      "label": "Content",
-     "default": "<p>Orders ship within 1\u20132 business days.</p>"
+     "default": "<p>Orders ship within 1–2 business days.</p>"
     }
    ]
   }

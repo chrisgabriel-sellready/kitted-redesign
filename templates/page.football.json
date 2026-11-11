@@ -22,7 +22,8 @@
     "t11": "kg-patent-seal-green.webp",
     "t12": "Patent pending",
     "desktop_url": "https://kittedgear.com/__l5e/assets-v1/1c55e06f-188b-40ff-aab3-ef9e1fdbf3d8/football-hero-fast-desktop.mp4",
-    "mobile_url": "https://kittedgear.com/__l5e/assets-v1/1c55e06f-188b-40ff-aab3-ef9e1fdbf3d8/football-hero-fast-desktop.mp4"
+    "mobile_url": "https://kittedgear.com/__l5e/assets-v1/1c55e06f-188b-40ff-aab3-ef9e1fdbf3d8/football-hero-fast-desktop.mp4",
+    "kg_shop_url": "/collections/football"
    }
   },
   "kg_01": {
@@ -42,7 +43,8 @@
     "t6": "“Now it just feels like a Nerf ball.”",
     "t7": "Peyton “Pop” Houston",
     "t8": "Shop SpinGrip",
-    "kg_video_url": "https://kittedgear.com/__l5e/assets-v1/1d76a2c5-86bf-4a68-9eb4-bbec54ab01bb/football-ugc-1.mp4"
+    "kg_video_url": "https://kittedgear.com/__l5e/assets-v1/1d76a2c5-86bf-4a68-9eb4-bbec54ab01bb/football-ugc-1.mp4",
+    "kg_shop_url": "/collections/football"
    }
   },
   "kg_03": {
@@ -259,7 +261,8 @@
     "t4": "Get set up with SpinGrip Football",
     "t5": "Slide it on, strap it high and tight, and throw. Here’s the full walkthrough.",
     "t6": "Shop SpinGrip",
-    "kg_video_url": "https://kittedgear.com/__l5e/assets-v1/a7918ef0-1630-4dc3-aaf8-745921930dd7/football-howto.mp4"
+    "kg_video_url": "https://kittedgear.com/__l5e/assets-v1/a7918ef0-1630-4dc3-aaf8-745921930dd7/football-howto.mp4",
+    "kg_shop_url": "/collections/football"
    }
   },
   "kg_09": {
@@ -326,7 +329,8 @@
     "h1": "<span class=\"dot\"></span>Limited stock available",
     "t2": "The pros do it. Now you can too.",
     "t3": "Every throw without SpinGrip is a missed opportunity. Join the quarterbacks throwing harder, spinning more, and hitting their spots with confidence.",
-    "t4": "Shop SpinGrip"
+    "t4": "Shop SpinGrip",
+    "kg_shop_url": "/collections/football"
    }
   },
   "kg_11": {

@@ -1,18 +1,2 @@
-{%- liquid
-  assign product_view = ''
-  case p.handle
-    when 'spingrip-softball'
-      assign product_view = 'softball'
-    when 'spingrip-softball-pitcher'
-      assign product_view = 'softball-pitcher'
-    when 'spin-grip-football'
-      assign product_view = 'football'
-    when 'spingrips-exclusive-throwing-blueprint'
-      assign product_view = 'formula-baseball'
-    when 'spingrip-softballs-d-1-throwing-formula-150-value-instant-digital-access'
-      assign product_view = 'formula-softball'
-    when 'spingrip-footballs-d-1-throwing-formula-150-value-instant-digital-access'
-      assign product_view = 'formula-football'
-  endcase
--%}
-{{- p.url -}}{%- if product_view != blank -%}?view={{ product_view }}{%- endif -%}
+{%- comment -%} Clean product URL. Template choice comes from each product's assigned template in Shopify admin. Params: p (product) {%- endcomment -%}
+{{- p.url -}}

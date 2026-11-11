@@ -13,7 +13,7 @@
 <h2 class="h-section">{{ section.settings.t7 }}</h2>
 <p class="lede">{{ section.settings.t8 }}</p>
 <blockquote style="margin:0;display:grid;gap:8px"><p class="vcard__quote" style="font-size:18px">{{ section.settings.t9 }}</p><p class="vcard__who">{{ section.settings.t10 }}</p></blockquote>
-<div class="btn-row"><a class="btn" href="#buy">{{ section.settings.t11 }}<svg aria-hidden="true" class="arrow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>
+<div class="btn-row"><a class="btn" href="{{ section.settings.kg_shop_url | default: '#buy' }}">{{ section.settings.t11 }}<svg aria-hidden="true" class="arrow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>
 </div>
 </div>
 </section>
@@ -80,6 +80,12 @@
    "type": "text",
    "id": "t11",
    "label": "Link text: Shop SpinGrip"
+  },
+  {
+   "type": "url",
+   "id": "kg_shop_url",
+   "label": "Shop button link",
+   "info": "Leave empty to scroll to the buy box on this page."
   }
  ],
  "presets": [

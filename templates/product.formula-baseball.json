@@ -28,7 +28,9 @@
     "show_used_by": false,
     "show_trust": false,
     "show_pack_callout": false,
-    "description_label": "About the program"
+    "description_label": "About the program",
+    "back_url": "/pages/baseball",
+    "back_label": "Baseball"
    },
    "blocks": {
     "inside_0": {

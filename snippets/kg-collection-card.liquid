@@ -1,0 +1,39 @@
+{%- comment -%} Large collection card, as on the live kittedgear.com collection pages. Params: p (product) {%- endcomment -%}
+{%- liquid
+  assign v = p.selected_or_first_available_variant
+  case p.handle
+    when 'spingrip'
+      assign fallback_blurb = 'Patent-pending throwing glove for more velocity, spin & accuracy.'
+    when 'spingrip-softball'
+      assign fallback_blurb = 'Designed for overhand throwing -- for infielders, outfielders, and catchers.'
+    when 'spingrip-softball-pitcher'
+      assign fallback_blurb = 'Designed for underhand pitching. Contains a thicker palm-spacer optimized for pitchers.'
+    when 'spin-grip-football'
+      assign fallback_blurb = 'Tighter spirals, more velocity, dialed-in accuracy.'
+    when 'spingrips-exclusive-throwing-blueprint'
+      assign fallback_blurb = 'The same throwing framework we use with elite arms — instant digital access.'
+    when 'spingrip-softballs-d-1-throwing-formula-150-value-instant-digital-access'
+      assign fallback_blurb = 'Train with 2-time National Champion Kaydee Bennett — instant digital access.'
+    when 'spingrip-footballs-d-1-throwing-formula-150-value-instant-digital-access'
+      assign fallback_blurb = 'The throwing framework we use with D-1 quarterbacks — instant digital access.'
+    else
+      assign fallback_blurb = p.description | strip_html | truncatewords: 16
+  endcase
+  assign blurb = p.metafields.custom.blurb | default: fallback_blurb
+  assign badge = p.metafields.custom.badge
+-%}
+{%- capture product_url -%}{%- render 'kg-product-url', p: p -%}{%- endcapture -%}
+<a class="lcard" href="{{ product_url }}">
+  <div class="lcard__media">
+    {%- if p.featured_media -%}{{ p.featured_media | image_url: width: 900 | image_tag: loading: 'lazy', widths: '460, 700, 900', sizes: '(min-width: 990px) 460px, 50vw', alt: p.title }}{%- endif -%}
+    {%- if badge != blank -%}<span class="lcard__tag">{{ badge }}</span>{%- endif -%}
+  </div>
+  <div class="lcard__body">
+    <h2 class="lcard__name">{{ p.title }}</h2>
+    {%- if blurb != blank -%}<p class="lcard__blurb">{{ blurb }}</p>{%- endif -%}
+    <div class="lcard__foot">
+      <span class="lcard__price">{{ v.price | money_without_currency | prepend: '$' }} USD{% if v.compare_at_price > v.price %} <s>{{ v.compare_at_price | money_without_trailing_zeros }}</s>{% endif %}</span>
+      <span class="lcard__cta">Shop now <span aria-hidden="true">→</span></span>
+    </div>
+  </div>
+</a>

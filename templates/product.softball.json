@@ -28,7 +28,8 @@
     "show_used_by": true,
     "show_trust": true,
     "show_pack_callout": true,
-    "description_label": "Description"
+    "description_label": "Description",
+    "back_url": "/pages/softball"
    },
    "blocks": {
     "result_0": {

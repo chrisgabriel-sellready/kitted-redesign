@@ -9,7 +9,7 @@
 <h2 class="award__title">{{ section.settings.i6 }}</h2>
 <p class="award__quote">{{ section.settings.t7 }}</p>
 <p class="award__by">{{ section.settings.t8 }}</p>
-<div class="award__btns"><button class="pill-btn pill-btn--dark" data-poster="{{ 'kg-chips-award-still.webp' | asset_url }}" data-vmodal="{{ section.settings.u9 }}" type="button"><svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24"><path d="M7 4l13 8-13 8z"></path></svg>{{ section.settings.t10 }}</button><a class="pill-btn" href="#buy">{{ section.settings.t11 }}</a></div>
+<div class="award__btns"><button class="pill-btn pill-btn--dark" data-poster="{{ 'kg-chips-award-still.webp' | asset_url }}" data-vmodal="{{ section.settings.u9 }}" type="button"><svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24"><path d="M7 4l13 8-13 8z"></path></svg>{{ section.settings.t10 }}</button><a class="pill-btn" href="{{ section.settings.kg_shop_url | default: '#buy' }}">{{ section.settings.t11 }}</a></div>
 </div>
 </div>
 </section>
@@ -76,6 +76,12 @@
    "type": "text",
    "id": "t11",
    "label": "Link text: Shop SpinGrip"
+  },
+  {
+   "type": "url",
+   "id": "kg_shop_url",
+   "label": "Shop button link",
+   "info": "Leave empty to scroll to the buy box on this page."
   }
  ],
  "presets": [

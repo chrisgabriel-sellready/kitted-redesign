@@ -18,21 +18,21 @@
     "t5": "Introducing the KITTED SpinGrip Baseball",
     "t6": "Own the Diamond",
     "t7": "Proven to increase velocity, spin rate, and accuracy.",
-    "u8": "/products/spingrip",
+    "u8": "/pages/baseball",
     "t9": "Shop Baseball",
     "t11": "kg-softball-hero-desktop.webp",
     "h12": "18U Team Mercado<br/>Texas Select",
     "t13": "Introducing the KITTED SpinGrip Softball",
     "t14": "The Time is Now",
     "t15": "Tighter spins, stronger throws.",
-    "u16": "/pages/spingrip-softball-is-here",
+    "u16": "/pages/softball",
     "t17": "Shop Softball",
     "t19": "kg-pop-hero-desktop.webp",
     "h20": "Peyton “Pop” Houston<br/>Elite 11 Champ",
     "t21": "Introducing the KITTED SpinGrip Football",
     "t22": "Calling All QB1s",
     "t23": "The first and only QB throwing glove built to enhance spirals, velocity and accuracy.",
-    "u24": "/products/spin-grip-football",
+    "u24": "/pages/football",
     "t25": "Shop Football"
    }
   },
@@ -222,7 +222,7 @@
     "c1a_1": {
      "type": "c1a",
      "settings": {
-      "u1": "/products/spingrip",
+      "u1": "/pages/baseball",
       "t3": "kg-baseball-card-home.webp",
       "t4": "Pitcher throwing with SpinGrip Baseball",
       "h5": "<span class=\"display tile__name\">Baseball</span><span class=\"tile__cta\">Shop now</span>"
@@ -231,7 +231,7 @@
     "c1a_2": {
      "type": "c1a",
      "settings": {
-      "u1": "/pages/spingrip-softball-is-here",
+      "u1": "/pages/softball",
       "t3": "kg-softball-card-home.webp",
       "t4": "Softball player throwing with SpinGrip Softball",
       "h5": "<span class=\"display tile__name\">Softball</span><span class=\"tile__cta\">Shop now</span>"
@@ -240,7 +240,7 @@
     "c1a_3": {
      "type": "c1a",
      "settings": {
-      "u1": "/products/spin-grip-football",
+      "u1": "/pages/football",
       "t3": "kg-football-card-home.webp",
       "t4": "Quarterback with SpinGrip Football",
       "h5": "<span class=\"display tile__name\">Football</span><span class=\"tile__cta\">Shop now</span>"

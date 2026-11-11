@@ -4,6 +4,8 @@
 {%- if theme.role == 'main' and request.design_mode != true -%}
 <script>
   (function() {
+    // After the domain swap this store IS kittedgear.com: never redirect to itself (that would reload forever).
+    if (window.location.hostname.replace(/^www\./, '') === 'kittedgear.com') return;
     var path = window.location.pathname;
 
     // Remove the locale prefix for route checks only.
@@ -32,15 +34,24 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    {%- if template.name == 'product' and template.suffix == blank and request.design_mode != true -%}
-      {%- capture kg_product_url -%}{%- render 'kg-product-url', p: product -%}{%- endcapture -%}
-      {%- if kg_product_url contains '?view=' -%}
+    {%- comment -%} Safety net until each product is assigned its template in Shopify admin: load the right layout, then keep the address bar clean. {%- endcomment -%}
+    {%- if template.name == 'product' and request.design_mode != true -%}
+      {%- capture kg_view -%}{%- render 'kg-product-view', p: product -%}{%- endcapture -%}
+      {%- if template.suffix == blank and kg_view != blank -%}
         <script>
           (function () {
-            var target = new URL({{ kg_product_url | json }}, window.location.origin);
-            var current = new URL(window.location.href);
-            current.searchParams.set('view', target.searchParams.get('view'));
-            window.location.replace(current.href);
+            var url = new URL(window.location.href);
+            url.searchParams.set('view', {{ kg_view | json }});
+            window.location.replace(url.href);
+          })();
+        </script>
+      {%- elsif template.suffix != blank -%}
+        <script>
+          (function () {
+            var url = new URL(window.location.href);
+            if (!url.searchParams.has('view')) return;
+            url.searchParams.delete('view');
+            history.replaceState(history.state, '', url.pathname + url.search + url.hash);
           })();
         </script>
       {%- endif -%}
