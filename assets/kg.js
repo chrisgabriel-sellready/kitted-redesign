@@ -83,9 +83,11 @@
   document.querySelectorAll('[data-kg-live-videos]').forEach(function (root) {
     var viewport = root.querySelector('.kg-live-videos__viewport'), group = root.querySelector('.kg-live-videos__set');
     var videos = Array.from(root.querySelectorAll('video')), audible = false, visible = false, interacting = false, last = 0, position = 0;
+    var visibleVideos = new Set();
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         var video = entry.target;
+        if (entry.isIntersecting) visibleVideos.add(video); else visibleVideos.delete(video);
         if (entry.isIntersecting && !document.hidden) video.play().catch(function () {}); else video.pause();
       });
     });
@@ -111,7 +113,7 @@
     viewport.addEventListener('focusin', function () { interacting = true; });
     viewport.addEventListener('focusout', function () { interacting = false; });
     function move(time) {
-      if (last && visible && !interacting && !document.hidden && !reduce) {
+      if (last && visible && !interacting && !document.hidden) {
         position += Math.min(time - last, 40) * .035;
         if (position >= group.offsetWidth) position -= group.offsetWidth;
         viewport.scrollLeft = position;
@@ -119,7 +121,10 @@
       last = time; requestAnimationFrame(move);
     }
     requestAnimationFrame(move);
-    document.addEventListener('visibilitychange', function () { if (document.hidden) videos.forEach(function (video) { video.pause(); }); });
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) videos.forEach(function (video) { video.pause(); });
+      else visibleVideos.forEach(function (video) { video.play().catch(function () {}); });
+    });
   });
 
   /* ---------- carousels ---------- */
