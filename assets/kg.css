@@ -799,3 +799,7 @@
 .kg .kg-team-products legend{font-size:14px;font-weight:600;margin-bottom:12px;}
 .kg .kg-team-products label{display:flex;align-items:center;gap:8px;font-size:14px;}
 .kg .kg-team-products input{accent-color:var(--ink);width:18px;height:18px;}
+.kg .jm-review-widget{--jm-review-widget-text-color:var(--ink)!important;--jm-review-widget-lighter-text-color:#666!important;--jm-review-widget-star-and-histogram-color:#f6ac2b!important;--jm-review-widget-button-color:var(--ink)!important;--jm-review-widget-button-text-color:#fff!important;--jm-widget-primary-color:var(--ink)!important;}
+.kg .jm-review-widget-minimal-header__title{display:none;}
+
+.kg .kg-team-page{padding-bottom:var(--section);}

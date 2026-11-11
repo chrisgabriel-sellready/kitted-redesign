@@ -95,12 +95,22 @@
       if (v.paused) {
         if (current && current !== card) stopVideo(current);
         v.muted = false; if (snd) snd.innerHTML = soundIcon(true);
-        var p = v.play(); if (p && p.catch) p.catch(function () { v.muted = true; v.play().catch(function () {}); if (snd) snd.innerHTML = soundIcon(false); });
+        var p = v.play(); if (p && p.catch) p.catch(function () { v.muted = true; v.play().catch(function () { stopVideo(card); }); if (snd) snd.innerHTML = soundIcon(false); });
         card.classList.add("is-playing"); current = card;
       } else { stopVideo(card); }
     }
     if (play) play.addEventListener("click", toggle);
     v.addEventListener("click", toggle);
+    function playbackState() {
+      card.classList.toggle("is-playing", !v.paused);
+      if (play) {
+        play.setAttribute("aria-pressed", v.paused ? "false" : "true");
+        if (play.dataset.playLabel) play.setAttribute("aria-label", v.paused ? play.dataset.playLabel : play.dataset.pauseLabel);
+      }
+    }
+    v.addEventListener("play", playbackState);
+    v.addEventListener("pause", playbackState);
+    v.addEventListener("error", function () { stopVideo(card); });
     v.addEventListener("ended", function () { card.classList.remove("is-playing"); });
     if (snd) snd.addEventListener("click", function (e) { e.stopPropagation(); v.muted = !v.muted; snd.innerHTML = soundIcon(!v.muted); });
   });

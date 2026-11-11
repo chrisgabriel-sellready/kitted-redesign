@@ -632,97 +632,11 @@
    ]
   },
   "kg_13": {
-   "type": "kg-d22ba674",
+   "type": "kg-product-reviews",
    "settings": {
-    "t1": "4.8+ from real players",
-    "t2": "4.8",
-    "t3": "Thousands of player experiences, youth to MLB",
-    "t4": "All athletes experience immediate proper grip results. Most see metric gains within 1 week of use."
-   },
-   "blocks": {
-    "c1a_1": {
-     "type": "c1a",
-     "settings": {
-      "t1": "Baseball Mom",
-      "t2": "“My son went from the #4 pitcher to #1 after training with SpinGrip for a month. Worth every penny.”",
-      "t3": "Jennifer L."
-     }
-    },
-    "c1a_2": {
-     "type": "c1a",
-     "settings": {
-      "t1": "D2 Pitching Coach",
-      "t2": "“I recommend SpinGrip to every pitcher I work with. The grip consistency it builds is unmatched.”",
-      "t3": "Coach Williams"
-     }
-    },
-    "c1a_3": {
-     "type": "c1a",
-     "settings": {
-      "t1": "14U Player",
-      "t2": "“My fastball went from 58 to 63 mph. I’m throwing harder than kids two years older than me.”",
-      "t3": "Ryan K."
-     }
-    },
-    "c1a_4": {
-     "type": "c1a",
-     "settings": {
-      "t1": "Private Instructor",
-      "t2": "“SpinGrip is the most impactful training tool I’ve used in 20 years of coaching. Period.”",
-      "t3": "David M."
-     }
-    },
-    "c1b_5": {
-     "type": "c1b",
-     "settings": {
-      "t1": "Mar 25, 2026",
-      "t2": "My 9 year old loves it",
-      "t3": "My 9 year old loves it. Haven’t even had it a week and while he was already a solid pitcher in his leagues, I can clearly see added velocity just from using this during throwing.",
-      "t4": "Christopher G.",
-      "t5": "Verified buyer"
-     }
-    },
-    "c1b_6": {
-     "type": "c1b",
-     "settings": {
-      "t1": "Mar 21, 2026",
-      "t2": "Great learning tool",
-      "t3": "Got this for my team. Worked great getting them to understand how to hold the ball. It’s a great tool for kinesthetic learners.",
-      "t4": "Coach N.",
-      "t5": "Verified buyer"
-     }
-    },
-    "c1b_7": {
-     "type": "c1b",
-     "settings": {
-      "t1": "Mar 20, 2026",
-      "t2": "Teaches naturally",
-      "t3": "Teaches naturally without having to think about it and becomes muscle memory after a few uses. Great product!",
-      "t4": "Jeremiah F.",
-      "t5": "Verified buyer"
-     }
-    },
-    "c1b_8": {
-     "type": "c1b",
-     "settings": {
-      "t1": "Mar 19, 2026",
-      "t2": "Amazing product!",
-      "t3": "It works beautifully. I wore it for about 3 innings in the outfield and catching the ball felt so amazing coming off my hand!",
-      "t4": "Gionni H.",
-      "t5": "Verified buyer"
-     }
-    }
-   },
-   "block_order": [
-    "c1a_1",
-    "c1a_2",
-    "c1a_3",
-    "c1a_4",
-    "c1b_5",
-    "c1b_6",
-    "c1b_7",
-    "c1b_8"
-   ]
+    "heading": "Customer reviews",
+    "product": "spingrip"
+   }
   },
   "kg_14": {
    "type": "kg-14a5dab0",
@@ -736,7 +650,8 @@
      "settings": {
       "t2": "kg-poster-ugc-2.webp",
       "t3": "“It’s a simple training tool that leaves a big impact.”",
-      "t4": "Chip"
+      "t4": "Chip",
+      "kg_video_url": "https://shop.kittedgear.com/cdn/shop/videos/c/vp/7820ebad85bb489c9556b7c642763d16/7820ebad85bb489c9556b7c642763d16.HD-1080p-2.5Mbps-78683271.mp4"
      }
     },
     "c1b_2": {
@@ -755,7 +670,8 @@
      "settings": {
       "t2": "kg-poster-ugc-4.webp",
       "t3": "“I highly approve and recommend the SpinGrip.”",
-      "t4": "Pro Pitching Instructor"
+      "t4": "Pro Pitching Instructor",
+      "kg_video_url": "https://kittedgear.com/videos/ugc-4.mp4"
      }
     },
     "c1a_4": {
@@ -763,7 +679,8 @@
      "settings": {
       "t2": "kg-poster-ugc-6.webp",
       "t3": "“It’s effortless power.”",
-      "t4": "Youth Ballplayers"
+      "t4": "Youth Ballplayers",
+      "kg_video_url": "https://kittedgear.com/videos/ugc-6.mp4"
      }
     },
     "c1a_5": {
@@ -771,7 +688,8 @@
      "settings": {
       "t2": "kg-poster-ugc-15.webp",
       "t3": "“It’s forcing me to use my fingertips.”",
-      "t4": "Donte Lewis, D1 Player"
+      "t4": "Donte Lewis, D1 Player",
+      "kg_video_url": "https://kittedgear.com/videos/ugc-15.mp4"
      }
     },
     "c1a_6": {
@@ -779,7 +697,8 @@
      "settings": {
       "t2": "kg-poster-ugc-16.webp",
       "t3": "“It puts the ball in the right position in my hand.”",
-      "t4": "Will Brennan, Big Leaguer"
+      "t4": "Will Brennan, Big Leaguer",
+      "kg_video_url": "https://kittedgear.com/videos/ugc-16.mp4"
      }
     },
     "c1a_7": {
@@ -787,7 +706,8 @@
      "settings": {
       "t2": "kg-poster-ugc-17.webp",
       "t3": "“There’s no tension. Everything is loose.”",
-      "t4": "Blake Rogers, Pro Player"
+      "t4": "Blake Rogers, Pro Player",
+      "kg_video_url": "https://kittedgear.com/videos/ugc-17.mp4"
      }
     },
     "c1a_8": {
@@ -795,7 +715,8 @@
      "settings": {
       "t2": "kg-poster-ugc-19.webp",
       "t3": "“I don’t feel like I’m choking the ball.”",
-      "t4": "Youth Player"
+      "t4": "Youth Player",
+      "kg_video_url": "https://kittedgear.com/videos/ugc-19.mp4"
      }
     }
    },
@@ -914,7 +835,8 @@
      "settings": {
       "t2": "kg-poster-ugc-10.webp",
       "t3": "“That ball is shooting out of my hand.”",
-      "t4": "Sam Walker · Former Ballplayer"
+      "t4": "Sam Walker · Former Ballplayer",
+      "kg_video_url": "https://kittedgear.com/videos/ugc-10.mp4"
      }
     },
     "c1b_4": {
@@ -922,7 +844,8 @@
      "settings": {
       "t2": "kg-poster-ugc-11.webp",
       "t3": "“The whole squad trains with SpinGrip. It’s become part of our routine.”",
-      "t4": "11u East Cobb Team · #4 Ranked Team In The Nation"
+      "t4": "11u East Cobb Team · #4 Ranked Team In The Nation",
+      "kg_video_url": "https://kittedgear.com/videos/ugc-11.mp4"
      }
     },
     "c1b_5": {
@@ -930,7 +853,8 @@
      "settings": {
       "t2": "kg-poster-ugc-12.webp",
       "t3": "“Optimal becomes automatic. SpinGrip makes the perfect grip second nature.”",
-      "t4": "Steele Walker · Pro Player"
+      "t4": "Steele Walker · Pro Player",
+      "kg_video_url": "https://kittedgear.com/videos/ugc-12.mp4"
      }
     },
     "c1b_6": {
@@ -938,7 +862,8 @@
      "settings": {
       "t2": "kg-poster-ugc-21.webp",
       "t3": "“It’s forcing your brain to really focus on what your hand is doing.”",
-      "t4": "D1 Pitching Coach · Kansas State"
+      "t4": "D1 Pitching Coach · Kansas State",
+      "kg_video_url": "https://kittedgear.com/videos/ugc-21.mp4"
      }
     },
     "c1a_7": {

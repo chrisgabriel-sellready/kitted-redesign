@@ -41,7 +41,8 @@
     "t5": "Elite 11 champ Peyton “Pop” Houston puts SpinGrip Football to work.",
     "t6": "“Now it just feels like a Nerf ball.”",
     "t7": "Peyton “Pop” Houston",
-    "t8": "Shop SpinGrip"
+    "t8": "Shop SpinGrip",
+    "kg_video_url": "https://kittedgear.com/__l5e/assets-v1/1d76a2c5-86bf-4a68-9eb4-bbec54ab01bb/football-ugc-1.mp4"
    }
   },
   "kg_03": {
@@ -211,7 +212,8 @@
      "settings": {
       "t2": "kg-poster-football-ugc-1.webp",
       "t3": "“The ball feels like a feather.”",
-      "t4": "Peyton “Pop” Houston, Elite 11 Champ"
+      "t4": "Peyton “Pop” Houston, Elite 11 Champ",
+      "kg_video_url": "https://kittedgear.com/__l5e/assets-v1/1d76a2c5-86bf-4a68-9eb4-bbec54ab01bb/football-ugc-1.mp4"
      }
     },
     "c1a_2": {
@@ -219,7 +221,8 @@
      "settings": {
       "t2": "kg-vposter-football-ugc-2.jpg",
       "t3": "“Warm-up routine with the SpinGrip.”",
-      "t4": "Quarterback"
+      "t4": "Quarterback",
+      "kg_video_url": "https://kittedgear.com/__l5e/assets-v1/4de16fd1-79ee-40ec-a08b-e1ee6c2d7fa0/football-ugc-2.mp4"
      }
     },
     "c1a_3": {
@@ -227,7 +230,8 @@
      "settings": {
       "t2": "kg-vposter-football-ugc-3.jpg",
       "t3": "“Before vs. after with the SpinGrip.”",
-      "t4": "Heston Horn"
+      "t4": "Heston Horn",
+      "kg_video_url": "https://kittedgear.com/__l5e/assets-v1/e1c2f4bf-65d4-441b-a972-b32ce38bac0d/football-ugc-3.mp4"
      }
     },
     "c1a_4": {
@@ -235,7 +239,8 @@
      "settings": {
       "t2": "kg-vposter-football-ugc-4.jpg",
       "t3": "“The training tool every QB needs.”",
-      "t4": "Trevor"
+      "t4": "Trevor",
+      "kg_video_url": "https://kittedgear.com/__l5e/assets-v1/8a16e18c-056b-46e9-ae26-5d66277d6efd/football-ugc-4.mp4"
      }
     }
    },
@@ -253,7 +258,8 @@
     "t3": "How to",
     "t4": "Get set up with SpinGrip Football",
     "t5": "Slide it on, strap it high and tight, and throw. Here’s the full walkthrough.",
-    "t6": "Shop SpinGrip"
+    "t6": "Shop SpinGrip",
+    "kg_video_url": "https://kittedgear.com/__l5e/assets-v1/a7918ef0-1630-4dc3-aaf8-745921930dd7/football-howto.mp4"
    }
   },
   "kg_09": {
@@ -338,6 +344,13 @@
   "kg_12": {
    "type": "kg-kollective",
    "settings": {}
+  },
+  "kg_reviews": {
+   "type": "kg-product-reviews",
+   "settings": {
+    "heading": "Customer reviews",
+    "product": "spin-grip-football"
+   }
   }
  },
  "order": [
@@ -351,6 +364,7 @@
   "kg_07",
   "kg_08",
   "kg_09",
+  "kg_reviews",
   "kg_10",
   "kg_11",
   "kg_12"

@@ -9,10 +9,8 @@
 <button aria-label="Toggle sound" class="vcard__sound" type="button"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4V5z"></path><path d="M23 9l-6 6M17 9l6 6"></path></svg>{{ block.settings.t5 }}</button>
 </div>
 <div class="vcard__cap"><p class="vcard__quote">{{ block.settings.t6 }}</p><p class="vcard__who">{{ block.settings.t7 }}</p></div>
-</figure>{%- when "c1b" -%}<figure {{ block.shopify_attributes }} class="vcard" style="margin:0">
-<div class="vcard__frame">
-{%- if block.settings.i1 != blank -%}{{ block.settings.i1 | image_url: width: 1800 | image_tag: alt: "", loading: "lazy", style: "position:absolute;inset:0;width:100%;height:100%;object-fit:cover" }}{%- else -%}<img src="{{ block.settings.t2 | asset_url }}" width="720" height="1280" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">{%- endif -%}
-</div>
+</figure>{%- when "c1b" -%}<figure {{ block.shopify_attributes }} class="vcard" data-video="" style="margin:0">
+<div class="vcard__frame">{% render 'kg-video-card-media', video: block.settings.kg_video, url: block.settings.kg_video_url, image: block.settings.i1, poster: block.settings.t2 %}</div>
 <div class="vcard__cap"><p class="vcard__quote">{{ block.settings.t3 }}</p><p class="vcard__who">{{ block.settings.t4 }}</p></div>
 </figure>{%- endcase -%}{%- endfor -%}</div></div>
 </div>
@@ -101,6 +99,17 @@
      "type": "text",
      "id": "t4",
      "label": "Name: Sam Walker - Former Ball..."
+    },
+    {
+     "type": "video",
+     "id": "kg_video",
+     "label": "Video (Shopify file)"
+    },
+    {
+     "type": "url",
+     "id": "kg_video_url",
+     "label": "Video URL",
+     "info": "Use a permanent Shopify-hosted file before changing the domain."
     }
    ]
   }

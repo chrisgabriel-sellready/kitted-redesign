@@ -93,7 +93,8 @@
      "settings": {
       "t2": "kg-poster-ugc-2.webp",
       "t3": "“It’s a simple training tool that leaves a big impact.”",
-      "t4": "Chip"
+      "t4": "Chip",
+      "kg_video_url": "https://shop.kittedgear.com/cdn/shop/videos/c/vp/7820ebad85bb489c9556b7c642763d16/7820ebad85bb489c9556b7c642763d16.HD-1080p-2.5Mbps-78683271.mp4"
      }
     },
     "c1b_2": {
@@ -112,7 +113,8 @@
      "settings": {
       "t2": "kg-poster-ugc-4.webp",
       "t3": "“I highly approve and recommend the SpinGrip.”",
-      "t4": "Pro Pitching Instructor"
+      "t4": "Pro Pitching Instructor",
+      "kg_video_url": "https://kittedgear.com/videos/ugc-4.mp4"
      }
     },
     "c1a_4": {
@@ -120,7 +122,8 @@
      "settings": {
       "t2": "kg-poster-ugc-6.webp",
       "t3": "“It’s effortless power.”",
-      "t4": "Youth Ballplayers"
+      "t4": "Youth Ballplayers",
+      "kg_video_url": "https://kittedgear.com/videos/ugc-6.mp4"
      }
     },
     "c1a_5": {
@@ -128,7 +131,8 @@
      "settings": {
       "t2": "kg-poster-ugc-15.webp",
       "t3": "“It’s forcing me to use my fingertips.”",
-      "t4": "Donte Lewis, D1 Player"
+      "t4": "Donte Lewis, D1 Player",
+      "kg_video_url": "https://kittedgear.com/videos/ugc-15.mp4"
      }
     },
     "c1a_6": {
@@ -136,7 +140,8 @@
      "settings": {
       "t2": "kg-poster-ugc-16.webp",
       "t3": "“It puts the ball in the right position in my hand.”",
-      "t4": "Will Brennan, Big Leaguer"
+      "t4": "Will Brennan, Big Leaguer",
+      "kg_video_url": "https://kittedgear.com/videos/ugc-16.mp4"
      }
     },
     "c1a_7": {
@@ -144,7 +149,8 @@
      "settings": {
       "t2": "kg-poster-ugc-17.webp",
       "t3": "“There’s no tension. Everything is loose.”",
-      "t4": "Blake Rogers, Pro Player"
+      "t4": "Blake Rogers, Pro Player",
+      "kg_video_url": "https://kittedgear.com/videos/ugc-17.mp4"
      }
     },
     "c1a_8": {
@@ -152,7 +158,8 @@
      "settings": {
       "t2": "kg-poster-ugc-19.webp",
       "t3": "“I don’t feel like I’m choking the ball.”",
-      "t4": "Youth Player"
+      "t4": "Youth Player",
+      "kg_video_url": "https://kittedgear.com/videos/ugc-19.mp4"
      }
     }
    },

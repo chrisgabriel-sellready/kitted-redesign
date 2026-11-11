@@ -1,0 +1,17 @@
+{% doc %}
+  Play a verified clip inside an existing redesigned card, retaining its poster.
+  @param {video} [video] - Shopify-hosted video, preferred after asset migration.
+  @param {string} [url] - Verified source URL while media migration is pending.
+  @param {image} [image] - Optional merchant-selected cover.
+  @param {string} poster - Existing theme poster filename.
+{% enddoc %}
+{%- capture cover -%}{%- if image != blank -%}{{ image | image_url: width: 1200 }}{%- else -%}{{ poster | asset_url }}{%- endif -%}{%- endcapture -%}
+{%- if video != blank or url != blank -%}
+  {%- if video != blank -%}
+    {{ video | video_tag: playsinline: true, preload: 'none', controls: false, poster: cover }}
+  {%- else -%}<video playsinline preload="none" poster="{{ cover }}" src="{{ url | escape }}"></video>{%- endif -%}
+  <button type="button" class="vcard__play" aria-label="{{ 'kg.storefront.play' | t }}" data-play-label="{{ 'kg.storefront.play' | t }}" data-pause-label="{{ 'kg.storefront.pause' | t }}" aria-pressed="false"><span><svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4l13 8-13 8z"/></svg></span></button>
+  <button type="button" class="vcard__sound" aria-label="{{ 'kg.storefront.sound' | t }}"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5zM23 9l-6 6M17 9l6 6"/></svg>{{ 'kg.storefront.sound_hint' | t }}</button>
+{%- else -%}
+  <img src="{{ cover }}" width="720" height="1280" alt="" loading="lazy">
+{%- endif -%}

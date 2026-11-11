@@ -65,7 +65,8 @@
      "settings": {
       "t2": "kg-poster-ugc-2.webp",
       "t3": "“It’s a simple training tool that leaves a big impact.”",
-      "t4": "Chip"
+      "t4": "Chip",
+      "kg_video_url": "https://shop.kittedgear.com/cdn/shop/videos/c/vp/7820ebad85bb489c9556b7c642763d16/7820ebad85bb489c9556b7c642763d16.HD-1080p-2.5Mbps-78683271.mp4"
      }
     },
     "c1b_2": {
@@ -84,7 +85,8 @@
      "settings": {
       "t2": "kg-poster-ugc-4.webp",
       "t3": "“I highly approve and recommend the SpinGrip.”",
-      "t4": "Pro Pitching Instructor"
+      "t4": "Pro Pitching Instructor",
+      "kg_video_url": "https://kittedgear.com/videos/ugc-4.mp4"
      }
     },
     "c1a_4": {
@@ -92,7 +94,8 @@
      "settings": {
       "t2": "kg-poster-ugc-6.webp",
       "t3": "“It’s effortless power.”",
-      "t4": "Youth Ballplayers"
+      "t4": "Youth Ballplayers",
+      "kg_video_url": "https://kittedgear.com/videos/ugc-6.mp4"
      }
     },
     "c1a_5": {
@@ -100,7 +103,8 @@
      "settings": {
       "t2": "kg-poster-softball-ugc-1.webp",
       "t3": "“It’s making me pull down my throws.”",
-      "t4": "Annie Kay, All-American"
+      "t4": "Annie Kay, All-American",
+      "kg_video_url": "https://kittedgear.com/videos/softball-ugc-1.mp4"
      }
     },
     "c1a_6": {
@@ -108,7 +112,8 @@
      "settings": {
       "t2": "kg-poster-softball-ugc-2.webp",
       "t3": "“I feel everything in the finger tips.”",
-      "t4": "HS Softball Players"
+      "t4": "HS Softball Players",
+      "kg_video_url": "https://kittedgear.com/videos/softball-ugc-2.mp4"
      }
     },
     "c1a_7": {
@@ -116,7 +121,8 @@
      "settings": {
       "t2": "kg-poster-softball-ugc-3.webp",
       "t3": "“It’s letting me feel where I release the ball.”",
-      "t4": "Ainsley Davis, College Pitcher"
+      "t4": "Ainsley Davis, College Pitcher",
+      "kg_video_url": "https://kittedgear.com/videos/softball-ugc-3.mp4"
      }
     },
     "c1a_8": {
@@ -124,7 +130,8 @@
      "settings": {
       "t2": "kg-poster-football-ugc-1.webp",
       "t3": "“The ball feels like a feather.”",
-      "t4": "Peyton “Pop” Houston, Elite 11 Champ"
+      "t4": "Peyton “Pop” Houston, Elite 11 Champ",
+      "kg_video_url": "https://kittedgear.com/__l5e/assets-v1/1d76a2c5-86bf-4a68-9eb4-bbec54ab01bb/football-ugc-1.mp4"
      }
     }
    },

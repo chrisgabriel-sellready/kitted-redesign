@@ -1,10 +1,8 @@
 <div class="kg">
 <section class="section">
 <div class="wrap split">
-<div class="split__media" style="order:2"><div style="max-width:380px;margin-inline:auto"><figure class="vcard" style="margin:0">
-<div class="vcard__frame">
-{%- if section.settings.i1 != blank -%}{{ section.settings.i1 | image_url: width: 1800 | image_tag: alt: "", loading: "lazy", style: "position:absolute;inset:0;width:100%;height:100%;object-fit:cover" }}{%- else -%}<img src="{{ section.settings.t2 | asset_url }}" width="720" height="1280" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">{%- endif -%}
-</div>
+<div class="split__media" style="order:2"><div style="max-width:380px;margin-inline:auto"><figure class="vcard" data-video="" style="margin:0">
+<div class="vcard__frame">{% render 'kg-video-card-media', video: section.settings.kg_video, url: section.settings.kg_video_url, image: section.settings.i1, poster: section.settings.t2 %}</div>
 </figure></div></div>
 <div class="split__text">
 <p class="eyebrow">{{ section.settings.t3 }}</p>
@@ -52,6 +50,17 @@
    "type": "text",
    "id": "t6",
    "label": "Link text: Shop SpinGrip"
+  },
+  {
+   "type": "video",
+   "id": "kg_video",
+   "label": "Video (Shopify file)"
+  },
+  {
+   "type": "url",
+   "id": "kg_video_url",
+   "label": "Video URL",
+   "info": "Use a permanent Shopify-hosted file before changing the domain."
   }
  ],
  "presets": [

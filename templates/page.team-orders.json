@@ -45,9 +45,48 @@
         "email": "grouporders@kittedgear.com",
         "phone": "724-263-4031"
       }
+    },
+    "1755362176b48e53f3": {
+      "type": "apps",
+      "blocks": {
+        "moast_carousel_bTjDwt": {
+          "type": "shopify://apps/moast/blocks/carousel/1ac7547b-5443-446c-868c-7fab4566ee16",
+          "settings": {
+            "dynamic": false,
+            "feed": "8a8a02d7-0b61-4430-bcda-036ce17aea36",
+            "feed_usage": "back_up",
+            "header": "",
+            "slide_type": "cards",
+            "product_cards": "none",
+            "autoplay_mode": "all",
+            "autoscroll_duration": 7,
+            "slide_size": "250",
+            "aspect_ratio": "vertical",
+            "border": 2,
+            "border_color": "linear-gradient(90deg, rgba(131, 58, 180, 1), rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%)",
+            "slide_rounding": "6",
+            "slide_spacing": 12,
+            "padding_top": 20,
+            "pagination": "overlay",
+            "alignment": "center",
+            "click_action": "fullscreen",
+            "float_location": "bottom_right",
+            "float_size": "medium",
+            "show_captions": false,
+            "custom_css": ""
+          }
+        }
+      },
+      "block_order": [
+        "moast_carousel_bTjDwt"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "1755362176b48e53f3"
   ]
 }
