@@ -83,7 +83,30 @@
         {%- assign preselect = true -%}
         {%- if option.name contains 'Size' -%}{%- assign preselect = false -%}{%- endif -%}
         <fieldset class="option" data-label="{{ option.name | escape }}"><legend>{{ option.name }}{% if option.name contains 'Size' %} <span>Fits by age</span>{% endif %}</legend><div class="chips">
-          {%- for value in option.values -%}
+          {%- liquid
+            assign option_values = option.values
+            if option.name contains 'Size'
+              assign youth = '' | split: ''
+              assign small = '' | split: ''
+              assign large = '' | split: ''
+              assign rest = '' | split: ''
+              for ov in option.values
+                assign ov_s = ov | append: ''
+                assign ov_list = ov_s | split: '|||'
+                if ov_s contains 'Youth'
+                  assign youth = youth | concat: ov_list
+                elsif ov_s contains 'Small'
+                  assign small = small | concat: ov_list
+                elsif ov_s contains 'Large'
+                  assign large = large | concat: ov_list
+                else
+                  assign rest = rest | concat: ov_list
+                endif
+              endfor
+              assign option_values = youth | concat: small | concat: large | concat: rest
+            endif
+          -%}
+          {%- for value in option_values -%}
             <label class="chip"><input type="radio" name="kg-{{ panel_key }}-opt-{{ forloop.parentloop.index0 }}" value="{{ value | escape }}"{% if preselect and value.selected %} checked{% endif %}><span>{{ value }}</span></label>
           {%- endfor -%}
         </div></fieldset>
