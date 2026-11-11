@@ -10,140 +10,54 @@
 {
  "sections": {
   "kg_00": {
-   "type": "kg-product",
+   "type": "kg-live-pdp",
    "settings": {
-    "show_crumbs": true,
-    "title_tag": "h1",
-    "anchor": "",
-    "kicker": "",
-    "heading": "",
-    "as_section": false,
-    "banner": "Guaranteed to increase velo, spin and accuracy",
-    "eyebrow": "Softball",
-    "rating_text": "4.8 · 199 reviews",
-    "value_tag": "",
-    "lede": "",
+    "banner": "Guaranteed to Increase Velo, Spin and Accuracy",
+    "back_url": "/collections/spingrip-softball",
+    "back_label": "Softball",
     "seal": "yellow",
-    "digital": false,
+    "results_heading": "Results we see after using SpinGrip",
     "show_used_by": true,
     "show_trust": true,
-    "show_pack_callout": true,
-    "description_label": "Description",
-    "back_url": "/pages/softball"
+    "sizing_title": "Sizing guide",
+    "sizing_html": "<p>Softball SpinGrip — Designed for girls’ and women’s hands.</p><table><thead><tr><th>Size</th><th>Age</th><th>Palm Length</th></tr></thead><tbody><tr><td>Youth</td><td>Ages 6–9</td><td>2.75\"–3.5\"</td></tr><tr><td>S/M</td><td>Ages 10–14</td><td>3.5\"–4.25\"</td></tr><tr><td>L/XL</td><td>Ages 15+</td><td>4.25\"–4.9\"</td></tr></tbody></table><p><strong>Palm length:</strong> measure from the middle of the crease where your palm meets your wrist up to the base of your middle finger.</p><p>We recommend sizing by age first, then palm length. SpinGrip is a fingerless glove and does stretch, and age has worked well for sizing.</p>",
+    "how_title": "How SpinGrip works",
+    "how_html": "<p>SpinGrip is built on simple physics. When the ball sits farther out in your fingers, you can create more spin, higher velocity, and better accuracy. This effective fingertip release is what the elite arms aim for, but without the right feel, it is very hard to mimic.</p><p><strong>SpinGrip gives you this feel and makes it consistently automatic for everyone.</strong></p><p>With its embedded palm-spacer, SpinGrip positions the ball into the proper finger placement so every athlete can feel the same release pattern that took the best arms in the game years to develop. You don't need a coach and you don't need to think. Just put the grip on and get to work. You will feel the difference immediately.</p>",
+    "how_video_url": "https://kittedgear.com/videos/how-to-use.mp4",
+    "show_pack": true,
+    "pack_url": "/pages/team-orders"
    },
    "blocks": {
     "result_0": {
      "type": "result",
      "settings": {
-      "label": "MPH velocity",
-      "value": "Up to +7"
+      "text": "Up to +7 MPH velocity"
      }
     },
     "result_1": {
      "type": "result",
      "settings": {
-      "label": "RPM spin rate",
-      "value": "+350"
+      "text": "+350 RPM spin rate"
      }
     },
     "result_2": {
      "type": "result",
      "settings": {
-      "label": "Accuracy increase",
-      "value": "30%"
-     }
-    },
-    "accordion_3": {
-     "type": "accordion",
-     "settings": {
-      "title": "Sizing guide",
-      "content": "<p>Youth6–9 · Small/Medium10–14 · Large/XLarge15+</p><p>Between sizes? Size by age first; the strap adjusts high and tight on the wrist.</p>"
-     }
-    },
-    "accordion_4": {
-     "type": "accordion",
-     "settings": {
-      "title": "How SpinGrip works",
-      "content": "<p>Put your throwing hand's index finger and thumb in an “L” shape, slide the index finger into the top hole and the thumb into the side hole, pull tight on the wrist, and fasten the velcro.</p><p>Grab a ball and throw normally.</p><p>We recommend wearing the grip from the very first throw and working all the way up to full speed with it on. When you're good and warm, take it off and keep letting it fly. You'll feel a fifth gear every time.</p>"
-     }
-    },
-    "accordion_5": {
-     "type": "accordion",
-     "settings": {
-      "title": "Shipping & returns",
-      "content": "<p>Orders ship within 1–2 business days. Standard delivery is 3–7 business days. Free domestic shipping on orders $100+. See the <a href=\"/pages/returns\">return policy</a>.</p>"
+      "text": "30% accuracy increase"
      }
     }
    },
    "block_order": [
     "result_0",
     "result_1",
-    "result_2",
-    "accordion_3",
-    "accordion_4",
-    "accordion_5"
-   ]
-  },
-  "kg_01": {
-   "type": "kg-d3947980",
-   "settings": {
-    "v1": "shopify://files/videos/Ainsley how to put on.mov",
-    "u2": "https://shop.kittedgear.com/cdn/shop/videos/c/vp/0cb15d2c1c94437eafc530c6e34173be/0cb15d2c1c94437eafc530c6e34173be.HD-1080p-7.2Mbps-53127113.mp4",
-    "t4": "kg-poster-softball-pos-player-howto.webp",
-    "t5": "Tap for sound",
-    "t6": "Watch it in action",
-    "t7": "How to wear SpinGrip",
-    "t8": "Index finger and thumb in an “L”, slide in, pull tight on the wrist, fasten the strap, and throw normally.",
-    "u9": "/pages/how-to-use-spingrip",
-    "t10": "Read the full guide"
-   }
-  },
-  "kg_02": {
-   "type": "kg-2b4b7be0",
-   "settings": {
-    "t1": "How SpinGrip works",
-    "t2": "SpinGrip's embedded palm-spacer harnesses the physics of an elite release by positioning the ball farther into your fingers, unlocking optimal spin, velocity, and accuracy."
-   },
-   "blocks": {
-    "c1a_1": {
-     "type": "c1a",
-     "settings": {
-      "t2": "kg-softball-slide-on.webp",
-      "t3": "Step 1 of 3",
-      "t4": "Slide it on",
-      "t5": "SpinGrip slides onto your throwing hand in seconds. Fasten the strap high and tight on the wrist."
-     }
-    },
-    "c1a_2": {
-     "type": "c1a",
-     "settings": {
-      "t2": "kg-softball-let-it-fly.webp",
-      "t3": "Step 2 of 3",
-      "t4": "Let it fly",
-      "t5": "The patent-pending design with embedded palm-spacer positions the ball in your fingers for the optimal grip on every throw."
-     }
-    },
-    "c1a_3": {
-     "type": "c1a",
-     "settings": {
-      "t2": "kg-softball-spingrip-effect.webp",
-      "t3": "Step 3 of 3",
-      "t4": "Feel the SpinGrip Effect",
-      "t5": "Velocity, spin rate, and accuracy improve right away. Data-proven performance gains."
-     }
-    }
-   },
-   "block_order": [
-    "c1a_1",
-    "c1a_2",
-    "c1a_3"
+    "result_2"
    ]
   },
   "kg_03": {
    "type": "kg-product-reviews",
    "settings": {
-    "heading": "Customer reviews",
-    "stone": true
+    "heading": "Customer Reviews",
+    "limit": 20
    }
   },
   "kg_04": {
@@ -331,26 +245,16 @@
     "c1a_8"
    ]
   },
-  "kg_06": {
-   "type": "kg-035962fe",
-   "settings": {
-    "t1": "Bulk & team orders",
-    "t2": "Outfitting a team, club or organization? Contact KITTED for bulk and retail pricing.",
-    "i3": "",
-    "i4": "",
-    "i5": "",
-    "u6": "/pages/team-orders",
-    "t7": "Bulk orders"
-   }
+  "kg_07": {
+   "type": "kg-kollective",
+   "settings": {}
   }
  },
  "order": [
   "kg_00",
-  "kg_01",
-  "kg_02",
   "kg_03",
   "kg_04",
   "kg_05",
-  "kg_06"
+  "kg_07"
  ]
 }

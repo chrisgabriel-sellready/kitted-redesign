@@ -1,0 +1,260 @@
+{%- comment -%}
+  Product page buy area, matching the live kittedgear.com product pages 1:1:
+  bordered card with banner, back link, title + price, gallery, rating, results,
+  pill options, full-width add-to-cart, athlete logos and trust icons; then the
+  Sizing guide / How SpinGrip works dropdowns and the pack box.
+  Uses the same form hooks as kg-buy-panel, so assets/kg.js handles variants and cart.
+{%- endcomment -%}
+{%- liquid
+  assign p = section.settings.product | default: product
+  assign v = p.selected_or_first_available_variant
+  assign digital = false
+  if v.requires_shipping == false
+    assign digital = true
+  endif
+  assign form_id = 'kg-live-form-' | append: section.id
+  assign first_media = p.featured_media | default: p.media.first
+  assign rating = p.metafields.reviews.rating.value.rating | round: 1
+  assign rating_count = p.metafields.reviews.rating_count.value | default: 0
+  assign price_str = v.price | money_without_currency | prepend: '$'
+  if digital
+    assign atc_template = section.settings.digital_label | append: ' — {price} USD'
+  else
+    assign atc_template = section.settings.atc_label | append: ' — {price} USD'
+  endif
+-%}
+<div class="kg lpdp-wrap">
+<section class="lpdp" data-kg-product>
+  {%- if p == blank -%}
+    <p class="muted" style="padding:40px 16px">Choose a product for this section in the theme editor.</p>
+  {%- else -%}
+  <script type="application/json" data-product-json>{{ p | json }}</script>
+  <div class="lpdp__card">
+    {%- if section.settings.banner != blank -%}<div class="lpdp__banner"><p>{{ section.settings.banner }}</p></div>{%- endif -%}
+    <div class="lpdp__inner">
+      {%- if section.settings.back_url != blank -%}
+        <a class="lpdp__back" href="{{ section.settings.back_url }}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>{{ section.settings.back_label }}</a>
+      {%- endif -%}
+      <div class="lpdp__head">
+        <h1 class="lpdp__title">{{ p.title | split: ' (' | first }}</h1>
+        <span class="lpdp__price" data-price>{{ v.price | money_without_currency | prepend: '$' }} USD</span>
+      </div>
+      <div class="lpdp__grid">
+        <div class="lpdp__media">
+          <div class="lpdp__gallery" data-gallery>
+            <div class="lpdp__stage">
+              {%- if section.settings.seal != 'none' -%}<img class="lpdp__seal" src="{{ 'kg-patent-seal-' | append: section.settings.seal | append: '.webp' | asset_url }}" alt="Patent Pending" width="56" height="56">{%- endif -%}
+              {%- for m in p.media -%}
+                <div class="lpdp__slide" data-gallery-media="{{ m.id }}"{% unless m.id == first_media.id %} hidden{% endunless %}>
+                  {%- case m.media_type -%}
+                    {%- when 'image' -%}
+                      {%- if m.id == first_media.id -%}
+                        {{ m | image_url: width: 1100 | image_tag: loading: 'eager', fetchpriority: 'high', sizes: '(min-width: 768px) 544px, 100vw', widths: '400, 600, 800, 1100', alt: m.alt | default: p.title }}
+                      {%- else -%}
+                        {{ m | image_url: width: 1100 | image_tag: loading: 'lazy', sizes: '(min-width: 768px) 544px, 100vw', widths: '400, 600, 800, 1100', alt: m.alt | default: p.title }}
+                      {%- endif -%}
+                    {%- when 'video' -%}
+                      {{ m | video_tag: controls: true, preload: 'metadata', image_size: '900x', playsinline: true }}
+                    {%- when 'external_video' -%}
+                      {{ m | external_video_tag: loading: 'lazy' }}
+                    {%- when 'model' -%}
+                      {{ m | model_viewer_tag: reveal: 'interaction', toggleable: true }}
+                  {%- endcase -%}
+                </div>
+              {%- endfor -%}
+              {%- if p.media.size > 1 -%}
+                <button type="button" class="lpdp__arrow lpdp__arrow--prev" data-g="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg><span class="visually-hidden">Previous slide</span></button>
+                <button type="button" class="lpdp__arrow lpdp__arrow--next" data-g="1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg><span class="visually-hidden">Next slide</span></button>
+              {%- endif -%}
+            </div>
+            {%- if p.media.size > 1 -%}
+              <div class="gallery__thumbs lpdp__thumbs">
+                {%- for m in p.media -%}
+                  <button type="button" data-media-id="{{ m.id }}" aria-label="{{ 'kg.storefront.show_media' | t: index: forloop.index }}" aria-current="{% if m.id == first_media.id %}true{% else %}false{% endif %}">{{ m.preview_image | image_url: width: 200 | image_tag: loading: 'lazy', alt: '' }}</button>
+                {%- endfor -%}
+              </div>
+            {%- endif -%}
+          </div>
+        </div>
+
+        <div class="lpdp__offer">
+          {%- form 'product', p, id: form_id, novalidate: 'novalidate', data-kg-buy: '', data-kg-digital: digital, data-kg-atc: atc_template, class: 'lpdp__form' -%}
+            <input type="hidden" name="id" value="{{ v.id }}">
+            {%- if digital -%}
+              {%- if section.settings.value_tag != blank -%}<p class="lpdp__value">{{ section.settings.value_tag }}</p>{%- endif -%}
+              {%- if section.settings.lede != blank -%}<p class="lpdp__lede">{{ section.settings.lede }}</p>{%- endif -%}
+            {%- else -%}
+              <div class="lpdp__rating" data-kg-rating{% if rating_count == 0 %} hidden{% endif %}>
+                <span class="lpdp__stars" aria-hidden="true">{%- for i in (1..5) -%}<svg viewBox="0 0 24 24"><path d="M11.5 2.3a.53.53 0 0 1 .95 0l2.31 4.68a2.12 2.12 0 0 0 1.6 1.16l5.16.76a.53.53 0 0 1 .3.9l-3.74 3.64a2.12 2.12 0 0 0-.61 1.87l.88 5.14a.53.53 0 0 1-.77.56l-4.62-2.43a2.12 2.12 0 0 0-1.97 0L6.4 21.01a.53.53 0 0 1-.77-.56l.88-5.14a2.12 2.12 0 0 0-.61-1.87L2.17 9.8a.53.53 0 0 1 .3-.9l5.16-.76a2.12 2.12 0 0 0 1.6-1.16z"/></svg>{%- endfor -%}</span>
+                <span class="lpdp__rating-text"><b data-kg-avg>{{ rating }}</b> · <span data-kg-count>{{ rating_count }}</span> reviews</span>
+              </div>
+            {%- endif -%}
+
+            {%- assign results = section.blocks | where: 'type', 'result' -%}
+            {%- if results.size > 0 -%}
+              <div class="lpdp__results">
+                <h3>{{ section.settings.results_heading }}</h3>
+                {%- for b in results -%}<div class="lpdp__check" {{ b.shopify_attributes }}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>{{ b.settings.text }}</span></div>{%- endfor -%}
+              </div>
+            {%- endif -%}
+            {%- assign inside = section.blocks | where: 'type', 'inside' -%}
+            {%- if inside.size > 0 -%}
+              <div class="lpdp__results">
+                <h3>{{ section.settings.inside_heading }}</h3>
+                {%- for b in inside -%}<div class="lpdp__check" {{ b.shopify_attributes }}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>{{ b.settings.text }}</span></div>{%- endfor -%}
+              </div>
+            {%- endif -%}
+
+            {%- unless p.has_only_default_variant -%}
+              {%- for option in p.options_with_values -%}
+                {%- liquid
+                  assign option_values = option.values
+                  if option.name contains 'Size'
+                    assign youth = '' | split: ''
+                    assign small = '' | split: ''
+                    assign large = '' | split: ''
+                    assign rest = '' | split: ''
+                    for ov in option.values
+                      assign ov_s = ov | append: ''
+                      assign ov_list = ov_s | split: '|||'
+                      if ov_s contains 'Youth'
+                        assign youth = youth | concat: ov_list
+                      elsif ov_s contains 'Small'
+                        assign small = small | concat: ov_list
+                      elsif ov_s contains 'Large'
+                        assign large = large | concat: ov_list
+                      else
+                        assign rest = rest | concat: ov_list
+                      endif
+                    endfor
+                    assign option_values = youth | concat: small | concat: large | concat: rest
+                  endif
+                -%}
+                <fieldset class="option lpdp__option" data-label="{{ option.name | escape }}">
+                  <legend>{{ option.name }}</legend>
+                  <div class="lpdp__pills">
+                    {%- for value in option_values -%}
+                      <label class="lpdp__pill"><input type="radio" name="kg-{{ section.id }}-opt-{{ forloop.parentloop.index0 }}" value="{{ value | escape }}"{% if forloop.first %} checked{% endif %}><span>{{ value }}</span></label>
+                    {%- endfor -%}
+                  </div>
+                </fieldset>
+              {%- endfor -%}
+            {%- endunless -%}
+
+            <button class="lpdp__atc" type="submit">{{ atc_template | replace: '{price}', price_str }}</button>
+            <p class="buy__msg lpdp__msg" role="status" aria-live="polite"></p>
+          {%- endform -%}
+
+          {%- if section.settings.show_used_by -%}
+            <div class="lpdp__used">
+              <p>Used by athletes from</p>
+              <div class="lpdp__marquee"><div class="lpdp__marquee-track" aria-hidden="true">
+                {%- capture logos -%}
+                  {%- assign logo_list = 'kstate,oregon-state,oklahoma,lsu,baylor,tcu,florida,alabama,usc,louisiana-tech,arkansas,texas-longhorns,pitt,ohiostate,rangers,yankees,tigers,dodgers,diamondbacks,mets,brewers,giants,whitesox' | split: ',' -%}
+                  <div class="lpdp__logos">{%- for l in logo_list -%}<img src="{{ 'kg-logo-' | append: l | append: '.webp' | asset_url }}" alt="" width="28" height="28" loading="lazy">{%- endfor -%}</div>
+                {%- endcapture -%}
+                {{ logos }}{{ logos }}
+              </div></div>
+            </div>
+          {%- endif -%}
+          {%- if section.settings.show_trust -%}
+            <ul class="lpdp__trust">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62L18.3 8.38A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg><span>Free Shipping $100+</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg><span>Easy Returns</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Secure Checkout</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg><span>30 Day Guarantee</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></svg><span>Customer Support</span></li>
+            </ul>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  </div>
+  {%- endif -%}
+</section>
+
+{%- if section.settings.sizing_html != blank or section.settings.how_html != blank or section.settings.show_pack -%}
+<section class="lpdp-more">
+  <div class="lpdp-more__wrap">
+    {%- if section.settings.sizing_html != blank -%}
+      <details class="lpdp-acc">
+        <summary><h2>{{ section.settings.sizing_title }}</h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="lpdp-acc__body">{{ section.settings.sizing_html }}</div>
+      </details>
+    {%- endif -%}
+    {%- if section.settings.how_html != blank -%}
+      <details class="lpdp-acc">
+        <summary><h2>{{ section.settings.how_title }}</h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="lpdp-acc__body lpdp-acc__body--text">{{ section.settings.how_html }}</div>
+        {%- if section.settings.how_video != blank or section.settings.how_video_url != blank -%}
+          <div class="lpdp-acc__video">
+            <p class="lpdp-acc__video-title">How to use</p>
+            <div class="lpdp-acc__frame">
+              {%- if section.settings.how_video != blank -%}
+                {{ section.settings.how_video | video_tag: controls: true, preload: 'none', playsinline: true }}
+              {%- else -%}
+                <video src="{{ section.settings.how_video_url }}" controls playsinline preload="none"></video>
+              {%- endif -%}
+            </div>
+          </div>
+        {%- endif -%}
+      </details>
+    {%- endif -%}
+    {%- if section.settings.show_pack -%}
+      <a class="lpdp-pack" href="{{ section.settings.pack_url | default: '/pages/team-orders' }}">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg>
+        <div>
+          <p class="lpdp-pack__title">{{ section.settings.pack_title }}</p>
+          {%- assign chips = section.settings.pack_chips | split: ',' -%}
+          <div class="lpdp-pack__chips">{%- for c in chips -%}<span>{{ c | strip }}</span>{%- endfor -%}</div>
+          <p class="lpdp-pack__text">{{ section.settings.pack_text }}</p>
+          <span class="lpdp-pack__cta">{{ section.settings.pack_cta }}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+        </div>
+      </a>
+    {%- endif -%}
+  </div>
+</section>
+{%- endif -%}
+</div>
+{% schema %}
+{
+ "name": "KITTED product (live)",
+ "tag": "div",
+ "class": "kg-section",
+ "settings": [
+  { "type": "product", "id": "product", "label": "Product", "info": "Leave empty on product pages to use the page's product." },
+  { "type": "text", "id": "banner", "label": "Banner", "default": "Guaranteed to Increase Velo, Spin and Accuracy" },
+  { "type": "url", "id": "back_url", "label": "Back link" },
+  { "type": "text", "id": "back_label", "label": "Back link text", "default": "Baseball" },
+  { "type": "select", "id": "seal", "label": "Patent seal", "default": "red", "options": [
+    { "value": "none", "label": "None" }, { "value": "red", "label": "Red (baseball)" }, { "value": "yellow", "label": "Yellow (softball)" }, { "value": "pink", "label": "Pink (pitcher)" }, { "value": "green", "label": "Green (football)" }
+  ] },
+  { "type": "text", "id": "results_heading", "label": "Results heading", "default": "Results we see after using SpinGrip" },
+  { "type": "text", "id": "inside_heading", "label": "What's inside heading", "default": "What's inside" },
+  { "type": "text", "id": "value_tag", "label": "Value line (digital products)", "default": "$150 Value" },
+  { "type": "textarea", "id": "lede", "label": "Intro (digital products)" },
+  { "type": "text", "id": "atc_label", "label": "Add to cart text", "default": "Add to Cart" },
+  { "type": "text", "id": "digital_label", "label": "Digital button text", "default": "Get Instant Access" },
+  { "type": "checkbox", "id": "show_used_by", "label": "Show 'Used by athletes from' logos", "default": true },
+  { "type": "checkbox", "id": "show_trust", "label": "Show trust icons", "default": true },
+  { "type": "header", "content": "Dropdowns" },
+  { "type": "text", "id": "sizing_title", "label": "Sizing title", "default": "Sizing guide" },
+  { "type": "html", "id": "sizing_html", "label": "Sizing guide content" },
+  { "type": "text", "id": "how_title", "label": "How it works title", "default": "How SpinGrip works" },
+  { "type": "html", "id": "how_html", "label": "How it works text" },
+  { "type": "video", "id": "how_video", "label": "How to use video" },
+  { "type": "url", "id": "how_video_url", "label": "How to use video URL", "info": "Used when no video is chosen above." },
+  { "type": "header", "content": "Pack box" },
+  { "type": "checkbox", "id": "show_pack", "label": "Show pack box", "default": true },
+  { "type": "url", "id": "pack_url", "label": "Pack link" },
+  { "type": "text", "id": "pack_title", "label": "Title", "default": "Buying more than one? Save up to 20%" },
+  { "type": "text", "id": "pack_chips", "label": "Tags", "default": "2-Pack · Save 10%, 5-Pack · Save 15%, 10-Pack · Save 20%" },
+  { "type": "text", "id": "pack_text", "label": "Text", "default": "Mix & match any glove, size, or hand — discount applies automatically at checkout." },
+  { "type": "text", "id": "pack_cta", "label": "Link text", "default": "Build your pack" }
+ ],
+ "blocks": [
+  { "type": "result", "name": "Result", "settings": [ { "type": "text", "id": "text", "label": "Text", "default": "Up to +7 MPH velocity" } ] },
+  { "type": "inside", "name": "What's inside item", "settings": [ { "type": "text", "id": "text", "label": "Text" } ] }
+ ]
+}
+{% endschema %}

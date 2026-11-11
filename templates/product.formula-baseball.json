@@ -10,27 +10,20 @@
 {
  "sections": {
   "kg_00": {
-   "type": "kg-product",
+   "type": "kg-live-pdp",
    "settings": {
-    "show_crumbs": true,
-    "title_tag": "h1",
-    "anchor": "",
-    "kicker": "",
-    "heading": "",
-    "as_section": false,
-    "banner": "Instant digital access · guaranteed results",
-    "eyebrow": "Baseball · Digital program",
-    "rating_text": "",
-    "value_tag": "$150 value",
-    "lede": "Work 1-on-1 with a former MLB athlete to guarantee results from your SpinGrip.",
+    "banner": "Instant Digital Access — Guarantee Results",
+    "back_url": "/pages/baseball",
+    "back_label": "Baseball",
     "seal": "none",
-    "digital": true,
+    "inside_heading": "What's inside",
+    "value_tag": "$150 Value",
+    "lede": "Work 1-on-1 with a former MLB athlete to guarantee results from your SpinGrip.",
     "show_used_by": false,
     "show_trust": false,
-    "show_pack_callout": false,
-    "description_label": "About the program",
-    "back_url": "/pages/baseball",
-    "back_label": "Baseball"
+    "how_title": "How SpinGrip works",
+    "how_html": "<p>The same throwing framework we use with elite arms — now in a step-by-step digital program you can start in minutes.</p><p>Instant digital access. No shipping, no waiting.</p><p>Inside, you'll get the exact progressions, warm-ups, and throwing sequences built around the SpinGrip fingertip release — how to structure your throwing week, how to build arm strength safely, and how to turn the feel SpinGrip creates into spin, velocity, and accuracy that hold up in games.</p>",
+    "show_pack": false
    },
    "blocks": {
     "inside_0": {
@@ -54,14 +47,7 @@
     "inside_3": {
      "type": "inside",
      "settings": {
-      "text": "Instant digital access, start today"
-     }
-    },
-    "accordion_4": {
-     "type": "accordion",
-     "settings": {
-      "title": "Pairs with",
-      "content": "<p>Built around the fingertip release that <a href=\"/products/spingrip\">SpinGrip Baseball</a> makes automatic. Use them together for the fastest results.</p>"
+      "text": "Instant digital access — start today"
      }
     }
    },
@@ -69,19 +55,8 @@
     "inside_0",
     "inside_1",
     "inside_2",
-    "inside_3",
-    "accordion_4"
+    "inside_3"
    ]
-  },
-  "kg_01": {
-   "type": "kg-80b1e18a",
-   "settings": {
-    "t2": "kg-poster-formula-baseball.webp",
-    "t3": "Program preview",
-    "t4": "See the formula in action",
-    "t5": "Work 1-on-1 with a former MLB athlete to guarantee results from your SpinGrip.",
-    "t6": "Get instant access"
-   }
   },
   "kg_02": {
    "type": "kg-03be4538",
@@ -225,12 +200,16 @@
     "c1a_4",
     "c1a_5"
    ]
+  },
+  "kg_04": {
+   "type": "kg-kollective",
+   "settings": {}
   }
  },
  "order": [
   "kg_00",
-  "kg_01",
   "kg_02",
-  "kg_03"
+  "kg_03",
+  "kg_04"
  ]
 }

@@ -10,27 +10,20 @@
 {
  "sections": {
   "kg_00": {
-   "type": "kg-product",
+   "type": "kg-live-pdp",
    "settings": {
-    "show_crumbs": true,
-    "title_tag": "h1",
-    "anchor": "",
-    "kicker": "",
-    "heading": "",
-    "as_section": false,
-    "banner": "Instant digital access · guaranteed results",
-    "eyebrow": "Softball · Digital program",
-    "rating_text": "",
-    "value_tag": "$150 value",
-    "lede": "Train with 2-time National Champion Kaydee Bennett to guarantee results from your SpinGrip.",
-    "seal": "none",
-    "digital": true,
-    "show_used_by": false,
-    "show_trust": false,
-    "show_pack_callout": false,
-    "description_label": "About the program",
+    "banner": "Instant Digital Access — Guarantee Results",
     "back_url": "/pages/softball",
-    "back_label": "Softball"
+    "back_label": "Softball",
+    "seal": "none",
+    "inside_heading": "What's inside",
+    "value_tag": "$150 Value",
+    "lede": "Train with 2-time National Champion Kaydee Bennett to guarantee results from your SpinGrip.",
+    "show_used_by": true,
+    "show_trust": false,
+    "how_title": "How SpinGrip works",
+    "how_html": "<p>2-Time National Champion and former University of Texas softball player Kaydee Bennett teams up with SpinGrip Softball to bring you SpinGrip Softball's D-1 Throwing Formula.</p><p>This formula follows her through a Division 1 level warm up, elite-level throwing progressions, and position-player specific tips to guarantee a consistent, efficient, and productive throwing routine while getting the most out of your SpinGrip Softball.</p><p>If you implement the drills and progressions in this formula, you are guaranteeing results with your SpinGrip — or your money back.</p>",
+    "show_pack": false
    },
    "blocks": {
     "inside_0": {
@@ -60,20 +53,13 @@
     "inside_4": {
      "type": "inside",
      "settings": {
-      "text": "Guaranteed results with your SpinGrip, or your money back"
+      "text": "Guaranteed results with your SpinGrip — or your money back"
      }
     },
     "inside_5": {
      "type": "inside",
      "settings": {
-      "text": "Instant digital access, start today"
-     }
-    },
-    "accordion_6": {
-     "type": "accordion",
-     "settings": {
-      "title": "Pairs with",
-      "content": "<p>Built around the fingertip release that <a href=\"/products/spingrip-softball\">SpinGrip Softball</a> makes automatic. Use them together for the fastest results.</p>"
+      "text": "Instant digital access — start today"
      }
     }
    },
@@ -83,19 +69,8 @@
     "inside_2",
     "inside_3",
     "inside_4",
-    "inside_5",
-    "accordion_6"
+    "inside_5"
    ]
-  },
-  "kg_01": {
-   "type": "kg-0baae17c",
-   "settings": {
-    "t2": "kg-poster-formula-softball.webp",
-    "t3": "Program preview",
-    "t4": "See the formula in action",
-    "t5": "Train with 2-time National Champion Kaydee Bennett to guarantee results from your SpinGrip.",
-    "t6": "Get instant access"
-   }
   },
   "kg_02": {
    "type": "kg-a1e80829",
@@ -249,12 +224,16 @@
     "c1a_3",
     "c1a_4"
    ]
+  },
+  "kg_04": {
+   "type": "kg-kollective",
+   "settings": {}
   }
  },
  "order": [
   "kg_00",
-  "kg_01",
   "kg_02",
-  "kg_03"
+  "kg_03",
+  "kg_04"
  ]
 }
