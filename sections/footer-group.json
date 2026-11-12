@@ -14,9 +14,14 @@
     "kg-footer": {
       "type": "kg-footer",
       "settings": {}
+    },
+    "kg-kollective-popup": {
+      "type": "kg-kollective-popup",
+      "settings": {}
     }
   },
   "order": [
-    "kg-footer"
+    "kg-footer",
+    "kg-kollective-popup"
   ]
 }

@@ -1049,3 +1049,41 @@
 }
 @media(max-width:639px){.kg-live-videos__card{width:calc((100vw - 34px)*.45);}.kg-live-videos figcaption{padding:51px 12px 12px;}.kg-live-videos figcaption p{font-size:13px;}.kg-live-videos figcaption span{font-size:11px;}}
 .kg.lpdp-wrap--offer .lpdp__card{margin-inline:auto;}
+
+/* Kollective popup + "Get 10% off" tab, rebuilt from the old kittedgear.com site */
+html.kpop-lock{overflow: hidden;}
+.kg.kpop[hidden], .kg.kpop-tab[hidden], .kg.kpop [hidden]{display: none !important;}
+.kg.kpop{background: transparent; position: fixed; inset: 0; z-index: 2147483000; display: grid; place-items: start center; padding: clamp(16px, 6vh, 58px) 16px 16px; overflow-y: auto; overscroll-behavior: contain;}
+.kg .kpop__overlay{display: block; position: fixed; inset: 0; background: rgba(0, 0, 0, .62);}
+.kg .kpop__dialog{position: relative; width: min(475px, 100%); background: #0d0d0d; border: 1px solid rgba(250, 181, 5, .55); color: #fff; padding: 26px 22px 22px; box-shadow: 0 20px 60px rgba(0, 0, 0, .5);}
+.kg .kpop__close{position: absolute; top: 13px; right: 13px; width: 40px; height: 40px; border-radius: 50%; border: 2px solid #fff; background: #0d0d0d; color: #fff; display: grid; place-items: center; cursor: pointer; z-index: 1;}
+.kg .kpop__close svg{width: 18px; height: 18px;}
+.kg .kpop__body{display: grid; justify-items: center; text-align: center; gap: 10px;}
+.kg .kpop__tag{display: inline-block; background: #fff; color: #0d0d0d; font: 600 13px/1 var(--body); letter-spacing: .22em; text-transform: uppercase; padding: 7px 18px; border-radius: 999px;}
+.kg .kpop__title{font: 900 clamp(26px, 4vw, 32px)/1.05 var(--display); text-transform: uppercase; color: #fff; margin-top: 4px;}
+.kg .kpop__text{font: 400 14px/1.5 var(--body); color: #e5e5e5; max-width: 400px;}
+.kg .kpop__badge{display: inline-flex; align-items: center; gap: 8px; border: 1.5px solid #fab505; color: #fab505; border-radius: 999px; padding: 5px 14px; font: 700 12px/1 var(--display); letter-spacing: .12em; text-transform: uppercase;}
+.kg .kpop__dot{width: 7px; height: 7px; border-radius: 50%; background: #22c55e;}
+.kg .kpop__jersey{width: min(370px, 100%); margin: 4px auto 6px;}
+.kg .kpop__jersey svg{width: 100%; height: auto; display: block;}
+.kg .kpop__form{display: grid; gap: 13px; width: 100%; text-align: left;}
+.kg .kpop__form input:not([type=checkbox]){width: 100%; height: 58px; padding: 0 18px; background: #141414; border: 1px solid #3a3a3a; border-radius: 0; color: #fff; font: 400 16px/1 var(--body);}
+.kg .kpop__form input::placeholder{color: #9a9a9a;}
+.kg .kpop__form input:focus-visible{outline: 2px solid #fab505; outline-offset: -1px;}
+.kg .kpop__submit{width: 100%; min-height: 40px; border: 0; border-radius: 999px; background: #fab505; color: #0d0d0d; font: 600 16px/1 var(--body); text-transform: uppercase; letter-spacing: .02em; cursor: pointer; padding: 12px 16px; transition: background .2s;}
+.kg .kpop__submit:hover{background: #ffc12e;}
+.kg .kpop__submit:disabled{opacity: .7; cursor: wait;}
+.kg .kpop__msg{font: 400 13px/1.4 var(--body); color: #ff8a80;}
+.kg .kpop__consent{display: grid; grid-template-columns: 20px 1fr; gap: 10px; font: 400 12.5px/1.45 var(--body); color: #d4d4d4; cursor: pointer;}
+.kg .kpop__consent input{width: 18px; height: 18px; margin: 1px 0 0; accent-color: #fff;}
+.kg .kpop__consent a{color: #fff; text-decoration: underline;}
+.kg .kpop__done{padding: 20px 0 6px;}
+.kg .kpop__done .kg .kpop__submit{max-width: 260px; margin-top: 10px;}
+.kg.kpop-tab{position: fixed; left: 13px; bottom: 13px; z-index: 2147482000; display: inline-flex; align-items: center; background: #0d0d0d; border: 1px solid #fab505; border-radius: 999px; box-shadow: 0 6px 18px rgba(0, 0, 0, .25);}
+.kg .kpop-tab__open{background: none; border: 0; color: #fab505; font: 600 12px/1 var(--body); padding: 9px 4px 9px 13px; cursor: pointer;}
+.kg .kpop-tab__x{background: none; border: 0; color: #fff; font: 400 16px/1 var(--body); padding: 6px 11px 7px 6px; cursor: pointer;}
+@media (max-width: 480px){
+  .kg.kpop{background: transparent; padding: 12px;}
+  .kg .kpop__dialog{padding: 22px 16px 18px;}
+  .kg .kpop__form input:not([type=checkbox]){height: 50px;}
+}
