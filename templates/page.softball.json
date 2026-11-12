@@ -18,13 +18,13 @@
     "t4": "Shop SpinGrip",
     "t5": "How it works",
     "t6": "4.8 across thousands of player experiences",
-    "u8": "https://kittedgear.com/__l5e/assets-v1/6effdfbd-291f-4d9a-b9f1-02e8576507f3/softball-hero-fast-desktop.mp4",
     "t10": "kg-softball-hero-wide-poster.webp",
-    "u12": "https://kittedgear.com/__l5e/assets-v1/6effdfbd-291f-4d9a-b9f1-02e8576507f3/softball-hero-fast-desktop.mp4",
     "t14": "kg-softball-hero-tall-poster.webp",
     "t16": "kg-patent-seal-yellow.webp",
     "t17": "Patent pending",
-    "kg_shop_url": "/collections/spingrip-softball"
+    "kg_shop_url": "/collections/spingrip-softball",
+    "v7": "shopify://files/videos/softball-hero-fast-desktop.mp4",
+    "v11": "shopify://files/videos/softball-hero-fast-desktop.mp4"
    }
   },
   "kg_01": {
@@ -233,7 +233,7 @@
       "t2": "kg-poster-softball-ugc-1.webp",
       "t3": "“It’s making me pull down my throws.”",
       "t4": "Annie Kay, All-American",
-      "kg_video_url": "https://kittedgear.com/videos/softball-ugc-1.mp4"
+      "kg_video": "shopify://files/videos/softball-ugc-1.mp4"
      }
     },
     "c1a_2": {
@@ -242,7 +242,7 @@
       "t2": "kg-poster-softball-ugc-2.webp",
       "t3": "“I feel everything in the finger tips.”",
       "t4": "HS Softball Players",
-      "kg_video_url": "https://kittedgear.com/videos/softball-ugc-2.mp4"
+      "kg_video": "shopify://files/videos/softball-ugc-2.mp4"
      }
     },
     "c1a_3": {
@@ -251,7 +251,7 @@
       "t2": "kg-poster-softball-ugc-3.webp",
       "t3": "“It’s letting me feel where I release the ball.”",
       "t4": "Ainsley Davis, College Pitcher",
-      "kg_video_url": "https://kittedgear.com/videos/softball-ugc-3.mp4"
+      "kg_video": "shopify://files/videos/softball-ugc-3.mp4"
      }
     },
     "c1a_4": {
@@ -260,7 +260,7 @@
       "t2": "kg-poster-softball-ugc-4.webp",
       "t3": "“You can’t death grip the ball.”",
       "t4": "Steele Walker, Founder",
-      "kg_video_url": "https://kittedgear.com/videos/softball-ugc-4.mp4"
+      "kg_video": "shopify://files/videos/softball-ugc-4.mp4"
      }
     },
     "c1a_5": {
@@ -269,7 +269,7 @@
       "t2": "kg-poster-softball-ugc-5.webp",
       "t3": "“This offers game changing benefits.”",
       "t4": "Softball Coach",
-      "kg_video_url": "https://kittedgear.com/videos/softball-ugc-5.mp4"
+      "kg_video": "shopify://files/videos/softball-ugc-5.mp4"
      }
     },
     "c1a_6": {
@@ -278,7 +278,7 @@
       "t2": "kg-poster-softball-ugc-6.webp",
       "t3": "“My throws are way more accurate now.”",
       "t4": "Fastpitch athlete",
-      "kg_video_url": "https://kittedgear.com/videos/softball-ugc-6.mp4"
+      "kg_video": "shopify://files/videos/softball-ugc-6.mp4"
      }
     },
     "c1a_7": {
@@ -287,7 +287,7 @@
       "t2": "kg-poster-softball-ugc-7.webp",
       "t3": "“This is the only tool on the market that does this.”",
       "t4": "Fastpitch athlete",
-      "kg_video_url": "https://kittedgear.com/videos/softball-ugc-7.mp4"
+      "kg_video": "shopify://files/videos/softball-ugc-7.mp4"
      }
     },
     "c1a_8": {
@@ -296,7 +296,7 @@
       "t2": "kg-poster-softball-ugc-8.webp",
       "t3": "“The ball just jumps out of my hand.”",
       "t4": "Pitcher",
-      "kg_video_url": "https://kittedgear.com/videos/softball-ugc-8.mp4"
+      "kg_video": "shopify://files/videos/softball-ugc-8.mp4"
      }
     },
     "c1a_9": {
@@ -305,7 +305,7 @@
       "t2": "kg-poster-softball-ugc-9.webp",
       "t3": "“No more bad grips.”",
       "t4": "Fastpitch athlete",
-      "kg_video_url": "https://kittedgear.com/videos/softball-ugc-9.mp4"
+      "kg_video": "shopify://files/videos/softball-ugc-9.mp4"
      }
     },
     "c1a_10": {
@@ -314,7 +314,7 @@
       "t2": "kg-poster-softball-ugc-10.webp",
       "t3": "“Hits her spots every throw.”",
       "t4": "Softball dad",
-      "kg_video_url": "https://kittedgear.com/videos/softball-ugc-10.mp4"
+      "kg_video": "shopify://files/videos/softball-ugc-10.mp4"
      }
     }
    },
@@ -339,8 +339,8 @@
     "t4": "A softball dad shocked by SpinGrip results",
     "t5": "If you’re not using SpinGrip, you’re not getting the most out of your throws.",
     "t6": "Shop SpinGrip",
-    "kg_video_url": "https://kittedgear.com/__l5e/assets-v1/26ba446f-90f0-4887-bb12-c8f12c2ff5d7/softball-call.mp4",
-    "kg_shop_url": "/collections/spingrip-softball"
+    "kg_shop_url": "/collections/spingrip-softball",
+    "kg_video": "shopify://files/videos/softball-call.mp4"
    }
   },
   "kg_07": {
@@ -352,7 +352,7 @@
     "t5": "See how SpinGrip Softball for Pitchers locks in your release and unlocks tighter, faster rotation.",
     "u6": "/products/spingrip-softball-pitcher",
     "t7": "Shop SpinGrip for Pitchers",
-    "kg_video_url": "https://kittedgear.com/__l5e/assets-v1/dc9bd045-7efe-4065-a53b-7d3a6f79416d/softball-pitcher-dimension.mp4"
+    "kg_video": "shopify://files/videos/softball-pitcher-dimension.mp4"
    }
   },
   "kg_08": {
@@ -404,8 +404,8 @@
     "t4": "The #1 throwing mistake every softball player makes",
     "t5": "A former D1 softball athlete explains the grip problem killing your spin, velocity and accuracy, and how SpinGrip fixes it automatically.",
     "t6": "Shop SpinGrip",
-    "kg_video_url": "https://kittedgear.com/__l5e/assets-v1/18f657b1-3791-4031-be7a-8d442d46a75f/softball-d1-problem.mp4",
-    "kg_shop_url": "/collections/spingrip-softball"
+    "kg_shop_url": "/collections/spingrip-softball",
+    "kg_video": "shopify://files/videos/softball-d1-problem.mp4"
    }
   },
   "kg_10": {
@@ -722,7 +722,7 @@
       "t2": "kg-poster-softball-testimonial-1.webp",
       "t3": "“This will maximize your speed and spin.”",
       "t4": "Jaymee Lynn · Pitching Coach, 20 years of coaching",
-      "kg_video_url": "https://kittedgear.com/videos/softball-testimonial-1.mp4"
+      "kg_video": "shopify://files/videos/softball-testimonial-1.mp4"
      }
     },
     "c1a_2": {
@@ -731,7 +731,7 @@
       "t2": "kg-poster-softball-testimonial-2.webp",
       "t3": "“It locks players into the right grip every single throw.”",
       "t4": "Kevin Starr · Coach",
-      "kg_video_url": "https://kittedgear.com/videos/softball-testimonial-2.mp4"
+      "kg_video": "shopify://files/videos/softball-testimonial-2.mp4"
      }
     },
     "c1a_3": {
@@ -740,7 +740,7 @@
       "t2": "kg-poster-softball-testimonial-3.webp",
       "t3": "“I can see her ball staying on track because of the SpinGrip.”",
       "t4": "Julie Wyrick · HS Softball Coach, 600+ career wins",
-      "kg_video_url": "https://kittedgear.com/videos/softball-testimonial-3.mp4"
+      "kg_video": "shopify://files/videos/softball-testimonial-3.mp4"
      }
     },
     "c1a_4": {
@@ -749,7 +749,7 @@
       "t2": "kg-poster-softball-testimonial-4.webp",
       "t3": "“I feel like I have a lot more spin and control.”",
       "t4": "Annie Kay · All-American Softball Player",
-      "kg_video_url": "https://kittedgear.com/videos/softball-testimonial-4.mp4"
+      "kg_video": "shopify://files/videos/softball-testimonial-4.mp4"
      }
     }
    },

@@ -23,9 +23,9 @@
     "sizing_html": "<p>Baseball SpinGrip</p><table><thead><tr><th>Size</th><th>Age</th><th>Palm Length</th></tr></thead><tbody><tr><td>Youth</td><td>Ages 6–9</td><td>3.0\"–3.75\"</td></tr><tr><td>S/M</td><td>Ages 10–14</td><td>3.75\"–4.5\"</td></tr><tr><td>L/XL</td><td>Ages 15+</td><td>4.5\"–5.25\"</td></tr></tbody></table><p><strong>Palm length:</strong> measure from the middle of the crease where your palm meets your wrist up to the base of your middle finger.</p><p>We recommend sizing by age first, then palm length. SpinGrip is a fingerless glove and does stretch, and age has worked well for sizing.</p>",
     "how_title": "How SpinGrip works",
     "how_html": "<p>SpinGrip is built on simple physics. When the ball sits farther out in your fingers, you can create more spin, higher velocity, and better accuracy. This effective fingertip release is what the elite arms aim for, but without the right feel, it is very hard to mimic.</p><p><strong>SpinGrip gives you this feel and makes it consistently automatic for everyone.</strong></p><p>With its embedded palm-spacer, SpinGrip positions the ball into the proper finger placement so every athlete can feel the same release pattern that took the best arms in the game years to develop. You don't need a coach and you don't need to think. Just put the grip on and get to work. You will feel the difference immediately.</p>",
-    "how_video_url": "https://kittedgear.com/videos/how-to-use.mp4",
     "show_pack": true,
-    "pack_url": "/pages/team-orders"
+    "pack_url": "/pages/team-orders",
+    "how_video": "shopify://files/videos/how-to-use.mp4"
    },
    "blocks": {
     "result_0": {
@@ -152,7 +152,7 @@
       "t2": "kg-poster-ugc-4.webp",
       "t3": "“I highly approve and recommend the SpinGrip.”",
       "t4": "Pro Pitching Instructor",
-      "kg_video_url": "https://kittedgear.com/videos/ugc-4.mp4"
+      "kg_video": "shopify://files/videos/ugc-4.mp4"
      }
     },
     "c1a_4": {
@@ -161,7 +161,7 @@
       "t2": "kg-poster-ugc-6.webp",
       "t3": "“It’s effortless power.”",
       "t4": "Youth Ballplayers",
-      "kg_video_url": "https://kittedgear.com/videos/ugc-6.mp4"
+      "kg_video": "shopify://files/videos/ugc-6.mp4"
      }
     },
     "c1a_5": {
@@ -170,7 +170,7 @@
       "t2": "kg-poster-ugc-15.webp",
       "t3": "“It’s forcing me to use my fingertips.”",
       "t4": "Donte Lewis, D1 Player",
-      "kg_video_url": "https://kittedgear.com/videos/ugc-15.mp4"
+      "kg_video": "shopify://files/videos/ugc-15.mp4"
      }
     },
     "c1a_6": {
@@ -179,7 +179,7 @@
       "t2": "kg-poster-ugc-16.webp",
       "t3": "“It puts the ball in the right position in my hand.”",
       "t4": "Will Brennan, Big Leaguer",
-      "kg_video_url": "https://kittedgear.com/videos/ugc-16.mp4"
+      "kg_video": "shopify://files/videos/ugc-16.mp4"
      }
     },
     "c1a_7": {
@@ -188,7 +188,7 @@
       "t2": "kg-poster-ugc-17.webp",
       "t3": "“There’s no tension. Everything is loose.”",
       "t4": "Blake Rogers, Pro Player",
-      "kg_video_url": "https://kittedgear.com/videos/ugc-17.mp4"
+      "kg_video": "shopify://files/videos/ugc-17.mp4"
      }
     },
     "c1a_8": {
@@ -197,7 +197,7 @@
       "t2": "kg-poster-ugc-19.webp",
       "t3": "“I don’t feel like I’m choking the ball.”",
       "t4": "Youth Player",
-      "kg_video_url": "https://kittedgear.com/videos/ugc-19.mp4"
+      "kg_video": "shopify://files/videos/ugc-19.mp4"
      }
     }
    },
