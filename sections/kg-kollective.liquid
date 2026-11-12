@@ -35,13 +35,57 @@
 </div>
 <script>
   (function () {
-    var f = document.getElementById('kg-kollective-form'); if (!f) return;
-    f.addEventListener('submit', function () {
+    var f = document.getElementById('kg-kollective-form'); if (!f || f.dataset.kgReady) return;
+    f.dataset.kgReady = '1';
+    var company = {{ section.settings.klaviyo_company_id | default: 'VvsiAM' | json }};
+    var listId = {{ section.settings.klaviyo_list_id | default: 'Y4syAV' | json }};
+    var source = {{ section.settings.klaviyo_source | default: 'KITTED Kollective VIP' | json }};
+    var offer = {{ section.settings.klaviyo_offer | default: 'kitted10' | json }};
+    function e164(raw) {
+      var d = (raw || '').replace(/[^\d+]/g, '');
+      if (/^\+\d{8,15}$/.test(d)) return d;
+      d = d.replace(/\D/g, '');
+      if (d.length === 10) return '+1' + d;
+      if (d.length === 11 && d.charAt(0) === '1') return '+' + d;
+      return '';
+    }
+    function toKlaviyo(first, last, email, phone, number, consent) {
+      if (!company || !listId || !email) return Promise.resolve();
+      var props = { signup_offer: offer };
+      if (number) props.jersey_number = number;
+      var subs = { email: { marketing: { consent: 'SUBSCRIBED' } } };
+      var attrs = { email: email, first_name: first, last_name: last, properties: props, subscriptions: subs };
+      if (phone && consent) { attrs.phone_number = phone; subs.sms = { marketing: { consent: 'SUBSCRIBED' } }; }
+      var body = { data: { type: 'subscription', attributes: { custom_source: source, profile: { data: { type: 'profile', attributes: attrs } } }, relationships: { list: { data: { type: 'list', id: listId } } } } };
+      var req = fetch('https://a.klaviyo.com/client/subscriptions?company_id=' + encodeURIComponent(company), {
+        method: 'POST', keepalive: true,
+        headers: { 'Content-Type': 'application/vnd.api+json', 'revision': '2025-07-15' },
+        body: JSON.stringify(body)
+      }).catch(function () {});
+      var timeout = new Promise(function (r) { setTimeout(r, 3000); });
+      return Promise.race([req, timeout]);
+    }
+    f.addEventListener('submit', function (ev) {
+      if (f.dataset.kgSent) return;
+      ev.preventDefault();
       var parts = (f.querySelector('[name=fullname]').value || '').trim().split(/\s+/);
-      f.querySelector('[name="contact[first_name]"]').value = parts.shift() || '';
-      f.querySelector('[name="contact[last_name]"]').value = parts.join(' ');
-      var n = (f.querySelector('[name=number]').value || '').replace(/\D/g, '');
+      var first = parts.shift() || '', last = parts.join(' ');
+      f.querySelector('[name="contact[first_name]"]').value = first;
+      f.querySelector('[name="contact[last_name]"]').value = last;
+      var n = (f.querySelector('[name=number]').value || '').replace(/\D/g, '').slice(0, 2);
       f.querySelector('[name="contact[tags]"]').value = 'kollective' + (n ? ',jersey-' + n : '');
+      var email = (f.querySelector('[name="contact[email]"]').value || '').trim();
+      var phoneInput = f.querySelector('[name="contact[phone]"]');
+      var phone = e164(phoneInput ? phoneInput.value : '');
+      var consentBox = f.querySelector('[name="contact[accepts_marketing]"]');
+      var consent = !!(consentBox && consentBox.checked);
+      var btns = f.querySelectorAll('[type=submit]');
+      btns.forEach(function (b) { b.disabled = true; });
+      toKlaviyo(first, last, email, phone, n, consent).then(function () {
+        f.dataset.kgSent = '1';
+        if (phoneInput) phoneInput.value = phone;
+        HTMLFormElement.prototype.submit.call(f);
+      });
     });
   })();
 </script>
@@ -51,8 +95,17 @@
  "tag": "div",
  "class": "kg-section",
  "settings": [
-  {"type":"checkbox","id":"full_page","label":"Full-page roster layout","default":false},
-  {"type":"text","id":"subtitle","label":"Subtitle"},
+  {
+   "type": "checkbox",
+   "id": "full_page",
+   "label": "Full-page roster layout",
+   "default": false
+  },
+  {
+   "type": "text",
+   "id": "subtitle",
+   "label": "Subtitle"
+  },
   {
    "type": "text",
    "id": "tag",
@@ -94,6 +147,35 @@
    "id": "consent",
    "label": "Consent text",
    "default": "<p>Yes, text me. By checking this box and providing my mobile number, I agree to receive recurring automated marketing text messages from KITTED at the number provided. Consent is not a condition of purchase. Message and data rates may apply. Reply STOP to opt out, HELP for help. See our Privacy Policy and Terms.</p>"
+  },
+  {
+   "type": "header",
+   "content": "Klaviyo"
+  },
+  {
+   "type": "text",
+   "id": "klaviyo_company_id",
+   "label": "Klaviyo public API key (company ID)",
+   "default": "VvsiAM"
+  },
+  {
+   "type": "text",
+   "id": "klaviyo_list_id",
+   "label": "Klaviyo list ID",
+   "default": "Y4syAV",
+   "info": "Sign-ups are added to this list (KITTED Kollective)."
+  },
+  {
+   "type": "text",
+   "id": "klaviyo_source",
+   "label": "Klaviyo source",
+   "default": "KITTED Kollective VIP"
+  },
+  {
+   "type": "text",
+   "id": "klaviyo_offer",
+   "label": "Sign-up offer property",
+   "default": "kitted10"
   }
  ],
  "presets": [
