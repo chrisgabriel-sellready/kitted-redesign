@@ -47,8 +47,8 @@
             <div class="lpdp__stage">
               {%- if section.settings.seal != 'none' and section.settings.landing_offer == false -%}<img class="lpdp__seal" src="{{ 'kg-patent-seal-' | append: section.settings.seal | append: '.webp' | asset_url }}" alt="Patent Pending" width="56" height="56">{%- endif -%}
               {%- if section.settings.landing_offer -%}
-                {%- assign offer_images = 'https://kittedgear.com/assets/product-grip-side-DWWA9Dq3.webp|https://kittedgear.com/assets/product-baseball-2-BHQik3k4.webp|https://kittedgear.com/assets/product-baseball-3-COQYaFOF.webp' | split: '|' -%}
-                {%- for image in offer_images -%}<div class="lpdp__slide" data-gallery-media="offer-{{ forloop.index }}"{% unless forloop.first %} hidden{% endunless %}><img src="{{ image }}" alt="{{ p.title | escape }}" width="960" height="960" loading="lazy"></div>{%- endfor -%}
+                {%- assign offer_images = 'kg-offer-baseball-1.webp|kg-offer-baseball-2.webp|kg-offer-baseball-3.webp' | split: '|' -%}
+                {%- for image in offer_images -%}<div class="lpdp__slide" data-gallery-media="offer-{{ forloop.index }}"{% unless forloop.first %} hidden{% endunless %}><img src="{{ image | asset_url }}" alt="{{ p.title | escape }}" width="960" height="960" loading="lazy"></div>{%- endfor -%}
               {%- else -%}
               {%- for m in p.media -%}
                 <div class="lpdp__slide" data-gallery-media="{{ m.id }}"{% unless m.id == first_media.id %} hidden{% endunless %}>
