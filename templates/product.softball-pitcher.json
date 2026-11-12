@@ -23,9 +23,9 @@
     "sizing_html": "<p>Softball SpinGrip for Pitchers — Designed for girls’ and women’s hands.</p><table><thead><tr><th>Size</th><th>Age</th><th>Palm Length</th></tr></thead><tbody><tr><td>S/M</td><td>Ages 8–14</td><td>3.25\"–4.25\"</td></tr><tr><td>L/XL</td><td>Ages 15+</td><td>4.25\"–4.9\"</td></tr></tbody></table><p><strong>Palm length:</strong> measure from the middle of the crease where your palm meets your wrist up to the base of your middle finger.</p><p>We recommend sizing by age first, then palm length. SpinGrip is a fingerless glove and does stretch, and age has worked well for sizing.</p>",
     "how_title": "How SpinGrip works",
     "how_html": "<p>SpinGrip is built on simple physics. When the ball sits farther out in your fingers, you can create more spin, higher velocity, and better accuracy. This effective fingertip release is what the elite arms aim for, but without the right feel, it is very hard to mimic.</p><p><strong>SpinGrip gives you this feel and makes it consistently automatic for everyone.</strong></p><p>With its embedded palm-spacer, SpinGrip positions the ball into the proper finger placement so every athlete can feel the same release pattern that took the best arms in the game years to develop. You don't need a coach and you don't need to think. Just put the grip on and get to work. You will feel the difference immediately.</p>",
-    "how_video_url": "https://kittedgear.com/videos/how-to-use.mp4",
     "show_pack": true,
-    "pack_url": "/pages/team-orders"
+    "pack_url": "/pages/team-orders",
+    "how_video": "shopify://files/videos/how-to-use.mp4"
    },
    "blocks": {
     "result_0": {
@@ -73,7 +73,7 @@
       "t2": "kg-poster-softball-ugc-1.webp",
       "t3": "“It’s making me pull down my throws.”",
       "t4": "Annie Kay, All-American",
-      "kg_video_url": "https://kittedgear.com/videos/softball-ugc-1.mp4"
+      "kg_video": "shopify://files/videos/softball-ugc-1.mp4"
      }
     },
     "c1a_2": {
@@ -82,7 +82,7 @@
       "t2": "kg-poster-softball-ugc-2.webp",
       "t3": "“I feel everything in the finger tips.”",
       "t4": "HS Softball Players",
-      "kg_video_url": "https://kittedgear.com/videos/softball-ugc-2.mp4"
+      "kg_video": "shopify://files/videos/softball-ugc-2.mp4"
      }
     },
     "c1a_3": {
@@ -91,7 +91,7 @@
       "t2": "kg-poster-softball-ugc-3.webp",
       "t3": "“It’s letting me feel where I release the ball.”",
       "t4": "Ainsley Davis, College Pitcher",
-      "kg_video_url": "https://kittedgear.com/videos/softball-ugc-3.mp4"
+      "kg_video": "shopify://files/videos/softball-ugc-3.mp4"
      }
     },
     "c1a_4": {
@@ -100,7 +100,7 @@
       "t2": "kg-poster-softball-ugc-4.webp",
       "t3": "“You can’t death grip the ball.”",
       "t4": "Steele Walker, Founder",
-      "kg_video_url": "https://kittedgear.com/videos/softball-ugc-4.mp4"
+      "kg_video": "shopify://files/videos/softball-ugc-4.mp4"
      }
     },
     "c1a_5": {
@@ -109,7 +109,7 @@
       "t2": "kg-poster-softball-ugc-5.webp",
       "t3": "“This offers game changing benefits.”",
       "t4": "Softball Coach",
-      "kg_video_url": "https://kittedgear.com/videos/softball-ugc-5.mp4"
+      "kg_video": "shopify://files/videos/softball-ugc-5.mp4"
      }
     },
     "c1a_6": {
@@ -118,7 +118,7 @@
       "t2": "kg-poster-softball-ugc-6.webp",
       "t3": "“My throws are way more accurate now.”",
       "t4": "Fastpitch athlete",
-      "kg_video_url": "https://kittedgear.com/videos/softball-ugc-6.mp4"
+      "kg_video": "shopify://files/videos/softball-ugc-6.mp4"
      }
     },
     "c1a_7": {
@@ -127,7 +127,7 @@
       "t2": "kg-poster-softball-ugc-7.webp",
       "t3": "“This is the only tool on the market that does this.”",
       "t4": "Fastpitch athlete",
-      "kg_video_url": "https://kittedgear.com/videos/softball-ugc-7.mp4"
+      "kg_video": "shopify://files/videos/softball-ugc-7.mp4"
      }
     },
     "c1a_8": {
@@ -136,7 +136,7 @@
       "t2": "kg-poster-softball-ugc-8.webp",
       "t3": "“The ball just jumps out of my hand.”",
       "t4": "Pitcher",
-      "kg_video_url": "https://kittedgear.com/videos/softball-ugc-8.mp4"
+      "kg_video": "shopify://files/videos/softball-ugc-8.mp4"
      }
     },
     "c1a_9": {
@@ -145,7 +145,7 @@
       "t2": "kg-poster-softball-ugc-9.webp",
       "t3": "“No more bad grips.”",
       "t4": "Fastpitch athlete",
-      "kg_video_url": "https://kittedgear.com/videos/softball-ugc-9.mp4"
+      "kg_video": "shopify://files/videos/softball-ugc-9.mp4"
      }
     },
     "c1a_10": {
@@ -154,7 +154,7 @@
       "t2": "kg-poster-softball-ugc-10.webp",
       "t3": "“Hits her spots every throw.”",
       "t4": "Softball dad",
-      "kg_video_url": "https://kittedgear.com/videos/softball-ugc-10.mp4"
+      "kg_video": "shopify://files/videos/softball-ugc-10.mp4"
      }
     }
    },

@@ -23,9 +23,9 @@
     "sizing_html": "<p>Football SpinGrip</p><table><thead><tr><th>Size</th><th>Age</th><th>Palm Length</th></tr></thead><tbody><tr><td>Youth</td><td>Ages 6–9</td><td>3.0\"–3.75\"</td></tr><tr><td>S/M</td><td>Ages 10–14</td><td>3.75\"–4.5\"</td></tr><tr><td>L/XL</td><td>Ages 15+</td><td>4.5\"–5.25\"</td></tr></tbody></table><p><strong>Palm length:</strong> measure from the middle of the crease where your palm meets your wrist up to the base of your middle finger.</p><p>We recommend sizing by age first, then palm length. SpinGrip is a fingerless glove and does stretch, and age has worked well for sizing.</p>",
     "how_title": "How SpinGrip works",
     "how_html": "<p>SpinGrip is built on simple physics. When the ball sits farther out in your fingers, you can create more spin, higher velocity, and better accuracy. This effective fingertip release is what the elite arms aim for, but without the right feel, it is very hard to mimic.</p><p><strong>SpinGrip gives you this feel and makes it consistently automatic for everyone.</strong></p><p>With its embedded palm-spacer, SpinGrip positions the ball into the proper finger placement so every athlete can feel the same release pattern that took the best arms in the game years to develop. You don't need a coach and you don't need to think. Just put the grip on and get to work. You will feel the difference immediately.</p>",
-    "how_video_url": "https://kittedgear.com/videos/how-to-use.mp4",
     "show_pack": true,
-    "pack_url": "/pages/team-orders"
+    "pack_url": "/pages/team-orders",
+    "how_video": "shopify://files/videos/how-to-use.mp4"
    },
    "blocks": {
     "result_0": {
@@ -73,7 +73,7 @@
       "t2": "kg-poster-football-ugc-1.webp",
       "t3": "“The ball feels like a feather.”",
       "t4": "Peyton “Pop” Houston, Elite 11 Champ",
-      "kg_video_url": "https://kittedgear.com/__l5e/assets-v1/1d76a2c5-86bf-4a68-9eb4-bbec54ab01bb/football-ugc-1.mp4"
+      "kg_video": "shopify://files/videos/football-ugc-1.mp4"
      }
     },
     "c1a_2": {
@@ -82,7 +82,7 @@
       "t2": "kg-vposter-football-ugc-2.jpg",
       "t3": "“Warm-up routine with the SpinGrip.”",
       "t4": "Quarterback",
-      "kg_video_url": "https://kittedgear.com/__l5e/assets-v1/4de16fd1-79ee-40ec-a08b-e1ee6c2d7fa0/football-ugc-2.mp4"
+      "kg_video": "shopify://files/videos/football-ugc-2.mp4"
      }
     },
     "c1a_3": {
@@ -91,7 +91,7 @@
       "t2": "kg-vposter-football-ugc-3.jpg",
       "t3": "“Before vs. after with the SpinGrip.”",
       "t4": "Heston Horn",
-      "kg_video_url": "https://kittedgear.com/__l5e/assets-v1/e1c2f4bf-65d4-441b-a972-b32ce38bac0d/football-ugc-3.mp4"
+      "kg_video": "shopify://files/videos/football-ugc-3.mp4"
      }
     },
     "c1a_4": {
@@ -100,7 +100,7 @@
       "t2": "kg-vposter-football-ugc-4.jpg",
       "t3": "“The training tool every QB needs.”",
       "t4": "Trevor",
-      "kg_video_url": "https://kittedgear.com/__l5e/assets-v1/8a16e18c-056b-46e9-ae26-5d66277d6efd/football-ugc-4.mp4"
+      "kg_video": "shopify://files/videos/football-ugc-4.mp4"
      }
     }
    },

@@ -18,13 +18,13 @@
     "t4": "Shop SpinGrip",
     "t5": "How it works",
     "t6": "4.8 across thousands of player experiences",
-    "u8": "https://kittedgear.com/__l5e/assets-v1/f7563a13-5ba8-47cc-9252-c32f892738f5/baseball-hero-fast-desktop.mp4",
     "t10": "kg-baseball-hero-wide-poster.webp",
-    "u12": "https://kittedgear.com/__l5e/assets-v1/f7563a13-5ba8-47cc-9252-c32f892738f5/baseball-hero-fast-desktop.mp4",
     "t14": "kg-baseball-hero-tall-poster.webp",
     "t16": "kg-patent-seal-red.webp",
     "t17": "Patent pending",
-    "kg_shop_url": "/collections/baseball"
+    "kg_shop_url": "/collections/baseball",
+    "v7": "shopify://files/videos/baseball-hero-fast-desktop.mp4",
+    "v11": "shopify://files/videos/baseball-hero-fast-desktop.mp4"
    }
   },
   "kg_01": {
@@ -670,7 +670,7 @@
       "t2": "kg-poster-ugc-4.webp",
       "t3": "“I highly approve and recommend the SpinGrip.”",
       "t4": "Pro Pitching Instructor",
-      "kg_video_url": "https://kittedgear.com/videos/ugc-4.mp4"
+      "kg_video": "shopify://files/videos/ugc-4.mp4"
      }
     },
     "c1a_4": {
@@ -679,7 +679,7 @@
       "t2": "kg-poster-ugc-6.webp",
       "t3": "“It’s effortless power.”",
       "t4": "Youth Ballplayers",
-      "kg_video_url": "https://kittedgear.com/videos/ugc-6.mp4"
+      "kg_video": "shopify://files/videos/ugc-6.mp4"
      }
     },
     "c1a_5": {
@@ -688,7 +688,7 @@
       "t2": "kg-poster-ugc-15.webp",
       "t3": "“It’s forcing me to use my fingertips.”",
       "t4": "Donte Lewis, D1 Player",
-      "kg_video_url": "https://kittedgear.com/videos/ugc-15.mp4"
+      "kg_video": "shopify://files/videos/ugc-15.mp4"
      }
     },
     "c1a_6": {
@@ -697,7 +697,7 @@
       "t2": "kg-poster-ugc-16.webp",
       "t3": "“It puts the ball in the right position in my hand.”",
       "t4": "Will Brennan, Big Leaguer",
-      "kg_video_url": "https://kittedgear.com/videos/ugc-16.mp4"
+      "kg_video": "shopify://files/videos/ugc-16.mp4"
      }
     },
     "c1a_7": {
@@ -706,7 +706,7 @@
       "t2": "kg-poster-ugc-17.webp",
       "t3": "“There’s no tension. Everything is loose.”",
       "t4": "Blake Rogers, Pro Player",
-      "kg_video_url": "https://kittedgear.com/videos/ugc-17.mp4"
+      "kg_video": "shopify://files/videos/ugc-17.mp4"
      }
     },
     "c1a_8": {
@@ -715,7 +715,7 @@
       "t2": "kg-poster-ugc-19.webp",
       "t3": "“I don’t feel like I’m choking the ball.”",
       "t4": "Youth Player",
-      "kg_video_url": "https://kittedgear.com/videos/ugc-19.mp4"
+      "kg_video": "shopify://files/videos/ugc-19.mp4"
      }
     }
    },
@@ -835,7 +835,7 @@
       "t2": "kg-poster-ugc-10.webp",
       "t3": "“That ball is shooting out of my hand.”",
       "t4": "Sam Walker · Former Ballplayer",
-      "kg_video_url": "https://kittedgear.com/videos/ugc-10.mp4"
+      "kg_video": "shopify://files/videos/ugc-10.mp4"
      }
     },
     "c1b_4": {
@@ -844,7 +844,7 @@
       "t2": "kg-poster-ugc-11.webp",
       "t3": "“The whole squad trains with SpinGrip. It’s become part of our routine.”",
       "t4": "11u East Cobb Team · #4 Ranked Team In The Nation",
-      "kg_video_url": "https://kittedgear.com/videos/ugc-11.mp4"
+      "kg_video": "shopify://files/videos/ugc-11.mp4"
      }
     },
     "c1b_5": {
@@ -853,7 +853,7 @@
       "t2": "kg-poster-ugc-12.webp",
       "t3": "“Optimal becomes automatic. SpinGrip makes the perfect grip second nature.”",
       "t4": "Steele Walker · Pro Player",
-      "kg_video_url": "https://kittedgear.com/videos/ugc-12.mp4"
+      "kg_video": "shopify://files/videos/ugc-12.mp4"
      }
     },
     "c1b_6": {
@@ -862,7 +862,7 @@
       "t2": "kg-poster-ugc-21.webp",
       "t3": "“It’s forcing your brain to really focus on what your hand is doing.”",
       "t4": "D1 Pitching Coach · Kansas State",
-      "kg_video_url": "https://kittedgear.com/videos/ugc-21.mp4"
+      "kg_video": "shopify://files/videos/ugc-21.mp4"
      }
     },
     "c1a_7": {

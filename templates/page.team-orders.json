@@ -92,7 +92,7 @@
             "t2": "kg-poster-ugc-21.webp",
             "t3": "“It’s forcing your brain to really focus on what your hand is doing.”",
             "t4": "Pitching Coach · Kansas State",
-            "kg_video_url": "https://kittedgear.com/videos/ugc-21.mp4"
+            "kg_video": "shopify://files/videos/ugc-21.mp4"
           }
         },
         "donte": {
@@ -101,7 +101,7 @@
             "t2": "kg-poster-ugc-15.webp",
             "t3": "",
             "t4": "Donte Lewis · Kansas State",
-            "kg_video_url": "https://kittedgear.com/videos/ugc-15.mp4"
+            "kg_video": "shopify://files/videos/ugc-15.mp4"
           }
         }
       },
