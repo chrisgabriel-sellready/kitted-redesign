@@ -51,7 +51,7 @@
   </div>
 
   {%- form 'product', p, class: 'buy', id: form_id, novalidate: 'novalidate', data-kg-buy: '', data-kg-digital: digital -%}
-    <script type="application/json" data-product-json>{{ p | json }}</script>
+    <script type="application/json" data-product-json>{"options":[{% for option in p.options_with_values %}{{ option.name | json }}{% unless forloop.last %},{% endunless %}{% endfor %}],"variants":[{% for variant in p.variants %}{"id":{{ variant.id }},"options":{{ variant.options | json }},"price":{{ variant.price }},"available":{{ variant.available | json }},"featured_media":{% if variant.featured_media %}{"id":{{ variant.featured_media.id }}}{% else %}null{% endif %}}{% unless forloop.last %},{% endunless %}{% endfor %}]}</script>
     <input type="hidden" name="id" value="{{ v.id }}">
     {%- if s.banner != blank -%}<div class="buy__banner"><span class="dot"></span>{{ s.banner }}</div>{%- endif -%}
     <div class="stack" style="gap:10px">
