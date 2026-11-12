@@ -367,7 +367,8 @@
     "offer_text": "The first-ever patent-pending throwing glove that improves every metric.",
     "show_used_by": false,
     "show_trust": true,
-    "show_pack": false
+    "show_pack": false,
+    "offer_images": "kg-offer-baseball-1.webp|kg-offer-baseball-2.webp|kg-offer-baseball-3.webp"
    },
    "blocks": {
     "result_0": {

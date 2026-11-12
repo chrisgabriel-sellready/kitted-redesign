@@ -46,8 +46,8 @@
           <div class="lpdp__gallery" data-gallery>
             <div class="lpdp__stage">
               {%- if section.settings.seal != 'none' and section.settings.landing_offer == false -%}<img class="lpdp__seal" src="{{ 'kg-patent-seal-' | append: section.settings.seal | append: '.webp' | asset_url }}" alt="Patent Pending" width="56" height="56">{%- endif -%}
-              {%- if section.settings.landing_offer -%}
-                {%- assign offer_images = 'kg-offer-baseball-1.webp|kg-offer-baseball-2.webp|kg-offer-baseball-3.webp' | split: '|' -%}
+              {%- assign offer_images = section.settings.offer_images | strip | split: '|' -%}
+              {%- if section.settings.landing_offer and offer_images.size > 0 -%}
                 {%- for image in offer_images -%}<div class="lpdp__slide" data-gallery-media="offer-{{ forloop.index }}"{% unless forloop.first %} hidden{% endunless %}><img src="{{ image | asset_url }}" alt="{{ p.title | escape }}" width="960" height="960" loading="lazy"></div>{%- endfor -%}
               {%- else -%}
               {%- for m in p.media -%}
@@ -76,7 +76,7 @@
             </div>
             {%- if p.media.size > 1 -%}
               <div class="gallery__thumbs lpdp__thumbs"{% if section.settings.landing_offer %} hidden{% endif %}>
-                {%- if section.settings.landing_offer -%}
+                {%- if section.settings.landing_offer and offer_images.size > 0 -%}
                   {%- for image in offer_images -%}<button type="button" data-media-id="offer-{{ forloop.index }}" aria-current="{% if forloop.first %}true{% else %}false{% endif %}">{{ forloop.index }}</button>{%- endfor -%}
                 {%- else -%}
                 {%- for m in p.media -%}
@@ -234,42 +234,227 @@
  "tag": "div",
  "class": "kg-section",
  "settings": [
-  { "type": "checkbox", "id": "landing_offer", "label": "Landing-page offer layout", "default": false },
-  { "type": "text", "id": "anchor", "label": "Section anchor" },
-  { "type": "textarea", "id": "offer_text", "label": "Offer introduction" },
-  { "type": "product", "id": "product", "label": "Product", "info": "Leave empty on product pages to use the page's product." },
-  { "type": "text", "id": "banner", "label": "Banner", "default": "Guaranteed to Increase Velo, Spin and Accuracy" },
-  { "type": "url", "id": "back_url", "label": "Back link" },
-  { "type": "text", "id": "back_label", "label": "Back link text", "default": "Baseball" },
-  { "type": "select", "id": "seal", "label": "Patent seal", "default": "red", "options": [
-    { "value": "none", "label": "None" }, { "value": "red", "label": "Red (baseball)" }, { "value": "yellow", "label": "Yellow (softball)" }, { "value": "pink", "label": "Pink (pitcher)" }, { "value": "green", "label": "Green (football)" }
-  ] },
-  { "type": "text", "id": "results_heading", "label": "Results heading", "default": "Results we see after using SpinGrip" },
-  { "type": "text", "id": "inside_heading", "label": "What's inside heading", "default": "What's inside" },
-  { "type": "text", "id": "value_tag", "label": "Value line (digital products)", "default": "$150 Value" },
-  { "type": "textarea", "id": "lede", "label": "Intro (digital products)" },
-  { "type": "text", "id": "atc_label", "label": "Add to cart text", "default": "Add to Cart" },
-  { "type": "text", "id": "digital_label", "label": "Digital button text", "default": "Get Instant Access" },
-  { "type": "checkbox", "id": "show_used_by", "label": "Show 'Used by athletes from' logos", "default": true },
-  { "type": "checkbox", "id": "show_trust", "label": "Show trust icons", "default": true },
-  { "type": "header", "content": "Dropdowns" },
-  { "type": "text", "id": "sizing_title", "label": "Sizing title", "default": "Sizing guide" },
-  { "type": "html", "id": "sizing_html", "label": "Sizing guide content" },
-  { "type": "text", "id": "how_title", "label": "How it works title", "default": "How SpinGrip works" },
-  { "type": "html", "id": "how_html", "label": "How it works text" },
-  { "type": "video", "id": "how_video", "label": "How to use video" },
-  { "type": "url", "id": "how_video_url", "label": "How to use video URL", "info": "Used when no video is chosen above." },
-  { "type": "header", "content": "Pack box" },
-  { "type": "checkbox", "id": "show_pack", "label": "Show pack box", "default": true },
-  { "type": "url", "id": "pack_url", "label": "Pack link" },
-  { "type": "text", "id": "pack_title", "label": "Title", "default": "Buying more than one? Save up to 20%" },
-  { "type": "text", "id": "pack_chips", "label": "Tags", "default": "2-Pack · Save 10%, 5-Pack · Save 15%, 10-Pack · Save 20%" },
-  { "type": "text", "id": "pack_text", "label": "Text", "default": "Mix & match any glove, size, or hand — discount applies automatically at checkout." },
-  { "type": "text", "id": "pack_cta", "label": "Link text", "default": "Build your pack" }
+  {
+   "type": "checkbox",
+   "id": "landing_offer",
+   "label": "Landing-page offer layout",
+   "default": false
+  },
+  {
+   "type": "text",
+   "id": "offer_images",
+   "label": "Offer gallery images",
+   "info": "Theme image files separated by |. Leave empty to show the product's own photos."
+  },
+  {
+   "type": "text",
+   "id": "anchor",
+   "label": "Section anchor"
+  },
+  {
+   "type": "textarea",
+   "id": "offer_text",
+   "label": "Offer introduction"
+  },
+  {
+   "type": "product",
+   "id": "product",
+   "label": "Product",
+   "info": "Leave empty on product pages to use the page's product."
+  },
+  {
+   "type": "text",
+   "id": "banner",
+   "label": "Banner",
+   "default": "Guaranteed to Increase Velo, Spin and Accuracy"
+  },
+  {
+   "type": "url",
+   "id": "back_url",
+   "label": "Back link"
+  },
+  {
+   "type": "text",
+   "id": "back_label",
+   "label": "Back link text",
+   "default": "Baseball"
+  },
+  {
+   "type": "select",
+   "id": "seal",
+   "label": "Patent seal",
+   "default": "red",
+   "options": [
+    {
+     "value": "none",
+     "label": "None"
+    },
+    {
+     "value": "red",
+     "label": "Red (baseball)"
+    },
+    {
+     "value": "yellow",
+     "label": "Yellow (softball)"
+    },
+    {
+     "value": "pink",
+     "label": "Pink (pitcher)"
+    },
+    {
+     "value": "green",
+     "label": "Green (football)"
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "id": "results_heading",
+   "label": "Results heading",
+   "default": "Results we see after using SpinGrip"
+  },
+  {
+   "type": "text",
+   "id": "inside_heading",
+   "label": "What's inside heading",
+   "default": "What's inside"
+  },
+  {
+   "type": "text",
+   "id": "value_tag",
+   "label": "Value line (digital products)",
+   "default": "$150 Value"
+  },
+  {
+   "type": "textarea",
+   "id": "lede",
+   "label": "Intro (digital products)"
+  },
+  {
+   "type": "text",
+   "id": "atc_label",
+   "label": "Add to cart text",
+   "default": "Add to Cart"
+  },
+  {
+   "type": "text",
+   "id": "digital_label",
+   "label": "Digital button text",
+   "default": "Get Instant Access"
+  },
+  {
+   "type": "checkbox",
+   "id": "show_used_by",
+   "label": "Show 'Used by athletes from' logos",
+   "default": true
+  },
+  {
+   "type": "checkbox",
+   "id": "show_trust",
+   "label": "Show trust icons",
+   "default": true
+  },
+  {
+   "type": "header",
+   "content": "Dropdowns"
+  },
+  {
+   "type": "text",
+   "id": "sizing_title",
+   "label": "Sizing title",
+   "default": "Sizing guide"
+  },
+  {
+   "type": "html",
+   "id": "sizing_html",
+   "label": "Sizing guide content"
+  },
+  {
+   "type": "text",
+   "id": "how_title",
+   "label": "How it works title",
+   "default": "How SpinGrip works"
+  },
+  {
+   "type": "html",
+   "id": "how_html",
+   "label": "How it works text"
+  },
+  {
+   "type": "video",
+   "id": "how_video",
+   "label": "How to use video"
+  },
+  {
+   "type": "url",
+   "id": "how_video_url",
+   "label": "How to use video URL",
+   "info": "Used when no video is chosen above."
+  },
+  {
+   "type": "header",
+   "content": "Pack box"
+  },
+  {
+   "type": "checkbox",
+   "id": "show_pack",
+   "label": "Show pack box",
+   "default": true
+  },
+  {
+   "type": "url",
+   "id": "pack_url",
+   "label": "Pack link"
+  },
+  {
+   "type": "text",
+   "id": "pack_title",
+   "label": "Title",
+   "default": "Buying more than one? Save up to 20%"
+  },
+  {
+   "type": "text",
+   "id": "pack_chips",
+   "label": "Tags",
+   "default": "2-Pack · Save 10%, 5-Pack · Save 15%, 10-Pack · Save 20%"
+  },
+  {
+   "type": "text",
+   "id": "pack_text",
+   "label": "Text",
+   "default": "Mix & match any glove, size, or hand — discount applies automatically at checkout."
+  },
+  {
+   "type": "text",
+   "id": "pack_cta",
+   "label": "Link text",
+   "default": "Build your pack"
+  }
  ],
  "blocks": [
-  { "type": "result", "name": "Result", "settings": [ { "type": "text", "id": "text", "label": "Text", "default": "Up to +7 MPH velocity" } ] },
-  { "type": "inside", "name": "What's inside item", "settings": [ { "type": "text", "id": "text", "label": "Text" } ] }
+  {
+   "type": "result",
+   "name": "Result",
+   "settings": [
+    {
+     "type": "text",
+     "id": "text",
+     "label": "Text",
+     "default": "Up to +7 MPH velocity"
+    }
+   ]
+  },
+  {
+   "type": "inside",
+   "name": "What's inside item",
+   "settings": [
+    {
+     "type": "text",
+     "id": "text",
+     "label": "Text"
+    }
+   ]
+  }
  ]
 }
 {% endschema %}
