@@ -1087,3 +1087,9 @@ html.kpop-lock{overflow: hidden;}
   .kg .kpop__dialog{padding: 22px 16px 18px;}
   .kg .kpop__form input:not([type=checkbox]){height: 50px;}
 }
+.kg .kpop__code{display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%; max-width: 320px; margin: 4px auto; padding: 8px 8px 8px 18px; border: 1.5px dashed #fab505; border-radius: 10px; background: rgba(250, 181, 5, .08);}
+.kg .kpop__code-value{font: 900 24px/1 var(--display); letter-spacing: .12em; color: #fab505;}
+.kg .kpop__copy{border: 0; border-radius: 999px; background: #fab505; color: #0d0d0d; font: 600 13px/1 var(--body); text-transform: uppercase; padding: 10px 16px; cursor: pointer;}
+.kg .kpop__code--band{margin: 0 0 4px;}
+.kg .roster-page .kpop__code{background: #0d0d0d; border-color: #0d0d0d;}
+.kg .roster-page .kpop__code-value{color: #fab505;}
