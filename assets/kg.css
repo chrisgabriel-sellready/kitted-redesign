@@ -1093,3 +1093,24 @@ html.kpop-lock{overflow: hidden;}
 .kg .kpop__code--band{margin: 0 0 4px;}
 .kg .roster-page .kpop__code{background: #0d0d0d; border-color: #0d0d0d;}
 .kg .roster-page .kpop__code-value{color: #fab505;}
+/* Kollective welcome (shown on the same page after joining) */
+.kg .kwel{display:flex;flex-direction:column;align-items:center;gap:14px;width:100%;max-width:560px;margin:0 auto;text-align:center;}
+.kg .kwel[hidden]{display:none;}
+.kg .kwel__check{display:flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;background:#3cff1e;color:#0d0d0d;animation:kwel-pop .45s cubic-bezier(.2,1.4,.4,1) both;}
+.kg .kwel__check svg{width:28px;height:28px;}
+.kg .kwel__title{margin:0;font:900 clamp(28px,4.6vw,42px)/1 var(--display);text-transform:uppercase;letter-spacing:.01em;color:inherit;}
+.kg .kwel__text{margin:0;max-width:440px;font:400 15px/1.5 var(--body);opacity:.75;}
+.kg .kwel__code{display:flex;flex-direction:column;align-items:center;gap:6px;width:100%;}
+.kg .kwel__code-label{font:600 11px/1 var(--body);letter-spacing:.25em;text-transform:uppercase;opacity:.6;}
+.kg .kwel__video{position:relative;width:100%;aspect-ratio:16/9;margin-top:4px;overflow:hidden;border-radius:12px;background:#000;}
+.kg .kwel__video iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+.kg .kwel__play{position:absolute;inset:0;width:100%;height:100%;padding:0;border:0;background:#000;cursor:pointer;}
+.kg .kwel__play img{width:100%;height:100%;object-fit:cover;display:block;}
+.kg .kwel__play-label{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);display:inline-flex;align-items:center;gap:8px;white-space:nowrap;border-radius:999px;background:#fff;color:#0d0d0d;padding:9px 16px;font:600 14px/1 var(--body);box-shadow:0 4px 14px rgba(0,0,0,.3);}
+.kg .kwel__play-label svg{width:16px;height:16px;}
+.kg .kwel__play:hover .kwel__play-label{background:#3cff1e;}
+.kg .kpop__done .kwel{gap:12px;margin-bottom:14px;}
+.kg .kpop__done .kwel__title{font-size:30px;}
+.kg .roster-page .kwel{margin-top:8px;}
+@keyframes kwel-pop{0%{transform:scale(.4);opacity:0}100%{transform:scale(1);opacity:1}}
+@media (prefers-reduced-motion: reduce){.kg .kwel__check{animation:none;}}

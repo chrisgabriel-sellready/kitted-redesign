@@ -1,0 +1,47 @@
+{%- comment -%}
+  Success view shown in place of a Kollective sign-up form, on the same page.
+  Params: code (discount code, optional), video (YouTube ID or URL, optional), hidden (bool)
+{%- endcomment -%}
+{%- liquid
+  assign vid = video | default: '' | strip
+  if vid contains 'v='
+    assign vid = vid | split: 'v=' | last | split: '&' | first
+  elsif vid contains 'youtu.be/'
+    assign vid = vid | split: 'youtu.be/' | last | split: '?' | first
+  elsif vid contains '/embed/'
+    assign vid = vid | split: '/embed/' | last | split: '?' | first
+  elsif vid contains '/shorts/'
+    assign vid = vid | split: '/shorts/' | last | split: '?' | first
+  endif
+-%}
+<div class="kwel" data-kwel role="status" aria-live="polite"{% if hidden %} hidden{% endif %}>
+  <span class="kwel__check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+  <h3 class="kwel__title">Welcome to the KITTED Kollective</h3>
+  <p class="kwel__text">You're on the roster. Watch your texts and inbox: first access to KITTED drops lands there first.</p>
+  {%- if code != blank -%}
+    <div class="kwel__code"><span class="kwel__code-label">Your 10% off code</span><div class="kpop__code"><span class="kpop__code-value" data-kg-code>{{ code | escape }}</span><button type="button" class="kpop__copy" data-kg-copy>Copy</button></div></div>
+  {%- endif -%}
+  {%- if vid != blank -%}
+    <div class="kwel__video" data-kwel-video="{{ vid | escape }}">
+      <button type="button" class="kwel__play" data-kwel-play aria-label="Play video: Welcome to the KITTED Roster">
+        <img src="https://i.ytimg.com/vi/{{ vid | escape }}/hqdefault.jpg" alt="" width="480" height="360" loading="lazy">
+        <span class="kwel__play-label"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Watch the welcome</span>
+      </button>
+    </div>
+  {%- endif -%}
+</div>
+<script>
+  (function () {
+    if (window.kgWelcomeReady) return; window.kgWelcomeReady = true;
+    document.addEventListener('click', function (e) {
+      var b = e.target.closest && e.target.closest('[data-kwel-play]'); if (!b) return;
+      var box = b.closest('[data-kwel-video]'); var id = box.getAttribute('data-kwel-video');
+      var f = document.createElement('iframe');
+      f.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id) + '?autoplay=1&rel=0&playsinline=1';
+      f.title = 'Welcome to the KITTED Roster';
+      f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      f.allowFullscreen = true;
+      box.innerHTML = ''; box.appendChild(f);
+    });
+  })();
+</script>

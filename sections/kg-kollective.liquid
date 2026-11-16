@@ -14,14 +14,10 @@
       {%- form 'customer', class: 'stack', id: 'kg-kollective-form', data-jersey: '', style: 'gap:14px' -%}
         <input type="hidden" name="contact[tags]" value="kollective">
         <input type="hidden" name="contact[first_name]"><input type="hidden" name="contact[last_name]">
-        {%- if form.posted_successfully? -%}
-          <p class="form-msg is-ok" role="status">{{ section.settings.success }}</p>
-          {%- if section.settings.discount_code != blank -%}
-            <div class="kpop__code kpop__code--band"><span class="kpop__code-value" data-kg-code>{{ section.settings.discount_code | escape }}</span><button type="button" class="kpop__copy" data-kg-copy>Copy</button></div>
-          {%- endif -%}
-        {%- elsif form.errors -%}
+        {%- if form.posted_successfully? -%}{%- assign kol_done = true -%}{%- elsif form.errors -%}
           <p class="form-msg is-warn" role="alert">{{ form.errors.translated_fields.email | capitalize }} {{ form.errors.messages.email }}</p>
         {%- endif -%}
+        <p class="form-msg is-warn" role="alert" data-kol-msg hidden></p>
         <div class="form-grid">
           <div class="kg-field full"><label{% if kg_full_page %} class="visually-hidden"{% endif %} for="hr-name">First and last name</label><input id="hr-name" name="fullname" placeholder="First and Last Name" autocomplete="name" required></div>
           <div class="kg-field"><label{% if kg_full_page %} class="visually-hidden"{% endif %} for="hr-num">Jersey # (0–99)</label><input id="hr-num" name="number" inputmode="numeric" maxlength="2" placeholder="{% if kg_full_page %}Jersey # (0–99){% else %}00{% endif %}"></div>
@@ -32,6 +28,9 @@
         <label class="consent"><input type="checkbox" name="contact[accepts_marketing]" value="true" checked><span>{{ section.settings.consent | remove: "<p>" | remove: "</p>" }}</span></label>
         {% unless kg_full_page %}<button class="btn btn--gold btn--lg btn--block" type="submit">{{ section.settings.button }}</button>{% endunless %}
       {%- endform -%}
+      {%- if kol_done -%}<style>#kg-kollective-form{display:none}</style>{%- endif -%}
+      {%- assign kol_hidden = true -%}{%- if kol_done -%}{%- assign kol_hidden = false -%}{%- endif -%}
+      {%- render 'kg-kollective-welcome', code: section.settings.discount_code, video: section.settings.welcome_video, hidden: kol_hidden -%}
     </div>
   </div>
 </section>
@@ -60,7 +59,7 @@
       return '';
     }
     function toKlaviyo(first, last, email, phone, number, consent) {
-      if (!company || !listId || !email) return Promise.resolve();
+      if (!company || !listId || !email) return Promise.resolve(false);
       var props = { signup_offer: offer };
       if (number) props.jersey_number = number;
       var subs = { email: { marketing: { consent: 'SUBSCRIBED' } } };
@@ -71,13 +70,20 @@
         method: 'POST', keepalive: true,
         headers: { 'Content-Type': 'application/vnd.api+json', 'revision': '2025-07-15' },
         body: JSON.stringify(body)
-      }).catch(function () {});
-      var timeout = new Promise(function (r) { setTimeout(r, 3000); });
+      }).then(function (r) { return r.ok; }).catch(function () { return false; });
+      var timeout = new Promise(function (r) { setTimeout(function () { r(false); }, 10000); });
       return Promise.race([req, timeout]);
     }
+    function toShopify() {
+      // Also save the customer in Shopify, in the background, so the shopper never leaves the page.
+      try { fetch(f.action, { method: 'POST', body: new FormData(f), credentials: 'same-origin', keepalive: true }).catch(function () {}); } catch (e) {}
+    }
+    var msg = document.querySelector('#kollective [data-kol-msg]');
+    function showMsg(t) { if (msg) { msg.textContent = t; msg.hidden = !t; } }
     f.addEventListener('submit', function (ev) {
-      if (f.dataset.kgSent) return;
       ev.preventDefault();
+      if (f.dataset.kgSending) return;
+      showMsg('');
       var parts = (f.querySelector('[name=fullname]').value || '').trim().split(/\s+/);
       var first = parts.shift() || '', last = parts.join(' ');
       f.querySelector('[name="contact[first_name]"]').value = first;
@@ -89,12 +95,24 @@
       var phone = e164(phoneInput ? phoneInput.value : '');
       var consentBox = f.querySelector('[name="contact[accepts_marketing]"]');
       var consent = !!(consentBox && consentBox.checked);
+      var rawPhone = phoneInput ? (phoneInput.value || '').trim() : '';
+      if (rawPhone && !phone) { showMsg('Please enter a valid mobile number, or leave it blank.'); return; }
       var btns = f.querySelectorAll('[type=submit]');
-      btns.forEach(function (b) { b.disabled = true; });
-      toKlaviyo(first, last, email, phone, n, consent).then(function () {
-        f.dataset.kgSent = '1';
+      var labels = [];
+      btns.forEach(function (b) { labels.push(b.textContent); b.disabled = true; b.textContent = 'Joining…'; });
+      f.dataset.kgSending = '1';
+      toKlaviyo(first, last, email, phone, n, consent).then(function (ok) {
+        delete f.dataset.kgSending;
+        btns.forEach(function (b, i) { b.disabled = false; b.textContent = labels[i]; });
+        if (!ok) { showMsg('Something went wrong. Please try again in a moment.'); return; }
         if (phoneInput) phoneInput.value = phone;
-        HTMLFormElement.prototype.submit.call(f);
+        toShopify();
+        try { localStorage.setItem('kgKollectivePopupJoined', '1'); } catch (e) {}
+        var welcome = document.querySelector('#kollective [data-kwel]');
+        if (!welcome) return;
+        f.hidden = true; f.style.display = 'none';
+        welcome.hidden = false;
+        welcome.scrollIntoView({ behavior: 'smooth', block: 'center' });
       });
     });
   })();
@@ -145,6 +163,12 @@
    "id": "button",
    "label": "Button",
    "default": "Join the roster"
+  },
+  {
+   "type": "text",
+   "id": "welcome_video",
+   "label": "Welcome video (YouTube link or ID)",
+   "default": "x2MLQFuNRhQ"
   },
   {
    "type": "text",

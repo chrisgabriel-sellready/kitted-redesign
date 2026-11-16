@@ -44,11 +44,7 @@
     </div>
     <div class="kpop__body kpop__done" data-kpop-done hidden>
       <p class="kpop__tag">{{ section.settings.tag }}</p>
-      <h2 class="kpop__title">{{ section.settings.success_heading }}</h2>
-      <p class="kpop__text">{{ section.settings.success }}</p>
-      {%- if section.settings.discount_code != blank -%}
-        <div class="kpop__code"><span class="kpop__code-value" data-kg-code>{{ section.settings.discount_code | escape }}</span><button type="button" class="kpop__copy" data-kg-copy>Copy</button></div>
-      {%- endif -%}
+      {%- render 'kg-kollective-welcome', code: section.settings.discount_code, video: section.settings.welcome_video -%}
       <button type="button" class="kpop__submit" data-kpop-close>{{ section.settings.success_button }}</button>
     </div>
   </div>
@@ -82,6 +78,7 @@
   }
   function close() {
     root.hidden = true; document.documentElement.classList.remove('kpop-lock');
+    root.querySelectorAll('[data-kwel-video] iframe').forEach(function (fr) { fr.src = 'about:blank'; });
     if (!joined) { set(K + 'Closed', String(Date.now())); if (tab && sget(K + 'TabHidden') !== '1') tab.hidden = false; }
     if (lastFocus && lastFocus.focus) lastFocus.focus({ preventScroll: true });
   }
@@ -226,6 +223,12 @@
    "id": "success_heading",
    "label": "Thank-you heading",
    "default": "You're on the roster"
+  },
+  {
+   "type": "text",
+   "id": "welcome_video",
+   "label": "Welcome video (YouTube link or ID)",
+   "default": "x2MLQFuNRhQ"
   },
   {
    "type": "textarea",
